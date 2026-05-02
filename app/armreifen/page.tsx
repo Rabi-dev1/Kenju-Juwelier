@@ -4,17 +4,17 @@ import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 
 export const metadata: Metadata = {
-  title: 'Armreifen Berlin – Gold & Platin Armbänder | KenJu Juwelier',
-  description: 'Exklusive Armreifen und Armbänder in Berlin. Massivgold, Brillant-besetzte Modelle und individuelle Anfertigung bei KenJu Juwelier.',
-  keywords: ['Armreifen Berlin', 'Goldarmband', 'Platin Armreif', 'Diamant Armband', 'Juwelier Berlin'],
+  title: 'Armreifen – Goldbangles & Armbänder in 585 Gold | KenJu Juwelier',
+  description: 'Exklusive Armreifen und Armbänder in 585 Gelbgold und Roségold. Wellen-Armreif, gedrehte Bangles und feine Roségold-Armbänder bei KenJu Juwelier.',
+  keywords: ['Armreifen', 'Goldbangle', 'Armband Gold', '585 Gelbgold', 'Roségold Armband'],
   alternates: { canonical: 'https://kenju-juwelier.de/armreifen' },
 };
 
 const items = [
-  { name: 'Massiv-Armreif', material: '18K Gelbgold', detail: '10 mm Breite, poliert', img: '/images/image_4.png' },
-  { name: 'Tennis-Armband', material: '18K Weißgold', detail: '2 ct Brillant-Besatz', img: '/images/image_5.png' },
-  { name: 'Bangle Stack', material: '14K Roségold', detail: '3er-Set, dünn', img: '/images/image_8.png' },
-  { name: 'Gravur-Armreif', material: '18K Gelbgold', detail: 'Personalisierte Gravur', img: '/images/image_10.png' },
+  { name: 'Wellen-Armreif',      material: '585 Gelbgold',  detail: 'Organische Wellenform, poliert #ARMREIF', img: '/images/armreif-welle.jpg' },
+  { name: 'Roségold-Armband',    material: '585 Roségold',  detail: 'Zarte Panzerkette, verstellbar',          img: '/images/armband-rose.jpg' },
+  { name: 'Gedrehter Bangle',    material: '585 Gelbgold',  detail: 'Twisted Muster, matt & poliert #ARMREIF', img: '/images/armreif-gedreht.jpg' },
+  { name: 'Bangle 2er-Set',      material: '585 Gelbgold',  detail: '2 Bangles im Set, verschiedene Breiten',  img: '/images/armreif-gedreht.jpg' },
 ];
 
 export default function ArmreifenPage() {
@@ -23,18 +23,24 @@ export default function ArmreifenPage() {
       <CategoryHero
         title="Armreifen"
         subtitle="Eleganz am Handgelenk"
-        description="Unsere Armreifen und Armbänder aus Gold und Platin sind zeitlose Schmuckstücke – von schlicht und elegant bis brillantbesetzt."
-        imageSrc="/images/image_4.png"
-        imageAlt="Goldarmreifen KenJu Juwelier Berlin"
+        description="Unsere Armreifen und Armbänder in 585 Gelbgold und Roségold – vom organischen Wellen-Armreif bis zum feinen Roségold-Armband."
+        imageSrc="/images/armreif-welle.jpg"
+        imageAlt="Goldarmreifen KenJu Juwelier 585 Gelbgold"
         breadcrumb="Armreifen"
       />
+
       <section className="py-24 bg-kenju-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {items.map((p) => (
               <article key={p.name} className="card-dark overflow-hidden group">
                 <div className="relative h-52 category-img-placeholder">
-                  <Image src={p.img} alt={p.name} fill className="object-cover opacity-75 group-hover:opacity-95 transition-all duration-500" />
+                  <Image
+                    src={p.img}
+                    alt={p.name}
+                    fill
+                    className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />
                 </div>
                 <div className="p-5">

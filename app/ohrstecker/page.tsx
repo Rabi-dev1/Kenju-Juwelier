@@ -4,17 +4,17 @@ import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 
 export const metadata: Metadata = {
-  title: 'Ohrstecker Berlin – Brillant- & Edelstein-Ohrstecker | KenJu Juwelier',
-  description: 'Exklusive Ohrstecker in Berlin. Brillant-Ohrstecker, Perlen- und Edelstein-Ohrringe in Gold, Weißgold und Platin. Handgefertigt bei KenJu Juwelier.',
-  keywords: ['Ohrstecker Berlin', 'Brillant Ohrstecker', 'Diamant Ohrringe', 'Goldohrstecker', 'Juwelier Berlin'],
+  title: 'Ohrstecker – Goldohrstecker in 585 Gelbgold | KenJu Juwelier',
+  description: 'Exklusive Goldohrstecker in 585 Gelbgold. Kugelohrstecker in 4 Größen (3mm, 4mm, 6mm, 8mm) – schlicht und elegant für jeden Anlass.',
+  keywords: ['Ohrstecker', 'Goldohrstecker', 'Kugelohrstecker', '585 Gelbgold', 'Juwelier'],
   alternates: { canonical: 'https://kenju-juwelier.de/ohrstecker' },
 };
 
 const items = [
-  { name: 'Brillant-Solitär', material: '18K Weißgold', detail: '0,30 ct Brillant (F/VS)', img: '/images/image_2.png' },
-  { name: 'Rubin-Ohrstecker', material: '14K Gelbgold', detail: 'Burma-Rubin 0,5 ct', img: '/images/image_3.png' },
-  { name: 'Perlen-Ohrstecker', material: '18K Gelbgold', detail: 'Akoya-Perlen 7 mm', img: '/images/image_5.png' },
-  { name: 'Saphir-Ohrstecker', material: '18K Weißgold', detail: 'Ceylon-Saphir + Brillant', img: '/images/image_7.png' },
+  { name: 'Kugel-Ohrstecker 3 mm', material: '585 Gelbgold', detail: 'Für das tägliche Tragen', img: '/images/ohrstecker-kugel.jpg' },
+  { name: 'Kugel-Ohrstecker 4 mm', material: '585 Gelbgold', detail: 'Beliebteste Größe',       img: '/images/ohrstecker-kugel.jpg' },
+  { name: 'Kugel-Ohrstecker 6 mm', material: '585 Gelbgold', detail: 'Statement-Piece',         img: '/images/ohrstecker-kugel.jpg' },
+  { name: 'Kugel-Ohrstecker 8 mm', material: '585 Gelbgold', detail: 'Große Kugel, maximaler Glanz', img: '/images/ohrstecker-kugel.jpg' },
 ];
 
 export default function OhrsteckerPage() {
@@ -22,19 +22,25 @@ export default function OhrsteckerPage() {
     <>
       <CategoryHero
         title="Ohrstecker"
-        subtitle="Brillanz am Ohr"
-        description="Zarte Brillant-Ohrstecker bis zu opulenten Edelstein-Arrangements – handgefertigt für jeden Anlass und jeden Stil."
-        imageSrc="/images/image_2.png"
-        imageAlt="Ohrstecker KenJu Juwelier Berlin"
+        subtitle="Schlicht & Strahlend"
+        description="Klassische Kugel-Ohrstecker in 585 Gelbgold – erhältlich in vier Größen (3, 4, 6 und 8 mm). Zeitlos elegant für jeden Anlass."
+        imageSrc="/images/ohrstecker-kugel.jpg"
+        imageAlt="Goldohrstecker KenJu Juwelier 585 Gelbgold"
         breadcrumb="Ohrstecker"
       />
+
       <section className="py-24 bg-kenju-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {items.map((p) => (
               <article key={p.name} className="card-dark overflow-hidden group">
                 <div className="relative h-52 category-img-placeholder">
-                  <Image src={p.img} alt={p.name} fill className="object-cover opacity-75 group-hover:opacity-95 transition-all duration-500" />
+                  <Image
+                    src={p.img}
+                    alt={p.name}
+                    fill
+                    className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />
                 </div>
                 <div className="p-5">
@@ -45,8 +51,18 @@ export default function OhrsteckerPage() {
               </article>
             ))}
           </div>
-          <div className="text-center">
-            <Link href="/#termin" className="btn-gold">Ohrstecker anfragen</Link>
+
+          <div className="max-w-2xl mx-auto">
+            <div className="card-dark p-8">
+              <h2 className="font-serif text-3xl text-kenju-cream mb-4">Der perfekte Ohrstecker</h2>
+              <div className="divider-gold mb-6" />
+              <p className="font-sans text-sm text-kenju-muted leading-relaxed mb-6">
+                Unsere Kugel-Ohrstecker in 585 Gelbgold sind ein absoluter Klassiker. Die perfekte Kugelform
+                sorgt für maximalen Glanz – von der zarten 3-mm-Variante für den Alltag bis zum auffälligen
+                8-mm-Stecker als Statement-Piece. Alle Stecker verfügen über sichere Butterfly-Verschlüsse.
+              </p>
+              <Link href="/#termin" className="btn-gold">Ohrstecker anfragen</Link>
+            </div>
           </div>
         </div>
       </section>

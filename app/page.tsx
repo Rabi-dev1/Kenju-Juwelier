@@ -5,14 +5,14 @@ import GoogleMap from '@/components/GoogleMap';
 import AppointmentForm from '@/components/AppointmentForm';
 
 const categories = [
-  { title: 'Kreuze',        desc: 'Goldene und silberne Kreuze in höchster Handwerkskunst.',      href: '/kreuze',        img: '/images/image_0.png', icon: '✝' },
-  { title: 'Ringe',         desc: 'Eheringe, Siegelringe und individuelle Unikate.',               href: '/ringe',         img: '/images/image_1.png', icon: '◉' },
-  { title: 'Ohrstecker',    desc: 'Brillant- und Edelsteinohrstecker für jeden Anlass.',           href: '/ohrstecker',    img: '/images/image_2.png', icon: '◆' },
-  { title: 'Creolen',       desc: 'Klassische und moderne Creolen in Gold und Platin.',            href: '/creolen',       img: '/images/image_3.png', icon: '◯' },
-  { title: 'Armreifen',     desc: 'Elegante Armreifen und Armbänder in exklusiver Qualität.',     href: '/armreifen',     img: '/images/image_4.png', icon: '⌀' },
-  { title: 'Halsketten',    desc: 'Feine Ketten in Gold, Silber und Platin.',                      href: '/halsketten',    img: '/images/image_5.png', icon: '◎' },
-  { title: 'Brillantringe', desc: 'Verlobungs- und Brillantringe nach Ihrem Wunsch.',             href: '/brillantringe', img: '/images/image_6.png', icon: '◈' },
-  { title: 'Goldankauf',    desc: 'Fairer und transparenter Goldankauf zum Tagespreis.',           href: '/goldankauf',    img: '/images/image_8.png', icon: '⬡' },
+  { title: 'Kreuze',        desc: 'Goldene Kreuze in höchster Handwerkskunst.',                href: '/kreuze',        img: '/images/kreuz-filigran.jpg',          icon: '✝' },
+  { title: 'Ringe',         desc: 'Eheringe, Siegelringe und individuelle Unikate.',           href: '/ringe',         img: '/images/ring-baguette.jpg',            icon: '◉' },
+  { title: 'Ohrstecker',    desc: 'Brillant- und Edelsteinohrstecker für jeden Anlass.',       href: '/ohrstecker',    img: '/images/ohrstecker-kugel.jpg',         icon: '◆' },
+  { title: 'Creolen',       desc: 'Klassische und moderne Creolen in Gold.',                   href: '/creolen',       img: '/images/creolen-gedreht.jpg',          icon: '◯' },
+  { title: 'Armreifen',     desc: 'Elegante Armreifen und Armbänder in exklusiver Qualität.', href: '/armreifen',     img: '/images/armreif-welle.jpg',            icon: '⌀' },
+  { title: 'Halsketten',    desc: 'Feine Ketten mit einzigartigen Anhängern.',                 href: '/halsketten',    img: '/images/kette-engelsfluegel.jpg',      icon: '◎' },
+  { title: 'Brillantringe', desc: 'Verlobungs- und Brillantringe nach Ihrem Wunsch.',         href: '/brillantringe', img: '/images/brillantring-cluster-gelb.jpg',icon: '◈' },
+  { title: 'Goldankauf',    desc: 'Fairer und transparenter Goldankauf zum Tagespreis.',       href: '/goldankauf',    img: '/images/brillant-set-luxus.jpg',       icon: '⬡' },
 ];
 
 export default function HomePage() {
@@ -20,23 +20,24 @@ export default function HomePage() {
     <>
       {/* ── Hero ───────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-hero-gradient" />
-
-        {/* Background pattern */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #C9A84C 1px, transparent 0)`,
-            backgroundSize: '48px 48px',
-          }}
-        />
+        {/* Store front background */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-ladenfront.jpg"
+            alt="KenJu Juwelier Laden"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-kenju-black/80 via-kenju-black/70 to-kenju-black" />
+        </div>
 
         {/* Decorative gold lines */}
         <div className="absolute top-1/4 left-0 w-64 h-px bg-gradient-to-r from-transparent via-kenju-gold/40 to-transparent" />
         <div className="absolute bottom-1/4 right-0 w-64 h-px bg-gradient-to-l from-transparent via-kenju-gold/40 to-transparent" />
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-subtitle mb-8 animate-fade-in">Meisterbetrieb · Berlin</p>
+          <p className="section-subtitle mb-8 animate-fade-in">Meisterbetrieb · Juwelier</p>
 
           <h1 className="font-serif text-7xl sm:text-8xl md:text-9xl font-light leading-none mb-4 animate-slide-up">
             <span className="gold-text">Ken</span>
@@ -50,8 +51,8 @@ export default function HomePage() {
           <div className="divider-gold mx-auto mb-10" />
 
           <p className="font-sans text-kenju-muted text-lg max-w-xl mx-auto leading-relaxed mb-12 animate-fade-in">
-            Exklusiver Schmuck, Brillantringe &amp; fairer Goldankauf. Handgefertigt in Berlin
-            mit Leidenschaft für Perfektion.
+            Exklusiver Schmuck in 585 Gelbgold, Weißgold &amp; Roségold.
+            Brillantringe, Goldankauf und individuelle Anfertigungen.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
@@ -76,9 +77,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: '⋆', label: 'Meisterbetrieb', desc: 'Zertifizierte Goldschmiede-Qualität' },
-              { icon: '◈', label: 'Brillant-Expertise', desc: 'IGI- & GIA-zertifizierte Steine' },
+              { icon: '◈', label: 'Brillant-Expertise', desc: '585 Gelb-, Weiß- & Roségold' },
               { icon: '⬡', label: 'Goldankauf', desc: 'Fairer Tagespreis, sofort Bargeld' },
-              { icon: '◯', label: 'Seit 2005', desc: 'Über 20 Jahre Erfahrung in Berlin' },
+              { icon: '◯', label: 'Seit 2005', desc: 'Über 20 Jahre Erfahrung' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center text-center gap-3">
                 <span className="text-3xl gold-text">{item.icon}</span>
@@ -108,7 +109,7 @@ export default function HomePage() {
                       src={cat.img}
                       alt={cat.title}
                       fill
-                      className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+                      className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-kenju-black/80 to-transparent" />
                     <span className="absolute top-4 right-4 text-2xl opacity-60">{cat.icon}</span>
@@ -118,7 +119,7 @@ export default function HomePage() {
                       {cat.title}
                     </h3>
                     <p className="font-sans text-xs text-kenju-muted leading-relaxed mb-4">{cat.desc}</p>
-                    <span className="font-sans text-xs tracking-widest uppercase text-kenju-gold group-hover:gap-3 flex items-center gap-2 transition-all">
+                    <span className="font-sans text-xs tracking-widest uppercase text-kenju-gold flex items-center gap-2">
                       Mehr entdecken <span>→</span>
                     </span>
                   </div>
@@ -135,16 +136,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-96 lg:h-[500px] gold-border overflow-hidden">
               <Image
-                src="/images/image_7.png"
-                alt="KenJu Juwelier Werkstatt"
+                src="/images/brillant-set-luxus.jpg"
+                alt="KenJu Juwelier Brillant-Kollektion"
                 fill
-                className="object-cover opacity-80"
+                className="object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-kenju-black/30 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="bg-kenju-black/80 backdrop-blur border border-kenju-gold/30 p-4">
-                  <p className="font-serif text-xl gold-text">Meisterbetrieb seit 2005</p>
-                  <p className="font-sans text-xs text-kenju-muted mt-1">Berlin Mitte</p>
+                  <p className="font-serif text-xl gold-text">585 Gelbgold · Weißgold · Roségold</p>
+                  <p className="font-sans text-xs text-kenju-muted mt-1">Höchste Qualität – für unvergessliche Momente</p>
                 </div>
               </div>
             </div>
@@ -154,16 +155,14 @@ export default function HomePage() {
               <div className="divider-gold mb-8" />
               <div className="space-y-5 font-sans text-kenju-muted leading-relaxed">
                 <p>
-                  Seit 2005 steht KenJu Juwelier in Berlin für handgefertigten Schmuck der
-                  höchsten Güte. Was als kleines Familiengeschäft begann, ist heute eine der
-                  renommiertesten Adressen für Brillantringe, Goldankauf und exklusiven
-                  Schmuck in der Hauptstadt.
+                  Seit über 20 Jahren steht KenJu Juwelier für handgefertigten Schmuck der
+                  höchsten Güte. Unser Sortiment umfasst Kreuze, Ringe, Creolen, Halsketten,
+                  Armreifen und exklusive Brillantringe – alle in 585 Gold.
                 </p>
                 <p>
                   Unser Team zertifizierter Goldschmiede kombiniert jahrhundertealtes
-                  Handwerk mit modernem Design. Jedes Stück – ob Verlobungsring, Kreuz
-                  oder Armreifen – entsteht mit Liebe zum Detail und dem Anspruch an
-                  Perfektion.
+                  Handwerk mit modernem Design. Jedes Stück entsteht mit Liebe zum Detail
+                  und dem Anspruch an Perfektion.
                 </p>
                 <p>
                   Beim <strong className="text-kenju-gold">Goldankauf</strong> setzen wir auf
@@ -180,13 +179,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Goldankauf Banner ─────────────────────────────── */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gold-gradient opacity-10" />
+      {/* ── Store Front Banner ─────────────────────────────── */}
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-ladenfront.jpg"
+            alt="KenJu Juwelier Laden"
+            fill
+            className="object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-kenju-black via-kenju-black/80 to-kenju-black" />
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-subtitle mb-4">Jetzt verkaufen</p>
           <h2 className="font-serif text-4xl md:text-5xl text-kenju-cream mb-4">
-            Fairer <span className="gold-text">Goldankauf</span> in Berlin
+            Fairer <span className="gold-text">Goldankauf</span>
           </h2>
           <p className="font-sans text-kenju-muted max-w-lg mx-auto mb-8">
             Wir kaufen Gold, Silber, Platin, Uhren und Brillanten zum tagesaktuellen
@@ -209,7 +216,7 @@ export default function HomePage() {
             <h2 className="section-title mb-4">Termin vereinbaren</h2>
             <div className="divider-gold mx-auto mb-6" />
             <p className="font-sans text-kenju-muted max-w-md mx-auto">
-              Vereinbaren Sie ein kostenloses Beratungsgespräch in unserem Atelier in Berlin Mitte.
+              Vereinbaren Sie ein kostenloses Beratungsgespräch in unserem Atelier.
             </p>
           </div>
           <div className="card-dark p-8 md:p-12">
@@ -227,16 +234,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Juwelier Berlin – Qualität ohne Kompromisse',
-                text: 'Als führender Juwelier in Berlin bieten wir Ihnen exklusiven Schmuck, handgefertigt von zertifizierten Goldschmieden. Von Brillantringen über Creolen bis hin zu individuellen Sonderwünschen – bei KenJu wird jeder Traum Wirklichkeit.',
+                title: 'Juwelier – Qualität ohne Kompromisse',
+                text: 'Als Juwelier bieten wir exklusiven Schmuck in 585 Gelbgold, Weißgold und Roségold. Von Brillantringen über Creolen bis zu individuellen Sonderwünschen – bei KenJu wird jeder Traum Wirklichkeit.',
               },
               {
                 title: 'Brillantringe nach Maß',
-                text: 'Unser Spezialgebiet sind Brillantringe für Verlobung und Hochzeit. IGI- und GIA-zertifizierte Diamanten, gefasst in Gold oder Platin nach Ihrem Wunsch. Lassen Sie sich von unseren Experten individuell beraten.',
+                text: 'Unser Spezialgebiet sind Brillantringe für Verlobung und Hochzeit. Diamanten in 585er Gold oder Weißgold, nach Ihrem Wunsch handgefertigt. Lassen Sie sich von unseren Experten individuell beraten.',
               },
               {
-                title: 'Goldankauf Berlin – Fair & Transparent',
-                text: 'Sie möchten Gold, Schmuck oder Edelmetalle verkaufen? Wir bieten Ihnen den tagesaktuellen Marktpreis für Ihr Gold. Keine versteckten Gebühren, sofortige Auszahlung. KenJu ist Berlins vertrauenswürdigste Adresse für Goldankauf.',
+                title: 'Goldankauf – Fair & Transparent',
+                text: 'Sie möchten Gold, Schmuck oder Edelmetalle verkaufen? Wir bieten Ihnen den tagesaktuellen Marktpreis für Ihr Gold. Keine versteckten Gebühren, sofortige Auszahlung. KenJu ist Ihre vertrauenswürdige Adresse für Goldankauf.',
               },
             ].map((block) => (
               <div key={block.title}>

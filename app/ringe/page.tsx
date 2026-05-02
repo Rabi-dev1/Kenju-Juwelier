@@ -4,17 +4,17 @@ import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 
 export const metadata: Metadata = {
-  title: 'Ringe Berlin – Eheringe, Siegelringe & mehr | KenJu Juwelier',
-  description: 'Hochwertige Ringe in Berlin. Eheringe, Siegelringe, Bandringen und individuelle Unikate in Gold, Weißgold, Roségold und Platin.',
-  keywords: ['Ringe Berlin', 'Eheringe Berlin', 'Goldring', 'Siegelring', 'Juwelier Berlin', 'Trauringe'],
+  title: 'Ringe – Goldringe & Eheringe in 585 Gold | KenJu Juwelier',
+  description: 'Hochwertige Ringe in 585 Gelbgold. Solitärringe mit Brillant, Baguette-Ringe mit Farbsteinen (Rubin, Smaragd) und individuelle Anfertigungen.',
+  keywords: ['Ringe', 'Goldringe', 'Solitärring', 'Baguette Ring', 'Rubin Ring', 'Smaragd Ring', '585 Gelbgold'],
   alternates: { canonical: 'https://kenju-juwelier.de/ringe' },
 };
 
 const items = [
-  { name: 'Klassischer Ehering', material: '18K Gelbgold', detail: '4 mm Bandbreite', img: '/images/image_1.png' },
-  { name: 'Siegelring', material: '14K Gelbgold', detail: 'Mit Wappenplatte', img: '/images/image_4.png' },
-  { name: 'Infinity Ring', material: '18K Weißgold', detail: 'Diamant-Pavé', img: '/images/image_5.png' },
-  { name: 'Cocktailring', material: '18K Roségold', detail: 'Rubin & Brillant', img: '/images/image_6.png' },
+  { name: 'Solitär-Ring',          material: '585 Gelbgold', detail: 'Mit Zirkonia-Brillant, handgravierter Ringschiene', img: '/images/ring-solitaer.jpg' },
+  { name: 'Baguette-Ring Rubin',   material: '585 Gelbgold', detail: 'Roter Baguette-Stein, Panzerketten-Schiene',        img: '/images/ring-baguette.jpg' },
+  { name: 'Baguette-Ring Smaragd', material: '585 Gelbgold', detail: 'Grüner Baguette-Stein, florale Gravur',             img: '/images/ring-baguette.jpg' },
+  { name: 'Individueller Ring',    material: '585 Gold',      detail: 'Nach Ihren Wünschen angefertigt',                  img: '/images/ring-solitaer.jpg' },
 ];
 
 export default function RingePage() {
@@ -23,18 +23,24 @@ export default function RingePage() {
       <CategoryHero
         title="Ringe"
         subtitle="Zeitlose Eleganz"
-        description="Von klassischen Eheringen bis zu auffälligen Cocktailringen – entdecken Sie unsere Ringkollektion in Gold, Weißgold und Platin."
-        imageSrc="/images/image_1.png"
-        imageAlt="Goldringe KenJu Juwelier Berlin"
+        description="Von klassischen Solitärringen bis zu auffälligen Baguette-Ringen mit Farbsteinen – entdecken Sie unsere Ringkollektion in 585 Gelbgold."
+        imageSrc="/images/ring-baguette.jpg"
+        imageAlt="Goldringe KenJu Juwelier 585 Gelbgold"
         breadcrumb="Ringe"
       />
+
       <section className="py-24 bg-kenju-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {items.map((p) => (
               <article key={p.name} className="card-dark overflow-hidden group">
                 <div className="relative h-52 category-img-placeholder">
-                  <Image src={p.img} alt={p.name} fill className="object-cover opacity-75 group-hover:opacity-95 transition-all duration-500" />
+                  <Image
+                    src={p.img}
+                    alt={p.name}
+                    fill
+                    className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />
                 </div>
                 <div className="p-5">

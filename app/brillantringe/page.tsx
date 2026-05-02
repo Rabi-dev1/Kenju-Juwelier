@@ -5,9 +5,9 @@ import CategoryHero from '@/components/CategoryHero';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Brillantringe Berlin – Verlobungsringe & Diamantringe | KenJu Juwelier',
-  description: 'Exklusive Brillantringe & Verlobungsringe in Berlin. IGI/GIA-zertifizierte Diamanten, handgefertigt in Gold & Platin. Kostenlose Beratung bei KenJu Juwelier.',
-  keywords: ['Brillantringe Berlin', 'Verlobungsringe', 'Diamantringe', 'Brillant', 'Juwelier Berlin'],
+  title: 'Brillantringe – Verlobungsringe in 585 Gold & Weißgold | KenJu Juwelier',
+  description: 'Exklusive Brillantringe & Verlobungsringe in 585 Gelbgold und Weißgold. Cluster-Ring, Halo-Ring und luxuriöse Brillant-Sets. Kostenlose Beratung bei KenJu Juwelier.',
+  keywords: ['Brillantringe', 'Verlobungsringe', 'Brillant Cluster Ring', 'Halo Ring Weißgold', '585 Gold'],
   alternates: { canonical: 'https://kenju-juwelier.de/brillantringe' },
 };
 
@@ -15,19 +15,19 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'Brillantringe',
-  description: 'Handgefertigte Brillant- und Verlobungsringe in Gold und Platin mit IGI/GIA-zertifizierten Diamanten.',
+  description: 'Handgefertigte Brillant- und Verlobungsringe in 585 Gelbgold und Weißgold.',
   brand: { '@type': 'Brand', name: 'KenJu Juwelier' },
-  offers: { '@type': 'AggregateOffer', priceCurrency: 'EUR', offerCount: '50+', availability: 'https://schema.org/InStock' },
+  offers: { '@type': 'AggregateOffer', priceCurrency: 'EUR', offerCount: '10+', availability: 'https://schema.org/InStock' },
 };
 
 const products = [
-  { name: 'Solitär Classic', material: '18K Weißgold', stone: '0,50 ct Brillant (H/VS)', img: '/images/image_6.png' },
-  { name: 'Halo Diamant', material: '18K Gelbgold', stone: '0,75 ct Brillant (F/VVS)', img: '/images/image_9.png' },
-  { name: 'Trilogy Ring', material: 'Platin 950', stone: '1,00 ct total (G/VS)', img: '/images/image_10.png' },
-  { name: 'Pavé Eternity', material: '18K Roségold', stone: '0,50 ct Brillant-Pavé', img: '/images/image_7.png' },
+  { name: 'Brillant-Cluster Ring',    material: '585 Gelbgold',  stone: 'Cluster-Brillant, Halo-Fassung',              img: '/images/brillantring-cluster-gelb.jpg' },
+  { name: 'Halo-Ring Weißgold',       material: '585 Weißgold',  stone: 'Ovaler Brillant, doppelter Halo',              img: '/images/brillantring-halo-weiss.jpg' },
+  { name: 'Luxus Brillant-Set',       material: 'Weißgold',      stone: 'Collier + Armband + Creolen, Tropfenschliff',  img: '/images/brillant-set-luxus.jpg' },
+  { name: 'Solitär Brillant',         material: '585 Gelbgold',  stone: 'Klassischer Solitär, gravierte Schiene',       img: '/images/ring-solitaer.jpg' },
 ];
 
-export default function BrillantrингePage() {
+export default function BrillantringePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -35,9 +35,9 @@ export default function BrillantrингePage() {
       <CategoryHero
         title="Brillantringe"
         subtitle="Unvergessliche Momente"
-        description="Brillantringe für die schönsten Momente Ihres Lebens – handgefertigt aus IGI- und GIA-zertifizierten Diamanten in Gold und Platin."
-        imageSrc="/images/image_6.png"
-        imageAlt="Brillantringe KenJu Juwelier Berlin"
+        description="Brillantringe in 585 Gelbgold und Weißgold – von eleganten Cluster-Ringen bis zu opulenten Luxus-Sets mit Tropfendiamanten."
+        imageSrc="/images/brillantring-cluster-gelb.jpg"
+        imageAlt="Brillantringe KenJu Juwelier 585 Gold Weißgold"
         breadcrumb="Brillantringe"
       />
 
@@ -51,8 +51,13 @@ export default function BrillantrингePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((p) => (
               <article key={p.name} className="card-dark overflow-hidden group">
-                <div className="relative h-56 category-img-placeholder">
-                  <Image src={p.img} alt={p.name} fill className="object-cover opacity-75 group-hover:opacity-95 group-hover:scale-105 transition-all duration-500" />
+                <div className="relative h-64 category-img-placeholder">
+                  <Image
+                    src={p.img}
+                    alt={p.name}
+                    fill
+                    className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />
                 </div>
                 <div className="p-5">
@@ -64,7 +69,7 @@ export default function BrillantrингePage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <p className="font-sans text-kenju-muted mb-6">Alle Brillantringe sind auf Anfrage individuell anfertigbar.</p>
+            <p className="font-sans text-kenju-muted mb-6">Alle Brillantringe sind individuell anfertigbar – in Ihrer Wunschgröße und Legierung.</p>
             <Link href="/#termin" className="btn-gold">Individuelle Beratung anfragen</Link>
           </div>
         </div>
@@ -79,12 +84,12 @@ export default function BrillantrингePage() {
               <div className="divider-gold mb-6" />
               <ul className="space-y-3 font-sans text-sm text-kenju-muted">
                 {[
-                  'IGI- & GIA-zertifizierte Diamanten',
+                  '585 Gelbgold, Weißgold & Roségold',
+                  'Cluster-, Halo- und Solitär-Fassungen',
                   'Individuelle Anfertigungen nach Wunsch',
-                  'Kostenlose Umarbeitung bestehender Ringe',
-                  'Gratis Reinigung & Inspektion',
-                  'Zertifikat für jeden Brillanten',
-                  'Faire Preise ohne Aufschläge',
+                  'Kostenlose Ringgrößenbestimmung',
+                  'Gravuren auf Anfrage',
+                  'Faire Preise ohne versteckte Aufschläge',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-kenju-gold shrink-0" />
@@ -94,17 +99,17 @@ export default function BrillantrингePage() {
               </ul>
             </div>
             <div>
-              <h2 className="font-serif text-3xl text-kenju-cream mb-4">Die 4 Cs Ihres Brillanten</h2>
+              <h2 className="font-serif text-3xl text-kenju-cream mb-4">Unsere Goldlegierungen</h2>
               <div className="divider-gold mb-6" />
               <div className="space-y-4">
                 {[
-                  { c: 'Cut', desc: 'Der Schliff bestimmt das Feuer und die Brillanz des Diamanten.' },
-                  { c: 'Color', desc: 'Von D (farblos) bis Z – wir empfehlen D–H für strahlenden Glanz.' },
-                  { c: 'Clarity', desc: 'IF bis SI – mit bloßem Auge makellose Qualitäten ab VS.' },
-                  { c: 'Carat', desc: 'Das Gewicht des Diamanten – wir beraten Sie zur idealen Größe.' },
+                  { c: '585 Gelbgold', desc: '14 Karat Gelbgold – der Klassiker für warmen Goldglanz.' },
+                  { c: '585 Weißgold', desc: '14 Karat Weißgold – modern, rhodiniert für brillanten Glanz.' },
+                  { c: '585 Roségold', desc: '14 Karat Roségold – romantisch und zeitlos elegant.' },
+                  { c: '750 Gold', desc: '18 Karat Gold – maximale Reinheit auf Anfrage erhältlich.' },
                 ].map((item) => (
                   <div key={item.c} className="flex gap-4">
-                    <span className="font-serif text-xl gold-text shrink-0 w-24">{item.c}</span>
+                    <span className="font-serif text-base gold-text shrink-0 w-32">{item.c}</span>
                     <p className="font-sans text-xs text-kenju-muted">{item.desc}</p>
                   </div>
                 ))}

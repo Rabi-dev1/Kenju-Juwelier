@@ -42,12 +42,29 @@ export const metadata: Metadata = {
     title: 'KenJu Juwelier Bielefeld – Brillantringe & Goldankauf',
     description: 'Exklusiver Schmuck, Brillantringe und fairer Goldankauf in Bielefeld. Meisterbetrieb mit Tradition.',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'KenJu Juwelier Bielefeld – Brillantringe & Goldankauf',
+    description: 'Exklusiver Schmuck, Brillantringe und fairer Goldankauf in Bielefeld. Meisterbetrieb mit Tradition.',
+  },
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
   alternates: { canonical: 'https://kenju-juwelier.de' },
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'KenJu Juwelier',
+  url: 'https://kenju-juwelier.de',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://kenju-juwelier.de/?s={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 const jsonLd = {
@@ -85,10 +102,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body>

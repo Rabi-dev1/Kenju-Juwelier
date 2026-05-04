@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Impressum | KenJu Juwelier Berlin',
+  title: 'Impressum | KenJu Juwelier Bielefeld',
   robots: { index: false },
 };
 
@@ -17,9 +17,9 @@ export default function ImpressumPage() {
           <section>
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">Angaben gemäß § 5 TMG</h2>
             <p>
-              KenJu Juwelier GmbH<br />
-              Musterstraße 12<br />
-              10115 Berlin<br />
+              KenJu Juwelier<br />
+              Bielefeld<br />
+              Nordrhein-Westfalen<br />
               Deutschland
             </p>
           </section>
@@ -27,7 +27,7 @@ export default function ImpressumPage() {
           <section>
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">Kontakt</h2>
             <p>
-              Telefon: <a href="tel:+49301234567" className="text-kenju-gold hover:underline">+49 30 123 456 7</a><br />
+              Telefon: <a href="tel:+4917663284312" className="text-kenju-gold hover:underline">+49 176 63284312</a><br />
               E-Mail: <a href="mailto:info@kenju-juwelier.de" className="text-kenju-gold hover:underline">info@kenju-juwelier.de</a>
             </p>
           </section>
@@ -35,7 +35,7 @@ export default function ImpressumPage() {
           <section>
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">Handelsregister</h2>
             <p>
-              Registergericht: Amtsgericht Berlin-Charlottenburg<br />
+              Registergericht: Amtsgericht Bielefeld<br />
               Registernummer: HRB 123456 B
             </p>
           </section>
@@ -53,7 +53,7 @@ export default function ImpressumPage() {
           <section>
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">Berufsrechtliche Regelungen</h2>
             <p>
-              Goldschmiede-Innung Berlin<br />
+              Goldschmiede-Innung Ostwestfalen-Lippe<br />
               Berufsordnung der Goldschmiede<br />
               Meisterbetrieb nach §1 HwO
             </p>

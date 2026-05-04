@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Datenschutzerklärung | KenJu Juwelier Berlin',
+  title: 'Datenschutzerklärung | KenJu Juwelier Bielefeld',
   robots: { index: false },
 };
 
@@ -27,9 +27,9 @@ export default function DatenschutzPage() {
           <section>
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">2. Verantwortlicher</h2>
             <p>
-              KenJu Juwelier GmbH<br />
-              Musterstraße 12, 10115 Berlin<br />
-              Telefon: +49 30 123 456 7<br />
+              KenJu Juwelier<br />
+              Bielefeld, Nordrhein-Westfalen<br />
+              Telefon: +49 176 63284312<br />
               E-Mail: info@kenju-juwelier.de
             </p>
           </section>

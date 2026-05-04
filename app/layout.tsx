@@ -77,7 +77,9 @@ const jsonLd = {
   email: 'info@kenju-juwelier.de',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Bahnhofstraße 28',
     addressLocality: 'Bielefeld',
+    postalCode: '33602',
     addressRegion: 'NRW',
     addressCountry: 'DE',
   },

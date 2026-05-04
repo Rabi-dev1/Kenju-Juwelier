@@ -90,7 +90,7 @@ export default function Footer() {
           <div>
             <h3 className="font-sans text-xs tracking-widest uppercase text-kenju-gold mb-5">Kontakt</h3>
             <ul className="space-y-3 font-sans text-sm text-kenju-muted">
-              <li>Bielefeld,<br />Nordrhein-Westfalen</li>
+              <li>Bahnhofstraße 28<br />33602 Bielefeld</li>
               <li>
                 <a href="tel:+4917663284312" className="hover:text-kenju-gold transition-colors">
                   +49 176 63284312

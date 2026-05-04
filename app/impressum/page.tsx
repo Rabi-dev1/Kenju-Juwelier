@@ -18,8 +18,8 @@ export default function ImpressumPage() {
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">Angaben gemäß § 5 TMG</h2>
             <p>
               KenJu Juwelier<br />
-              Bielefeld<br />
-              Nordrhein-Westfalen<br />
+              Bahnhofstraße 28<br />
+              33602 Bielefeld<br />
               Deutschland
             </p>
           </section>

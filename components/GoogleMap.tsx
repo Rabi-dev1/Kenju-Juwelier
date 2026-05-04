@@ -19,7 +19,7 @@ export default function GoogleMap() {
                 </div>
                 <div>
                   <p className="font-sans text-xs tracking-widest uppercase text-kenju-gold mb-1">Adresse</p>
-                  <p className="font-sans text-sm text-kenju-cream">Bielefeld,<br />Nordrhein-Westfalen</p>
+                  <p className="font-sans text-sm text-kenju-cream">Bahnhofstraße 28<br />33602 Bielefeld</p>
                 </div>
               </div>
 
@@ -58,7 +58,7 @@ export default function GoogleMap() {
           {/* Map embed placeholder – replace src with your Google Maps embed URL */}
           <div className="relative h-80 lg:h-96 gold-border overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78187.37039649808!2d8.4692898!3d52.0302273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba3d9aee2a8d11%3A0x1ca9d940a31e1aa4!2sBielefeld!5e0!3m2!1sde!2sde!4v1680000000000!5m2!1sde!2sde"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.8!2d8.5333!3d52.0253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba3d8b2e2e2e2f%3A0x0!2sBahnhofstra%C3%9Fe%2028%2C%2033602%20Bielefeld!5e0!3m2!1sde!2sde!4v1680000000000!5m2!1sde!2sde"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}

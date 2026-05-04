@@ -1,20 +1,20 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 
 export const metadata: Metadata = {
-  title: 'Halsketten – Goldketten mit Anhänger in 585 Gold | KenJu Juwelier',
-  description: 'Exklusive Goldketten in 585 Gelbgold. Engelsflügel-Kette, Traumfänger-Anhänger, Herzkette, layered Kreisanhänger und Schlangenkette mit Kugeln.',
-  keywords: ['Halsketten Gold', 'Goldkette Anhänger', 'Engelsflügel Kette', 'Traumfänger Gold', '585 Gelbgold'],
+  title: 'Halsketten â€“ Goldketten mit AnhÃ¤nger in 585 Gold | KenJu Juwelier',
+  description: 'Exklusive Goldketten in 585 Gelbgold. EngelsflÃ¼gel-Kette, TraumfÃ¤nger-AnhÃ¤nger, Herzkette, layered KreisanhÃ¤nger und Schlangenkette mit Kugeln.',
+  keywords: ['Halsketten Gold', 'Goldkette AnhÃ¤nger', 'EngelsflÃ¼gel Kette', 'TraumfÃ¤nger Gold', '585 Gelbgold'],
   alternates: { canonical: 'https://kenju-juwelier.de/halsketten' },
 };
 
 const items = [
-  { name: 'Engelsflügel-Kette',       material: '585 Gelbgold', detail: 'Großer Flügel-Anhänger #GOLDKETTE',        img: '/images/kette-engelsfluegel.jpg' },
-  { name: 'Traumfänger-Kette',         material: '585 Gelbgold', detail: 'Dreamcatcher mit Kristall-Federn',         img: '/images/kette-traumfaenger.jpg' },
-  { name: 'Herzkette',                 material: '585 Gelbgold', detail: 'Kugel-Herz Anhänger, zarte Ankerkette',    img: '/images/kette-herz.jpg' },
-  { name: 'Layered Kreis-Anhänger',    material: '585 Gelbgold', detail: 'Mit Rubin, Smaragd & Kristall',            img: '/images/kette-kreis.jpg' },
+  { name: 'EngelsflÃ¼gel-Kette',       material: '585 Gelbgold', detail: 'GroÃŸer FlÃ¼gel-AnhÃ¤nger #GOLDKETTE',        img: '/images/kette-engelsfluegel.jpg' },
+  { name: 'TraumfÃ¤nger-Kette',         material: '585 Gelbgold', detail: 'Dreamcatcher mit Kristall-Federn',         img: '/images/kette-traumfaenger.jpg' },
+  { name: 'Herzkette',                 material: '585 Gelbgold', detail: 'Kugel-Herz AnhÃ¤nger, zarte Ankerkette',    img: '/images/kette-herz.jpg' },
+  { name: 'Layered Kreis-AnhÃ¤nger',    material: '585 Gelbgold', detail: 'Mit Rubin, Smaragd & Kristall',            img: '/images/kette-kreis.jpg' },
   { name: 'Schlangenkette mit Kugeln', material: '585 Gelbgold', detail: 'Choker + lange Version, gedrehte Kugeln',  img: '/images/kette-schlange.jpg' },
 ];
 
@@ -23,8 +23,8 @@ export default function HalskettenPage() {
     <>
       <CategoryHero
         title="Halsketten"
-        subtitle="Feine Ketten & Anhänger"
-        description="Goldketten mit einzigartigen Anhängern in 585 Gelbgold – von der zarten Herzkette bis zur auffälligen Engelsflügel-Kette."
+        subtitle="Feine Ketten & AnhÃ¤nger"
+        description="Goldketten mit einzigartigen AnhÃ¤ngern in 585 Gelbgold â€“ von der zarten Herzkette bis zur auffÃ¤lligen EngelsflÃ¼gel-Kette."
         imageSrc="/images/kette-engelsfluegel.jpg"
         imageAlt="Goldhalsketten KenJu Juwelier 585 Gelbgold"
         breadcrumb="Halsketten"
@@ -40,6 +40,7 @@ export default function HalskettenPage() {
                     src={p.img}
                     alt={p.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />

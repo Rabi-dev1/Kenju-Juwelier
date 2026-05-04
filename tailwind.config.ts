@@ -24,8 +24,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif:  ['Cormorant Garamond', 'Georgia', 'serif'],
-        sans:   ['Inter', 'system-ui', 'sans-serif'],
+        serif:  ['var(--font-cormorant)', 'Georgia', 'serif'],
+        sans:   ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gold-gradient':     'linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #A6873A 100%)',

@@ -26,6 +26,7 @@ export default function HomePage() {
             src="/images/hero-ladenfront.jpg"
             alt="KenJu Juwelier Laden"
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
             priority
           />
@@ -109,6 +110,7 @@ export default function HomePage() {
                       src={cat.img}
                       alt={cat.title}
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-kenju-black/80 to-transparent" />
@@ -139,6 +141,7 @@ export default function HomePage() {
                 src="/images/brillant-set-luxus.jpg"
                 alt="KenJu Juwelier Brillant-Kollektion"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-kenju-black/30 to-transparent" />
@@ -186,6 +189,7 @@ export default function HomePage() {
             src="/images/hero-ladenfront.jpg"
             alt="KenJu Juwelier Laden"
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-kenju-black via-kenju-black/80 to-kenju-black" />

@@ -1,20 +1,20 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 
 export const metadata: Metadata = {
-  title: 'Gold- & Silberkreuze – Hochwertige Kreuze | KenJu Juwelier',
-  description: 'Handgefertigte Goldkreuze in 585 Gelbgold. Filigrane Kreuze, Dog-Tag Kreuz-Anhänger und klassische Designs. Persönliche Gravur möglich.',
-  keywords: ['Kreuze Gold', 'Goldkreuz', 'Kreuz Anhänger', 'Juwelier', '585 Gelbgold'],
+  title: 'Gold- & Silberkreuze â€“ Hochwertige Kreuze | KenJu Juwelier',
+  description: 'Handgefertigte Goldkreuze in 585 Gelbgold. Filigrane Kreuze, Dog-Tag Kreuz-AnhÃ¤nger und klassische Designs. PersÃ¶nliche Gravur mÃ¶glich.',
+  keywords: ['Kreuze Gold', 'Goldkreuz', 'Kreuz AnhÃ¤nger', 'Juwelier', '585 Gelbgold'],
   alternates: { canonical: 'https://kenju-juwelier.de/kreuze' },
 };
 
 const items = [
   { name: 'Filigran-Kreuz',    material: '585 Gelbgold', detail: 'Handgraviertes Flechtmuster',      img: '/images/kreuz-filigran.jpg' },
-  { name: 'Filigran-Kreuz II', material: '585 Gelbgold', detail: 'Verschiedene Größen erhältlich',   img: '/images/kreuz-filigran.jpg' },
+  { name: 'Filigran-Kreuz II', material: '585 Gelbgold', detail: 'Verschiedene GrÃ¶ÃŸen erhÃ¤ltlich',   img: '/images/kreuz-filigran.jpg' },
   { name: 'Dog-Tag Kreuz',     material: '585 Gelbgold', detail: 'Mattiert mit Kreuz-Gravur, #NEW',  img: '/images/kreuz-platte.jpg' },
-  { name: 'Kreuz-Platte',      material: '585 Gelbgold', detail: '3 Größen: S, M, L',               img: '/images/kreuz-platte.jpg' },
+  { name: 'Kreuz-Platte',      material: '585 Gelbgold', detail: '3 GrÃ¶ÃŸen: S, M, L',               img: '/images/kreuz-platte.jpg' },
 ];
 
 export default function KreuzePage() {
@@ -23,7 +23,7 @@ export default function KreuzePage() {
       <CategoryHero
         title="Kreuze"
         subtitle="Glaube & Eleganz"
-        description="Handgefertigte Goldkreuze in 585 Gelbgold – von filigranen Flechtmustern bis zu modernen Dog-Tag Designs. Ein Symbol für Glaube und Tradition."
+        description="Handgefertigte Goldkreuze in 585 Gelbgold â€“ von filigranen Flechtmustern bis zu modernen Dog-Tag Designs. Ein Symbol fÃ¼r Glaube und Tradition."
         imageSrc="/images/kreuz-filigran.jpg"
         imageAlt="Goldkreuze KenJu Juwelier 585 Gelbgold"
         breadcrumb="Kreuze"
@@ -39,6 +39,7 @@ export default function KreuzePage() {
                     src={p.img}
                     alt={p.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />
@@ -54,12 +55,12 @@ export default function KreuzePage() {
 
           <div className="max-w-2xl mx-auto text-center">
             <p className="section-subtitle mb-4">Handwerk & Tradition</p>
-            <h2 className="font-serif text-3xl text-kenju-cream mb-4">Kreuze mit persönlicher Bedeutung</h2>
+            <h2 className="font-serif text-3xl text-kenju-cream mb-4">Kreuze mit persÃ¶nlicher Bedeutung</h2>
             <div className="divider-gold mx-auto mb-6" />
             <p className="font-sans text-sm text-kenju-muted leading-relaxed mb-8">
-              Unsere Kreuze in 585 Gelbgold werden von Hand gefertigt und können auf Wunsch mit
-              einer persönlichen Gravur versehen oder in individuellen Maßen angefertigt werden.
-              Von der schlichten Eleganz bis zum aufwändigen Flechtmuster – wir realisieren Ihren Wunsch.
+              Unsere Kreuze in 585 Gelbgold werden von Hand gefertigt und kÃ¶nnen auf Wunsch mit
+              einer persÃ¶nlichen Gravur versehen oder in individuellen MaÃŸen angefertigt werden.
+              Von der schlichten Eleganz bis zum aufwÃ¤ndigen Flechtmuster â€“ wir realisieren Ihren Wunsch.
             </p>
             <Link href="/#termin" className="btn-gold">Kreuz individuell anfertigen lassen</Link>
           </div>

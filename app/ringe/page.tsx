@@ -1,20 +1,20 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 
 export const metadata: Metadata = {
-  title: 'Ringe – Goldringe & Eheringe in 585 Gold | KenJu Juwelier',
-  description: 'Hochwertige Ringe in 585 Gelbgold. Solitärringe mit Brillant, Baguette-Ringe mit Farbsteinen (Rubin, Smaragd) und individuelle Anfertigungen.',
-  keywords: ['Ringe', 'Goldringe', 'Solitärring', 'Baguette Ring', 'Rubin Ring', 'Smaragd Ring', '585 Gelbgold'],
+  title: 'Ringe â€“ Goldringe & Eheringe in 585 Gold | KenJu Juwelier',
+  description: 'Hochwertige Ringe in 585 Gelbgold. SolitÃ¤rringe mit Brillant, Baguette-Ringe mit Farbsteinen (Rubin, Smaragd) und individuelle Anfertigungen.',
+  keywords: ['Ringe', 'Goldringe', 'SolitÃ¤rring', 'Baguette Ring', 'Rubin Ring', 'Smaragd Ring', '585 Gelbgold'],
   alternates: { canonical: 'https://kenju-juwelier.de/ringe' },
 };
 
 const items = [
-  { name: 'Solitär-Ring',          material: '585 Gelbgold', detail: 'Mit Zirkonia-Brillant, handgravierter Ringschiene', img: '/images/ring-solitaer.jpg' },
+  { name: 'SolitÃ¤r-Ring',          material: '585 Gelbgold', detail: 'Mit Zirkonia-Brillant, handgravierter Ringschiene', img: '/images/ring-solitaer.jpg' },
   { name: 'Baguette-Ring Rubin',   material: '585 Gelbgold', detail: 'Roter Baguette-Stein, Panzerketten-Schiene',        img: '/images/ring-baguette.jpg' },
-  { name: 'Baguette-Ring Smaragd', material: '585 Gelbgold', detail: 'Grüner Baguette-Stein, florale Gravur',             img: '/images/ring-baguette.jpg' },
-  { name: 'Individueller Ring',    material: '585 Gold',      detail: 'Nach Ihren Wünschen angefertigt',                  img: '/images/ring-solitaer.jpg' },
+  { name: 'Baguette-Ring Smaragd', material: '585 Gelbgold', detail: 'GrÃ¼ner Baguette-Stein, florale Gravur',             img: '/images/ring-baguette.jpg' },
+  { name: 'Individueller Ring',    material: '585 Gold',      detail: 'Nach Ihren WÃ¼nschen angefertigt',                  img: '/images/ring-solitaer.jpg' },
 ];
 
 export default function RingePage() {
@@ -23,7 +23,7 @@ export default function RingePage() {
       <CategoryHero
         title="Ringe"
         subtitle="Zeitlose Eleganz"
-        description="Von klassischen Solitärringen bis zu auffälligen Baguette-Ringen mit Farbsteinen – entdecken Sie unsere Ringkollektion in 585 Gelbgold."
+        description="Von klassischen SolitÃ¤rringen bis zu auffÃ¤lligen Baguette-Ringen mit Farbsteinen â€“ entdecken Sie unsere Ringkollektion in 585 Gelbgold."
         imageSrc="/images/ring-baguette.jpg"
         imageAlt="Goldringe KenJu Juwelier 585 Gelbgold"
         breadcrumb="Ringe"
@@ -39,6 +39,7 @@ export default function RingePage() {
                     src={p.img}
                     alt={p.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />
@@ -52,7 +53,7 @@ export default function RingePage() {
             ))}
           </div>
           <div className="text-center">
-            <p className="font-sans text-kenju-muted mb-6">Alle Ringe sind in Ihrer Wunschgröße erhältlich. Gravuren auf Anfrage.</p>
+            <p className="font-sans text-kenju-muted mb-6">Alle Ringe sind in Ihrer WunschgrÃ¶ÃŸe erhÃ¤ltlich. Gravuren auf Anfrage.</p>
             <Link href="/#termin" className="btn-gold">Ring individuell gestalten</Link>
           </div>
         </div>

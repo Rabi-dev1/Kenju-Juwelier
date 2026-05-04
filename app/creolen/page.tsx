@@ -1,20 +1,20 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 
 export const metadata: Metadata = {
-  title: 'Creolen – Goldcreolen in 585 Gelbgold | KenJu Juwelier',
-  description: 'Exklusive Goldcreolen in 585 Gelbgold. Filigrane Creolen, gedrehte Creolen in 2 Größen und bunte Farbstein-Creolen. Neu #NEW erhältlich.',
+  title: 'Creolen â€“ Goldcreolen in 585 Gelbgold | KenJu Juwelier',
+  description: 'Exklusive Goldcreolen in 585 Gelbgold. Filigrane Creolen, gedrehte Creolen in 2 GrÃ¶ÃŸen und bunte Farbstein-Creolen. Neu #NEW erhÃ¤ltlich.',
   keywords: ['Creolen', 'Goldcreolen', 'Creolen Farbsteine', '585 Gelbgold', 'Juwelier'],
   alternates: { canonical: 'https://kenju-juwelier.de/creolen' },
 };
 
 const items = [
-  { name: 'Filigrane Creolen',          material: '585 Gelbgold', detail: 'Florales Muster, 3 Größen',           img: '/images/creolen-filigran.jpg' },
+  { name: 'Filigrane Creolen',          material: '585 Gelbgold', detail: 'Florales Muster, 3 GrÃ¶ÃŸen',           img: '/images/creolen-filigran.jpg' },
   { name: 'Gedrehte Creolen klein',      material: '585 Gelbgold', detail: 'Twisted Design, #NEW',               img: '/images/creolen-gedreht.jpg' },
-  { name: 'Gedrehte Creolen groß',       material: '585 Gelbgold', detail: 'Statement-Piece, #NEW',              img: '/images/creolen-gedreht.jpg' },
-  { name: 'Creolen Bunt #FARBSTEINE',    material: '585 Gelbgold', detail: 'Regenbogen-Farbsteine, 3 Größen',   img: '/images/creolen-farbsteine.jpg' },
+  { name: 'Gedrehte Creolen groÃŸ',       material: '585 Gelbgold', detail: 'Statement-Piece, #NEW',              img: '/images/creolen-gedreht.jpg' },
+  { name: 'Creolen Bunt #FARBSTEINE',    material: '585 Gelbgold', detail: 'Regenbogen-Farbsteine, 3 GrÃ¶ÃŸen',   img: '/images/creolen-farbsteine.jpg' },
 ];
 
 export default function CreolenPage() {
@@ -23,7 +23,7 @@ export default function CreolenPage() {
       <CategoryHero
         title="Creolen"
         subtitle="Klassisch & Modern"
-        description="Von filigranen Miniaturcreolen bis zu bunten Farbstein-Creolen – unsere Kollektion in 585 Gelbgold vereint Klassik und zeitgenössisches Design."
+        description="Von filigranen Miniaturcreolen bis zu bunten Farbstein-Creolen â€“ unsere Kollektion in 585 Gelbgold vereint Klassik und zeitgenÃ¶ssisches Design."
         imageSrc="/images/creolen-gedreht.jpg"
         imageAlt="Goldcreolen KenJu Juwelier 585 Gelbgold"
         breadcrumb="Creolen"
@@ -39,6 +39,7 @@ export default function CreolenPage() {
                     src={p.img}
                     alt={p.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />

@@ -3,24 +3,71 @@ import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Goldankauf Berlin – Fairer Goldpreis Sofort | KenJu Juwelier',
-  description: 'Goldankauf in Berlin zum Tagespreis. Wir kaufen Gold, Silber, Platin, Brillanten und Schmuck. Sofortige Auszahlung in bar. Keine versteckten Kosten. KenJu Juwelier.',
-  keywords: ['Goldankauf Berlin', 'Gold verkaufen Berlin', 'Goldpreis', 'Schmuck verkaufen', 'Edelmetall Ankauf', 'Juwelier Berlin'],
+  title: 'Goldankauf Bielefeld – Fairer Goldpreis Sofort | KenJu Juwelier',
+  description: 'Goldankauf in Bielefeld zum Tagespreis. Wir kaufen Gold, Silber, Platin, Brillanten und Schmuck. Sofortige Auszahlung in bar. Keine versteckten Kosten. KenJu Juwelier.',
+  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Goldpreis', 'Schmuck verkaufen', 'Edelmetall Ankauf', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/goldankauf' },
 };
 
-const jsonLd = {
+const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Goldankauf',
   description: 'Fairer Goldankauf zum Tagespreis. Wir kaufen Gold, Silber, Platin, Brillanten und Schmuck.',
   provider: { '@type': 'JewelryStore', name: 'KenJu Juwelier' },
   serviceType: 'Goldankauf',
-  areaServed: { '@type': 'City', name: 'Berlin' },
+  areaServed: { '@type': 'City', name: 'Bielefeld' },
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Was brauche ich beim Goldankauf?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sie benötigen lediglich einen gültigen Personalausweis oder Reisepass. Alle weiteren Schritte erledigen wir gemeinsam.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie wird der Goldpreis berechnet?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Der Ankaufspreis richtet sich nach dem tagesaktuellen Goldkurs (LBMA Fix). Wir bieten Ihnen den transparenten Marktpreis ohne versteckte Abzüge.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Welche Arten von Gold kaufen Sie an?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Wir kaufen alle Arten von Gold und Edelmetallen an: Goldschmuck (585er und 750er), Goldmünzen (Krügerrand, Maple Leaf), Zahngold, Silber, Platin sowie Brillanten und Uhren.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie schnell erhalte ich mein Geld?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Bei Einigung zahlen wir sofort in bar aus – noch am selben Tag. Es gibt keine Wartezeiten oder Überweisungen.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Ist die Bewertung kostenlos?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ja, die Bewertung Ihres Schmucks oder Ihrer Edelmetalle ist vollständig kostenlos und unverbindlich.',
+      },
+    },
+  ],
 };
 
 const steps = [
-  { step: '01', title: 'Termin vereinbaren', desc: 'Buchen Sie einen kostenlosen Beratungstermin in unserem Geschäft in Berlin Mitte.' },
+  { step: '01', title: 'Termin vereinbaren', desc: 'Buchen Sie einen kostenlosen Beratungstermin in unserem Geschäft in Bielefeld.' },
   { step: '02', title: 'Kostenlose Bewertung', desc: 'Unsere Experten bewerten Ihren Schmuck, Ihr Gold oder Ihre Edelmetalle kostenlos und unverbindlich.' },
   { step: '03', title: 'Faires Angebot', desc: 'Sie erhalten ein transparentes Angebot auf Basis des tagesaktuellen Marktpreises.' },
   { step: '04', title: 'Sofortige Auszahlung', desc: 'Bei Einigung zahlen wir sofort in bar aus. Kein Warten, keine versteckten Gebühren.' },
@@ -31,16 +78,17 @@ const materials = [
   { name: 'Silberschmuck', items: '925er Sterlingsilber, 999er Feinsilber' },
   { name: 'Platin', items: 'Alle Legierungen, Platinschmuck' },
   { name: 'Brillanten & Diamanten', items: 'Lose und gefasste Steine' },
-  { name: 'Goldmünzen', dest: 'Krügerrand, Maple Leaf, Wiener Philharmoniker' },
-  { name: 'Uhren', dest: 'Rolex, Patek Philippe, Omega und mehr' },
-  { name: 'Zahngold', dest: 'Goldkronen, Brücken und Prothesen' },
-  { name: 'Altgold', dest: 'Gebrochener Schmuck, alte Stücke' },
+  { name: 'Goldmünzen', items: 'Krügerrand, Maple Leaf, Wiener Philharmoniker' },
+  { name: 'Uhren', items: 'Rolex, Patek Philippe, Omega und mehr' },
+  { name: 'Zahngold', items: 'Goldkronen, Brücken und Prothesen' },
+  { name: 'Altgold', items: 'Gebrochener Schmuck, alte Stücke' },
 ];
 
 export default function GoldankaufPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 overflow-hidden bg-hero-gradient">
@@ -61,7 +109,7 @@ export default function GoldankaufPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-goldankauf" className="btn-gold">Jetzt Termin buchen</Link>
-            <a href="tel:+49301234567" className="btn-outline-gold">+49 30 123 456 7</a>
+            <a href="tel:+4917663284312" className="btn-outline-gold">+49 176 63284312</a>
           </div>
         </div>
       </section>
@@ -116,21 +164,43 @@ export default function GoldankaufPage() {
             {materials.map((m) => (
               <div key={m.name} className="card-dark p-5">
                 <h3 className="font-serif text-lg text-kenju-gold mb-2">{m.name}</h3>
-                <p className="font-sans text-xs text-kenju-muted">{m.items ?? m.dest}</p>
+                <p className="font-sans text-xs text-kenju-muted">{m.items}</p>
               </div>
             ))}
           </div>
           <div className="mt-12 p-6 border border-kenju-gold/20 bg-kenju-black/50">
             <p className="font-sans text-sm text-kenju-muted text-center">
               <strong className="text-kenju-gold">Wichtiger Hinweis:</strong> Der Ankaufspreis richtet sich nach dem tagesaktuellen Goldkurs (LBMA Fix).
-              Alle Bewertungen sind kostenlos und unverbindlich. Bring Sie Ihren Personalausweis mit.
+              Alle Bewertungen sind kostenlos und unverbindlich. Bringen Sie Ihren Personalausweis mit.
             </p>
           </div>
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-24 bg-kenju-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="section-subtitle mb-3">Häufige Fragen</p>
+            <h2 className="section-title">FAQ – Goldankauf</h2>
+            <div className="divider-gold mx-auto mt-4" />
+          </div>
+          <div className="space-y-4">
+            {faqJsonLd.mainEntity.map((faq, i) => (
+              <details key={i} className="card-dark p-5 group">
+                <summary className="font-serif text-lg text-kenju-cream cursor-pointer list-none flex items-center justify-between gap-4">
+                  {faq.name}
+                  <span className="text-kenju-gold shrink-0 text-xl">+</span>
+                </summary>
+                <p className="font-sans text-sm text-kenju-muted mt-4 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Appointment */}
-      <section className="py-24 bg-kenju-black" id="termin-goldankauf">
+      <section className="py-24 bg-kenju-navy" id="termin-goldankauf">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="section-subtitle mb-3">Kostenlose Bewertung</p>
@@ -143,13 +213,13 @@ export default function GoldankaufPage() {
       </section>
 
       {/* SEO Text */}
-      <section className="py-16 bg-kenju-navy">
+      <section className="py-16 bg-kenju-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl text-kenju-cream mb-6">Goldankauf Berlin – Ihr vertrauensvoller Partner</h2>
+          <h2 className="font-serif text-3xl text-kenju-cream mb-6">Goldankauf Bielefeld – Ihr vertrauensvoller Partner</h2>
           <div className="divider-gold mb-8" />
           <div className="prose prose-invert font-sans text-sm text-kenju-muted leading-relaxed space-y-4">
             <p>
-              KenJu Juwelier ist seit über 20 Jahren der vertrauenswürdige Ansprechpartner für <strong className="text-kenju-cream">Goldankauf in Berlin</strong>.
+              KenJu Juwelier ist seit über 20 Jahren der vertrauenswürdige Ansprechpartner für <strong className="text-kenju-cream">Goldankauf in Bielefeld</strong>.
               Wir kaufen sämtliche Edelmetalle und Schmuckstücke – vom alten Erbschmuck bis zur Goldmünze – zu fairen Marktpreisen an.
             </p>
             <p>
@@ -158,7 +228,7 @@ export default function GoldankaufPage() {
             </p>
             <p>
               Für den Goldankauf benötigen Sie lediglich einen gültigen Personalausweis. Alle weiteren Schritte erledigen wir gemeinsam
-              in einem persönlichen Gespräch – diskret, schnell und professionell in unserem Atelier in Berlin Mitte.
+              in einem persönlichen Gespräch – diskret, schnell und professionell in unserem Atelier in Bielefeld.
             </p>
           </div>
         </div>

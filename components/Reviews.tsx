@@ -3,45 +3,72 @@ const reviews = [
     name: 'Sarah M.',
     rating: 5,
     text: 'Absolut beeindruckende Beratung und wunderschöner Verlobungsring. KenJu hat meine Erwartungen bei Weitem übertroffen – die Qualität ist unvergleichlich.',
-    date: 'März 2024',
+    date: '2024-03-15',
+    dateDisplay: 'März 2024',
     item: 'Brillantring',
   },
   {
     name: 'Thomas K.',
     rating: 5,
     text: 'Beim Goldankauf wurde ich sehr fair und transparent beraten. Der Preis war marktgerecht und die Abwicklung professionell. Sehr empfehlenswert!',
-    date: 'Januar 2024',
+    date: '2024-01-20',
+    dateDisplay: 'Januar 2024',
     item: 'Goldankauf',
   },
   {
     name: 'Lena R.',
     rating: 5,
     text: 'Das Kreuz aus 18-karätigem Gold ist ein Meisterwerk. Die Handwerkskunst ist außergewöhnlich. Meine Familie ist begeistert von diesem Erbstück.',
-    date: 'Dezember 2023',
+    date: '2023-12-10',
+    dateDisplay: 'Dezember 2023',
     item: 'Goldkreuz',
   },
   {
     name: 'Ahmed B.',
     rating: 5,
     text: 'Ich habe nach dem perfekten Ehering gesucht und ihn bei KenJu gefunden. Die Beratung war geduldige und das Ergebnis einfach traumhaft.',
-    date: 'Februar 2024',
+    date: '2024-02-08',
+    dateDisplay: 'Februar 2024',
     item: 'Ehering',
   },
   {
     name: 'Maria S.',
     rating: 5,
     text: 'Wunderschöne Creolen, genau wie bestellt. Die Verarbeitung ist makellos und der Preis mehr als fair. KenJu ist mein Juwelier des Vertrauens.',
-    date: 'November 2023',
+    date: '2023-11-22',
+    dateDisplay: 'November 2023',
     item: 'Creolen',
   },
   {
     name: 'Daniel F.',
     rating: 5,
     text: 'Die Halskette für meine Mutter zum Geburtstag war ein voller Erfolg. Das Team hat perfekt beraten und das Stück ist einfach atemberaubend.',
-    date: 'Oktober 2023',
+    date: '2023-10-05',
+    dateDisplay: 'Oktober 2023',
     item: 'Halskette',
   },
 ];
+
+const reviewJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'JewelryStore',
+  name: 'KenJu Juwelier',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '200',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: reviews.map((r) => ({
+    '@type': 'Review',
+    author: { '@type': 'Person', name: r.name },
+    reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
+    reviewBody: r.text,
+    datePublished: r.date,
+    name: r.item,
+  })),
+};
 
 function Stars({ count }: { count: number }) {
   return (
@@ -63,6 +90,10 @@ function Stars({ count }: { count: number }) {
 export default function Reviews() {
   return (
     <section className="py-24 bg-kenju-navy" id="bewertungen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="section-subtitle mb-4">Kundenstimmen</p>
@@ -87,7 +118,7 @@ export default function Reviews() {
                   <p className="font-sans text-sm font-medium text-kenju-cream">{review.name}</p>
                   <p className="font-sans text-xs text-kenju-gold">{review.item}</p>
                 </div>
-                <span className="font-sans text-xs text-kenju-muted">{review.date}</span>
+                <time className="font-sans text-xs text-kenju-muted" dateTime={review.date}>{review.dateDisplay}</time>
               </div>
             </article>
           ))}

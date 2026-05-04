@@ -1,30 +1,46 @@
 import type { Metadata } from 'next';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
+import FloatingButtons from '@/components/FloatingButtons';
 import './globals.css';
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kenju-juwelier.de'),
   title: {
-    default: 'KenJu Juwelier Berlin – Brillantringe, Goldankauf & Exklusiver Schmuck',
-    template: '%s | KenJu Juwelier Berlin',
+    default: 'KenJu Juwelier Bielefeld – Brillantringe, Goldankauf & Exklusiver Schmuck',
+    template: '%s | KenJu Juwelier Bielefeld',
   },
   description:
-    'KenJu Juwelier Berlin – Ihr Spezialist für Brillantringe, Goldankauf, Kreuze, Ringe, Creolen, Armreifen und Halsketten. Meisterbetrieb mit höchster Qualität.',
+    'KenJu Juwelier Bielefeld – Ihr Spezialist für Brillantringe, Goldankauf, Kreuze, Ringe, Creolen, Armreifen und Halsketten. Meisterbetrieb mit höchster Qualität.',
   keywords: [
-    'Juwelier Berlin', 'Goldankauf Berlin', 'Brillantringe', 'Verlobungsringe',
+    'Juwelier Bielefeld', 'Goldankauf Bielefeld', 'Brillantringe', 'Verlobungsringe',
     'Goldschmuck', 'Kreuze Gold', 'Creolen Juwelier', 'Armreifen Gold',
-    'Halsketten Platin', 'Ohrstecker Brillant', 'KenJu', 'Schmuck Berlin',
+    'Halsketten Platin', 'Ohrstecker Brillant', 'KenJu', 'Schmuck Bielefeld',
   ],
   openGraph: {
     type: 'website',
     locale: 'de_DE',
     url: 'https://kenju-juwelier.de',
     siteName: 'KenJu Juwelier',
-    title: 'KenJu Juwelier Berlin – Brillantringe & Goldankauf',
-    description: 'Exklusiver Schmuck, Brillantringe und fairer Goldankauf in Berlin. Meisterbetrieb mit Tradition.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'KenJu Juwelier Berlin' }],
+    title: 'KenJu Juwelier Bielefeld – Brillantringe & Goldankauf',
+    description: 'Exklusiver Schmuck, Brillantringe und fairer Goldankauf in Bielefeld. Meisterbetrieb mit Tradition.',
   },
   robots: {
     index: true,
@@ -32,28 +48,21 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
   alternates: { canonical: 'https://kenju-juwelier.de' },
-  verification: { google: 'YOUR_GOOGLE_VERIFICATION_CODE' },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'JewelryStore',
   name: 'KenJu Juwelier',
-  description: 'Exklusiver Juwelier in Berlin – Brillantringe, Goldankauf, Kreuze, Ringe, Creolen und mehr.',
+  description: 'Exklusiver Juwelier in Bielefeld – Brillantringe, Goldankauf, Kreuze, Ringe, Creolen und mehr.',
   url: 'https://kenju-juwelier.de',
-  telephone: '+49301234567',
+  telephone: '+4917663284312',
   email: 'info@kenju-juwelier.de',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Musterstraße 12',
-    addressLocality: 'Berlin',
-    postalCode: '10115',
+    addressLocality: 'Bielefeld',
+    addressRegion: 'NRW',
     addressCountry: 'DE',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 52.5192,
-    longitude: 13.4050,
   },
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '10:00', closes: '18:30' },
@@ -66,12 +75,15 @@ const jsonLd = {
     reviewCount: '200',
     bestRating: '5',
   },
-  sameAs: [],
+  sameAs: [
+    'https://www.instagram.com/juwelier_kenju/',
+    'https://www.facebook.com/people/Juwelier-KenJu-Bielefeld/100029105127054/',
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de">
+    <html lang="de" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -83,6 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingButtons />
         <CookieBanner />
       </body>
     </html>

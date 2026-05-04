@@ -1,20 +1,20 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 
 export const metadata: Metadata = {
-  title: 'Ohrstecker – Goldohrstecker in 585 Gelbgold | KenJu Juwelier',
-  description: 'Exklusive Goldohrstecker in 585 Gelbgold. Kugelohrstecker in 4 Größen (3mm, 4mm, 6mm, 8mm) – schlicht und elegant für jeden Anlass.',
+  title: 'Ohrstecker â€“ Goldohrstecker in 585 Gelbgold | KenJu Juwelier',
+  description: 'Exklusive Goldohrstecker in 585 Gelbgold. Kugelohrstecker in 4 GrÃ¶ÃŸen (3mm, 4mm, 6mm, 8mm) â€“ schlicht und elegant fÃ¼r jeden Anlass.',
   keywords: ['Ohrstecker', 'Goldohrstecker', 'Kugelohrstecker', '585 Gelbgold', 'Juwelier'],
   alternates: { canonical: 'https://kenju-juwelier.de/ohrstecker' },
 };
 
 const items = [
-  { name: 'Kugel-Ohrstecker 3 mm', material: '585 Gelbgold', detail: 'Für das tägliche Tragen', img: '/images/ohrstecker-kugel.jpg' },
-  { name: 'Kugel-Ohrstecker 4 mm', material: '585 Gelbgold', detail: 'Beliebteste Größe',       img: '/images/ohrstecker-kugel.jpg' },
+  { name: 'Kugel-Ohrstecker 3 mm', material: '585 Gelbgold', detail: 'FÃ¼r das tÃ¤gliche Tragen', img: '/images/ohrstecker-kugel.jpg' },
+  { name: 'Kugel-Ohrstecker 4 mm', material: '585 Gelbgold', detail: 'Beliebteste GrÃ¶ÃŸe',       img: '/images/ohrstecker-kugel.jpg' },
   { name: 'Kugel-Ohrstecker 6 mm', material: '585 Gelbgold', detail: 'Statement-Piece',         img: '/images/ohrstecker-kugel.jpg' },
-  { name: 'Kugel-Ohrstecker 8 mm', material: '585 Gelbgold', detail: 'Große Kugel, maximaler Glanz', img: '/images/ohrstecker-kugel.jpg' },
+  { name: 'Kugel-Ohrstecker 8 mm', material: '585 Gelbgold', detail: 'GroÃŸe Kugel, maximaler Glanz', img: '/images/ohrstecker-kugel.jpg' },
 ];
 
 export default function OhrsteckerPage() {
@@ -23,7 +23,7 @@ export default function OhrsteckerPage() {
       <CategoryHero
         title="Ohrstecker"
         subtitle="Schlicht & Strahlend"
-        description="Klassische Kugel-Ohrstecker in 585 Gelbgold – erhältlich in vier Größen (3, 4, 6 und 8 mm). Zeitlos elegant für jeden Anlass."
+        description="Klassische Kugel-Ohrstecker in 585 Gelbgold â€“ erhÃ¤ltlich in vier GrÃ¶ÃŸen (3, 4, 6 und 8 mm). Zeitlos elegant fÃ¼r jeden Anlass."
         imageSrc="/images/ohrstecker-kugel.jpg"
         imageAlt="Goldohrstecker KenJu Juwelier 585 Gelbgold"
         breadcrumb="Ohrstecker"
@@ -39,6 +39,7 @@ export default function OhrsteckerPage() {
                     src={p.img}
                     alt={p.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-kenju-black to-transparent" />
@@ -58,8 +59,8 @@ export default function OhrsteckerPage() {
               <div className="divider-gold mb-6" />
               <p className="font-sans text-sm text-kenju-muted leading-relaxed mb-6">
                 Unsere Kugel-Ohrstecker in 585 Gelbgold sind ein absoluter Klassiker. Die perfekte Kugelform
-                sorgt für maximalen Glanz – von der zarten 3-mm-Variante für den Alltag bis zum auffälligen
-                8-mm-Stecker als Statement-Piece. Alle Stecker verfügen über sichere Butterfly-Verschlüsse.
+                sorgt fÃ¼r maximalen Glanz â€“ von der zarten 3-mm-Variante fÃ¼r den Alltag bis zum auffÃ¤lligen
+                8-mm-Stecker als Statement-Piece. Alle Stecker verfÃ¼gen Ã¼ber sichere Butterfly-VerschlÃ¼sse.
               </p>
               <Link href="/#termin" className="btn-gold">Ohrstecker anfragen</Link>
             </div>

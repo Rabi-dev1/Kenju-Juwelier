@@ -19,7 +19,7 @@ export default function GoogleMap() {
                 </div>
                 <div>
                   <p className="font-sans text-xs tracking-widest uppercase text-kenju-gold mb-1">Adresse</p>
-                  <p className="font-sans text-sm text-kenju-cream">Musterstraße 12<br />10115 Berlin</p>
+                  <p className="font-sans text-sm text-kenju-cream">Bielefeld,<br />Nordrhein-Westfalen</p>
                 </div>
               </div>
 
@@ -58,7 +58,7 @@ export default function GoogleMap() {
           {/* Map embed placeholder – replace src with your Google Maps embed URL */}
           <div className="relative h-80 lg:h-96 gold-border overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.847899897673!2d13.404953715783548!3d52.51916637981345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e195b6f2a87%3A0xbcfb3f6c51b32a41!2sBerlin%20Mitte!5e0!3m2!1sde!2sde!4v1620000000000!5m2!1sde!2sde"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78187.37039649808!2d8.4692898!3d52.0302273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba3d9aee2a8d11%3A0x1ca9d940a31e1aa4!2sBielefeld!5e0!3m2!1sde!2sde!4v1680000000000!5m2!1sde!2sde"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}

@@ -36,8 +36,8 @@ export default function BrillantringePage() {
         title="Brillantringe"
         subtitle="Unvergessliche Momente"
         description="Brillantringe in 585 Gelbgold und Weißgold – von eleganten Cluster-Ringen bis zu opulenten Luxus-Sets mit Tropfendiamanten."
-        imageSrc="/images/brillantring-cluster-gelb.jpg"
-        imageAlt="Brillantringe KenJu Juwelier 585 Gold Weißgold"
+        imageSrc="/images/brillantringe.jpg"
+        imageAlt="Brillantring unter der Lupe – KenJu Juwelier Bielefeld"
         breadcrumb="Brillantringe"
       />
 

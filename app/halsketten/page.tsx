@@ -25,8 +25,8 @@ export default function HalskettenPage() {
         title="Halsketten"
         subtitle="Feine Ketten & AnhÃ¤nger"
         description="Goldketten mit einzigartigen AnhÃ¤ngern in 585 Gelbgold â€“ von der zarten Herzkette bis zur auffÃ¤lligen EngelsflÃ¼gel-Kette."
-        imageSrc="/images/kette-engelsfluegel.jpg"
-        imageAlt="Goldhalsketten KenJu Juwelier 585 Gelbgold"
+        imageSrc="/images/halsketten.jpg"
+        imageAlt="Paar hält Händchen – Halsketten KenJu Juwelier Bielefeld"
         breadcrumb="Halsketten"
       />
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 
@@ -92,10 +93,17 @@ export default function GoldankaufPage() {
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 overflow-hidden bg-hero-gradient">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #C9A84C 1px, transparent 0)`, backgroundSize: '40px 40px' }}
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/goldankauf.jpg"
+            alt="Gold in der Schmelze – Goldankauf KenJu Juwelier Bielefeld"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-25"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-kenju-black/70 via-kenju-black/60 to-kenju-black" />
+        </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-subtitle mb-4">Diskret & Professionell</p>
           <h1 className="font-serif text-6xl md:text-7xl font-light mb-6">

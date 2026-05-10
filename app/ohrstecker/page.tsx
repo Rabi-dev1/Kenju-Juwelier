@@ -24,8 +24,8 @@ export default function OhrsteckerPage() {
         title="Ohrstecker"
         subtitle="Schlicht & Strahlend"
         description="Klassische Kugel-Ohrstecker in 585 Gelbgold â€“ erhÃ¤ltlich in vier GrÃ¶ÃŸen (3, 4, 6 und 8 mm). Zeitlos elegant fÃ¼r jeden Anlass."
-        imageSrc="/images/ohrstecker-kugel.jpg"
-        imageAlt="Goldohrstecker KenJu Juwelier 585 Gelbgold"
+        imageSrc="/images/ohrstecker.jpg"
+        imageAlt="Juwelier Beratung Ohrstecker – KenJu Juwelier Bielefeld"
         breadcrumb="Ohrstecker"
       />
 

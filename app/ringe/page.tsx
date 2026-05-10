@@ -24,8 +24,8 @@ export default function RingePage() {
         title="Ringe"
         subtitle="Zeitlose Eleganz"
         description="Von klassischen SolitÃ¤rringen bis zu auffÃ¤lligen Baguette-Ringen mit Farbsteinen â€“ entdecken Sie unsere Ringkollektion in 585 Gelbgold."
-        imageSrc="/images/ring-baguette.jpg"
-        imageAlt="Goldringe KenJu Juwelier 585 Gelbgold"
+        imageSrc="/images/ringe.jpg"
+        imageAlt="Ring-Display KenJu Juwelier Bielefeld"
         breadcrumb="Ringe"
       />
 

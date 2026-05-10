@@ -24,8 +24,8 @@ export default function KreuzePage() {
         title="Kreuze"
         subtitle="Glaube & Eleganz"
         description="Handgefertigte Goldkreuze in 585 Gelbgold â€“ von filigranen Flechtmustern bis zu modernen Dog-Tag Designs. Ein Symbol fÃ¼r Glaube und Tradition."
-        imageSrc="/images/kreuz-filigran.jpg"
-        imageAlt="Goldkreuze KenJu Juwelier 585 Gelbgold"
+        imageSrc="/images/kreuze.jpg"
+        imageAlt="Goldschmied am Werktisch – KenJu Juwelier Bielefeld"
         breadcrumb="Kreuze"
       />
 

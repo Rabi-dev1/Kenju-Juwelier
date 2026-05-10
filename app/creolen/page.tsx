@@ -24,8 +24,8 @@ export default function CreolenPage() {
         title="Creolen"
         subtitle="Klassisch & Modern"
         description="Von filigranen Miniaturcreolen bis zu bunten Farbstein-Creolen â€“ unsere Kollektion in 585 Gelbgold vereint Klassik und zeitgenÃ¶ssisches Design."
-        imageSrc="/images/creolen-gedreht.jpg"
-        imageAlt="Goldcreolen KenJu Juwelier 585 Gelbgold"
+        imageSrc="/images/creolen.jpg"
+        imageAlt="Beleuchtete Schmuckvitrine – KenJu Juwelier Bielefeld"
         breadcrumb="Creolen"
       />
 

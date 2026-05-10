@@ -24,8 +24,8 @@ export default function ArmreifenPage() {
         title="Armreifen"
         subtitle="Eleganz am Handgelenk"
         description="Unsere Armreifen und ArmbÃ¤nder in 585 Gelbgold und RosÃ©gold â€“ vom organischen Wellen-Armreif bis zum feinen RosÃ©gold-Armband."
-        imageSrc="/images/armreif-welle.jpg"
-        imageAlt="Goldarmreifen KenJu Juwelier 585 Gelbgold"
+        imageSrc="/images/armreifen.jpg"
+        imageAlt="Juwelier mit Schmucktablett – KenJu Juwelier Bielefeld"
         breadcrumb="Armreifen"
       />
 

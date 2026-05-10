@@ -4,14 +4,13 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const nav = [
-  { label: 'Kreuze',        href: '/kreuze' },
-  { label: 'Ringe',         href: '/ringe' },
-  { label: 'Ohrstecker',    href: '/ohrstecker' },
-  { label: 'Creolen',       href: '/creolen' },
-  { label: 'Armreifen',     href: '/armreifen' },
-  { label: 'Halsketten',    href: '/halsketten' },
-  { label: 'Brillantringe', href: '/brillantringe' },
-  { label: 'Goldankauf',    href: '/goldankauf' },
+  { label: 'Ringe',       href: '/ringe' },
+  { label: 'Trauringe',   href: '/trauringe' },
+  { label: 'Ohrringe',    href: '/ohrringe' },
+  { label: 'Halsketten',  href: '/halsketten' },
+  { label: 'Armreifen',   href: '/armreifen' },
+  { label: 'Uhren',       href: '/uhren' },
+  { label: 'Goldankauf',  href: '/goldankauf' },
 ];
 
 export default function Header() {

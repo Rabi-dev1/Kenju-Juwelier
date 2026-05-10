@@ -6,6 +6,14 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      { source: '/ohrstecker',   destination: '/ohrringe',   permanent: true },
+      { source: '/creolen',      destination: '/ohrringe',   permanent: true },
+      { source: '/brillantringe', destination: '/ringe',     permanent: true },
+      { source: '/kreuze',       destination: '/halsketten', permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

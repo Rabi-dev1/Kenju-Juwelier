@@ -5,14 +5,13 @@ import GoogleMap from '@/components/GoogleMap';
 import AppointmentForm from '@/components/AppointmentForm';
 
 const categories = [
-  { title: 'Kreuze',        desc: 'Goldene Kreuze in höchster Handwerkskunst.',                href: '/kreuze',        img: '/images/kreuz-filigran.jpg',          icon: '✝' },
-  { title: 'Ringe',         desc: 'Eheringe, Siegelringe und individuelle Unikate.',           href: '/ringe',         img: '/images/ring-baguette.jpg',            icon: '◉' },
-  { title: 'Ohrstecker',    desc: 'Brillant- und Edelsteinohrstecker für jeden Anlass.',       href: '/ohrstecker',    img: '/images/ohrstecker-kugel.jpg',         icon: '◆' },
-  { title: 'Creolen',       desc: 'Klassische und moderne Creolen in Gold.',                   href: '/creolen',       img: '/images/creolen-gedreht.jpg',          icon: '◯' },
-  { title: 'Armreifen',     desc: 'Elegante Armreifen und Armbänder in exklusiver Qualität.', href: '/armreifen',     img: '/images/armreif-welle.jpg',            icon: '⌀' },
-  { title: 'Halsketten',    desc: 'Feine Ketten mit einzigartigen Anhängern.',                 href: '/halsketten',    img: '/images/kette-engelsfluegel.jpg',      icon: '◎' },
-  { title: 'Brillantringe', desc: 'Verlobungs- und Brillantringe nach Ihrem Wunsch.',         href: '/brillantringe', img: '/images/brillantring-cluster-gelb.jpg',icon: '◈' },
-  { title: 'Goldankauf',    desc: 'Fairer und transparenter Goldankauf zum Tagespreis.',       href: '/goldankauf',    img: '/images/brillant-set-luxus.jpg',       icon: '⬡' },
+  { title: 'Ringe & Brillantringe', desc: 'Goldringe, Verlobungs- und Brillantringe in 585 Gold.',     href: '/ringe',      img: '/images/ringe.jpg',        icon: '◉' },
+  { title: 'Trauringe',             desc: 'Cilor Trauringe – Made in Germany, individuelle Anfertigung.', href: '/trauringe', img: '/images/brillantringe.jpg', icon: '◈' },
+  { title: 'Ohrringe',              desc: 'Ohrstecker und Creolen in 585 Gelbgold.',                    href: '/ohrringe',   img: '/images/ohrstecker.jpg',   icon: '◆' },
+  { title: 'Halsketten & Kreuze',   desc: 'Goldketten mit Anhängern und Kreuzanhänger.',               href: '/halsketten', img: '/images/halsketten.jpg',   icon: '◎' },
+  { title: 'Armreifen',             desc: 'Elegante Armreifen und Armbänder in exklusiver Qualität.',  href: '/armreifen',  img: '/images/armreifen.jpg',    icon: '⌀' },
+  { title: 'Uhren',                 desc: 'Citizen Eco-Drive & Pierre Junod – Präzision trifft Design.', href: '/uhren',    img: '/images/creolen.jpg',      icon: '◯' },
+  { title: 'Goldankauf',            desc: 'Fairer und transparenter Goldankauf zum Tagespreis.',        href: '/goldankauf', img: '/images/goldankauf.jpg',   icon: '⬡' },
 ];
 
 export default function HomePage() {

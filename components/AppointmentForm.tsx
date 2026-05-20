@@ -14,8 +14,15 @@ interface FormData {
 }
 
 const categories = [
-  'Kreuze', 'Ringe', 'Ohrstecker', 'Creolen',
-  'Armreifen', 'Halsketten', 'Brillantringe', 'Goldankauf', 'Sonstiges',
+  'Ringe & Brillantringe',
+  'Labor Diamanten',
+  'Trauringe',
+  'Ohrringe',
+  'Halsketten & Kreuze',
+  'Armreifen',
+  'Uhren',
+  'Goldankauf',
+  'Sonstiges',
 ];
 
 const times = [
@@ -98,7 +105,7 @@ export default function AppointmentForm() {
             type="tel"
             {...register('phone')}
             className="input-dark"
-            placeholder="+49 30 …"
+            placeholder="+49 176 …"
           />
         </div>
 

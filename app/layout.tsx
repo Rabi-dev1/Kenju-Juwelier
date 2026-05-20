@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     template: '%s | KenJu Juwelier Bielefeld',
   },
   description:
-    'KenJu Juwelier Bielefeld – Ihr Spezialist für Brillantringe, Goldankauf, Kreuze, Ringe, Creolen, Armreifen und Halsketten. Meisterbetrieb mit höchster Qualität.',
+    'KenJu Juwelier Bielefeld – Ihr Spezialist für Brillantringe, Goldankauf, Labor Diamanten, Trauringe, Ringe, Ohrringe und Halsketten. Meisterbetrieb mit höchster Qualität.',
   keywords: [
     'Juwelier Bielefeld', 'Goldankauf Bielefeld', 'Brillantringe', 'Verlobungsringe',
-    'Goldschmuck', 'Kreuze Gold', 'Creolen Juwelier', 'Armreifen Gold',
-    'Halsketten Platin', 'Ohrstecker Brillant', 'KenJu', 'Schmuck Bielefeld',
+    'Goldschmuck', 'Labor Diamanten', 'Trauringe', 'Ohrringe Gold',
+    'Halsketten Gold', 'Armreifen Gold', 'KenJu', 'Schmuck Bielefeld',
   ],
   openGraph: {
     type: 'website',
@@ -71,7 +71,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'JewelryStore',
   name: 'KenJu Juwelier',
-  description: 'Exklusiver Juwelier in Bielefeld – Brillantringe, Goldankauf, Kreuze, Ringe, Creolen und mehr.',
+  description: 'Exklusiver Juwelier in Bielefeld – Brillantringe, Labor Diamanten, Goldankauf, Ringe, Ohrringe und mehr.',
   url: 'https://kenju-juwelier.de',
   telephone: '+4917663284312',
   email: 'info@kenju-juwelier.de',
@@ -100,10 +100,25 @@ const jsonLd = {
   ],
 };
 
+/* Prevents FOUC – runs before first paint */
+const themeScript = `
+(function(){
+  try{
+    var t=localStorage.getItem('kenju-theme');
+    var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(t==='dark'||(t===null&&prefersDark)){
+      document.documentElement.classList.add('dark');
+    }
+  }catch(e){}
+})();
+`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

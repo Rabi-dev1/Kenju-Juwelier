@@ -1,36 +1,46 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import CategoryHero from '@/components/CategoryHero';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Uhren – Citizen & Pierre Junod | KenJu Juwelier Bielefeld',
-  description: 'Exklusive Uhren bei KenJu Juwelier Bielefeld. Citizen Eco-Drive (Solar, Funk, Super Titanium) und Pierre Junod – präzise Schweizer und japanische Uhrmacherkunst.',
-  keywords: ['Uhren Bielefeld', 'Citizen Eco-Drive', 'Citizen Funkuhr', 'Citizen Super Titanium', 'Pierre Junod', 'Juwelier Bielefeld'],
+  title: 'Uhren – Tommy Hilfiger, Hugo Boss, Police & mehr | KenJu Juwelier Bielefeld',
+  description: 'Exklusive Uhren bei KenJu Juwelier Bielefeld. Tommy Hilfiger, Hugo Boss, Police, Regent und Swiss Military – stilvolle Markenuhren für jeden Anlass.',
+  keywords: ['Uhren Bielefeld', 'Tommy Hilfiger Uhren', 'Hugo Boss Uhren', 'Police Uhren', 'Swiss Military Uhren', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/uhren' },
 };
 
-const citizenLines = [
+const brands = [
   {
-    name: 'Eco-Drive Solar',
-    desc: 'Angetrieben durch jede Lichtquelle – nie wieder Batteriewechsel. Die bahnbrechende Solartechnologie von Citizen wandelt Licht in Energie um und speichert sie für Monate.',
-    icon: '☀',
+    name: 'Tommy Hilfiger',
+    subtitle: 'American Classic Style',
+    desc: 'Tommy Hilfiger Uhren verbinden den ikonischen amerikanischen Preppy-Stil mit moderner Uhrmacherkunst. Klare Linien, hochwertige Materialien und zeitloser Charakter machen diese Uhren zum perfekten Alltagsbegleiter – von der Business-Uhr bis zum lässigen Freizeitmodell.',
+    tags: ['Casual', 'Business', 'Fashion'],
   },
   {
-    name: 'Eco-Drive Funk',
-    desc: 'Präzision auf die Sekunde genau: Die Citizen Funkuhren synchronisieren sich automatisch mit dem Atomzeitsignal – bis zu 6 Mal täglich, in über 40 Ländern.',
-    icon: '📡',
+    name: 'Hugo Boss',
+    subtitle: 'Deutscher Designanspruch',
+    desc: 'Hugo Boss steht für unverwechselbaren deutschen Stil und höchste Verarbeitungsqualität. Die Uhrenkollektion überzeugt durch schlichtes, elegantes Design mit präziser Mechanik – ideal für den modernen Gentleman, der Wert auf Klasse und Stil legt.',
+    tags: ['Elegant', 'Business', 'Premium'],
   },
   {
-    name: 'Super Titanium™',
-    desc: 'Fünfmal härter als Edelstahl, ultraleicht und hypoallergen. Das exklusive Duratect-Oberflächenverfahren von Citizen macht Super Titanium kratzresistenter als jedes andere Uhrenmaterial.',
-    icon: '⬡',
+    name: 'Police',
+    subtitle: 'Italienischer Urban Style',
+    desc: 'Police Uhren sind mutig, urban und unverwechselbar. Die italienische Modemarke bringt avantgardistisches Design und einen starken Charakter ans Handgelenk. Für alle, die auffallen möchten – ohne auf Qualität zu verzichten.',
+    tags: ['Urban', 'Trendy', 'Fashion'],
   },
   {
-    name: 'Promaster',
-    desc: 'Tauchen, Fliegen, Bergsteigen – die Promaster-Serie ist für extreme Bedingungen konzipiert. Wasserdicht, schockresistent und mit professionellen Funktionen für jeden Einsatz.',
-    icon: '◈',
+    name: 'Regent',
+    subtitle: 'Klassische Eleganz',
+    desc: 'Regent steht für zeitlose Eleganz zu einem fairen Preis. Die Uhren überzeugen mit klassischen Designs, zuverlässiger Quarz-Mechanik und hochwertiger Verarbeitung. Ideal für alle, die einen eleganten Zeitmesser ohne großen Aufpreis suchen.',
+    tags: ['Klassisch', 'Elegant', 'Alltagstauglich'],
+  },
+  {
+    name: 'Swiss Military',
+    subtitle: 'Schweizer Präzision & Robustheit',
+    desc: 'Swiss Military Uhren verbinden Schweizer Uhrmachertradition mit militärischer Robustheit. Kratzfeste Gehäuse, wasserdichte Konstruktion und präzise Schweizer Uhrwerke machen diese Uhren zum verlässlichen Begleiter – für Abenteuer wie für den Alltag.',
+    tags: ['Robust', 'Wasserdicht', 'Swiss Made'],
   },
 ];
 
@@ -39,118 +49,128 @@ export default function UhrenPage() {
     <>
       <CategoryHero
         title="Uhren"
-        subtitle="Citizen & Pierre Junod"
-        description="Präzision trifft auf Design – bei KenJu Juwelier finden Sie eine ausgewählte Kollektion exklusiver Uhren der Marken Citizen und Pierre Junod."
+        subtitle="Markenuhren – Stilvoll. Präzise. Zeitlos."
+        description="Bei KenJu Juwelier finden Sie eine sorgfältig ausgewählte Kollektion exklusiver Markenuhren – für jeden Stil, jeden Anlass und jedes Budget."
         imageSrc="/images/creolen.jpg"
-        imageAlt="Beleuchtete Schmuckvitrine – Uhren KenJu Juwelier Bielefeld"
+        imageAlt="Uhren Kollektion KenJu Juwelier Bielefeld"
         breadcrumb="Uhren"
         pageUrl="https://kenju-juwelier.de/uhren"
       />
 
-      {/* Citizen */}
-      <section className="py-24 bg-kenju-black">
+      {/* Brand Intro */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="section-subtitle mb-3">Japanische Uhrmacherkunst</p>
-            <h2 className="section-title">Citizen – Eco-Drive Technologie</h2>
+            <p className="section-subtitle mb-3">Unsere Marken</p>
+            <h2 className="section-title">Markenuhren – Stilvoll. Präzise. Zeitlos.</h2>
             <div className="divider-gold mx-auto mt-4 mb-8" />
-            <p className="font-sans text-kenju-muted max-w-2xl mx-auto leading-relaxed">
-              Citizen steht seit über 100 Jahren für höchste Präzision und Innovation. Die revolutionäre
-              <strong className="text-kenju-gold"> Eco-Drive Technologie</strong> veränderte die Uhrenbranche
-              für immer: keine Batterie, keine Kompromisse.
+            <p className="font-sans text-sm max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+              Wir führen eine handverlesene Auswahl renommierter Uhrenmarken – von klassisch-elegant
+              bis sportlich-modern. Kommen Sie vorbei und lassen Sie sich persönlich beraten.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {citizenLines.map((line) => (
-              <div key={line.name} className="card-dark p-6 flex flex-col gap-4">
-                <span className="text-3xl gold-text">{line.icon}</span>
-                <h3 className="font-serif text-xl text-kenju-cream">{line.name}</h3>
-                <p className="font-sans text-xs text-kenju-muted leading-relaxed flex-1">{line.desc}</p>
+          {/* Brand logos / tags */}
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            {['Tommy Hilfiger', 'Hugo Boss', 'Police', 'Regent', 'Swiss Military'].map((brand) => (
+              <span
+                key={brand}
+                className="font-sans text-sm tracking-widest uppercase px-6 py-3"
+                style={{
+                  border: '1px solid var(--kj-border)',
+                  color: 'var(--kj-text)',
+                  background: 'var(--kj-card)',
+                }}
+              >
+                {brand}
+              </span>
+            ))}
+          </div>
+
+          {/* Brand cards */}
+          <div className="space-y-8">
+            {brands.map((brand, i) => (
+              <div
+                key={brand.name}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden`}
+                style={{ border: '1px solid var(--kj-border)' }}
+              >
+                {/* Text side */}
+                <div
+                  className={`p-8 lg:p-10 flex flex-col justify-center ${i % 2 === 1 ? 'lg:order-2' : ''}`}
+                  style={{ background: 'var(--kj-card)' }}
+                >
+                  <p className="section-subtitle mb-2">{brand.subtitle}</p>
+                  <h3 className="font-serif text-3xl mb-3" style={{ color: 'var(--kj-text)' }}>{brand.name}</h3>
+                  <div className="divider-gold mb-5" />
+                  <p className="font-sans text-sm leading-relaxed mb-6" style={{ color: 'var(--kj-muted)' }}>
+                    {brand.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {brand.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-sans text-xs tracking-wider uppercase px-3 py-1"
+                        style={{ background: 'var(--kj-bg)', border: '1px solid var(--kj-border)', color: 'var(--kj-muted)' }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                {/* Image side */}
+                <div
+                  className={`relative h-64 lg:h-auto min-h-[260px] ${i % 2 === 1 ? 'lg:order-1' : ''}`}
+                  style={{ background: 'var(--kj-surface)' }}
+                >
+                  <Image
+                    src="/images/creolen.jpg"
+                    alt={`${brand.name} Uhren bei KenJu Juwelier Bielefeld`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                    style={{ opacity: 0.6 }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span
+                      className="font-serif text-4xl font-light text-white/90 text-center px-4"
+                      style={{ textShadow: '0 2px 20px rgba(0,0,0,0.6)' }}
+                    >
+                      {brand.name}
+                    </span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Citizen USPs */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            <div className="relative h-80 gold-border overflow-hidden">
-              <Image
-                src="/images/creolen.jpg"
-                alt="Citizen Uhren Vitrine – KenJu Juwelier Bielefeld"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-kenju-black/40 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 bg-kenju-black/80 backdrop-blur border border-kenju-gold/30 p-4">
-                <p className="font-serif text-lg gold-text">Citizen – Made in Japan</p>
-                <p className="font-sans text-xs text-kenju-muted mt-1">Seit 1918 · Über 100 Jahre Präzision</p>
-              </div>
+          {/* CTA */}
+          <div className="text-center mt-16">
+            <p className="font-sans text-sm mb-6" style={{ color: 'var(--kj-muted)' }}>
+              Kommen Sie in unser Geschäft und entdecken Sie unsere aktuelle Uhren-Kollektion persönlich.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/#termin" className="btn-gold">Beratung anfragen</Link>
+              <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
             </div>
-            <div>
-              <h3 className="font-serif text-3xl text-kenju-cream mb-4">Warum Citizen?</h3>
-              <div className="divider-gold mb-6" />
-              <ul className="space-y-4 font-sans text-sm text-kenju-muted">
-                {[
-                  { t: 'Keine Batterie notwendig', d: 'Eco-Drive läuft mit jeder Lichtquelle – Sonne, Kunstlicht oder sogar schwaches Innenlicht.' },
-                  { t: 'Super Titanium™', d: '5× härter als Edelstahl durch das Duratect-Verfahren. Leichter, langlebiger, kratzerresistenter.' },
-                  { t: 'Atomzeit-Synchronisation', d: 'Funk-Modelle synchronisieren sich automatisch – auf die Sekunde genau, weltweit.' },
-                  { t: 'Großes Modellsortiment', d: 'Von sportlichen Promaster bis zu eleganten Dress-Watches – für jeden Stil die richtige Uhr.' },
-                ].map((item) => (
-                  <li key={item.t} className="flex gap-4">
-                    <span className="w-1.5 h-1.5 rounded-full bg-kenju-gold shrink-0 mt-2" />
-                    <div>
-                      <p className="text-kenju-cream font-medium mb-1">{item.t}</p>
-                      <p className="text-kenju-muted">{item.d}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Pierre Junod */}
-          <div className="border-t border-kenju-border pt-20">
-            <div className="text-center mb-12">
-              <p className="section-subtitle mb-3">Schweizer Designkunst</p>
-              <h2 className="section-title">Pierre Junod</h2>
-              <div className="divider-gold mx-auto mt-4 mb-8" />
-              <p className="font-sans text-kenju-muted max-w-2xl mx-auto leading-relaxed">
-                Pierre Junod verbindet Schweizer Uhrmachertradition mit avantgardistischem Design.
-                Jede Uhr ist ein Kunstwerk – skulptural, unverwechselbar und von höchster handwerklicher Güte.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { title: 'Avantgardistisches Design', desc: 'Pierre Junod Uhren sind sofort erkennbar – geometrische Formen, ungewöhnliche Zifferblätter und ein unverkennbarer Charakter, der Uhren zu Schmuck macht.' },
-                { title: 'Schweizer Qualität', desc: 'Swiss Made – jede Uhr wird mit größter Sorgfalt gefertigt und entspricht den höchsten Schweizer Qualitätsstandards. Präzision ist Pflicht.' },
-                { title: 'Limitierte Kollektionen', desc: 'Viele Pierre Junod Modelle sind in limitierter Stückzahl erhältlich – ein Garant für Exklusivität und einen bleibenden Sammlerwert.' },
-              ].map((item) => (
-                <div key={item.title} className="card-dark p-6">
-                  <h3 className="font-serif text-xl text-kenju-gold mb-3">{item.title}</h3>
-                  <p className="font-sans text-xs text-kenju-muted leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/#termin" className="btn-gold">Uhren-Beratung anfragen</Link>
           </div>
         </div>
       </section>
 
       {/* Appointment */}
-      <section className="py-24 bg-kenju-navy" id="termin">
+      <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }} id="termin">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="section-subtitle mb-3">Persönliche Beratung</p>
             <h2 className="section-title mb-3">Uhren-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-4" />
-            <p className="font-sans text-kenju-muted">Kommen Sie in unser Atelier in Bielefeld – wir beraten Sie zu unserer gesamten Uhren-Kollektion.</p>
+            <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
+              Kommen Sie in unser Atelier in Bielefeld – wir beraten Sie zu unserer gesamten Uhren-Kollektion.
+            </p>
           </div>
-          <div className="card-dark p-8"><AppointmentForm /></div>
+          <div className="p-8" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+            <AppointmentForm />
+          </div>
         </div>
       </section>
     </>

@@ -89,7 +89,7 @@ function Stars({ count }: { count: number }) {
 
 export default function Reviews() {
   return (
-    <section className="py-24 bg-kenju-navy" id="bewertungen">
+    <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }} id="bewertungen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}

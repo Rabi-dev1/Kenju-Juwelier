@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/halsketten`,         priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE}/armreifen`,          priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE}/uhren`,              priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${BASE}/service`,            priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE}/impressum`,          priority: 0.1, changeFrequency: 'yearly'  as const },
     { url: `${BASE}/datenschutz`,        priority: 0.1, changeFrequency: 'yearly'  as const },
     { url: `${BASE}/agb`,                priority: 0.1, changeFrequency: 'yearly'  as const },

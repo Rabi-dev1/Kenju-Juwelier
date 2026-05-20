@@ -5,12 +5,13 @@ import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
 
 const nav = [
-  { label: 'Schmuck',              href: '/ringe' },
-  { label: 'Trauringe',            href: '/trauringe' },
-  { label: 'Uhren',                href: '/uhren' },
-  { label: 'Goldankauf',           href: '/goldankauf' },
-  { label: 'Labor Diamanten',      href: '/labordiamanten' },
-  { label: 'Kontakt',              href: '/#termin' },
+  { label: 'Schmuck',         href: '/ringe' },
+  { label: 'Trauringe',       href: '/trauringe' },
+  { label: 'Uhren',           href: '/uhren' },
+  { label: 'Goldankauf',      href: '/goldankauf' },
+  { label: 'Service',         href: '/service' },
+  { label: 'Labor Diamanten', href: '/labordiamanten' },
+  { label: 'Kontakt',         href: '/#termin' },
 ];
 
 export default function Header() {

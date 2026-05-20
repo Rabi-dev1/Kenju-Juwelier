@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Reviews from '@/components/Reviews';
 import GoogleMap from '@/components/GoogleMap';
 import AppointmentForm from '@/components/AppointmentForm';
+import JewelryCarousel from '@/components/JewelryCarousel';
 
 const categories = [
   { title: 'Ringe & Brillantringe', desc: 'Goldringe, Verlobungs- und Brillantringe in 585 Gold.',         href: '/ringe',          img: '/images/ringe.jpg' },
@@ -197,6 +198,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Jewelry Carousel ─────────────────────────────── */}
+      <JewelryCarousel />
 
       {/* ── Kollektionen ─────────────────────────────────── */}
       <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }} id="kollektionen">

@@ -28,7 +28,7 @@ html.dark {
   --kj-text-2:      #C8C8DC;
   --kj-muted:       #8888A8;
   --kj-border:      #2A2A4A;
-  --kj-shadow:      rgba(0,0,0,0.35);
+  --kj-shadow:      rgba(0,0,0,0.40);
   --kj-gold:        #C9A84C;
   --kj-gold-light:  #E8C96A;
   --kj-gold-dark:   #A6873A;
@@ -47,19 +47,20 @@ html.dark {
     background-color: var(--kj-bg);
     color: var(--kj-text);
     font-family: var(--font-inter), system-ui, sans-serif;
-    line-height: 1.7;
+    line-height: 1.75;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1, h2, h3, h4, h5 {
     font-family: var(--font-cormorant), Georgia, serif;
     line-height: 1.15;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
   }
 }
 
 @layer components {
-  /* ── Gold text gradient ── */
+
+  /* ── Gold gradient text ── */
   .gold-text {
     background: linear-gradient(135deg, var(--kj-gold) 0%, var(--kj-gold-light) 50%, var(--kj-gold-dark) 100%);
     -webkit-background-clip: text;
@@ -68,11 +69,9 @@ html.dark {
   }
 
   .gold-border {
-    border: 1px solid rgba(154, 120, 24, 0.35);
+    border: 1px solid rgba(154,120,24,0.35);
   }
-  html.dark .gold-border {
-    border-color: rgba(201, 168, 76, 0.4);
-  }
+  html.dark .gold-border { border-color: rgba(201,168,76,0.4); }
 
   /* ── Buttons ── */
   .btn-gold {
@@ -83,11 +82,7 @@ html.dark {
     letter-spacing: 0.12em;
   }
   html.dark .btn-gold { color: #08080F; }
-  .btn-gold:hover {
-    opacity: 0.88;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 24px rgba(154,120,24,0.32);
-  }
+  .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(154,120,24,0.3); }
 
   .btn-outline-gold {
     @apply inline-flex items-center justify-center px-8 py-3.5 font-sans font-medium tracking-widest uppercase text-xs;
@@ -96,9 +91,7 @@ html.dark {
     transition: all 0.3s ease;
     letter-spacing: 0.12em;
   }
-  .btn-outline-gold:hover {
-    background: color-mix(in srgb, var(--kj-gold) 10%, transparent);
-  }
+  .btn-outline-gold:hover { background: color-mix(in srgb, var(--kj-gold) 10%, transparent); }
 
   .btn-dark {
     @apply inline-flex items-center justify-center px-8 py-3.5 font-sans font-medium tracking-widest uppercase text-xs;
@@ -107,10 +100,7 @@ html.dark {
     transition: all 0.3s ease;
     letter-spacing: 0.12em;
   }
-  .btn-dark:hover {
-    opacity: 0.85;
-    transform: translateY(-1px);
-  }
+  .btn-dark:hover { opacity: 0.85; transform: translateY(-1px); }
 
   /* ── Typography ── */
   .section-title {
@@ -122,38 +112,31 @@ html.dark {
   .section-subtitle {
     @apply font-sans text-xs tracking-widest uppercase;
     color: var(--kj-gold);
-    letter-spacing: 0.25em;
+    letter-spacing: 0.28em;
   }
 
   /* ── Cards ── */
-  .card-kj {
+  .card-kj, .card-dark {
     background: var(--kj-card);
     border: 1px solid var(--kj-border);
     transition: all 0.35s ease;
   }
-  .card-kj:hover {
+  .card-kj:hover, .card-dark:hover {
     border-color: color-mix(in srgb, var(--kj-gold) 40%, transparent);
     box-shadow: 0 12px 40px var(--kj-shadow);
-    transform: translateY(-4px);
+    transform: translateY(-3px);
   }
 
-  /* Legacy alias */
-  .card-dark {
-    background: var(--kj-card);
-    border: 1px solid var(--kj-border);
-    transition: all 0.35s ease;
-  }
-  .card-dark:hover {
-    border-color: color-mix(in srgb, var(--kj-gold) 40%, transparent);
-    box-shadow: 0 12px 40px var(--kj-shadow);
-    transform: translateY(-4px);
-  }
-
-  /* ── Divider ── */
+  /* ── Gold divider with pulse animation ── */
   .divider-gold {
-    width: 64px;
+    width: 56px;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--kj-gold), transparent);
+    animation: divider-pulse 4s ease-in-out infinite;
+  }
+  @keyframes divider-pulse {
+    0%,100% { opacity: 0.55; width: 48px; }
+    50%      { opacity: 1;    width: 80px; }
   }
 
   /* ── Inputs ── */
@@ -163,7 +146,7 @@ html.dark {
     color: var(--kj-text);
     border: 1px solid var(--kj-border);
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   .input-dark::placeholder { color: var(--kj-muted); }
   .input-dark:focus {
@@ -179,13 +162,7 @@ html.dark {
     justify-content: center;
   }
 
-  /* ── Section frame (replaces navy card boxes) ── */
-  .section-frame {
-    border: 1px solid var(--kj-border);
-    background: var(--kj-surface);
-  }
-
-  /* ── Editorial caption block ── */
+  /* ── Editorial image caption ── */
   .img-caption {
     position: absolute;
     bottom: 0;
@@ -203,10 +180,21 @@ html.dark {
     background: var(--kj-card);
     transition: all 0.25s ease;
   }
-  .brand-tag:hover {
-    border-color: var(--kj-gold);
-    color: var(--kj-gold);
+  .brand-tag:hover { border-color: var(--kj-gold); color: var(--kj-gold); }
+
+  /* ── Scroll-reveal (toggled via JS IntersectionObserver) ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
   }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
 }
 
 /* ── Scrollbar ── */
@@ -221,3 +209,10 @@ html.dark {
   from { transform: translateY(100%); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
 }
+
+/* ── WhatsApp pulse on floating button ── */
+@keyframes wa-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+  50%      { box-shadow: 0 0 0 8px rgba(37,211,102,0); }
+}
+.wa-pulse { animation: wa-pulse 2.5s ease-in-out infinite; }

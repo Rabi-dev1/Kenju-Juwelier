@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
 import FloatingButtons from '@/components/FloatingButtons';
+import MobileCtaBar from '@/components/MobileCtaBar';
 import './globals.css';
 
 const cormorant = Cormorant_Garamond({
@@ -115,9 +116,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Header />
-        <main>{children}</main>
+        {/* pb-16 on mobile to avoid content hiding behind MobileCtaBar */}
+        <main className="pb-16 lg:pb-0">{children}</main>
         <Footer />
         <FloatingButtons />
+        <MobileCtaBar />
         <CookieBanner />
       </body>
     </html>

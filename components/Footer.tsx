@@ -124,6 +124,19 @@ export default function Footer() {
             Meisterbetrieb · Zertifizierter Goldankauf · Bielefeld
           </p>
         </div>
+        <div className="mt-4 text-center">
+          <p className="font-sans text-kenju-muted/60" style={{ fontSize: '0.72rem' }}>
+            made by{' '}
+            <a
+              href="https://www.kundenpilot.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-kenju-gold transition-colors duration-200"
+            >
+              KundenPilot.site
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

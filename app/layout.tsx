@@ -100,18 +100,8 @@ const jsonLd = {
   ],
 };
 
-/* Prevents FOUC – runs before first paint */
-const themeScript = `
-(function(){
-  try{
-    var t=localStorage.getItem('kenju-theme');
-    var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if(t==='dark'||(t===null&&prefersDark)){
-      document.documentElement.classList.add('dark');
-    }
-  }catch(e){}
-})();
-`;
+/* Prevents FOUC – defaults to LIGHT; dark only if user explicitly chose it */
+const themeScript = `(function(){try{if(localStorage.getItem('kenju-theme')==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -216,3 +216,19 @@ html.dark {
   50%      { box-shadow: 0 0 0 8px rgba(37,211,102,0); }
 }
 .wa-pulse { animation: wa-pulse 2.5s ease-in-out infinite; }
+
+/* ── Agency signature link ── */
+.agency-link .agency-underline {
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: var(--kj-gold);
+  transition: width 0.3s ease;
+}
+.agency-link:hover .agency-underline   { width: 100%; }
+.agency-link:hover .agency-label       { opacity: 0.92; }
+.agency-link:hover .agency-by          { opacity: 0.7; }
+.agency-link:hover .agency-icon        { opacity: 0.65; }

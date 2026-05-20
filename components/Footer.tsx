@@ -146,19 +146,41 @@ export default function Footer() {
             Meisterbetrieb · Zertifizierter Goldankauf · Bielefeld
           </p>
         </div>
-        <div className="mt-4 text-center">
-          <p className="font-sans" style={{ fontSize: '0.72rem', color: 'var(--kj-muted)', opacity: 0.7 }}>
-            made by{' '}
-            <a
-              href="https://www.kundenpilot.site/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:opacity-100"
-              style={{ color: 'var(--kj-gold)' }}
+        {/* Agency signature */}
+        <div className="mt-7 mb-1 flex justify-center">
+          <a
+            href="https://www.kundenpilot.site/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="agency-link inline-flex items-center gap-1.5"
+            aria-label="Website erstellt von KundenPilot"
+          >
+            <span
+              className="agency-by font-sans transition-opacity duration-200"
+              style={{ fontSize: '0.69rem', color: 'var(--kj-muted)', opacity: 0.55, letterSpacing: '0.05em' }}
             >
-              KundenPilot.site
-            </a>
-          </p>
+              Website by
+            </span>
+            <span
+              className="agency-label font-sans font-semibold relative transition-opacity duration-200"
+              style={{ fontSize: '0.78rem', color: 'var(--kj-text)', opacity: 0.75, letterSpacing: '0.01em' }}
+            >
+              KundenPilot
+              <span className="agency-underline" />
+            </span>
+            {/* Tiny external-link icon */}
+            <svg
+              className="agency-icon transition-opacity duration-200"
+              width="9" height="9" viewBox="0 0 12 12" fill="none"
+              stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+              style={{ color: 'var(--kj-muted)', opacity: 0.4 }}
+              aria-hidden="true"
+            >
+              <path d="M5 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V7"/>
+              <polyline points="8 1 11 1 11 4"/>
+              <line x1="5" y1="7" x2="11" y2="1"/>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>

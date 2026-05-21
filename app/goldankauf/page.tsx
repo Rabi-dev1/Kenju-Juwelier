@@ -179,7 +179,7 @@ export default function GoldankaufPage() {
             <div className="divider-gold mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {ankaufKategorien.map((kat) => (
               <div
                 key={kat.title}
@@ -187,7 +187,7 @@ export default function GoldankaufPage() {
                 style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
               >
                 {/* Image */}
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-48 sm:h-44 overflow-hidden">
                   <Image
                     src={kat.img}
                     alt={`${kat.title} Ankauf – KenJu Juwelier Bielefeld`}
@@ -200,24 +200,20 @@ export default function GoldankaufPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-5">
-                  <h3 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
+                <div className="p-4 sm:p-5">
+                  <h3 className="font-serif text-xl sm:text-2xl mb-2.5" style={{ color: 'var(--kj-text)' }}>
                     {kat.title}
                   </h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {kat.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="font-sans text-xs leading-relaxed"
-                        style={{ color: 'var(--kj-gold)' }}
-                      >
-                        {tag}
-                        {kat.tags.indexOf(tag) < kat.tags.length - 1 && (
-                          <span style={{ color: 'var(--kj-border)', margin: '0 3px' }}>·</span>
+                  <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+                    {kat.tags.map((tag, idx) => (
+                      <span key={tag}>
+                        <span style={{ color: 'var(--kj-gold)' }}>{tag}</span>
+                        {idx < kat.tags.length - 1 && (
+                          <span style={{ color: 'var(--kj-border)', margin: '0 4px' }}>·</span>
                         )}
                       </span>
                     ))}
-                  </div>
+                  </p>
                 </div>
               </div>
             ))}

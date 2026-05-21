@@ -63,7 +63,7 @@ export default function HomePage() {
           <div className="divider-gold mx-auto mb-10" />
 
           {/* Primary H1 */}
-          <h1 className="font-serif font-light text-white animate-slide-up" style={{ fontSize: 'clamp(2.4rem, 6vw, 5rem)', lineHeight: 1.08, marginBottom: '2rem' }}>
+          <h1 className="font-serif font-light text-white animate-slide-up" style={{ fontSize: 'clamp(1.75rem, 5vw, 5rem)', lineHeight: 1.1, marginBottom: '2rem' }}>
             Meisterbetrieb für exklusiven Schmuck,<br className="hidden sm:block" />
             <span className="gold-text"> Trauringe &amp; Goldankauf</span>
             <br className="hidden sm:block" /> in Bielefeld

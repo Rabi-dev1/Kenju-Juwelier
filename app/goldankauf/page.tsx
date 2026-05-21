@@ -130,7 +130,7 @@ export default function GoldankaufPage() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-subtitle mb-5">Diskret &amp; Professionell</p>
-          <h1 className="font-serif font-light mb-6 text-white" style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)', lineHeight: 1.05 }}>
+          <h1 className="font-serif font-light mb-6 text-white" style={{ fontSize: 'clamp(2.2rem, 7vw, 5.5rem)', lineHeight: 1.05 }}>
             <span className="gold-text">Gold</span>ankauf
           </h1>
           <div className="divider-gold mx-auto mb-8" />

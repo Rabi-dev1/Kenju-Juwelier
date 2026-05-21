@@ -18,7 +18,7 @@ export default function AGBPage() {
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">§ 1 Geltungsbereich</h2>
             <p>
               Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen KenJu Juwelier GmbH, Musterstraße 12,
-              10115 Berlin (nachfolgend „KenJu") und dem Kunden. Abweichende Bedingungen des Kunden werden nicht anerkannt,
+              10115 Berlin (nachfolgend &ldquo;KenJu&rdquo;) und dem Kunden. Abweichende Bedingungen des Kunden werden nicht anerkannt,
               es sei denn, KenJu stimmt ihrer Geltung ausdrücklich schriftlich zu.
             </p>
           </section>

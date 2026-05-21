@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Inter } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
@@ -202,6 +203,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <FloatingButtons />
         <MobileCtaBar />
         <CookieBanner />
+        <SpeedInsights />
       </body>
     </html>
   );

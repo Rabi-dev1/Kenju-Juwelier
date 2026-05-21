@@ -182,7 +182,7 @@ export default function EdelmetallRechner() {
 
   const handleSpotChange = (val: string) => {
     setSpotInputs(prev => ({ ...prev, [currentMetalKey]: val }));
-    setManualSpot(prev => new Set([...prev, currentMetalKey]));
+    setManualSpot(prev => { const s = new Set(prev); s.add(currentMetalKey); return s; });
     setResult(null);
   };
 

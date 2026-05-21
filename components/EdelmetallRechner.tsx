@@ -363,7 +363,7 @@ export default function EdelmetallRechner() {
               </p>
               <p className="font-sans text-sm leading-relaxed max-w-xs mx-auto" style={{ color: 'var(--kj-muted)' }}>
                 Wählen Sie Ihr Edelmetall, geben Sie Gewicht und Feinheit ein — klicken Sie dann
-                auf „Preis berechnen".
+                auf &ldquo;Preis berechnen&rdquo;.
               </p>
               {/* Quick tips on mobile */}
               <div className="mt-8 text-left space-y-2">

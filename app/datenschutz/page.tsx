@@ -42,7 +42,7 @@ export default function DatenschutzPage() {
               Cookies helfen uns dabei, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.
             </p>
             <p className="mt-3">
-              Einige Cookies sind „Session-Cookies." Solche Cookies werden nach Ende Ihrer Browser-Sitzung von selbst gelöscht.
+              Einige Cookies sind &ldquo;Session-Cookies.&rdquo; Solche Cookies werden nach Ende Ihrer Browser-Sitzung von selbst gelöscht.
               Hingegen bleiben andere Cookies auf Ihrem Endgerät bestehen, bis Sie diese selbst löschen.
             </p>
 

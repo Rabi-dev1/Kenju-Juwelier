@@ -30,8 +30,8 @@ const config: Config = {
       },
       backgroundImage: {
         'gold-gradient': 'linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #A6873A 100%)',
-        'dark-gradient': 'linear-gradient(180deg, #08080F 0%, #12122A 100%)',
-        'hero-gradient': 'linear-gradient(135deg, #08080F 0%, #12122A 40%, #0d2020 100%)',
+        'dark-gradient': 'linear-gradient(180deg, #0F0D0A 0%, #1C1810 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #0F0D0A 0%, #1C1810 40%, #111008 100%)',
       },
       animation: {
         'fade-in':  'fadeIn 0.6s ease-out',

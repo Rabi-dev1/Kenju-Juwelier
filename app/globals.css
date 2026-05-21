@@ -18,17 +18,17 @@
   --kj-gold-dark:   #7A5E10;
 }
 
-/* ── Dark Mode ─────────────────────────────────────── */
+/* ── Dark Mode (warm off-black, not cold navy) ──────── */
 html.dark {
-  --kj-bg:          #08080F;
-  --kj-surface:     #0B0B1A;
-  --kj-card:        #12122A;
-  --kj-card-deep:   #1A1A35;
+  --kj-bg:          #0F0D0A;
+  --kj-surface:     #141209;
+  --kj-card:        #1C1810;
+  --kj-card-deep:   #252016;
   --kj-text:        #F5F0E8;
-  --kj-text-2:      #C8C8DC;
-  --kj-muted:       #8888A8;
-  --kj-border:      #2A2A4A;
-  --kj-shadow:      rgba(0,0,0,0.40);
+  --kj-text-2:      #D4C9B8;
+  --kj-muted:       #9A8E7A;
+  --kj-border:      #302A20;
+  --kj-shadow:      rgba(0,0,0,0.55);
   --kj-gold:        #C9A84C;
   --kj-gold-light:  #E8C96A;
   --kj-gold-dark:   #A6873A;
@@ -47,7 +47,8 @@ html.dark {
     background-color: var(--kj-bg);
     color: var(--kj-text);
     font-family: var(--font-inter), system-ui, sans-serif;
-    line-height: 1.75;
+    font-size: 1rem;
+    line-height: 1.8;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
@@ -170,6 +171,14 @@ html.dark {
     right: 0;
     padding: 1.5rem;
     background: linear-gradient(to top, rgba(8,8,15,0.88) 0%, transparent 100%);
+  }
+
+  /* ── Prose body text helper ── */
+  .prose-kj {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--kj-muted);
   }
 
   /* ── Brand tag ── */

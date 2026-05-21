@@ -38,50 +38,78 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover"
             priority
-            style={{ opacity: 0.38 }}
+            style={{ opacity: 0.35 }}
           />
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(to bottom, rgba(8,8,15,0.78) 0%, rgba(8,8,15,0.62) 45%, rgba(8,8,15,0.95) 100%)' }}
+            style={{ background: 'linear-gradient(to bottom, rgba(15,13,10,0.82) 0%, rgba(15,13,10,0.65) 45%, rgba(15,13,10,0.97) 100%)' }}
           />
         </div>
 
-        {/* Decorative lines */}
-        <div className="absolute top-1/4 left-0 w-56 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(180,140,40,0.35), transparent)' }} />
-        <div className="absolute bottom-1/4 right-0 w-56 h-px" style={{ background: 'linear-gradient(to left, transparent, rgba(180,140,40,0.35), transparent)' }} />
+        {/* Decorative side lines */}
+        <div className="absolute top-1/3 left-0 w-40 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,76,0.3), transparent)' }} />
+        <div className="absolute bottom-1/3 right-0 w-40 h-px" style={{ background: 'linear-gradient(to left, transparent, rgba(201,168,76,0.3), transparent)' }} />
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-sans text-xs tracking-[0.4em] uppercase mb-10 animate-fade-in" style={{ color: 'var(--kj-gold)' }}>
-            Meisterbetrieb · Juwelier · Bielefeld
-          </p>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Brand mark – compact, not dominant */}
+          <div className="mb-8 animate-fade-in">
+            <span className="font-serif text-5xl md:text-6xl font-light leading-none text-white">
+              <span className="gold-text">Ken</span>Ju
+            </span>
+            <p className="font-sans text-[0.65rem] tracking-[0.45em] uppercase mt-1.5" style={{ color: 'var(--kj-gold)', opacity: 0.85 }}>
+              Juwelier · Bielefeld
+            </p>
+          </div>
 
-          <h1 className="font-serif text-7xl sm:text-8xl md:text-9xl font-light leading-none mb-4 animate-slide-up text-white">
-            <span className="gold-text">Ken</span>Ju
+          {/* Gold separator */}
+          <div className="divider-gold mx-auto mb-10" />
+
+          {/* Primary headline – the real H1 */}
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light leading-tight mb-8 animate-slide-up text-white">
+            Meisterbetrieb für exklusiven Schmuck,<br className="hidden md:block" />
+            <span className="gold-text"> Trauringe &amp; Goldankauf</span>
+            <br className="hidden md:block" /> in Bielefeld
           </h1>
 
-          <p className="font-serif text-xl md:text-2xl font-light tracking-widest mb-10 animate-fade-in text-white/75">
-            Juwelier · Bielefeld
+          <p className="font-sans text-base max-w-xl mx-auto leading-relaxed mb-12 animate-fade-in" style={{ color: 'rgba(245,240,232,0.62)' }}>
+            Brillantringe, Labor Diamanten, individuelle Anfertigungen und fairer Goldankauf –
+            seit über 20 Jahren Ihr Juwelier mit Meisterqualität.
           </p>
 
-          <div className="divider-gold mx-auto mb-12" />
-
-          <p className="font-sans text-white/65 text-base max-w-lg mx-auto leading-relaxed mb-14 animate-fade-in">
-            Exklusiver Schmuck in 585 Gelbgold, Weißgold &amp; Roségold.
-            Brillantringe, Labor Diamanten, Goldankauf und individuelle Anfertigungen.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14 animate-fade-in">
             <Link href="/#kollektionen" className="btn-gold">
               Kollektionen entdecken
             </Link>
-            <Link href="/#termin" className="btn-outline-gold" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'rgba(255,255,255,0.85)' }}>
+            <Link
+              href="/#termin"
+              className="btn-outline-gold"
+              style={{ borderColor: 'rgba(255,255,255,0.35)', color: 'rgba(255,255,255,0.82)' }}
+            >
               Termin buchen
             </Link>
           </div>
+
+          {/* Inline trust signals */}
+          <div
+            className="inline-flex flex-wrap justify-center gap-x-8 gap-y-3 px-8 py-4 animate-fade-in"
+            style={{ border: '1px solid rgba(201,168,76,0.2)', background: 'rgba(15,13,10,0.5)' }}
+          >
+            {[
+              '20+ Jahre Erfahrung',
+              'Persönliche Meisterberatung',
+              'Transparente Preise',
+              'Handgefertigte Qualität',
+            ].map((t) => (
+              <span key={t} className="font-sans text-xs tracking-wider" style={{ color: 'rgba(201,168,76,0.8)' }}>
+                ✦ {t}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <div className="w-px h-14" style={{ background: 'linear-gradient(to bottom, rgba(180,140,40,0.6), transparent)' }} />
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div className="w-px h-12" style={{ background: 'linear-gradient(to bottom, rgba(201,168,76,0.55), transparent)' }} />
         </div>
       </section>
 

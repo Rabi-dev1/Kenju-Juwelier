@@ -94,7 +94,7 @@ export default function LaborDiamantenPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-24 overflow-hidden" style={{ background: '#08080F' }}>
+      <section className="relative pt-36 pb-24 overflow-hidden" style={{ background: '#0F0D0A' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/brillant-set-luxus.jpg"
@@ -105,7 +105,7 @@ export default function LaborDiamantenPage() {
             priority
             style={{ opacity: 0.3 }}
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(8,8,15,0.7) 0%, rgba(8,8,15,0.5) 50%, rgba(8,8,15,1) 100%)' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,13,10,0.7) 0%, rgba(15,13,10,0.5) 50%, rgba(15,13,10,1) 100%)' }} />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-subtitle mb-4">Zukunft des Schmucks</p>
@@ -150,7 +150,7 @@ export default function LaborDiamantenPage() {
               >
                 <span className="text-4xl gold-text block mb-4">{b.icon}</span>
                 <h3 className="font-serif text-xl mb-3" style={{ color: 'var(--kj-text)' }}>{b.title}</h3>
-                <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{b.desc}</p>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{b.desc}</p>
               </div>
             ))}
           </div>
@@ -158,41 +158,76 @@ export default function LaborDiamantenPage() {
       </section>
 
       {/* Comparison */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
             <p className="section-subtitle mb-4">Transparenz</p>
-            <h2 className="section-title mb-4">Labor vs. Natur – Der Vergleich</h2>
-            <div className="divider-gold mx-auto" />
+            <h2 className="section-title mb-4">Labor vs. Natur – Der direkte Vergleich</h2>
+            <div className="divider-gold mx-auto mb-6" />
+            <p className="font-sans text-base max-w-2xl mx-auto" style={{ color: 'var(--kj-muted)' }}>
+              Labor Diamanten sind keine Imitate – sie sind physikalisch und chemisch identisch mit Naturdiamanten. Der einzige Unterschied: Ursprung, Ethik und Preis.
+            </p>
           </div>
-          <div className="overflow-x-auto">
+          <div
+            className="overflow-x-auto"
+            style={{ border: '1px solid var(--kj-border)', background: 'var(--kj-card)' }}
+          >
             <table className="w-full font-sans text-sm">
               <thead>
                 <tr style={{ borderBottom: '2px solid var(--kj-border)' }}>
-                  <th className="text-left py-4 pr-8 font-medium text-xs tracking-widest uppercase" style={{ color: 'var(--kj-muted)' }}>Eigenschaft</th>
-                  <th className="text-center py-4 px-4 font-medium text-xs tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>Labor Diamant</th>
-                  <th className="text-center py-4 px-4 font-medium text-xs tracking-widest uppercase" style={{ color: 'var(--kj-muted)' }}>Naturdiamant</th>
+                  <th
+                    className="text-left py-5 px-8 font-medium tracking-widest uppercase"
+                    style={{ color: 'var(--kj-muted)', fontSize: '0.7rem' }}
+                  >
+                    Eigenschaft
+                  </th>
+                  <th
+                    className="text-center py-5 px-8 font-medium tracking-widest uppercase"
+                    style={{ color: 'var(--kj-gold)', fontSize: '0.7rem', background: 'rgba(201,168,76,0.06)' }}
+                  >
+                    ✦ Labor Diamant
+                  </th>
+                  <th
+                    className="text-center py-5 px-8 font-medium tracking-widest uppercase"
+                    style={{ color: 'var(--kj-muted)', fontSize: '0.7rem' }}
+                  >
+                    Naturdiamant
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['Chemische Zusammensetzung', '100% Kohlenstoff', '100% Kohlenstoff'],
-                  ['Härte (Mohs)', '10 – Höchste Härte', '10 – Höchste Härte'],
+                  ['Chemische Zusammensetzung', '100 % Kohlenstoff', '100 % Kohlenstoff'],
+                  ['Härte (Mohs-Skala)', '10 – Höchste Härte', '10 – Höchste Härte'],
                   ['Brillanz & Feuer', 'Identisch', 'Identisch'],
-                  ['Zertifizierung', 'IGI / GIA', 'IGI / GIA'],
-                  ['Ethik & Umwelt', '✓ Kein Bergbau', '— Bergbau nötig'],
-                  ['Preis (Vergleichsgröße)', 'Bis 70% günstiger', 'Referenzpreis'],
-                  ['Verfügbarkeit', 'Große Auswahl', 'Begrenzt'],
-                ].map(([prop, lab, nat]) => (
-                  <tr key={prop} style={{ borderBottom: '1px solid var(--kj-border)' }}>
-                    <td className="py-4 pr-8 font-medium" style={{ color: 'var(--kj-text)' }}>{prop}</td>
-                    <td className="py-4 px-4 text-center" style={{ color: 'var(--kj-gold)' }}>{lab}</td>
-                    <td className="py-4 px-4 text-center" style={{ color: 'var(--kj-muted)' }}>{nat}</td>
+                  ['Unabhängige Zertifizierung', 'IGI / GIA zertifiziert', 'IGI / GIA zertifiziert'],
+                  ['Ethik & Umwelt', '✓ Kein Bergbau erforderlich', '— Bergbau notwendig'],
+                  ['Preisvorteil', 'Bis zu 70 % günstiger', 'Referenzpreis'],
+                  ['Verfügbarkeit & Auswahl', 'Große, flexible Auswahl', 'Begrenzt & aufwendig'],
+                ].map(([prop, lab, nat], i) => (
+                  <tr
+                    key={prop}
+                    style={{
+                      borderBottom: '1px solid var(--kj-border)',
+                      background: i % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.03)',
+                    }}
+                  >
+                    <td className="py-5 px-8 font-medium text-sm" style={{ color: 'var(--kj-text)' }}>{prop}</td>
+                    <td
+                      className="py-5 px-8 text-center text-sm font-medium"
+                      style={{ color: 'var(--kj-gold)', background: 'rgba(201,168,76,0.04)' }}
+                    >
+                      {lab}
+                    </td>
+                    <td className="py-5 px-8 text-center text-sm" style={{ color: 'var(--kj-muted)' }}>{nat}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <p className="font-sans text-xs text-center mt-5" style={{ color: 'var(--kj-muted)', opacity: 0.7 }}>
+            Alle Angaben nach aktuellem gemmologischen Stand (IGI/GIA). Labor Diamanten haben dasselbe Zertifizierungssystem wie Naturdiamanten.
+          </p>
         </div>
       </section>
 
@@ -224,7 +259,7 @@ export default function LaborDiamantenPage() {
                 </div>
                 <div className="p-5">
                   <h3 className="font-serif text-xl mb-2" style={{ color: 'var(--kj-text)' }}>{col.title}</h3>
-                  <p className="font-sans text-xs leading-relaxed mb-4" style={{ color: 'var(--kj-muted)' }}>{col.desc}</p>
+                  <p className="font-sans text-sm leading-relaxed mb-4" style={{ color: 'var(--kj-muted)' }}>{col.desc}</p>
                   <span className="font-sans text-xs tracking-widest uppercase flex items-center gap-2" style={{ color: 'var(--kj-gold)' }}>
                     Anfragen <span>→</span>
                   </span>

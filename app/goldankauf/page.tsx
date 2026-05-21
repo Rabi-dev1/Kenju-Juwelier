@@ -100,7 +100,7 @@ export default function GoldankaufPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-20 overflow-hidden" style={{ background: '#08080F' }}>
+      <section className="relative pt-36 pb-20 overflow-hidden" style={{ background: '#0F0D0A' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/goldankauf.jpg"
@@ -111,7 +111,7 @@ export default function GoldankaufPage() {
             priority
             style={{ opacity: 0.25 }}
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(8,8,15,0.7) 0%, rgba(8,8,15,0.55) 50%, rgba(8,8,15,1) 100%)' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,13,10,0.7) 0%, rgba(15,13,10,0.55) 50%, rgba(15,13,10,1) 100%)' }} />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-subtitle mb-4">Diskret &amp; Professionell</p>
@@ -224,7 +224,7 @@ export default function GoldankaufPage() {
                 style={{ opacity: 0.4 }}
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                <div className="p-8 max-w-xs" style={{ background: 'rgba(8,8,15,0.75)', border: '1px solid rgba(180,140,40,0.4)' }}>
+                <div className="p-8 max-w-xs" style={{ background: 'rgba(15,13,10,0.82)', border: '1px solid rgba(201,168,76,0.4)' }}>
                   <p className="font-serif text-5xl font-light mb-2 text-white">+</p>
                   <p className="section-subtitle mb-2">Mehrwert</p>
                   <p className="font-serif text-2xl text-white mb-3">Gutschein-Option</p>

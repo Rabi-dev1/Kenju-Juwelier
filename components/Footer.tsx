@@ -20,25 +20,25 @@ const legal = [
 export default function Footer() {
   return (
     <footer
-      className="pt-16 pb-8"
+      className="pt-20 pb-10"
       style={{
         backgroundColor: 'var(--kj-surface)',
-        borderTop: '1px solid var(--kj-border)',
+        borderTop: '2px solid var(--kj-border)',
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link href="/" className="inline-flex flex-col leading-none mb-4">
-              <span className="font-serif text-4xl font-light gold-text tracking-widest">KenJu</span>
-              <span className="font-sans text-[9px] tracking-[0.4em] uppercase mt-1" style={{ color: 'var(--kj-muted)' }}>
-                Juwelier
+            <Link href="/" className="inline-flex flex-col leading-none mb-5">
+              <span className="font-serif text-5xl font-light gold-text tracking-widest">KenJu</span>
+              <span className="font-sans text-[10px] tracking-[0.4em] uppercase mt-1.5" style={{ color: 'var(--kj-muted)' }}>
+                Juwelier · Bielefeld
               </span>
             </Link>
-            <p className="font-sans text-sm leading-relaxed mt-4" style={{ color: 'var(--kj-muted)' }}>
-              Exklusiver Juwelier für Schmuck, Brillantringe, Labor Diamanten und Goldankauf. Qualität, die überzeugt.
+            <p className="font-sans text-sm leading-relaxed mt-3" style={{ color: 'var(--kj-muted)' }}>
+              Meisterbetrieb für exklusiven Schmuck, Brillantringe, Labor Diamanten und fairen Goldankauf in Bielefeld.
             </p>
             {/* Social links */}
             <div className="flex gap-3 mt-5">
@@ -94,19 +94,21 @@ export default function Footer() {
             <h3 className="font-sans text-xs tracking-widest uppercase mb-5" style={{ color: 'var(--kj-gold)' }}>
               Kontakt
             </h3>
-            <ul className="space-y-3 font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              <li>Bahnhofstraße 28<br />33602 Bielefeld</li>
+            <ul className="space-y-4 font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
+              <li className="font-medium" style={{ color: 'var(--kj-text)' }}>
+                Bahnhofstraße 28<br />33602 Bielefeld
+              </li>
               <li>
-                <a href="tel:+4917663284312" className="transition-colors hover:opacity-80">
+                <a href="tel:+4917663284312" className="transition-opacity hover:opacity-80 font-medium" style={{ color: 'var(--kj-text)' }}>
                   +49 176 63284312
                 </a>
               </li>
               <li>
-                <a href="mailto:info@kenju-juwelier.de" className="transition-colors hover:opacity-80">
+                <a href="mailto:info@kenju-juwelier.de" className="transition-opacity hover:opacity-80">
                   info@kenju-juwelier.de
                 </a>
               </li>
-              <li style={{ color: 'var(--kj-muted)', opacity: 0.75 }}>
+              <li style={{ opacity: 0.75 }}>
                 Mo–Fr: 10:00–18:30<br />
                 Sa: 10:00–16:00
               </li>
@@ -136,7 +138,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div
-          className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
+          className="pt-10 flex flex-col md:flex-row items-center justify-between gap-4"
           style={{ borderTop: '1px solid var(--kj-border)' }}
         >
           <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>

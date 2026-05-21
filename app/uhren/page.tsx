@@ -63,15 +63,15 @@ export default function UhrenPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
             {/* Das EINE premium Bild der gesamten Seite */}
-            <div className="relative h-96 lg:h-[580px] overflow-hidden gold-border">
+            <div className="relative h-[480px] lg:h-[620px] overflow-hidden gold-border group">
               <Image
                 src="/images/creolen.jpg"
                 alt="Markenuhren bei KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover img-zoom"
                 priority
-                style={{ opacity: 0.85 }}
+                style={{ opacity: 0.88 }}
               />
               <div className="img-caption">
                 <p className="font-serif text-xl text-white">Stil am Handgelenk</p>
@@ -81,7 +81,7 @@ export default function UhrenPage() {
               </div>
               <div
                 className="absolute top-5 left-5 px-4 py-3"
-                style={{ background: 'rgba(8,8,15,0.80)', border: '1px solid rgba(154,120,24,0.4)' }}
+                style={{ background: 'rgba(15,13,10,0.85)', border: '1px solid rgba(201,168,76,0.4)' }}
               >
                 <p className="font-sans text-xs tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>Markenuhren</p>
                 <p className="font-serif text-sm text-white mt-0.5">KenJu Juwelier</p>
@@ -127,58 +127,82 @@ export default function UhrenPage() {
         </div>
       </section>
 
-      {/* ── Marken – edle Listenansicht ─────────────────── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── Marken – große typografische Karten ─────────── */}
+      <section className="py-32" style={{ backgroundColor: 'var(--kj-surface)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="section-subtitle mb-4">Unsere Markenpartner</p>
-            <h2 className="font-serif text-4xl font-light mb-5" style={{ color: 'var(--kj-text)' }}>
-              Qualität, die man spürt
-            </h2>
+            <p className="section-subtitle mb-5">Unsere Markenpartner</p>
+            <h2 className="section-title mb-4">Qualität, die man spürt</h2>
             <div className="divider-gold mx-auto" />
           </div>
 
-          {/* Clean brand list – Steglitz style */}
-          <div className="flex flex-col">
-            {brands.map((brand, i) => (
+          {/* Brand cards – typographic + bold */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {brands.slice(0, 3).map((brand) => (
               <div
                 key={brand.name}
-                className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 md:gap-12 py-10 items-start"
-                style={{
-                  borderTop: i === 0 ? '1px solid var(--kj-border)' : 'none',
-                  borderBottom: '1px solid var(--kj-border)',
-                }}
+                className="p-8 flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
               >
-                {/* Brand name column */}
-                <div className="md:pt-1">
-                  <h3 className="font-serif text-2xl mb-1" style={{ color: 'var(--kj-text)' }}>
+                <div>
+                  <h3 className="font-serif text-3xl font-light mb-1" style={{ color: 'var(--kj-text)' }}>
                     {brand.name}
                   </h3>
-                  <p className="section-subtitle" style={{ fontSize: '0.65rem' }}>{brand.subtitle}</p>
-                  <div className="flex flex-wrap gap-1.5 mt-4">
-                    {brand.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="font-sans text-xs px-2.5 py-1 tracking-wide"
-                        style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)', color: 'var(--kj-muted)' }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="font-sans text-[0.65rem] tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>
+                    {brand.subtitle}
+                  </p>
                 </div>
-                {/* Description column */}
-                <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+                <p className="font-sans text-base leading-relaxed flex-1" style={{ color: 'var(--kj-muted)' }}>
                   {brand.desc}
                 </p>
+                <div className="flex flex-wrap gap-2 pt-3" style={{ borderTop: '1px solid var(--kj-border)' }}>
+                  {brand.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="font-sans text-xs px-3 py-1.5 tracking-wide"
+                      style={{ background: 'var(--kj-surface)', color: 'var(--kj-muted)' }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {brands.slice(3).map((brand) => (
+              <div
+                key={brand.name}
+                className="p-8 flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
+              >
+                <div>
+                  <h3 className="font-serif text-3xl font-light mb-1" style={{ color: 'var(--kj-text)' }}>
+                    {brand.name}
+                  </h3>
+                  <p className="font-sans text-[0.65rem] tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>
+                    {brand.subtitle}
+                  </p>
+                </div>
+                <p className="font-sans text-base leading-relaxed flex-1" style={{ color: 'var(--kj-muted)' }}>
+                  {brand.desc}
+                </p>
+                <div className="flex flex-wrap gap-2 pt-3" style={{ borderTop: '1px solid var(--kj-border)' }}>
+                  {brand.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="font-sans text-xs px-3 py-1.5 tracking-wide"
+                      style={{ background: 'var(--kj-surface)', color: 'var(--kj-muted)' }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-14">
-            <p className="font-sans text-xs mb-6" style={{ color: 'var(--kj-muted)' }}>
-              Kommen Sie vorbei und entdecken Sie unsere aktuelle Uhren-Kollektion persönlich in Bielefeld.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#termin" className="btn-gold">Beratung anfragen</Link>
               <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>

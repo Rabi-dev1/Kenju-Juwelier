@@ -105,9 +105,10 @@ html.dark {
 
   /* ── Typography ── */
   .section-title {
-    @apply font-serif text-4xl md:text-5xl font-light;
+    @apply font-serif text-5xl md:text-6xl font-light;
     color: var(--kj-text);
     letter-spacing: -0.02em;
+    line-height: 1.1;
   }
 
   .section-subtitle {
@@ -142,17 +143,18 @@ html.dark {
 
   /* ── Inputs ── */
   .input-dark {
-    @apply w-full px-4 py-3.5 font-sans text-sm;
+    @apply w-full px-5 py-4 font-sans text-base;
     background: var(--kj-card);
     color: var(--kj-text);
     border: 1px solid var(--kj-border);
+    border-radius: 0;
     outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
   }
-  .input-dark::placeholder { color: var(--kj-muted); }
+  .input-dark::placeholder { color: var(--kj-muted); opacity: 0.6; font-size: 0.9rem; }
   .input-dark:focus {
     border-color: var(--kj-gold);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--kj-gold) 12%, transparent);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--kj-gold) 18%, transparent);
   }
 
   /* ── Image container ── */
@@ -169,8 +171,8 @@ html.dark {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem;
-    background: linear-gradient(to top, rgba(8,8,15,0.88) 0%, transparent 100%);
+    padding: 1.75rem;
+    background: linear-gradient(to top, rgba(15,13,10,0.92) 0%, rgba(15,13,10,0.4) 60%, transparent 100%);
   }
 
   /* ── Prose body text helper ── */
@@ -190,6 +192,14 @@ html.dark {
     transition: all 0.25s ease;
   }
   .brand-tag:hover { border-color: var(--kj-gold); color: var(--kj-gold); }
+
+  /* ── Image hover zoom (subtle) ── */
+  .img-zoom {
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .group:hover .img-zoom, .img-zoom:hover {
+    transform: scale(1.04);
+  }
 
   /* ── Scroll-reveal (toggled via JS IntersectionObserver) ── */
   .reveal {

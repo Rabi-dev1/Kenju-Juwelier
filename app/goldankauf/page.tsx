@@ -72,18 +72,13 @@ const ankaufKategorien = [
     tags: ['Goldbarren', 'Feingoldbarren', 'Goldketten', 'Goldringe', 'Altgold', 'Goldschmuck', 'Bruchgold', 'Zahngold Legierung', 'Zahnkronen'],
   },
   {
-    title: 'Luxus Uhren',
-    img: '/images/creolen.jpg',
-    tags: ['Rolex', 'Patek Philippe', 'Omega', 'IWC', 'Breitling', 'Gold- und Taschenuhren', 'Bewertung nach Marke und Zustand'],
-  },
-  {
     title: 'Silber',
     img: '/images/armreifen.jpg',
-    tags: ['Silberbarren', 'Silberschmuck', 'Besteck', 'Bruchsilber', '925er Sterling', '999er Feinsilber'],
+    tags: ['Silberbarren', 'Silberschmuck', 'Bruchsilber', '925er Sterling', '999er Feinsilber'],
   },
   {
     title: 'Münzen',
-    img: '/images/ringe.jpg',
+    img: '/images/silbermuenzen.jpg',
     tags: ['Goldmünzen', 'Silbermünzen', 'Sammlermünzen', 'Krügerrand', 'Maple Leaf', 'Wiener Philharmoniker'],
   },
   {
@@ -102,8 +97,13 @@ const ankaufKategorien = [
     tags: ['Zahnkronen', 'Brücken', 'Dentallegierungen', 'Fachgerechte Bewertung'],
   },
   {
+    title: 'Silberbesteck',
+    img: '/images/silberbesteck.jpg',
+    tags: ['Tafelsilber', 'Besteckgarnituren', 'Antikes Besteck', '800er Silber', '925er Sterling', 'Punzierung prüfen'],
+  },
+  {
     title: 'Altschmuck',
-    img: '/images/halsketten.jpg',
+    img: '/images/altschmuck.jpg',
     tags: ['Erbschmuck', 'Gebrochener Schmuck', 'Alte Ringe', 'Ketten', 'Anhänger', 'Armreifen'],
   },
 ];

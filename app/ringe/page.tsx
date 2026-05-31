@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 import AppointmentForm from '@/components/AppointmentForm';
+import JewelrySlider from '@/components/JewelrySlider';
 
 export const metadata: Metadata = {
   title: 'Ringe & Brillantringe – 585 Gold & Weißgold | KenJu Juwelier',
@@ -11,18 +12,16 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kenju-juwelier.de/ringe' },
 };
 
-const goldringe = [
-  { name: 'Solitär-Ring',          material: '585 Gelbgold', detail: 'Mit Zirkonia-Brillant, handgravierter Ringschiene', img: '/images/ringe.jpg' },
-  { name: 'Baguette-Ring Rubin',   material: '585 Gelbgold', detail: 'Roter Baguette-Stein, Panzerketten-Schiene',        img: '/images/ringe.jpg' },
-  { name: 'Baguette-Ring Smaragd', material: '585 Gelbgold', detail: 'Grüner Baguette-Stein, florale Gravur',             img: '/images/ringe.jpg' },
-  { name: 'Individueller Ring',    material: '585 Gold',      detail: 'Nach Ihren Wünschen angefertigt',                  img: '/images/ringe.jpg' },
-];
-
-const brillantringe = [
-  { name: 'Brillant-Cluster Ring', material: '585 Gelbgold', stone: 'Cluster-Brillant, Halo-Fassung',             img: '/images/brillant-set-luxus.jpg' },
-  { name: 'Halo-Ring Weißgold',    material: '585 Weißgold', stone: 'Ovaler Brillant, doppelter Halo',             img: '/images/brillantringe.jpg' },
-  { name: 'Luxus Brillant-Set',    material: 'Weißgold',     stone: 'Collier + Armband + Creolen, Tropfenschliff', img: '/images/brillant-set-luxus.jpg' },
-  { name: 'Solitär Brillant',      material: '585 Gelbgold', stone: 'Klassischer Solitär, gravierte Schiene',      img: '/images/ringe.jpg' },
+/* ── Slider-Bilder: Goldringe & Schmuck ──────────────── */
+const goldringeSlider = [
+  { src: '/images/brillantring-hand.jpg',    alt: 'Brillantring KenJu Juwelier Bielefeld' },
+  { src: '/images/ringe-baguette.jpg',        alt: '585 Gelbgold Ringe mit Farbsteinen' },
+  { src: '/images/brillantring-solitaer.jpg', alt: '585 Gelbgold Solitärring' },
+  { src: '/images/brillantring-box.jpg',      alt: 'Brillantring auf Samtbox' },
+  { src: '/images/ringe-memoire.jpg',         alt: 'Memoire Ringe Sortiment KenJu' },
+  { src: '/images/brillantringe.jpg',         alt: 'Brillantringe KenJu Bielefeld' },
+  { src: '/images/brillant-set-luxus.jpg',    alt: 'Luxus Brillant-Set KenJu' },
+  { src: '/images/ringe.jpg',                 alt: 'Goldringe KenJu Juwelier' },
 ];
 
 export default function RingePage() {
@@ -31,15 +30,16 @@ export default function RingePage() {
       <CategoryHero
         title="Ringe"
         subtitle="Goldringe & Brillantringe"
-        description="Von klassischen Goldringen bis zu exklusiven Brillantringen – entdecken Sie unsere gesamte Ring-Kollektion in 585 Gelbgold, Weißgold und Roségold."
-        imageSrc="/images/ringe.jpg"
-        imageAlt="Ring-Display KenJu Juwelier Bielefeld"
+        description="Von klassischen Goldringen bis zu exklusiven Brillantringen – entdecken Sie unsere Kollektion in 585 Gelbgold, Weißgold und Roségold."
+        imageSrc="/images/brillantring-hand.jpg"
+        imageAlt="Brillantring KenJu Juwelier Bielefeld"
         breadcrumb="Ringe"
+        pageUrl="https://kenju-juwelier.de/ringe"
       />
 
-      {/* ── Intro ──────────────────────────────────────────── */}
+      {/* ── Intro ───────────────────────────────────────── */}
       <section className="py-32" style={{ backgroundColor: 'var(--kj-bg)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             {/* Text */}
             <div>
@@ -52,36 +52,35 @@ export default function RingePage() {
                 Ein Ring ist mehr als ein Schmuckstück – er steht für Liebe, Treue und Verbundenheit.
                 Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier</strong> in Bielefeld finden
                 Sie eine ausgewählte Kollektion an Goldringen, Verlobungsringen und Brillantringen in
-                585 Gelbgold, Weißgold oder Roségold – auf Wunsch auch mit Brillanten oder Labor Diamanten.
+                585 Gelbgold, Weißgold oder Roségold.
               </p>
               <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Ob{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Weißgold</strong>,{' '}
+                Ob <strong style={{ color: 'var(--kj-text)' }}>Weißgold</strong>,{' '}
                 <strong style={{ color: 'var(--kj-text)' }}>Gelbgold</strong>,{' '}
                 <strong style={{ color: 'var(--kj-text)' }}>Roségold</strong> oder Bicolor – wir beraten
-                Sie persönlich und helfen Ihnen, den passenden Ring zu finden. Jeder Stil, jeder Anlass,
-                jedes Budget findet bei uns die richtige Antwort.
+                Sie persönlich und helfen Ihnen, den passenden Ring zu finden.
               </p>
               <p className="font-sans text-sm leading-relaxed mb-10" style={{ color: 'var(--kj-muted)' }}>
                 Wir passen die Ringgröße fachgerecht an und bieten auf Wunsch eine
                 <strong style={{ color: 'var(--kj-text)' }}> individuelle Gravur</strong> mit Datum oder
-                Widmung. Besuchen Sie uns in der Bahnhofstraße 28 und entdecken Sie Ringe, die Ihre
-                Geschichte erzählen.
+                Widmung. Besuchen Sie uns in der Bahnhofstraße 28.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="#termin" className="btn-dark">Jetzt kontaktieren</Link>
                 <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
               </div>
             </div>
-            {/* Image with editorial caption */}
-            <div className="relative h-80 lg:h-[540px] overflow-hidden gold-border">
+
+            {/* Editorial image */}
+            <div className="relative h-80 lg:h-[540px] overflow-hidden gold-border group">
               <Image
-                src="/images/ringe.jpg"
-                alt="Goldringe KenJu Juwelier Bielefeld"
+                src="/images/brillantring-hand.jpg"
+                alt="Brillantring KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-                style={{ opacity: 0.88 }}
+                className="object-cover img-zoom"
+                priority
+                style={{ opacity: 0.9 }}
               />
               <div className="img-caption">
                 <p className="font-serif text-base text-white leading-snug">585 Gelbgold · Weißgold · Roségold</p>
@@ -89,10 +88,9 @@ export default function RingePage() {
                   Alle Ringe in Ihrer Wunschgröße · Gravur auf Anfrage
                 </p>
               </div>
-              {/* Tag */}
               <div
                 className="absolute top-5 right-5 px-4 py-3"
-                style={{ background: 'rgba(8,8,15,0.82)', border: '1px solid rgba(154,120,24,0.4)' }}
+                style={{ background: 'rgba(15,13,10,0.82)', border: '1px solid rgba(201,168,76,0.4)' }}
               >
                 <p className="font-sans text-xs tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>Goldschmuck</p>
                 <p className="font-serif text-sm text-white mt-0.5">Handgefertigt</p>
@@ -102,89 +100,76 @@ export default function RingePage() {
         </div>
       </section>
 
-      {/* ── Goldringe Grid ───────────────────────────────── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="section-subtitle mb-3">Einblicke in unsere Lieblingsstücke</p>
-            <h2 className="font-serif text-4xl font-light mb-5" style={{ color: 'var(--kj-text)' }}>
-              Ist etwas für Sie dabei?
-            </h2>
-            <div className="divider-gold mx-auto" />
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
-            {goldringe.map((p) => (
-              <article
-                key={p.name}
-                className="overflow-hidden group transition-all duration-300 hover:shadow-lg"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <div className="relative overflow-hidden category-img-placeholder" style={{ paddingBottom: '110%' }}>
-                  <Image
-                    src={p.img}
-                    alt={p.name}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={{ opacity: 0.88 }}
-                  />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,8,15,0.58), transparent 55%)' }} />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <p className="font-sans text-xs text-white/85 tracking-wider uppercase">{p.material}</p>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-serif text-base mb-1" style={{ color: 'var(--kj-text)' }}>{p.name}</h3>
-                  <p className="font-sans text-xs leading-snug" style={{ color: 'var(--kj-muted)' }}>{p.detail}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <p className="font-sans text-xs text-center" style={{ color: 'var(--kj-muted)' }}>
-            Alle Ringe in Ihrer Wunschgröße erhältlich · Gravuren auf Anfrage
-          </p>
+      {/* ── Slider: Einblicke ────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)' }}>
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 mb-12">
+          <p className="section-subtitle mb-3">Einblicke in unsere Lieblingsstücke</p>
+          <h2 className="font-serif text-4xl font-light" style={{ color: 'var(--kj-text)' }}>
+            Ist etwas für Sie dabei?
+          </h2>
+          <div className="divider-gold mt-5" />
         </div>
+
+        <JewelrySlider images={goldringeSlider} speedSeconds={38} />
+
+        <p className="font-sans text-xs text-center mt-6 px-4" style={{ color: 'var(--kj-muted)' }}>
+          Alle Ringe in Ihrer Wunschgröße erhältlich · Gravuren auf Anfrage
+        </p>
       </section>
 
-      {/* ── Brillantschmuck ──────────────────────────────── */}
+      {/* ── Brillantschmuck Editorial ────────────────────── */}
       <section className="py-28" style={{ backgroundColor: 'var(--kj-bg)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden" style={{ border: '1px solid var(--kj-border)' }}>
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+          <div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden"
+            style={{ border: '1px solid var(--kj-border)' }}
+          >
             {/* Image */}
-            <div className="relative min-h-[360px] lg:min-h-0" style={{ background: 'var(--kj-surface)' }}>
+            <div className="relative min-h-[400px] lg:min-h-0 overflow-hidden group" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/brillant-set-luxus.jpg"
-                alt="Brillantschmuck KenJu Juwelier Bielefeld"
+                src="/images/brillantring-hand.jpg"
+                alt="Brillantringe & Verlobungsringe KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-                style={{ opacity: 0.82 }}
+                className="object-cover img-zoom"
+                style={{ opacity: 0.88 }}
               />
               <div
                 className="absolute top-5 left-5 px-3 py-2.5"
-                style={{ background: 'rgba(8,8,15,0.78)', border: '1px solid rgba(154,120,24,0.3)' }}
+                style={{ background: 'rgba(15,13,10,0.78)', border: '1px solid rgba(201,168,76,0.35)' }}
               >
                 <p className="font-sans text-xs tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>Brillantschmuck</p>
                 <p className="font-serif text-sm text-white mt-0.5">Handgefertigt · 585 Gold</p>
               </div>
             </div>
-            {/* Text */}
+
+            {/* Text – neue Beschreibung für den Brillantring */}
             <div className="p-8 lg:p-14 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
               <p className="section-subtitle mb-4">Exklusiv & Einzigartig</p>
-              <h2 className="font-serif text-3xl mb-5" style={{ color: 'var(--kj-text)' }}>
-                Brillantschmuck bei KenJu Juwelier in Bielefeld
+              <h2 className="font-serif text-3xl md:text-4xl font-light mb-5" style={{ color: 'var(--kj-text)', lineHeight: 1.2 }}>
+                Brillantringe &amp; Verlobungsringe bei KenJu Juwelier Bielefeld
               </h2>
-              <div className="divider-gold mb-6" />
-              <p className="font-sans text-sm leading-relaxed mb-4" style={{ color: 'var(--kj-muted)' }}>
-                Edelsteine verleihen Schmuck eine besondere Bedeutung und Individualität. Durch ihre
-                natürliche Einzigartigkeit entsteht ein Charakter, der jedes Stück unverwechselbar macht.
-                Brillanten setzen edle Lichtreflexe und unterstreichen die zeitlose Eleganz.
+              <div className="divider-gold mb-7" />
+              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
+                Ein Brillantring ist mehr als ein Schmuckstück – er ist das Zeichen eines Moments,
+                der für immer bleibt. Jeder Stein fängt das Licht auf seine ganz eigene Weise ein
+                und macht das Stück unverwechselbar. Brillanten setzen edle Lichtreflexe und
+                unterstreichen den Charakter jedes einzelnen Rings.
               </p>
-              <p className="font-sans text-sm leading-relaxed mb-8" style={{ color: 'var(--kj-muted)' }}>
-                Bei KenJu Juwelier in Bielefeld erwartet Sie eine sorgfältig zusammengestellte Auswahl
-                an <strong style={{ color: 'var(--kj-text)' }}>Edelstein- und Brillantschmuck</strong>.
-                Feine Ringe mit Solitärstein, glänzende Colliers und passende Ohrringe bieten Ihnen für
-                jeden Anlass das perfekte Schmuckstück.
+              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
+                Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier</strong> in Bielefeld
+                finden Sie eine handverlesene Auswahl exklusiver Brillantringe – vom zeitlosen Solitär
+                bis zum aufwendigen Halo-Design, in{' '}
+                <strong style={{ color: 'var(--kj-text)' }}>585er Gelbgold</strong>,{' '}
+                <strong style={{ color: 'var(--kj-text)' }}>Weißgold</strong> oder{' '}
+                <strong style={{ color: 'var(--kj-text)' }}>Roségold</strong>. Ob als Verlobungsring
+                für den bedeutendsten Antrag Ihres Lebens oder als besonderes Geschenk für jemanden,
+                dem Sie alles bedeuten.
+              </p>
+              <p className="font-sans text-sm leading-relaxed mb-9" style={{ color: 'var(--kj-muted)' }}>
+                Kommen Sie in unser Atelier an der Bahnhofstraße 28 und lassen Sie sich persönlich
+                beraten. Wir nehmen uns Zeit für Ihre Wünsche – und helfen Ihnen, den Ring zu finden,
+                der Ihre Geschichte erzählt.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="#termin" className="btn-dark">Jetzt kontaktieren</Link>
@@ -195,47 +180,24 @@ export default function RingePage() {
         </div>
       </section>
 
-      {/* ── Brillantringe Grid ────────────────────────────── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="section-subtitle mb-3">Unvergessliche Momente</p>
-            <h2 className="font-serif text-4xl font-light mb-5" style={{ color: 'var(--kj-text)' }}>
-              Brillantringe &amp; Verlobungsringe
-            </h2>
-            <div className="divider-gold mx-auto" />
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-            {brillantringe.map((p) => (
-              <article
-                key={p.name}
-                className="overflow-hidden group transition-all duration-300 hover:shadow-lg"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <div className="relative overflow-hidden category-img-placeholder" style={{ paddingBottom: '120%' }}>
-                  <Image
-                    src={p.img}
-                    alt={p.name}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={{ opacity: 0.88 }}
-                  />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,8,15,0.58), transparent 55%)' }} />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <p className="font-sans text-xs text-white/85 tracking-wider uppercase">{p.material}</p>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-serif text-base mb-1" style={{ color: 'var(--kj-text)' }}>{p.name}</h3>
-                  <p className="font-sans text-xs leading-snug" style={{ color: 'var(--kj-muted)' }}>{p.stone}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+      {/* ── Zweiter Slider: Brillantringe ───────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)' }}>
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 mb-12">
+          <p className="section-subtitle mb-3">Unvergessliche Momente</p>
+          <h2 className="font-serif text-4xl font-light" style={{ color: 'var(--kj-text)' }}>
+            Brillantringe &amp; Verlobungsringe
+          </h2>
+          <div className="divider-gold mt-5" />
+        </div>
 
-          {/* Goldlegierungen Info */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <JewelrySlider
+          images={[...goldringeSlider].reverse()}
+          speedSeconds={44}
+        />
+
+        {/* Goldlegierungen */}
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             {[
               { c: '585 Gelbgold', desc: '14 Karat · Klassischer Goldglanz' },
               { c: '585 Weißgold', desc: '14 Karat · Modern & rhodiniert' },
@@ -252,7 +214,6 @@ export default function RingePage() {
               </div>
             ))}
           </div>
-
           <div className="text-center">
             <p className="font-sans text-xs mb-6" style={{ color: 'var(--kj-muted)' }}>
               Alle Brillantringe sind individuell anfertigbar – in Ihrer Wunschgröße und Legierung.

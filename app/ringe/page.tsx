@@ -178,20 +178,9 @@ export default function SchmuckPage() {
         </div>
       </section>
 
-      {/* ── Zweiter Slider (umgekehrt) ───────────────────── */}
+      {/* ── Goldlegierungen ─────────────────────────────── */}
       <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 mb-12">
-          <p className="section-subtitle mb-3">Für jeden Anlass</p>
-          <h2 className="font-serif text-4xl font-light" style={{ color: 'var(--kj-text)' }}>
-            Goldschmuck für Sie &amp; Ihn
-          </h2>
-          <div className="divider-gold mt-5" />
-        </div>
-
-        <JewelrySlider images={[...sliderBilder].reverse()} speedSeconds={55} />
-
-        {/* Goldlegierungen */}
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 mt-12">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             {[
               { c: '585 Gelbgold', desc: '14 Karat · Klassischer Goldglanz' },
@@ -214,7 +203,6 @@ export default function SchmuckPage() {
               Alle Stücke individuell anfertigbar – in Ihrer Wunschgröße und Legierung.
             </p>
             <Link href="#termin" className="btn-gold">Individuelle Beratung anfragen</Link>
-          </div>
         </div>
       </section>
 

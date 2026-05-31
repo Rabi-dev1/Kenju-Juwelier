@@ -7,30 +7,26 @@ import JewelrySlider from '@/components/JewelrySlider';
 
 export const metadata: Metadata = {
   title: 'Schmuck – Ringe, Ketten, Ohrringe & mehr | KenJu Juwelier Bielefeld',
-  description: 'Goldschmuck bei KenJu Juwelier Bielefeld: Ringe, Brillantringe, Ketten, Creolen, Armreifen, Kreuze und mehr in 585 Gelbgold, Weißgold und Roségold. Persönliche Beratung vor Ort.',
+  description: 'Goldschmuck bei KenJu Juwelier Bielefeld: Ringe, Brillantringe, Ketten, Creolen, Armreifen und mehr in 585 Gelbgold, Weißgold und Roségold.',
   keywords: ['Schmuck Bielefeld', 'Goldringe', 'Brillantringe', 'Goldketten', 'Creolen', 'Armreifen Gold', '585 Gold', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/ringe' },
 };
 
-/* ── Alle Slider-Bilder ─────────────────────────────── */
+/* ── Slider-Bilder (nur diese, keine Beschreibung) ── */
 const sliderBilder = [
-  { src: '/images/armband-rosegold.jpg',     alt: '585 Roségold Armband KenJu Juwelier' },
-  { src: '/images/vitrine-ketten.jpg',        alt: 'Schaufenster Goldketten KenJu Bielefeld' },
-  { src: '/images/armreif-twisted.jpg',       alt: '585 Gelbgold Armreifen gedreht' },
-  { src: '/images/armreif-wellen.jpg',        alt: '585 Gelbgold Armreif Wellenform' },
-  { src: '/images/laden-ringe.jpg',           alt: 'Ringeauswahl KenJu Juwelier Bielefeld' },
-  { src: '/images/creolen-farbsteine.jpg',    alt: '585 Gelbgold Creolen mit Farbsteinen' },
-  { src: '/images/creolen-klassisch.jpg',     alt: '585 Gelbgold Creolen klassisch' },
-  { src: '/images/creolen-twisted.jpg',       alt: '585 Gelbgold Creolen gedreht' },
-  { src: '/images/kette-engel.jpg',           alt: '585 Gelbgold Kette Engelflügel' },
-  { src: '/images/kette-herz.jpg',            alt: '585 Gelbgold Kette Herz Anhänger' },
-  { src: '/images/kreuze-dogtag.jpg',         alt: '585 Gelbgold Kreuz Dog-Tag Anhänger' },
-  { src: '/images/ringe-memoire.jpg',         alt: 'Memoire Ringe Sortiment KenJu' },
-  { src: '/images/kreuze-klassisch.jpg',      alt: '585 Gelbgold Goldkreuze klassisch' },
-  { src: '/images/ohrstecker-kugel.jpg',      alt: '585 Gelbgold Kugelstecker Ohrringe' },
-  { src: '/images/ringe-baguette.jpg',        alt: '585 Gelbgold Ringe mit Farbsteinen' },
-  { src: '/images/beratung-frau.jpg',         alt: 'Persönliche Schmuckberatung KenJu Bielefeld' },
-  { src: '/images/labor-diamanten-set.jpg',   alt: 'Brillant Collier und Creolen Set KenJu' },
+  { src: '/images/armband-rosegold.jpg',   alt: '585 Roségold Armband KenJu Juwelier' },
+  { src: '/images/vitrine-ketten.jpg',      alt: 'Schaufenster Goldketten KenJu Bielefeld' },
+  { src: '/images/armreif-twisted.jpg',     alt: '585 Gelbgold Armreifen gedreht' },
+  { src: '/images/armreif-wellen.jpg',      alt: '585 Gelbgold Armreif Wellenform' },
+  { src: '/images/laden-ringe.jpg',         alt: 'Ringeauswahl KenJu Juwelier Bielefeld' },
+  { src: '/images/kette-engel.jpg',         alt: '585 Gelbgold Kette Engelflügel' },
+  { src: '/images/kette-herz.jpg',          alt: '585 Gelbgold Kette Herz Anhänger' },
+  { src: '/images/kette-farbstein.jpg',     alt: 'Goldketten mit Farbstein-Anhänger' },
+  { src: '/images/kette-kugel.jpg',         alt: 'Goldketten mit Kugeldekor auf Büste' },
+  { src: '/images/kette-traumfaenger.jpg',  alt: '585 Gelbgold Kette Traumfänger Anhänger' },
+  { src: '/images/ohrstecker-kugel.jpg',    alt: '585 Gelbgold Kugelstecker Ohrringe' },
+  { src: '/images/ringe-baguette.jpg',      alt: '585 Gelbgold Ringe mit Farbsteinen' },
+  { src: '/images/ringe-memoire.jpg',       alt: 'Memoire Ringe Sortiment KenJu' },
 ];
 
 export default function SchmuckPage() {
@@ -39,7 +35,7 @@ export default function SchmuckPage() {
       <CategoryHero
         title="Schmuck"
         subtitle="Gold · Brillanten · Leidenschaft"
-        description="Entdecken Sie unsere handverlesene Kollektion – Ringe, Ketten, Creolen, Armreifen und Kreuze in 585 Gelbgold, Weißgold und Roségold."
+        description="Entdecken Sie unsere handverlesene Kollektion – Ringe, Ketten, Creolen, Armreifen und mehr in 585 Gelbgold, Weißgold und Roségold."
         imageSrc="/images/ringe.jpg"
         imageAlt="Schmuck KenJu Juwelier Bielefeld"
         breadcrumb="Schmuck"
@@ -59,18 +55,18 @@ export default function SchmuckPage() {
               <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
                 Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier</strong> in Bielefeld finden
                 Sie eine sorgfältig zusammengestellte Auswahl an hochwertigem Goldschmuck – von eleganten
-                Ringen über feine Ketten bis hin zu Creolen, Armreifen und Kreuzanhängern.
+                Ringen über feine Ketten bis hin zu Creolen, Armreifen und Anhängern.
               </p>
               <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Alle Stücke sind in{' '}
+                Alle Stücke in{' '}
                 <strong style={{ color: 'var(--kj-text)' }}>585 Gelbgold</strong>,{' '}
                 <strong style={{ color: 'var(--kj-text)' }}>Weißgold</strong> oder{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Roségold</strong> erhältlich –
-                für jeden Anlass, jeden Stil und jedes Budget.
+                <strong style={{ color: 'var(--kj-text)' }}>Roségold</strong> –
+                für jeden Anlass und jeden Stil.
               </p>
               <p className="font-sans text-sm leading-relaxed mb-10" style={{ color: 'var(--kj-muted)' }}>
-                Kommen Sie vorbei und lassen Sie sich persönlich beraten – wir nehmen uns Zeit für Ihre
-                Wünsche in der Bahnhofstraße 28.
+                Kommen Sie vorbei und lassen Sie sich persönlich beraten –
+                Bahnhofstraße 28, Bielefeld.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="#termin" className="btn-dark">Jetzt kontaktieren</Link>
@@ -116,7 +112,7 @@ export default function SchmuckPage() {
         </p>
       </section>
 
-      {/* ── Brillantring Editorial ───────────────────────── */}
+      {/* ── Brillantring Editorial (brillantring-box.jpg) ── */}
       <section className="py-28" style={{ backgroundColor: 'var(--kj-bg)' }}>
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
           <div
@@ -126,12 +122,12 @@ export default function SchmuckPage() {
             {/* Bild */}
             <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden group" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/brillantring-cluster-gelb.jpg"
-                alt="Brillantringe und Verlobungsringe KenJu Juwelier Bielefeld"
+                src="/images/brillantring-box.jpg"
+                alt="Solitär Brillantring Verlobungsring KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover img-zoom"
-                style={{ opacity: 0.9 }}
+                style={{ opacity: 0.92 }}
               />
               <div
                 className="absolute top-5 left-5 px-3 py-2.5"
@@ -144,30 +140,27 @@ export default function SchmuckPage() {
 
             {/* Text */}
             <div className="p-8 lg:p-14 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
-              <p className="section-subtitle mb-4">Exklusiv & Einzigartig</p>
+              <p className="section-subtitle mb-4">Der besondere Moment</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light mb-5" style={{ color: 'var(--kj-text)', lineHeight: 1.2 }}>
-                Brillantringe &amp; Verlobungsringe bei KenJu Juwelier Bielefeld
+                Verlobungsringe &amp; Brillantringe bei KenJu Juwelier Bielefeld
               </h2>
               <div className="divider-gold mb-7" />
               <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Ein Brillantring ist mehr als ein Schmuckstück – er ist das Zeichen eines Moments,
-                der für immer bleibt. Jeder Stein fängt das Licht auf seine ganz eigene Weise ein
-                und macht das Stück unverwechselbar. Brillanten setzen edle Lichtreflexe und
-                verleihen jedem Ring einen einzigartigen Charakter.
+                Ein Verlobungsring ist das schönste Versprechen, das man geben kann. Er steht für
+                einen Moment, der für immer bleibt – und verdient deshalb höchste Qualität und
+                echte Leidenschaft für das Handwerk.
               </p>
               <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
                 Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier</strong> in Bielefeld
-                finden Sie eine handverlesene Auswahl exklusiver Brillantringe – vom zeitlosen Solitär
-                bis zum aufwendigen Cluster-Design, in{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>585er Gelbgold</strong>,{' '}
+                finden Sie klassische Solitärringe ebenso wie aufwendige Brillant-Designs – gefasst in
+                feinstem <strong style={{ color: 'var(--kj-text)' }}>585er Gelbgold</strong>,{' '}
                 <strong style={{ color: 'var(--kj-text)' }}>Weißgold</strong> oder{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Roségold</strong>. Ob als Verlobungsring
-                für den bedeutendsten Antrag Ihres Lebens oder als besonderes Geschenk für jemanden,
-                dem Sie alles bedeuten.
+                <strong style={{ color: 'var(--kj-text)' }}>Roségold</strong>.
+                Jeder Ring wird mit Sorgfalt ausgewählt und kann auf Wunsch individuell angefertigt werden.
               </p>
               <p className="font-sans text-sm leading-relaxed mb-9" style={{ color: 'var(--kj-muted)' }}>
-                Kommen Sie in unser Atelier an der Bahnhofstraße 28 und lassen Sie sich persönlich
-                beraten. Wir nehmen uns Zeit für Ihre Wünsche.
+                Lassen Sie sich in unserem Atelier an der Bahnhofstraße 28 persönlich beraten –
+                wir nehmen uns Zeit für Sie und helfen Ihnen, den Ring zu finden, der alles sagt.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="#termin" className="btn-dark">Jetzt kontaktieren</Link>
@@ -203,6 +196,7 @@ export default function SchmuckPage() {
               Alle Stücke individuell anfertigbar – in Ihrer Wunschgröße und Legierung.
             </p>
             <Link href="#termin" className="btn-gold">Individuelle Beratung anfragen</Link>
+          </div>
         </div>
       </section>
 

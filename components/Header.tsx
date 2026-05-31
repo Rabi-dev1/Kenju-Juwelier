@@ -10,7 +10,6 @@ const nav = [
   { label: 'Uhren',           href: '/uhren' },
   { label: 'Goldankauf',      href: '/goldankauf' },
   { label: 'Service',         href: '/service' },
-  { label: 'Labor Diamanten', href: '/labordiamanten' },
   { label: 'Kontakt',         href: '/#termin' },
 ];
 

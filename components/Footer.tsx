@@ -8,7 +8,6 @@ const categories = [
   { label: 'Armreifen',             href: '/armreifen' },
   { label: 'Uhren',                 href: '/uhren' },
   { label: 'Goldankauf',            href: '/goldankauf' },
-  { label: 'Labor Diamanten',       href: '/labordiamanten' },
 ];
 
 const legal = [

@@ -37,9 +37,9 @@ export default function SchmuckPage() {
   return (
     <>
       <CategoryHero
-        title="Schmuck aus Gold & mit Brillanten bei KenJu Juwelier Bielefeld"
+        title="Schmuck bei KenJu Juwelier Bielefeld"
         subtitle="Gold · Brillanten · Leidenschaft"
-        description="Entdecken Sie hochwertige Memory-Ringe, Solitär-Ringe, Anhänger, Armbänder, Ketten, Ohrstecker, Kreuze und Brillantschmuck in 585 Gelbgold, Weißgold und Roségold. Zeitlose Designs, hochwertige Verarbeitung und persönliche Beratung für besondere Momente."
+        description="Memory-Ringe, Solitär-Ringe, Anhänger, Ketten, Ohrstecker & Brillantschmuck – in 585 Gelbgold, Weißgold und Roségold."
         imageSrc="/images/ringe.jpg"
         imageAlt="Schmuck KenJu Juwelier Bielefeld"
         breadcrumb="Schmuck"
@@ -73,7 +73,7 @@ export default function SchmuckPage() {
             {/* Bild */}
             <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden group" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/brillantring-cluster-gelb.jpg"
+                src="/images/brillant-set-luxus.jpg"
                 alt="Brillantschmuck KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -69,41 +69,6 @@ export default function UhrenPage() {
         </div>
       </section>
 
-      {/* ── MARKEN ───────────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="section-subtitle mb-4">Unsere Markenpartner</p>
-            <h2 className="section-title mb-4">Qualität, die man spürt</h2>
-            <div className="divider-gold mx-auto" />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {brands.map((brand) => (
-              <div
-                key={brand.name}
-                className="p-8 flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <h3 className="font-serif text-2xl font-light" style={{ color: 'var(--kj-text)' }}>
-                  {brand.name}
-                </h3>
-                <p className="font-sans text-sm leading-relaxed flex-1" style={{ color: 'var(--kj-muted)' }}>
-                  {brand.desc}
-                </p>
-                <div className="flex flex-wrap gap-2 pt-4" style={{ borderTop: '1px solid var(--kj-border)' }}>
-                  {brand.tags.map((tag) => (
-                    <span key={tag} className="font-sans text-xs px-3 py-1.5 tracking-wide" style={{ background: 'var(--kj-surface)', color: 'var(--kj-muted)' }}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── AUSGEWÄHLTE UHREN (uhrzeig.jpg) ──────────────── */}
       <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

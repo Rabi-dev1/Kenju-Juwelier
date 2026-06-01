@@ -11,26 +11,10 @@ export const metadata: Metadata = {
 };
 
 const cilorVorteile = [
-  {
-    icon: '◈',
-    title: 'Made in Germany',
-    desc: 'Cilor Trauringe werden ausschließlich in Deutschland gefertigt – von Meisterhand, mit höchsten Qualitätsstandards und unter fairen Arbeitsbedingungen.',
-  },
-  {
-    icon: '⋆',
-    title: 'Echte Handarbeit',
-    desc: 'Jeder Ring ist ein Unikat. Erfahrene Goldschmiede fertigen Ihre Trauringe von Hand – mit der Sorgfalt und Liebe zum Detail, die dieser besondere Moment verdient.',
-  },
-  {
-    icon: '◯',
-    title: 'Jahrzehntelange Tradition',
-    desc: 'Cilor steht seit Generationen für Trauringkultur in Deutschland. Diese Tradition fließt in jeden einzelnen Ring – als Versprechen von Beständigkeit.',
-  },
-  {
-    icon: '⬡',
-    title: 'Individuelle Anfertigung',
-    desc: 'Ihr Trauring entsteht genau nach Ihren Vorstellungen: Legierung, Oberfläche, Breite, Gravur und Stein – alles individuell wählbar nach Ihrem Wunsch.',
-  },
+  { icon: '◈', title: 'Made in Germany',        desc: 'Ausschließlich in Deutschland gefertigt – von Meisterhand.' },
+  { icon: '⋆', title: 'Echte Handarbeit',        desc: 'Jeder Ring ein Unikat, gefertigt mit Sorgfalt und Liebe.' },
+  { icon: '◯', title: 'Jahrzehntelange Tradition', desc: 'Cilor steht seit Generationen für Trauringkultur.' },
+  { icon: '⬡', title: 'Individuelle Anfertigung', desc: 'Legierung, Breite, Gravur – alles nach Ihrem Wunsch.' },
 ];
 
 const materialien = [
@@ -70,7 +54,7 @@ export default function TrauringePage() {
     <>
       <CategoryHero
         title="Trauringe"
-        subtitle="Cilor – Made in Germany"
+        subtitle=""
         description="Ihr Trauring ist mehr als ein Ring – er ist ein Versprechen für die Ewigkeit. Bei KenJu Juwelier beraten wir Sie mit der exklusiven Cilor-Kollektion und fertigen Ihren Ring individuell nach Maß."
         imageSrc="/images/brillantringe.jpg"
         imageAlt="Trauringe Beratung – KenJu Juwelier Bielefeld"
@@ -81,24 +65,13 @@ export default function TrauringePage() {
       {/* ── Emotional Intro ──────────────────────────────── */}
       <section className="py-32" style={{ backgroundColor: 'var(--kj-bg)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-20">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="section-subtitle mb-4">Ein Moment für die Ewigkeit</p>
-            <h2 className="section-title mb-6">
-              Der Ring, der alles bedeutet
-            </h2>
-            <div className="divider-gold mx-auto mb-8" />
-            <p className="font-sans text-base leading-relaxed mb-6" style={{ color: 'var(--kj-muted)' }}>
-              Ein Trauring ist das Symbol schlechthin – für Vertrauen, Zusammenhalt und die
-              Entscheidung, das Leben gemeinsam zu gestalten. Deshalb verdient er höchste
-              Sorgfalt bei der Auswahl. Unser Trauringpartner{' '}
-              <strong style={{ color: 'var(--kj-gold)' }}>Cilor</strong> steht seit Generationen
-              für dieses Versprechen: Made in Germany, von Meisterhand, für Menschen, die
-              wissen, was ihnen wichtig ist.
-            </p>
+            <h2 className="section-title mb-6">Der Ring, der alles bedeutet</h2>
+            <div className="divider-gold mx-auto mb-6" />
             <p className="font-sans text-base leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-              Bei KenJu Juwelier in Bielefeld nehmen wir uns die Zeit, die dieser Moment
-              verdient. Kein Druck, kein Massengeschäft – sondern persönliche Beratung, mit
-              Blick auf Ihre Geschichte und Ihren Stil.
+              Persönliche Beratung, individuelle Anfertigung – bei KenJu Juwelier mit der exklusiven{' '}
+              <strong style={{ color: 'var(--kj-gold)' }}>Cilor</strong>-Kollektion.
             </p>
           </div>
 

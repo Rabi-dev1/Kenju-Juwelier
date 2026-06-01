@@ -20,49 +20,17 @@ const productJsonLd = {
 };
 
 const benefits = [
-  {
-    icon: '◈',
-    title: 'Identische Brillanz',
-    desc: 'Labor Diamanten sind chemisch, physikalisch und optisch identisch mit Naturdiamanten. Kein Unterschied in Härte, Brillanz oder Feuer – nur der Ursprung ist ein anderer.',
-  },
-  {
-    icon: '◉',
-    title: 'Ethisch & Nachhaltig',
-    desc: 'Kein Bergbau, keine Umweltzerstörung, keine fragwürdigen Lieferketten. Labor Diamanten werden verantwortungsvoll im Labor hergestellt – gut für die Welt und Ihr Gewissen.',
-  },
-  {
-    icon: '⬡',
-    title: 'Fairer Preis',
-    desc: 'Labor Diamanten bieten deutlich mehr Karat und Qualität für dasselbe Budget. Sie erhalten einen größeren, makelloseren Diamanten – ohne Kompromisse bei Brillanz oder Qualität.',
-  },
-  {
-    icon: '◯',
-    title: 'Zertifiziert',
-    desc: 'Alle unsere Labor Diamanten werden von unabhängigen Gemmologen (IGI, GIA) zertifiziert. Jeder Stein wird individuell auf Schliff, Farbe, Reinheit und Karat geprüft.',
-  },
+  { icon: '◈', title: 'Identische Brillanz',   desc: 'Chemisch und optisch identisch mit Naturdiamanten.' },
+  { icon: '◉', title: 'Ethisch & Nachhaltig',   desc: 'Kein Bergbau – verantwortungsvoll im Labor hergestellt.' },
+  { icon: '⬡', title: 'Fairer Preis',            desc: 'Bis zu 70 % günstiger als vergleichbare Naturdiamanten.' },
+  { icon: '◯', title: 'Zertifiziert',            desc: 'Alle Steine mit IGI / GIA Zertifikat.' },
 ];
 
 const collections = [
-  {
-    title: 'Verlobungsringe',
-    desc: 'Solitär, Halo oder Pavé – unser Labor Diamant Verlobungsring ist der perfekte Begleiter für Ihren besonderen Moment. Individuell nach Ihren Wünschen gefertigt.',
-    img: '/images/ringe.jpg',
-  },
-  {
-    title: 'Ohrringe & Creolen',
-    desc: 'Strahlende Ohrstecker und elegante Creolen mit Labor Diamanten in 585 Gelbgold, Weißgold oder Roségold. Für jeden Anlass.',
-    img: '/images/ohrstecker.jpg',
-  },
-  {
-    title: 'Anhänger & Colliers',
-    desc: 'Klassische Solitär-Anhänger oder moderne Collier-Designs mit Labor Diamanten – zeitlos schön und individuell gestaltbar.',
-    img: '/images/halsketten.jpg',
-  },
-  {
-    title: 'Tennis-Armbänder',
-    desc: 'Das klassische Tennis-Armband mit Labor Diamanten – eine Reihe funkelnder Steine, die jeden Handgelenk in den Mittelpunkt stellt.',
-    img: '/images/armreifen.jpg',
-  },
+  { title: 'Verlobungsringe',   desc: 'Solitär, Halo oder Pavé – individuell gefertigt.',       img: '/images/ringe.jpg' },
+  { title: 'Ohrringe & Creolen', desc: '585 Gelbgold, Weißgold oder Roségold.',                  img: '/images/ohrstecker.jpg' },
+  { title: 'Anhänger & Colliers', desc: 'Klassisch oder modern – zeitlos schön.',                img: '/images/halsketten.jpg' },
+  { title: 'Tennis-Armbänder',  desc: 'Funkelnde Steine, elegant am Handgelenk.',                img: '/images/armreifen.jpg' },
 ];
 
 const faq = [
@@ -164,9 +132,6 @@ export default function LaborDiamantenPage() {
             <p className="section-subtitle mb-4">Transparenz</p>
             <h2 className="section-title mb-4">Labor vs. Natur – Der direkte Vergleich</h2>
             <div className="divider-gold mx-auto mb-6" />
-            <p className="font-sans text-base max-w-2xl mx-auto" style={{ color: 'var(--kj-muted)' }}>
-              Labor Diamanten sind keine Imitate – sie sind physikalisch und chemisch identisch mit Naturdiamanten. Der einzige Unterschied: Ursprung, Ethik und Preis.
-            </p>
           </div>
           <div
             className="overflow-x-auto"
@@ -322,33 +287,6 @@ export default function LaborDiamantenPage() {
         </div>
       </section>
 
-      {/* SEO */}
-      <section className="py-16" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl mb-6" style={{ color: 'var(--kj-text)' }}>
-            Labor Diamanten in Bielefeld – KenJu Juwelier
-          </h2>
-          <div className="divider-gold mb-8" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-                Bei KenJu Juwelier in Bielefeld bieten wir eine sorgfältig ausgewählte Kollektion an
-                <strong style={{ color: 'var(--kj-text)' }}> Labor Diamant Schmuck</strong> – von klassischen
-                Verlobungsringen bis zu modernen Ohrringen und Armbändern. Alle Steine sind zertifiziert und
-                werden mit höchster Sorgfalt ausgewählt.
-              </p>
-            </div>
-            <div>
-              <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-                Labor Diamanten sind die intelligente Alternative für alle, die auf Brillanz und Qualität
-                nicht verzichten möchten, aber gleichzeitig auf Ethik und fairen Preis achten.
-                Besuchen Sie uns in der <strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28, 33602 Bielefeld</strong> und
-                entdecken Sie die Zukunft des Diamantschmucks.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

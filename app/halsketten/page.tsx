@@ -85,11 +85,7 @@ export default function HalskettenPage() {
             ))}
           </div>
 
-          <div className="max-w-2xl mx-auto text-center mt-4">
-            <p className="font-sans text-sm text-kenju-muted leading-relaxed mb-8">
-              Unsere Kreuze in 585 Gelbgold werden von Hand gefertigt und können auf Wunsch mit einer
-              persönlichen Gravur versehen oder in individuellen Maßen angefertigt werden.
-            </p>
+          <div className="text-center mt-8">
             <Link href="/#termin" className="btn-gold">Kette oder Kreuz anfragen</Link>
           </div>
         </div>

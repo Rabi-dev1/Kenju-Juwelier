@@ -60,14 +60,6 @@ export default function OhringePage() {
               </article>
             ))}
           </div>
-          <div className="max-w-2xl mx-auto card-dark p-6 mb-20">
-            <p className="font-sans text-sm text-kenju-muted leading-relaxed">
-              Unsere Kugel-Ohrstecker in 585 Gelbgold sind ein zeitloser Klassiker. Die perfekte Kugelform
-              sorgt für maximalen Glanz – von der zarten 3-mm-Variante für den Alltag bis zum auffälligen
-              8-mm-Stecker. Alle Stecker verfügen über sichere Butterfly-Verschlüsse.
-            </p>
-          </div>
-
           {/* Creolen */}
           <div className="text-center mb-12">
             <p className="section-subtitle mb-3">Trendy & Klassisch</p>

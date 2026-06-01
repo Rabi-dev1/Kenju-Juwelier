@@ -39,65 +39,12 @@ export default function SchmuckPage() {
       <CategoryHero
         title="Schmuck"
         subtitle="Gold · Brillanten · Leidenschaft"
-        description="Entdecken Sie unsere handverlesene Kollektion – Ringe, Ketten, Creolen, Armreifen und mehr in 585 Gelbgold, Weißgold und Roségold."
+        description="Memory-Ringe, Solitär-Ringe, Anhänger, Armbänder, Ketten, Ohrstecker und Kreuze – in 585 Gelbgold, Weißgold und Roségold."
         imageSrc="/images/ringe.jpg"
         imageAlt="Schmuck KenJu Juwelier Bielefeld"
         breadcrumb="Schmuck"
         pageUrl="https://kenju-juwelier.de/ringe"
       />
-
-      {/* ── Intro ───────────────────────────────────────── */}
-      <section className="py-32" style={{ backgroundColor: 'var(--kj-bg)' }}>
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <p className="section-subtitle mb-5">Goldschmiede-Handwerk</p>
-              <h2 className="font-serif text-4xl md:text-5xl font-light leading-tight mb-6" style={{ color: 'var(--kj-text)' }}>
-                Exklusiver Goldschmuck<br />in Bielefeld
-              </h2>
-              <div className="divider-gold mb-8" />
-              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier</strong> in Bielefeld finden
-                Sie eine sorgfältig zusammengestellte Auswahl an hochwertigem Goldschmuck – von eleganten
-                Ringen über feine Ketten bis hin zu Creolen, Armreifen und Anhängern.
-              </p>
-              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Alle Stücke in{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>585 Gelbgold</strong>,{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Weißgold</strong> oder{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Roségold</strong> –
-                für jeden Anlass und jeden Stil.
-              </p>
-              <p className="font-sans text-sm leading-relaxed mb-10" style={{ color: 'var(--kj-muted)' }}>
-                Kommen Sie vorbei und lassen Sie sich persönlich beraten –
-                Bahnhofstraße 28, Bielefeld.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="#termin" className="btn-dark">Jetzt kontaktieren</Link>
-                <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
-              </div>
-            </div>
-
-            <div className="relative h-80 lg:h-[540px] overflow-hidden gold-border group">
-              <Image
-                src="/images/ringe.jpg"
-                alt="Goldschmuck KenJu Juwelier Bielefeld"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover img-zoom"
-                priority
-                style={{ opacity: 0.9 }}
-              />
-              <div className="img-caption">
-                <p className="font-serif text-base text-white leading-snug">585 Gelbgold · Weißgold · Roségold</p>
-                <p className="font-sans text-xs mt-1" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                  Alle Größen · Gravur auf Anfrage
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── Slider ──────────────────────────────────────── */}
       <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)' }}>
@@ -171,35 +118,6 @@ export default function SchmuckPage() {
                 <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Goldlegierungen ─────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            {[
-              { c: '585 Gelbgold', desc: '14 Karat · Klassischer Goldglanz' },
-              { c: '585 Weißgold', desc: '14 Karat · Modern & rhodiniert' },
-              { c: '585 Roségold', desc: '14 Karat · Romantisch & zeitlos' },
-              { c: '750 Gold',     desc: '18 Karat · Maximale Reinheit' },
-            ].map((item) => (
-              <div
-                key={item.c}
-                className="p-5 text-center"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <p className="font-serif text-base gold-text mb-1">{item.c}</p>
-                <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center">
-            <p className="font-sans text-xs mb-6" style={{ color: 'var(--kj-muted)' }}>
-              Alle Stücke individuell anfertigbar – in Ihrer Wunschgröße und Legierung.
-            </p>
-            <Link href="#termin" className="btn-gold">Individuelle Beratung anfragen</Link>
           </div>
         </div>
       </section>

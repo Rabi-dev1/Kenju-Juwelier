@@ -5,20 +5,33 @@ import AppointmentForm from '@/components/AppointmentForm';
 import EdelmetallRechner from '@/components/EdelmetallRechner';
 
 export const metadata: Metadata = {
-  title: 'Goldankauf Bielefeld – Fairer Goldpreis Sofort | KenJu Juwelier',
-  description: 'Goldankauf in Bielefeld zum Tagespreis. Wir kaufen Gold, Silber, Platin, Brillanten und Schmuck. Sofortige Auszahlung in bar. Keine versteckten Kosten. KenJu Juwelier.',
-  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Goldpreis', 'Schmuck verkaufen', 'Edelmetall Ankauf'],
+  title: 'Goldankauf Bielefeld – Gold verkaufen zum Tagespreis | KenJu Juwelier',
+  description: 'Gold verkaufen in Bielefeld bei KenJu Juwelier. Goldankauf zum tagesaktuellen Marktpreis – Gold, Silber, Diamanten, Münzen & Altschmuck. Kostenlose Bewertung, sofortige Auszahlung in bar. Jetzt Termin buchen.',
+  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Silber ankauf Bielefeld', 'Schmuck verkaufen Bielefeld', 'Goldpreis Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Zahngold verkaufen', 'Altschmuck verkaufen Bielefeld', 'Juwelier Goldankauf Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/goldankauf' },
+  openGraph: {
+    title: 'Goldankauf Bielefeld – Fairer Preis, sofortige Auszahlung | KenJu Juwelier',
+    description: 'Kostenlose Bewertung, tagesaktueller Goldpreis, Bargeldauszahlung noch am selben Tag. KenJu Juwelier – Bahnhofstraße 28, Bielefeld.',
+    url: 'https://kenju-juwelier.de/goldankauf',
+    type: 'website',
+  },
 };
 
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Goldankauf',
-  description: 'Fairer Goldankauf zum Tagespreis. Wir kaufen Gold, Silber, Platin, Brillanten und Schmuck.',
-  provider: { '@type': 'JewelryStore', name: 'KenJu Juwelier' },
+  name: 'Goldankauf Bielefeld',
+  description: 'Fairer Goldankauf zum tagesaktuellen Marktpreis. Wir kaufen Gold, Silber, Diamanten, Münzen und Altschmuck. Kostenlose Bewertung, sofortige Auszahlung in bar.',
+  provider: {
+    '@type': 'JewelryStore',
+    name: 'KenJu Juwelier',
+    address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE' },
+    telephone: '+4917663284312',
+    url: 'https://kenju-juwelier.de',
+  },
   serviceType: 'Goldankauf',
   areaServed: { '@type': 'City', name: 'Bielefeld' },
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Kostenlose und unverbindliche Bewertung' },
 };
 
 const faqJsonLd = {
@@ -46,7 +59,6 @@ const ankaufKategorien = [
   { title: 'Silber',       img: '/images/silber.jpg',                 tags: ['Silberschmuck', 'Silberbarren', 'Silbermünzen'] },
   { title: 'Münzen',       img: '/images/munzen.jpg',                 tags: ['Goldmünzen', 'Silbermünzen', 'Sammlermünzen'] },
   { title: 'Diamanten',    img: '/images/diamant.jpg',                tags: ['Lose Diamanten', 'Brillanten', 'Diamantschmuck'] },
-  { title: 'Platin',       img: '/images/brillantring-halo-weiss.jpg', tags: ['Platinringe', 'Platinschmuck', 'Platinbarren'] },
   { title: 'Zahngold',     img: '/images/brillantringe.jpg',          tags: ['Kronen', 'Brücken', 'Dentalgold'] },
   { title: 'Silberbesteck', img: '/images/silberbesteck.jpg',         tags: ['Tafelsilber', 'Antikes Besteck', '800er / 925er Silber'] },
   { title: 'Altschmuck',   img: '/images/altschmuck.jpg',             tags: ['Ringe', 'Ketten', 'Anhänger'] },
@@ -97,6 +109,19 @@ export default function GoldankaufPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── SEO-TEXTBLOCK ────────────────────────────────── */}
+      <section className="py-14" style={{ backgroundColor: 'var(--kj-bg)', borderBottom: '1px solid var(--kj-border)' }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-2xl md:text-3xl font-light mb-4" style={{ color: 'var(--kj-text)' }}>
+            Goldankauf in Bielefeld – schnell, fair und diskret
+          </h2>
+          <div className="divider-gold mx-auto mb-5" />
+          <p className="font-sans text-sm leading-relaxed max-w-2xl mx-auto" style={{ color: 'var(--kj-muted)' }}>
+            Sie möchten Gold, Silber, Altschmuck oder Münzen verkaufen? Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier in Bielefeld</strong> erhalten Sie eine kostenlose und unverbindliche Bewertung zum tagesaktuellen Marktpreis – transparent, fair und mit sofortiger Auszahlung in bar. Kommen Sie einfach vorbei oder buchen Sie online Ihren Termin.
+          </p>
         </div>
       </section>
 

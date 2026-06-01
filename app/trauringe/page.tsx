@@ -6,31 +6,15 @@ import AppointmentForm from '@/components/AppointmentForm';
 export const metadata: Metadata = {
   title: 'Trauringe in Bielefeld – Individuelle Anfertigung | KenJu Juwelier',
   description: 'Trauringe in Bielefeld bei KenJu Juwelier. Persönliche Beratung, individuelle Anfertigung in Gelbgold, Weißgold und Roségold. Kostenloser Beratungstermin.',
-  keywords: ['Trauringe Bielefeld', 'Eheringe Bielefeld', 'Trauringe individuell', 'Trauring Gelbgold', 'Trauring Weißgold', 'Trauring Roségold'],
+  keywords: ['Trauringe Bielefeld', 'Eheringe Bielefeld', 'Trauringe individuell', 'Trauring Gelbgold'],
   alternates: { canonical: 'https://kenju-juwelier.de/trauringe' },
 };
 
 const vorteile = [
-  {
-    nr: '01',
-    title: 'Individuelle Gestaltung',
-    desc: 'Breite, Legierung und Edelsteine perfekt nach Ihren Wünschen.',
-  },
-  {
-    nr: '02',
-    title: 'Handgefertigt in Deutschland',
-    desc: 'Höchste Qualität, Präzision und Tradition aus Meisterhand.',
-  },
-  {
-    nr: '03',
-    title: 'Kostenlose Beratung',
-    desc: 'Wir nehmen uns in unserem Bielefelder Atelier ausgiebig Zeit für Sie.',
-  },
-  {
-    nr: '04',
-    title: 'Gravur nach Wunsch',
-    desc: 'Ihre persönliche Botschaft als ewige, kostenlose Erinnerung im Ring.',
-  },
+  { nr: '01', title: 'Individuelle Gestaltung',     desc: 'Breite, Legierung und Edelsteine nach Ihren Wünschen.' },
+  { nr: '02', title: 'Handgefertigt in Deutschland', desc: 'Höchste Qualität und Tradition aus Meisterhand.' },
+  { nr: '03', title: 'Kostenlose Beratung',          desc: 'Wir nehmen uns ausgiebig Zeit für Sie in Bielefeld.' },
+  { nr: '04', title: 'Gravur nach Wunsch',           desc: 'Ihre persönliche Botschaft – kostenlos im Ring.' },
 ];
 
 const materialien = [
@@ -51,11 +35,19 @@ const materialien = [
   },
 ];
 
-const processSteps = [
-  { step: '01', title: 'Beratungstermin',           desc: 'Wir zeigen Ihnen die gesamte Kollektion in Ruhe.' },
-  { step: '02', title: 'Individuelle Gestaltung',    desc: 'Material, Breite, Oberfläche, Gravur – ganz nach Ihrem Geschmack.' },
-  { step: '03', title: 'Handgefertigte Produktion',  desc: 'Jeder Ring wird von Hand mit größter Sorgfalt gefertigt.' },
-  { step: '04', title: 'Übergabe',                   desc: 'Ihr persönliches Versprechen – bereit für Ihren großen Tag.' },
+const bewertungen = [
+  {
+    name: 'Anna Moshage',
+    text: 'Bester Juwelier in Bielefeld. Sehr liebe und kompetente Beratung. Es wird sich sehr viel Zeit genommen und die Auswahl ist sehr gut. Kann ich zu 100% weiterempfehlen.',
+  },
+  {
+    name: 'Olga Mierau',
+    text: 'Ich bin mit der Bedienung und Beratung sehr zufrieden. Herzlicher Empfang und jede Frage wurde ernst genommen und beraten. Danke.',
+  },
+  {
+    name: 'Alexander Schäuble',
+    text: 'Seriös, sehr freundliches und kompetentes Personal vor Ort. Der Schmuck ist qualitativ perfekt, habe da nie Probleme gehabt. Auf jeden Fall weiterzuempfehlen 👍🏼',
+  },
 ];
 
 export default function TrauringePage() {
@@ -68,8 +60,8 @@ export default function TrauringePage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="/images/brillantringe.jpg"
-            alt="Trauringe Bielefeld – KenJu Juwelier"
+            src="/images/trauringehero.jpg"
+            alt="Trauringe Beratung – KenJu Juwelier Bielefeld"
             fill
             sizes="100vw"
             className="object-cover img-zoom"
@@ -83,16 +75,11 @@ export default function TrauringePage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav
-            aria-label="Brotkrumen"
-            className="flex items-center gap-2 font-sans text-xs mb-8 tracking-widest uppercase"
-            style={{ color: 'rgba(245,240,232,0.45)' }}
-          >
+          <nav className="flex items-center gap-2 font-sans text-xs mb-8 tracking-widest uppercase" style={{ color: 'rgba(245,240,232,0.45)' }}>
             <Link href="/" style={{ color: 'rgba(245,240,232,0.45)' }} className="hover:opacity-80 transition-opacity">Startseite</Link>
             <span style={{ opacity: 0.4 }}>›</span>
             <span style={{ color: 'var(--kj-gold)' }}>Trauringe</span>
           </nav>
-
           <h1 className="font-serif text-6xl md:text-8xl font-light mb-6 text-white" style={{ lineHeight: 1.05 }}>
             Trauringe in Bielefeld
           </h1>
@@ -106,36 +93,17 @@ export default function TrauringePage() {
         </div>
       </section>
 
-      {/* ── SEO-TEXTBLOCK ────────────────────────────────── */}
-      <section className="py-16" style={{ backgroundColor: 'var(--kj-surface)', borderBottom: '1px solid var(--kj-border)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-subtitle mb-4">Ihr Juwelier in Bielefeld</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-light mb-5" style={{ color: 'var(--kj-text)' }}>
-            Persönliche Trauring-Beratung in Bielefeld
-          </h2>
-          <div className="divider-gold mx-auto mb-6" />
-          <p className="font-sans text-base leading-relaxed max-w-3xl mx-auto" style={{ color: 'var(--kj-muted)' }}>
-            Gemeinsam finden wir die Trauringe, die perfekt zu Ihnen passen. Ob klassisches Gelbgold, modernes Weißgold oder romantisches Roségold – wir begleiten Sie von der ersten Beratung bis zum fertigen Ring. In unserem Atelier in Bielefeld nehmen wir uns Zeit für Ihre Wünsche und gestalten Trauringe, die Ihre persönliche Geschichte erzählen.
-          </p>
-        </div>
-      </section>
-
       {/* ── WARUM PAARE KENJU WÄHLEN ─────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-bg)' }}>
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderBottom: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-12">
             <p className="section-subtitle mb-4">Ihre Vorteile</p>
             <h2 className="section-title mb-4">Warum Paare KenJu wählen</h2>
             <div className="divider-gold mx-auto" />
           </div>
-
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {vorteile.map((v) => (
-              <div
-                key={v.nr}
-                className="p-5 flex flex-col gap-3 transition-all duration-300"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
+              <div key={v.nr} className="p-5 flex flex-col gap-3" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
                 <span className="font-serif text-2xl" style={{ color: 'var(--kj-gold)' }}>{v.nr}</span>
                 <h3 className="font-serif text-base" style={{ color: 'var(--kj-text)' }}>{v.title}</h3>
                 <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{v.desc}</p>
@@ -146,7 +114,7 @@ export default function TrauringePage() {
       </section>
 
       {/* ── MATERIALIEN ──────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="section-subtitle mb-4">Ihre Wahl</p>
@@ -155,15 +123,8 @@ export default function TrauringePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {materialien.map((m) => (
-              <div
-                key={m.name}
-                className="p-5 flex flex-col gap-3 transition-all duration-300"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <div
-                  className="w-10 h-10 rounded-full shrink-0"
-                  style={{ background: m.gradient, boxShadow: '0 2px 8px rgba(0,0,0,0.3)' }}
-                />
+              <div key={m.name} className="p-5 flex flex-col gap-3" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+                <div className="w-10 h-10 rounded-full" style={{ background: m.gradient, boxShadow: '0 2px 8px rgba(0,0,0,0.3)' }} />
                 <p className="font-serif text-lg gold-text">{m.name}</p>
                 <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{m.desc}</p>
               </div>
@@ -172,79 +133,90 @@ export default function TrauringePage() {
         </div>
       </section>
 
-      {/* ── PROZESS ──────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="section-subtitle mb-4">Schritt für Schritt</p>
-            <h2 className="section-title mb-4">Ihr Weg zum perfekten Trauring</h2>
-            <div className="divider-gold mx-auto" />
-          </div>
+      {/* ── PERSÖNLICHE BERATUNG ─────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden" style={{ border: '1px solid var(--kj-border)' }}>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
-            <div
-              className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px"
-              style={{ background: 'linear-gradient(to right, transparent, var(--kj-gold), transparent)', opacity: 0.3 }}
-            />
-            {processSteps.map((s, i) => (
-              <div key={s.step} className="relative text-center px-6 py-8">
-                <div
-                  className="inline-flex items-center justify-center w-16 h-16 mb-6 font-serif text-2xl font-light relative z-10"
-                  style={{ border: '1px solid var(--kj-gold)', color: 'var(--kj-gold)', background: 'var(--kj-bg)' }}
-                >
-                  {s.step}
+            {/* Bild */}
+            <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden" style={{ background: 'var(--kj-bg)' }}>
+              <Image
+                src="/images/ringberatung.jpg"
+                alt="Trauring Beratung KenJu Juwelier Bielefeld"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover img-zoom"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="p-8 lg:p-12 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
+              <p className="section-subtitle mb-4">Ihr Trauring-Partner</p>
+              <h2 className="font-serif text-2xl md:text-3xl font-light mb-4" style={{ color: 'var(--kj-text)', lineHeight: 1.2 }}>
+                Persönliche Beratung in unserem Atelier
+              </h2>
+              <div className="divider-gold mb-6" />
+              <p className="font-sans text-sm leading-relaxed mb-7" style={{ color: 'var(--kj-muted)' }}>
+                Bei KenJu Juwelier begleiten wir Sie von der ersten Idee bis zum fertigen Trauring. In unserem Atelier in Bielefeld nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  'Individuelle Beratung',
+                  'Maßanfertigung',
+                  'Gravuren kostenlos',
+                  'Bahnhofstraße 28, Bielefeld, Loom 1. OG',
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 font-sans text-sm" style={{ color: 'var(--kj-text)' }}>
+                    <span style={{ color: 'var(--kj-gold)' }}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="#termin" className="btn-gold self-start">
+                Jetzt Termin buchen
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── BEWERTUNGEN ──────────────────────────────────── */}
+      <section className="py-16" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-3">Kundenstimmen</p>
+            <h2 className="section-title">Was unsere Kunden sagen</h2>
+            <div className="divider-gold mx-auto mt-4" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {bewertungen.map((b) => (
+              <div key={b.name} className="p-6 flex flex-col gap-4" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+                <div className="flex gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <span key={i} style={{ color: 'var(--kj-gold)', fontSize: '0.85rem' }}>★</span>
+                  ))}
                 </div>
-                <h4 className="font-serif text-lg mb-2" style={{ color: 'var(--kj-text)' }}>{s.title}</h4>
-                <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
-                {i < processSteps.length - 1 && (
-                  <div
-                    className="md:hidden w-px h-8 mx-auto mt-6"
-                    style={{ background: 'linear-gradient(to bottom, var(--kj-gold), transparent)', opacity: 0.4 }}
-                  />
-                )}
+                <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+                  &ldquo;{b.text}&rdquo;
+                </p>
+                <p className="font-sans text-xs font-semibold tracking-wider" style={{ color: 'var(--kj-text)' }}>
+                  — {b.name}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── VERTRAUENSSEKTION ────────────────────────────── */}
-      <section className="py-16" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-subtitle mb-4">Ihr Trauring-Partner</p>
-          <h2 className="font-serif text-2xl md:text-3xl font-light mb-5" style={{ color: 'var(--kj-text)' }}>
-            Persönliche Beratung in unserem Atelier in Bielefeld
-          </h2>
-          <div className="divider-gold mx-auto mb-6" />
-          <p className="font-sans text-sm leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: 'var(--kj-muted)' }}>
-            Wir begleiten Sie von der ersten Idee bis zum fertigen Trauring. In unserem Atelier in Bielefeld nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
-            {[
-              { icon: '◎', label: 'Bahnhofstraße 28, Bielefeld' },
-              { icon: '◈', label: 'Individuelle Beratung' },
-              { icon: '⬡', label: 'Maßanfertigung' },
-              { icon: '✦', label: 'Gravuren kostenlos' },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col items-center gap-2 py-4 px-3"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
-                <span className="text-xl gold-text">{item.icon}</span>
-                <p className="font-sans text-xs text-center leading-snug" style={{ color: 'var(--kj-muted)' }}>{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── APPOINTMENT ──────────────────────────────────── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--kj-bg)' }} id="termin">
+      {/* ── FORMULAR ─────────────────────────────────────── */}
+      <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }} id="termin">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-4">Ihr besonderer Moment</p>
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-3">Kostenlos & Unverbindlich</p>
             <h2 className="section-title mb-4">Trauring-Beratung buchen</h2>
-            <div className="divider-gold mx-auto mb-5" />
+            <div className="divider-gold mx-auto mb-4" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Kostenlose und unverbindliche Beratung in unserem Atelier – Bahnhofstraße 28, 33602 Bielefeld.
+              Bahnhofstraße 28, 33602 Bielefeld · Loom 1. OG
             </p>
           </div>
           <div className="p-8 md:p-12" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

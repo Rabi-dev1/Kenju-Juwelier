@@ -42,10 +42,10 @@ const steps = [
 ];
 
 const ankaufKategorien = [
-  { title: 'Gold',         img: '/images/goldankauf.jpg',             tags: ['Goldschmuck', 'Goldbarren', 'Goldmünzen', 'Zahngold'] },
-  { title: 'Silber',       img: '/images/armreifen.jpg',              tags: ['Silberschmuck', 'Silberbarren', 'Silbermünzen'] },
-  { title: 'Münzen',       img: '/images/silbermuenzen.jpg',          tags: ['Goldmünzen', 'Silbermünzen', 'Sammlermünzen'] },
-  { title: 'Diamanten',    img: '/images/brillant-set-luxus.jpg',     tags: ['Lose Diamanten', 'Brillanten', 'Diamantschmuck'] },
+  { title: 'Gold',         img: '/images/gold.jpg',                   tags: ['Goldschmuck', 'Goldbarren', 'Goldmünzen', 'Zahngold'] },
+  { title: 'Silber',       img: '/images/silber.jpg',                 tags: ['Silberschmuck', 'Silberbarren', 'Silbermünzen'] },
+  { title: 'Münzen',       img: '/images/munzen.jpg',                 tags: ['Goldmünzen', 'Silbermünzen', 'Sammlermünzen'] },
+  { title: 'Diamanten',    img: '/images/diamant.jpg',                tags: ['Lose Diamanten', 'Brillanten', 'Diamantschmuck'] },
   { title: 'Platin',       img: '/images/brillantring-halo-weiss.jpg', tags: ['Platinringe', 'Platinschmuck', 'Platinbarren'] },
   { title: 'Zahngold',     img: '/images/brillantringe.jpg',          tags: ['Kronen', 'Brücken', 'Dentalgold'] },
   { title: 'Silberbesteck', img: '/images/silberbesteck.jpg',         tags: ['Tafelsilber', 'Antikes Besteck', '800er / 925er Silber'] },

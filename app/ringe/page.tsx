@@ -37,9 +37,9 @@ export default function SchmuckPage() {
   return (
     <>
       <CategoryHero
-        title="Schmuck"
+        title="Schmuck aus Gold & mit Brillanten bei KenJu Juwelier Bielefeld"
         subtitle="Gold · Brillanten · Leidenschaft"
-        description="Memory-Ringe, Solitär-Ringe, Anhänger, Armbänder, Ketten, Ohrstecker und Kreuze – in 585 Gelbgold, Weißgold und Roségold."
+        description="Entdecken Sie hochwertige Memory-Ringe, Solitär-Ringe, Anhänger, Armbänder, Ketten, Ohrstecker, Kreuze und Brillantschmuck in 585 Gelbgold, Weißgold und Roségold. Zeitlose Designs, hochwertige Verarbeitung und persönliche Beratung für besondere Momente."
         imageSrc="/images/ringe.jpg"
         imageAlt="Schmuck KenJu Juwelier Bielefeld"
         breadcrumb="Schmuck"
@@ -73,8 +73,8 @@ export default function SchmuckPage() {
             {/* Bild */}
             <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden group" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/ring-solitaer.jpg"
-                alt="Solitär Brillantring Verlobungsring KenJu Juwelier Bielefeld"
+                src="/images/brillantring-cluster-gelb.jpg"
+                alt="Brillantschmuck KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover img-zoom"
@@ -93,11 +93,11 @@ export default function SchmuckPage() {
             <div className="p-8 lg:p-14 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
               <p className="section-subtitle mb-4">Der besondere Moment</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light mb-5" style={{ color: 'var(--kj-text)', lineHeight: 1.2 }}>
-                Verlobungsringe &amp; Brillantringe bei KenJu Juwelier Bielefeld
+                Brillantschmuck bei KenJu Juwelier Bielefeld
               </h2>
               <div className="divider-gold mb-7" />
               <p className="font-sans text-sm leading-relaxed mb-9" style={{ color: 'var(--kj-muted)' }}>
-                Solitärringe, Brillant-Designs und Verlobungsringe – gefasst in 585 Gelbgold, Weißgold oder Roségold. Individuell nach Ihrem Wunsch.
+                Entdecken Sie hochwertige Solitärringe, Memory-Ringe und Brillantringe mit funkelnden Brillanten. Gefertigt in 585 Gelbgold, Weißgold oder Roségold und individuell nach Ihren Wünschen ausgewählt.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="#termin" className="btn-dark">Jetzt kontaktieren</Link>

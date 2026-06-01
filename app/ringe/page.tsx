@@ -73,7 +73,7 @@ export default function SchmuckPage() {
             {/* Bild */}
             <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden group" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/brillantring-halo-weiss.jpg"
+                src="/images/ring-solitaer.jpg"
                 alt="Solitär Brillantring Verlobungsring KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -96,22 +96,8 @@ export default function SchmuckPage() {
                 Verlobungsringe &amp; Brillantringe bei KenJu Juwelier Bielefeld
               </h2>
               <div className="divider-gold mb-7" />
-              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Ein Verlobungsring ist das schönste Versprechen, das man geben kann. Er steht für
-                einen Moment, der für immer bleibt – und verdient deshalb höchste Qualität und
-                echte Leidenschaft für das Handwerk.
-              </p>
-              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier</strong> in Bielefeld
-                finden Sie klassische Solitärringe ebenso wie aufwendige Brillant-Designs – gefasst in
-                feinstem <strong style={{ color: 'var(--kj-text)' }}>585er Gelbgold</strong>,{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Weißgold</strong> oder{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Roségold</strong>.
-                Jeder Ring wird mit Sorgfalt ausgewählt und kann auf Wunsch individuell angefertigt werden.
-              </p>
               <p className="font-sans text-sm leading-relaxed mb-9" style={{ color: 'var(--kj-muted)' }}>
-                Lassen Sie sich in unserem Atelier an der Bahnhofstraße 28 persönlich beraten –
-                wir nehmen uns Zeit für Sie und helfen Ihnen, den Ring zu finden, der alles sagt.
+                Solitärringe, Brillant-Designs und Verlobungsringe – gefasst in 585 Gelbgold, Weißgold oder Roségold. Individuell nach Ihrem Wunsch.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="#termin" className="btn-dark">Jetzt kontaktieren</Link>

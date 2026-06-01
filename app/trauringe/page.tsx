@@ -18,12 +18,9 @@ const cilorVorteile = [
 ];
 
 const materialien = [
-  { name: '585 Gelbgold',   desc: 'Der Klassiker – warmer Goldton, zeitlos und traditionell.' },
-  { name: '585 Weißgold',   desc: 'Elegant und modern, rhodiniert für bleibenden Glanz.' },
-  { name: '585 Roségold',   desc: 'Romantisch und einzigartig – zarter Rosaton für besondere Momente.' },
-  { name: '950 Platin',     desc: 'Das edelste Metall – selten, dauerhaft, unverwechselbar.' },
-  { name: '750 Gold',       desc: '18 Karat – maximale Reinheit für höchste Ansprüche.' },
-  { name: 'Bicolor',        desc: 'Gelb- und Weißgold kombiniert – zwei Töne, ein Ring.' },
+  { name: '585 Gelbgold', desc: 'Der Klassiker – warmer Goldton, zeitlos.' },
+  { name: '585 Weißgold', desc: 'Modern & rhodiniert für bleibenden Glanz.' },
+  { name: '585 Roségold', desc: 'Romantisch – zarter Rosaton für besondere Momente.' },
 ];
 
 const processSteps = [
@@ -76,16 +73,16 @@ export default function TrauringePage() {
           </div>
 
           {/* Cilor Vorteile */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+          <div className="grid grid-cols-2 gap-4 mb-16">
             {cilorVorteile.map((v) => (
               <div
                 key={v.title}
-                className="p-7 flex flex-col gap-4 transition-all duration-300"
+                className="p-5 flex flex-col gap-2 transition-all duration-300"
                 style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
               >
-                <span className="text-3xl gold-text">{v.icon}</span>
-                <h3 className="font-serif text-xl" style={{ color: 'var(--kj-text)' }}>{v.title}</h3>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{v.desc}</p>
+                <span className="text-xl gold-text">{v.icon}</span>
+                <h3 className="font-serif text-base" style={{ color: 'var(--kj-text)' }}>{v.title}</h3>
+                <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{v.desc}</p>
               </div>
             ))}
           </div>
@@ -97,7 +94,7 @@ export default function TrauringePage() {
               <h2 className="section-title mb-4">Materialien &amp; Legierungen</h2>
               <div className="divider-gold mx-auto" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {materialien.map((m) => (
                 <div
                   key={m.name}

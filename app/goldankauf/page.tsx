@@ -5,9 +5,9 @@ import AppointmentForm from '@/components/AppointmentForm';
 import EdelmetallRechner from '@/components/EdelmetallRechner';
 
 export const metadata: Metadata = {
-  title: 'Goldankauf Bielefeld – Gold verkaufen zum Tagespreis | KenJu Juwelier',
-  description: 'Gold verkaufen in Bielefeld bei KenJu Juwelier. Goldankauf zum tagesaktuellen Marktpreis – Gold, Silber, Diamanten, Münzen & Altschmuck. Kostenlose Bewertung, sofortige Auszahlung in bar. Jetzt Termin buchen.',
-  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Silber ankauf Bielefeld', 'Schmuck verkaufen Bielefeld', 'Goldpreis Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Zahngold verkaufen', 'Altschmuck verkaufen Bielefeld', 'Juwelier Goldankauf Bielefeld'],
+  title: 'Goldankauf Bielefeld | Faire Preise & Sofortige Auszahlung | KenJu Juwelier',
+  description: 'Goldankauf in Bielefeld zum tagesaktuellen Marktpreis. Kostenlose Bewertung, faire Ankaufspreise und sofortige Barauszahlung. Jetzt Termin vereinbaren.',
+  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Bahnhofstraße', 'Juwelier Bielefeld Goldankauf'],
   alternates: { canonical: 'https://kenju-juwelier.de/goldankauf' },
   openGraph: {
     title: 'Goldankauf Bielefeld – Fairer Preis, sofortige Auszahlung | KenJu Juwelier',
@@ -17,74 +17,122 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceJsonLd = {
+const localBusinessJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Goldankauf Bielefeld',
-  description: 'Fairer Goldankauf zum tagesaktuellen Marktpreis. Wir kaufen Gold, Silber, Diamanten, Münzen und Altschmuck. Kostenlose Bewertung, sofortige Auszahlung in bar.',
-  provider: {
-    '@type': 'JewelryStore',
-    name: 'KenJu Juwelier',
-    address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE' },
-    telephone: '+4917663284312',
-    url: 'https://kenju-juwelier.de',
+  '@type': 'JewelryStore',
+  name: 'KenJu Juwelier',
+  url: 'https://kenju-juwelier.de',
+  telephone: '+4917663284312',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Bahnhofstraße 28',
+    addressLocality: 'Bielefeld',
+    postalCode: '33602',
+    addressCountry: 'DE',
   },
-  serviceType: 'Goldankauf',
-  areaServed: { '@type': 'City', name: 'Bielefeld' },
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Kostenlose und unverbindliche Bewertung' },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '10:00', closes: '18:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '10:00', closes: '16:00' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Goldankauf Bielefeld',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Goldankauf', description: 'Fairer Goldankauf zum tagesaktuellen Marktpreis in Bielefeld.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Silberankauf', description: 'Silber verkaufen in Bielefeld – kostenlose Bewertung.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Diamanten Ankauf', description: 'Brillanten und lose Diamanten ankaufen in Bielefeld.' } },
+    ],
+  },
 };
 
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'Was brauche ich beim Goldankauf?', acceptedAnswer: { '@type': 'Answer', text: 'Sie benötigen lediglich einen gültigen Personalausweis oder Reisepass. Alle weiteren Schritte erledigen wir gemeinsam.' } },
-    { '@type': 'Question', name: 'Wie wird der Goldpreis berechnet?', acceptedAnswer: { '@type': 'Answer', text: 'Der Ankaufspreis richtet sich nach dem tagesaktuellen Goldkurs (LBMA Fix). Wir bieten Ihnen den transparenten Marktpreis ohne versteckte Abzüge.' } },
-    { '@type': 'Question', name: 'Welche Arten von Gold kaufen Sie an?', acceptedAnswer: { '@type': 'Answer', text: 'Wir kaufen alle Arten von Gold und Edelmetallen an: Goldschmuck (585er und 750er), Goldmünzen, Zahngold, Silber, Platin sowie Brillanten.' } },
-    { '@type': 'Question', name: 'Wie schnell erhalte ich mein Geld?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Einigung zahlen wir sofort in bar aus – noch am selben Tag.' } },
-    { '@type': 'Question', name: 'Ist die Bewertung kostenlos?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, die Bewertung ist vollständig kostenlos und unverbindlich.' } },
-    { '@type': 'Question', name: 'Was ist die Gutschein-Option?', acceptedAnswer: { '@type': 'Answer', text: 'Statt Barauszahlung können Sie einen Einkaufsgutschein wählen, der einen Mehrwert bietet – ideal für neuen Schmuck zu besseren Konditionen.' } },
+    {
+      '@type': 'Question',
+      name: 'Wie läuft ein Goldankauf in Bielefeld ab?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sie bringen Ihr Gold, Silber oder Ihren Schmuck in unser Atelier in der Bahnhofstraße 28, Bielefeld. Wir bewerten Ihre Stücke kostenlos und unverbindlich, erstellen ein faires Angebot und zahlen bei Einigung sofort in bar aus.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie wird der Goldpreis berechnet?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Der Ankaufspreis richtet sich nach dem tagesaktuellen Goldkurs (LBMA Fix). Wir bieten Ihnen den transparenten Marktpreis ohne versteckte Abzüge.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Kann ich Zahngold verkaufen?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, wir kaufen Zahngold in jeder Form an – Zahnkronen, Brücken und Dentallegierungen. Bringen Sie einfach Ihr Zahngold vorbei, wir bewerten es kostenlos vor Ort.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Kaufen Sie auch Silber an?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wir kaufen Silberschmuck, Silberbarren, Silbermünzen und Silberbesteck an – zum tagesaktuellen Silberpreis. Kostenlose Bewertung direkt in unserem Geschäft in Bielefeld.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Muss ich einen Termin vereinbaren?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Nein, Sie können auch ohne Termin vorbeikommen. Für eine stressfreie Beratung empfehlen wir jedoch einen kurzen Termin – einfach online buchen oder anrufen.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie schnell bekomme ich mein Geld?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Bei Einigung zahlen wir sofort in bar aus – noch am selben Tag. Es gibt keine Wartezeiten oder Überweisungen.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Ist die Bewertung kostenlos?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, die Bewertung Ihres Schmucks oder Ihrer Edelmetalle ist vollständig kostenlos und unverbindlich.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Benötige ich einen Ausweis?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja, bitte bringen Sie einen gültigen Personalausweis oder Reisepass mit. Dies ist gesetzlich vorgeschrieben.' },
+    },
   ],
 };
 
 const steps = [
-  { step: '01', title: 'Termin vereinbaren',  desc: 'Kostenloser Beratungstermin in Bielefeld.' },
-  { step: '02', title: 'Kostenlose Bewertung', desc: 'Experten bewerten Ihr Gold unverbindlich.' },
-  { step: '03', title: 'Faires Angebot',       desc: 'Transparenter Marktpreis, ohne versteckte Abzüge.' },
-  { step: '04', title: 'Sofortige Auszahlung', desc: 'Bargeld noch am selben Tag.' },
+  { step: '01', title: 'Termin vereinbaren',  desc: 'Online buchen oder einfach vorbeikommen – Bahnhofstraße 28, Bielefeld.' },
+  { step: '02', title: 'Kostenlose Bewertung', desc: 'Unsere Experten bewerten Ihr Gold, Silber oder Ihren Schmuck kostenlos und unverbindlich.' },
+  { step: '03', title: 'Faires Angebot',       desc: 'Transparenter Ankaufspreis auf Basis des tagesaktuellen Goldkurses.' },
+  { step: '04', title: 'Sofortige Auszahlung', desc: 'Bei Einigung zahlen wir sofort in bar – noch am selben Tag.' },
 ];
 
 const ankaufKategorien = [
-  { title: 'Gold',         img: '/images/gold.jpg',                   tags: ['Goldschmuck', 'Goldbarren', 'Goldmünzen', 'Zahngold'] },
-  { title: 'Silber',       img: '/images/silber.jpg',                 tags: ['Silberschmuck', 'Silberbarren', 'Silbermünzen'] },
-  { title: 'Münzen',       img: '/images/munzen.jpg',                 tags: ['Goldmünzen', 'Silbermünzen', 'Sammlermünzen'] },
-  { title: 'Diamanten',    img: '/images/diamant.jpg',                tags: ['Lose Diamanten', 'Brillanten', 'Diamantschmuck'] },
-  { title: 'Zahngold',     img: '/images/brillantringe.jpg',          tags: ['Kronen', 'Brücken', 'Dentalgold'] },
-  { title: 'Silberbesteck', img: '/images/silberbesteck.jpg',         tags: ['Tafelsilber', 'Antikes Besteck', '800er / 925er Silber'] },
-  { title: 'Altschmuck',   img: '/images/altschmuck.jpg',             tags: ['Ringe', 'Ketten', 'Anhänger'] },
+  { title: 'Gold',         img: '/images/gold.jpg',          alt: 'Gold verkaufen Bielefeld – Goldschmuck und Goldbarren',        tags: ['Goldschmuck', 'Goldbarren', 'Goldmünzen', 'Zahngold'] },
+  { title: 'Silber',       img: '/images/silber.jpg',         alt: 'Silber verkaufen Bielefeld – Silberschmuck und Silberbarren',  tags: ['Silberschmuck', 'Silberbarren', 'Silbermünzen'] },
+  { title: 'Münzen',       img: '/images/munzen.jpg',         alt: 'Goldmünzen verkaufen Bielefeld – Sammlermünzen Ankauf',        tags: ['Goldmünzen', 'Silbermünzen', 'Sammlermünzen'] },
+  { title: 'Diamanten',    img: '/images/diamant.jpg',        alt: 'Diamanten bewerten lassen Bielefeld – Brillanten Ankauf',      tags: ['Lose Diamanten', 'Brillanten', 'Diamantschmuck'] },
+  { title: 'Zahngold',     img: '/images/brillantringe.jpg',  alt: 'Zahngold verkaufen Bielefeld – Zahnkronen Ankauf',             tags: ['Kronen', 'Brücken', 'Dentalgold'] },
+  { title: 'Silberbesteck', img: '/images/silberbesteck.jpg', alt: 'Silberbesteck verkaufen Bielefeld – Tafelsilber Ankauf',       tags: ['Tafelsilber', 'Antikes Besteck', '800er / 925er'] },
+  { title: 'Altschmuck',   img: '/images/altschmuck.jpg',     alt: 'Altschmuck verkaufen Bielefeld – Schmuck Ankauf KenJu',        tags: ['Ringe', 'Ketten', 'Anhänger'] },
 ];
 
 export default function GoldankaufPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="relative pt-36 pb-24 overflow-hidden" style={{ background: '#0F0D0A' }}>
         <div className="absolute inset-0">
-          <Image src="/images/goldankauf.jpg" alt="Goldankauf KenJu Juwelier Bielefeld" fill sizes="100vw" className="object-cover" priority style={{ opacity: 0.35 }} />
+          <Image
+            src="/images/goldankauf.jpg"
+            alt="Goldankauf Bielefeld bei KenJu Juwelier – faire Preise und sofortige Auszahlung"
+            fill sizes="100vw" className="object-cover" priority style={{ opacity: 0.35 }}
+          />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,13,10,0.7) 0%, rgba(15,13,10,0.5) 50%, rgba(15,13,10,1) 100%)' }} />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-subtitle mb-5">Diskret &amp; Professionell</p>
           <h1 className="font-serif font-light mb-6 text-white" style={{ fontSize: 'clamp(2.2rem, 7vw, 5.5rem)', lineHeight: 1.05 }}>
-            <span className="gold-text">Gold</span>ankauf
+            Gold verkaufen in <span className="gold-text">Bielefeld</span>
           </h1>
           <div className="divider-gold mx-auto mb-6" />
-          <p className="font-sans text-lg max-w-xl mx-auto leading-relaxed mb-10" style={{ color: 'rgba(245,240,232,0.6)' }}>
-            Wir kaufen Gold, Silber, Platin und Brillanten zum{' '}
-            <strong className="gold-text">tagesaktuellen Marktpreis</strong>. Kostenlose Bewertung, sofortige Auszahlung in bar.
+          <p className="font-sans text-lg max-w-xl mx-auto leading-relaxed mb-10" style={{ color: 'rgba(245,240,232,0.65)' }}>
+            Goldankauf zum tagesaktuellen Marktpreis – kostenlose Bewertung, faire Ankaufspreise und sofortige Barauszahlung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-goldankauf" className="btn-gold">Jetzt Termin buchen</Link>
@@ -94,9 +142,9 @@ export default function GoldankaufPage() {
       </section>
 
       {/* ── STATS ────────────────────────────────────────── */}
-      <section className="py-12" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)', borderBottom: '1px solid var(--kj-border)' }}>
+      <section className="py-10" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)', borderBottom: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { val: '20+',    label: 'Jahre Erfahrung' },
               { val: '5.000+', label: 'Zufriedene Kunden' },
@@ -112,125 +160,123 @@ export default function GoldankaufPage() {
         </div>
       </section>
 
-      {/* ── SEO-TEXTBLOCK ────────────────────────────────── */}
-      <section className="py-14" style={{ backgroundColor: 'var(--kj-bg)', borderBottom: '1px solid var(--kj-border)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-light mb-4" style={{ color: 'var(--kj-text)' }}>
-            Goldankauf in Bielefeld – schnell, fair und diskret
-          </h2>
-          <div className="divider-gold mx-auto mb-5" />
-          <p className="font-sans text-sm leading-relaxed max-w-2xl mx-auto" style={{ color: 'var(--kj-muted)' }}>
-            Sie möchten Gold, Silber, Altschmuck oder Münzen verkaufen? Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier in Bielefeld</strong> erhalten Sie eine kostenlose und unverbindliche Bewertung zum tagesaktuellen Marktpreis – transparent, fair und mit sofortiger Auszahlung in bar. Kommen Sie einfach vorbei oder buchen Sie online Ihren Termin.
-          </p>
-        </div>
-      </section>
-
       {/* ── PRODUKTE ─────────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)' }}>
+      <section className="py-18" style={{ backgroundColor: 'var(--kj-bg)', paddingTop: '4.5rem', paddingBottom: '4.5rem' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-4">Was wir ankaufen</p>
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-3">Was wir ankaufen</p>
             <h2 className="section-title mb-4">Folgende Produkte kaufen wir an</h2>
             <div className="divider-gold mx-auto" />
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {ankaufKategorien.map((kat) => (
               <div key={kat.title} className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
                 <div className="relative h-40 overflow-hidden">
-                  <Image src={kat.img} alt={`${kat.title} Ankauf`} fill sizes="(max-width: 640px) 50vw, 25vw" className="object-cover img-zoom" style={{ opacity: 0.85 }} />
+                  <Image src={kat.img} alt={kat.alt} fill sizes="(max-width: 640px) 50vw, 25vw" className="object-cover img-zoom" style={{ opacity: 0.85 }} />
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(15,13,10,0.5), transparent 70%)' }} />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-serif text-lg mb-2" style={{ color: 'var(--kj-text)' }}>{kat.title}</h3>
-                  <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-                    {kat.tags.join(' · ')}
-                  </p>
+                  <h3 className="font-serif text-lg mb-1.5" style={{ color: 'var(--kj-text)' }}>{kat.title}</h3>
+                  <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{kat.tags.join(' · ')}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 p-5 text-center" style={{ border: '1px solid rgba(201,168,76,0.2)', background: 'var(--kj-card)' }}>
+          <div className="mt-6 p-4 text-center" style={{ border: '1px solid rgba(201,168,76,0.2)', background: 'var(--kj-card)' }}>
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
               <strong style={{ color: 'var(--kj-gold)' }}>Einfach vorbeikommen:</strong>{' '}
-              Kostenlose, unverbindliche Bewertung – Personalausweis mitbringen.
+              Kostenlose, unverbindliche Bewertung – Personalausweis mitbringen. Goldankauf Bahnhofstraße 28, Bielefeld.
             </p>
           </div>
         </div>
       </section>
 
       {/* ── RECHNER ──────────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }} id="rechner">
+      <section className="py-18" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)', paddingTop: '4.5rem', paddingBottom: '4.5rem' }} id="rechner">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-4">Transparenz</p>
-            <h2 className="section-title mb-4">Edelmetall-Preisrechner</h2>
-            <div className="divider-gold mx-auto mb-5" />
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-3">Transparenz</p>
+            <h2 className="section-title mb-3">Edelmetall-Preisrechner</h2>
+            <div className="divider-gold mx-auto mb-4" />
             <p className="font-sans text-sm max-w-xl mx-auto" style={{ color: 'var(--kj-muted)' }}>
-              Erhalten Sie einen ersten Orientierungswert auf Basis des aktuellen Spot-Kurses.
+              Erhalten Sie einen ersten Orientierungswert für Ihren Goldpreis in Bielefeld – auf Basis des aktuellen Spot-Kurses.
             </p>
           </div>
           <EdelmetallRechner />
 
-          {/* CTA unter Rechner */}
-          <div className="mt-10 p-8 text-center" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+          {/* Trust-CTA unter Rechner */}
+          <div className="mt-8 p-7 text-center" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
             <p className="font-serif text-xl mb-2" style={{ color: 'var(--kj-text)' }}>Sie möchten eine genaue Bewertung?</p>
-            <p className="font-sans text-sm mb-6" style={{ color: 'var(--kj-muted)' }}>
-              Der Preisrechner liefert einen ersten Orientierungswert. Für eine exakte Bewertung prüfen wir Ihr Gold kostenlos direkt vor Ort.
+            <p className="font-sans text-sm mb-5" style={{ color: 'var(--kj-muted)' }}>
+              Der Preisrechner liefert einen ersten Orientierungswert. Für eine exakte Bewertung prüfen wir Ihr Gold kostenlos direkt vor Ort in Bielefeld.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              {['Kostenlose Bewertung', 'Unverbindlich', 'Sofortige Auszahlung'].map((item) => (
+                <span key={item} className="font-sans text-xs flex items-center gap-1.5" style={{ color: 'var(--kj-muted)' }}>
+                  <span style={{ color: 'var(--kj-gold)' }}>✓</span>{item}
+                </span>
+              ))}
+            </div>
             <Link href="#termin-goldankauf" className="btn-gold">Kostenlosen Termin vereinbaren</Link>
           </div>
         </div>
       </section>
 
       {/* ── SO FUNKTIONIERT'S ────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
+      <section className="py-18" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)', paddingTop: '4.5rem', paddingBottom: '4.5rem' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-4">Einfach &amp; Transparent</p>
-            <h2 className="section-title">So funktioniert der Goldankauf</h2>
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-3">Einfach &amp; Transparent</p>
+            <h2 className="section-title">So funktioniert der Goldankauf in Bielefeld</h2>
             <div className="divider-gold mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((s) => (
               <div key={s.step}>
-                <span className="font-serif font-light gold-text block mb-4" style={{ fontSize: '3.5rem', opacity: 0.35, lineHeight: 1 }}>{s.step}</span>
+                <span className="font-serif font-light gold-text block mb-3" style={{ fontSize: '3rem', opacity: 0.3, lineHeight: 1 }}>{s.step}</span>
                 <h3 className="font-serif text-xl mb-2" style={{ color: 'var(--kj-text)' }}>{s.title}</h3>
                 <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
               </div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link href="#termin-goldankauf" className="btn-gold">Jetzt Termin buchen</Link>
+          </div>
         </div>
       </section>
 
-      {/* ── GUTSCHEIN ────────────────────────────────────── */}
-      <section className="py-16" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── GUTSCHEIN (Zusatzvorteil) ─────────────────────── */}
+      <section className="py-12" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden" style={{ border: '1px solid var(--kj-border)' }}>
-            <div className="p-8 lg:p-12 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
-              <p className="section-subtitle mb-3">Exklusiver Vorteil</p>
-              <h2 className="font-serif font-light mb-4" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', color: 'var(--kj-text)', lineHeight: 1.2 }}>
-                Altgold verkaufen &amp; mehr erhalten
+            <div className="p-7 lg:p-10 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
+              <p className="section-subtitle mb-2">Zusätzlicher Vorteil</p>
+              <h2 className="font-serif text-xl md:text-2xl font-light mb-3" style={{ color: 'var(--kj-text)', lineHeight: 1.2 }}>
+                Optional mehr Wert erhalten
               </h2>
-              <div className="divider-gold mb-6" />
-              <ul className="space-y-3 mb-7">
+              <div className="divider-gold mb-5" />
+              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
+                Statt der Barauszahlung können Sie einen <strong style={{ color: 'var(--kj-gold)' }}>Einkaufsgutschein</strong> mit Mehrwert wählen – ideal wenn Sie neuen Schmuck oder Trauringe bei KenJu erwerben möchten.
+              </p>
+              <ul className="space-y-2 mb-6">
                 {['Mehr Wert als Barauszahlung', 'Für das gesamte Sortiment einlösbar', 'Ideal für neuen Schmuck oder Trauringe', 'Keine Mindestbestellmenge'].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <span className="font-serif font-bold" style={{ color: 'var(--kj-gold)' }}>✓</span>
-                    <span className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>{item}</span>
+                  <li key={item} className="flex items-center gap-2.5">
+                    <span style={{ color: 'var(--kj-gold)', fontSize: '0.75rem' }}>✓</span>
+                    <span className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{item}</span>
                   </li>
                 ))}
               </ul>
-              <Link href="#termin-goldankauf" className="btn-gold self-start">Jetzt Termin vereinbaren</Link>
+              <Link href="#termin-goldankauf" className="btn-outline-gold self-start" style={{ fontSize: '0.7rem' }}>Mehr erfahren beim Termin</Link>
             </div>
-            <div className="relative min-h-[260px] lg:min-h-0" style={{ background: 'var(--kj-card-deep)' }}>
-              <Image src="/images/goldankauf.jpg" alt="Altgold Gutschein – KenJu Juwelier" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" style={{ opacity: 0.45 }} />
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                <div className="p-8 max-w-xs" style={{ background: 'rgba(15,13,10,0.85)', border: '1px solid rgba(201,168,76,0.4)' }}>
-                  <p className="font-serif text-5xl font-light mb-2 gold-text">+</p>
-                  <p className="section-subtitle mb-2">Mehrwert</p>
-                  <p className="font-serif text-xl text-white">Gutschein-Option</p>
+            <div className="relative min-h-[220px] lg:min-h-0" style={{ background: 'var(--kj-card-deep)' }}>
+              <Image src="/images/goldankauf.jpg" alt="Gutschein-Option beim Goldankauf – KenJu Juwelier Bielefeld" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" style={{ opacity: 0.4 }} />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="p-6 text-center" style={{ background: 'rgba(15,13,10,0.85)', border: '1px solid rgba(201,168,76,0.4)' }}>
+                  <p className="font-serif text-4xl font-light gold-text mb-1">+</p>
+                  <p className="font-sans text-xs tracking-widest uppercase mb-1" style={{ color: 'var(--kj-gold)' }}>Mehrwert</p>
+                  <p className="font-serif text-lg text-white">Gutschein-Option</p>
                 </div>
               </div>
             </div>
@@ -239,43 +285,67 @@ export default function GoldankaufPage() {
       </section>
 
       {/* ── TERMIN ───────────────────────────────────────── */}
-      <section className="py-28" style={{ backgroundColor: 'var(--kj-bg)' }} id="termin-goldankauf">
+      <section className="py-24" style={{ backgroundColor: 'var(--kj-bg)' }} id="termin-goldankauf">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-4">Kostenlose Bewertung</p>
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-3">Kostenlose Bewertung</p>
             <h2 className="section-title mb-4">Goldankauf-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-5" />
-            <p className="font-sans text-sm max-w-lg mx-auto" style={{ color: 'var(--kj-muted)' }}>
-              Vereinbaren Sie jetzt Ihren kostenlosen und unverbindlichen Bewertungstermin.
+            <p className="font-sans text-sm max-w-lg mx-auto mb-5" style={{ color: 'var(--kj-muted)' }}>
+              Vereinbaren Sie jetzt Ihren kostenlosen und unverbindlichen Bewertungstermin für Ihren Goldankauf in Bielefeld.
             </p>
-            <p className="font-sans text-xs mt-2" style={{ color: 'var(--kj-muted)', opacity: 0.65 }}>
+            <div className="flex flex-wrap justify-center gap-5 mb-2">
+              {['Kostenlose Bewertung', 'Unverbindliches Angebot', 'Sofortige Barauszahlung', 'Diskrete Beratung'].map((item) => (
+                <span key={item} className="font-sans text-xs flex items-center gap-1.5" style={{ color: 'var(--kj-muted)' }}>
+                  <span style={{ color: 'var(--kj-gold)' }}>✓</span>{item}
+                </span>
+              ))}
+            </div>
+            <p className="font-sans text-xs mt-3" style={{ color: 'var(--kj-muted)', opacity: 0.6 }}>
               Bahnhofstraße 28, 33602 Bielefeld
             </p>
           </div>
-          <div className="p-10 md:p-12" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+          <div className="p-8 md:p-12" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
             <AppointmentForm />
           </div>
         </div>
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
+      <section className="py-18" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)', paddingTop: '4.5rem', paddingBottom: '4.5rem' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-4">Häufige Fragen</p>
-            <h2 className="section-title">FAQ – Goldankauf</h2>
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-3">Häufige Fragen</p>
+            <h2 className="section-title">FAQ – Goldankauf in Bielefeld</h2>
             <div className="divider-gold mx-auto mt-4" />
           </div>
-          <div className="space-y-3">
+          <div className="space-y-2.5">
             {faqJsonLd.mainEntity.map((faq, i) => (
               <details key={i} className="transition-all" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
-                <summary className="font-serif text-lg cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-4" style={{ color: 'var(--kj-text)' }}>
+                <summary className="font-serif text-base cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-4" style={{ color: 'var(--kj-text)' }}>
                   {faq.name}
-                  <span className="shrink-0 text-xl font-light" style={{ color: 'var(--kj-gold)' }}>+</span>
+                  <span className="shrink-0 text-lg font-light" style={{ color: 'var(--kj-gold)' }}>+</span>
                 </summary>
                 <p className="font-sans text-sm px-6 pb-5 leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{faq.acceptedAnswer.text}</p>
               </details>
             ))}
+          </div>
+
+          {/* Internes Linking */}
+          <div className="mt-10 pt-8" style={{ borderTop: '1px solid var(--kj-border)' }}>
+            <p className="font-sans text-xs text-center mb-4 tracking-widest uppercase" style={{ color: 'var(--kj-muted)' }}>Weitere Angebote bei KenJu Juwelier</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { href: '/ringe', label: 'Schmuck' },
+                { href: '/trauringe', label: 'Trauringe' },
+                { href: '/uhren', label: 'Uhren' },
+                { href: '/service', label: 'Service' },
+              ].map((link) => (
+                <Link key={link.href} href={link.href} className="font-sans text-xs px-4 py-2 transition-colors hover:opacity-80" style={{ border: '1px solid var(--kj-border)', color: 'var(--kj-muted)', background: 'var(--kj-card)' }}>
+                  {link.label} →
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -5,186 +5,110 @@ import CategoryHero from '@/components/CategoryHero';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Uhren – Tommy Hilfiger, Hugo Boss, Police & mehr | KenJu Juwelier Bielefeld',
-  description: 'Exklusive Markenuhren bei KenJu Juwelier Bielefeld: Tommy Hilfiger, Hugo Boss, Police, Regent und Swiss Military. Persönliche Beratung und fachkundiger Uhrenservice vor Ort.',
-  keywords: ['Uhren Bielefeld', 'Tommy Hilfiger Uhren', 'Hugo Boss Uhren', 'Police Uhren', 'Regent Uhren', 'Swiss Military Uhren', 'Juwelier Bielefeld'],
+  title: 'Uhren in Bielefeld – Tommy Hilfiger, Hugo Boss & mehr | KenJu Juwelier',
+  description: 'Markenuhren bei KenJu Juwelier Bielefeld: Tommy Hilfiger, Hugo Boss, Police, Regent und Swiss Military. Persönliche Beratung vor Ort.',
+  keywords: ['Uhren Bielefeld', 'Tommy Hilfiger Uhren', 'Hugo Boss Uhren', 'Police Uhren', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/uhren' },
 };
 
 const brands = [
   {
     name: 'Tommy Hilfiger',
-    subtitle: 'American Classic Style',
-    desc: 'Tommy Hilfiger Uhren verbinden den ikonischen amerikanischen Preppy-Stil mit moderner Uhrmacherkunst. Klare Linien, hochwertige Edelstahlgehäuse und zeitloses Design machen diese Uhren zum perfekten Alltagsbegleiter – vom eleganten Businessmodell bis zur lässigen Freizeitvariante. Das charakteristische Hilfiger-Design ist auf jedem Zifferblatt sofort erkennbar.',
-    tags: ['Casual', 'Business', 'Fashion'],
+    desc: 'Moderne Designuhren für Alltag und Business.',
+    tags: ['Elegant', 'Alltag', 'Modern'],
   },
   {
     name: 'Hugo Boss',
-    subtitle: 'Deutscher Designanspruch',
-    desc: 'Hugo Boss steht für unverwechselbaren Stil und höchste Verarbeitungsqualität. Die Uhrenkollektion überzeugt durch reduziertes, elegantes Design mit präziser Quarz-Mechanik. Saphirgläser, hochwertige Leder- oder Edelstahlarmbänder und das markante Boss-Branding machen jede Uhr zum Statement – ideal für den modernen Mann, dem Klasse und Stil wichtig sind.',
-    tags: ['Elegant', 'Business', 'Premium'],
+    desc: 'Reduziertes, elegantes Design mit Präzisionsuhrwerk.',
+    tags: ['Premium', 'Business', 'Elegant'],
   },
   {
     name: 'Police',
-    subtitle: 'Italienischer Urban Style',
-    desc: 'Police Uhren sind mutig, urban und absolut unverwechselbar. Die italienische Modemarke bringt avantgardistisches Design und einen starken Charakter ans Handgelenk – asymmetrische Gehäuse, dunkle Zifferblätter und markante Details setzen bewusst Akzente. Für alle, die einen unkonventionellen Zeitmesser suchen, ohne auf Qualität zu verzichten.',
-    tags: ['Urban', 'Trendy', 'Statement'],
+    desc: 'Urbane Uhren mit starkem Charakter und italienischem Stil.',
+    tags: ['Urban', 'Statement', 'Trendy'],
   },
   {
     name: 'Regent',
-    subtitle: 'Zeitlose Eleganz zum fairen Preis',
-    desc: 'Regent steht für klassische Eleganz zu einem fairen Preis. Die Modelle überzeugen mit schlichten Designs, zuverlässiger Quarz-Mechanik und hochwertiger Verarbeitung. Ob klassisches Herrenzifferblatt, feminines Damenmodell oder eine schlichte Bicolor-Variante – Regent bietet eine breite Auswahl für alle Anlässe des Alltags.',
+    desc: 'Klassische Eleganz für Damen und Herren zum fairen Preis.',
     tags: ['Klassisch', 'Damen & Herren', 'Alltagstauglich'],
   },
   {
     name: 'Swiss Military',
-    subtitle: 'Schweizer Präzision & Robustheit',
-    desc: 'Swiss Military vereint Schweizer Uhrmachertradition mit militärischer Robustheit. Kratzfeste Gläser, wasserdichte Gehäuse und präzise Schweizer Uhrwerke machen diese Modelle zum verlässlichen Begleiter in jeder Situation – ob im Büro, auf Reisen oder beim Outdoor-Abenteuer. Qualität, auf die man sich jederzeit verlassen kann.',
-    tags: ['Robust', 'Wasserdicht', 'Swiss Made'],
+    desc: 'Schweizer Präzision – robust, wasserdicht, zuverlässig.',
+    tags: ['Robust', 'Swiss Made', 'Wasserdicht'],
   },
+];
+
+const services = [
+  { icon: '⟳', title: 'Batteriewechsel', desc: 'Noch am selben Tag, wasserdicht abgedichtet.' },
+  { icon: '◇', title: 'Glaswechsel',     desc: 'Mineral- und Saphirglas für alle Modelle.' },
+  { icon: '↔', title: 'Armbandservice',  desc: 'Kürzen, verlängern oder austauschen.' },
 ];
 
 export default function UhrenPage() {
   return (
     <>
-      <CategoryHero
-        title="Uhren"
-        subtitle="Markenuhren – Stilvoll. Präzise. Zeitlos."
-        description="Bei KenJu Juwelier finden Sie eine sorgfältig ausgewählte Kollektion exklusiver Markenuhren – für jeden Stil, jeden Anlass und jedes Budget."
-        imageSrc="/images/creolen.jpg"
-        imageAlt="Uhren Kollektion KenJu Juwelier Bielefeld"
-        breadcrumb="Uhren"
-        pageUrl="https://kenju-juwelier.de/uhren"
-      />
+      {/* ── HERO ─────────────────────────────────────────── */}
+      <section
+        className="relative flex items-end pb-16 pt-36 overflow-hidden"
+        style={{ background: '#0F0D0A', minHeight: '65vh' }}
+      >
+        <div className="absolute inset-0">
+          <Image
+            src="/images/uhrhero.jpg"
+            alt="Markenuhren KenJu Juwelier Bielefeld"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.48)' }} />
+        </div>
 
-      {/* ── Intro: 1 Bild + starker Text ─────────────────── */}
-      <section className="py-32" style={{ backgroundColor: 'var(--kj-bg)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-
-            {/* Das EINE premium Bild der gesamten Seite */}
-            <div className="relative h-[480px] lg:h-[620px] overflow-hidden gold-border group">
-              <Image
-                src="/images/creolen.jpg"
-                alt="Markenuhren bei KenJu Juwelier Bielefeld"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover img-zoom"
-                priority
-                style={{ opacity: 0.88 }}
-              />
-              <div className="img-caption">
-                <p className="font-serif text-xl text-white">Stil am Handgelenk</p>
-                <p className="font-sans text-xs mt-1" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                  5 Premiummarken · Persönliche Beratung · Bielefeld
-                </p>
-              </div>
-              <div
-                className="absolute top-5 left-5 px-4 py-3"
-                style={{ background: 'rgba(15,13,10,0.85)', border: '1px solid rgba(201,168,76,0.4)' }}
-              >
-                <p className="font-sans text-xs tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>Markenuhren</p>
-                <p className="font-serif text-sm text-white mt-0.5">KenJu Juwelier</p>
-              </div>
-            </div>
-
-            {/* Text */}
-            <div>
-              <p className="section-subtitle mb-5">Unser Sortiment</p>
-              <h2 className="font-serif text-4xl md:text-5xl font-light leading-tight mb-6" style={{ color: 'var(--kj-text)' }}>
-                Markenuhren für<br />jeden Anlass
-              </h2>
-              <div className="divider-gold mb-8" />
-              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier</strong> in Bielefeld führen
-                wir eine handverlesene Auswahl renommierter Uhrenmarken – von klassisch-eleganten
-                Zeitmessern über sportliche Modelle bis hin zu modernen Designuhren für Sie und Ihn.
-              </p>
-              <p className="font-sans text-sm leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Jede Uhr in unserem Sortiment wurde sorgfältig ausgewählt: Wir setzen auf Marken,
-                die für <strong style={{ color: 'var(--kj-text)' }}>Qualität, Stil und Zuverlässigkeit</strong> stehen.
-                Ob als täglicher Begleiter, Geschenk oder besonderes Stück für besondere Momente –
-                bei uns finden Sie die passende Uhr.
-              </p>
-              <p className="font-sans text-sm leading-relaxed mb-10" style={{ color: 'var(--kj-muted)' }}>
-                Kommen Sie in unser Geschäft und lassen Sie sich persönlich beraten. Wir nehmen uns
-                Zeit für Ihre Wünsche – und helfen Ihnen, den richtigen Zeitmesser zu finden.
-              </p>
-
-              {/* Marken-Chips */}
-              <div className="flex flex-wrap gap-2 mb-10">
-                {brands.map((b) => (
-                  <span key={b.name} className="brand-tag">{b.name}</span>
-                ))}
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="#termin" className="btn-dark">Beratung anfragen</Link>
-                <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
-              </div>
-            </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <nav className="flex items-center gap-2 font-sans text-xs mb-8 tracking-widest uppercase" style={{ color: 'rgba(245,240,232,0.45)' }}>
+            <Link href="/" style={{ color: 'rgba(245,240,232,0.45)' }} className="hover:opacity-80 transition-opacity">Startseite</Link>
+            <span style={{ opacity: 0.4 }}>›</span>
+            <span style={{ color: 'var(--kj-gold)' }}>Uhren</span>
+          </nav>
+          <h1 className="font-serif text-6xl md:text-8xl font-light mb-5 text-white" style={{ lineHeight: 1.05 }}>
+            Uhren in Bielefeld
+          </h1>
+          <div className="divider-gold mb-5" />
+          <p className="font-sans text-lg max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.65)' }}>
+            Markenuhren von Tommy Hilfiger, Hugo Boss, Police, Regent und Swiss Military.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="#termin" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem' }}>
+              Beratung vereinbaren
+            </Link>
+            <a href="tel:+4917663284312" className="btn-outline-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem', borderColor: 'rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.8)' }}>
+              Jetzt anrufen
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ── Marken – große typografische Karten ─────────── */}
-      <section className="py-32" style={{ backgroundColor: 'var(--kj-surface)' }}>
+      {/* ── MARKEN ───────────────────────────────────────── */}
+      <section className="py-28" style={{ backgroundColor: 'var(--kj-surface)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="section-subtitle mb-5">Unsere Markenpartner</p>
+            <p className="section-subtitle mb-4">Unsere Markenpartner</p>
             <h2 className="section-title mb-4">Qualität, die man spürt</h2>
             <div className="divider-gold mx-auto" />
           </div>
 
-          {/* Brand cards – typographic + bold */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {brands.slice(0, 3).map((brand) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="p-8 flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+                className="p-7 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-0.5"
                 style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
               >
-                <div>
-                  <h3 className="font-serif text-3xl font-light mb-1" style={{ color: 'var(--kj-text)' }}>
-                    {brand.name}
-                  </h3>
-                  <p className="font-sans text-[0.65rem] tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>
-                    {brand.subtitle}
-                  </p>
-                </div>
-                <p className="font-sans text-base leading-relaxed flex-1" style={{ color: 'var(--kj-muted)' }}>
-                  {brand.desc}
-                </p>
-                <div className="flex flex-wrap gap-2 pt-3" style={{ borderTop: '1px solid var(--kj-border)' }}>
-                  {brand.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-sans text-xs px-3 py-1.5 tracking-wide"
-                      style={{ background: 'var(--kj-surface)', color: 'var(--kj-muted)' }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {brands.slice(3).map((brand) => (
-              <div
-                key={brand.name}
-                className="p-8 flex flex-col gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <div>
-                  <h3 className="font-serif text-3xl font-light mb-1" style={{ color: 'var(--kj-text)' }}>
-                    {brand.name}
-                  </h3>
-                  <p className="font-sans text-[0.65rem] tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>
-                    {brand.subtitle}
-                  </p>
-                </div>
-                <p className="font-sans text-base leading-relaxed flex-1" style={{ color: 'var(--kj-muted)' }}>
+                <h3 className="font-serif text-2xl font-light" style={{ color: 'var(--kj-text)' }}>
+                  {brand.name}
+                </h3>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
                   {brand.desc}
                 </p>
                 <div className="flex flex-wrap gap-2 pt-3" style={{ borderTop: '1px solid var(--kj-border)' }}>
@@ -202,43 +126,43 @@ export default function UhrenPage() {
             ))}
           </div>
 
-          <div className="text-center mt-14">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#termin" className="btn-gold">Beratung anfragen</Link>
-              <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
-            </div>
+          <div className="text-center mt-12">
+            <Link href="#termin" className="btn-gold">Beratung anfragen</Link>
           </div>
         </div>
       </section>
 
-      {/* ── Uhrenservice Hinweis ─────────────────────────── */}
+      {/* ── SERVICE ──────────────────────────────────────── */}
       <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {[
-              { icon: '⟳', title: 'Batteriewechsel', desc: 'Schnell und sicher – noch am selben Tag, wasserdicht abgedichtet.' },
-              { icon: '◇', title: 'Glaswechsel', desc: 'Ersatz von Mineralglas und Saphirglas für alle Uhrenmodelle.' },
-              { icon: '↔', title: 'Armbandreparatur', desc: 'Kürzen, verlängern oder austauschen – Metall, Leder und Kunststoff.' },
-            ].map((s) => (
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="section-subtitle mb-4">Uhrenservice</p>
+            <h2 className="section-title mb-4">Service vor Ort</h2>
+            <div className="divider-gold mx-auto" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {services.map((s) => (
               <div
                 key={s.title}
-                className="p-8"
+                className="p-7 text-center"
                 style={{ border: '1px solid var(--kj-border)', background: 'var(--kj-card)' }}
               >
                 <span className="font-serif text-3xl mb-4 block" style={{ color: 'var(--kj-gold)' }}>{s.icon}</span>
-                <h3 className="font-serif text-xl mb-3" style={{ color: 'var(--kj-text)' }}>{s.title}</h3>
+                <h3 className="font-serif text-xl mb-2" style={{ color: 'var(--kj-text)' }}>{s.title}</h3>
                 <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
               </div>
             ))}
           </div>
+
           <p className="font-sans text-xs text-center mt-6" style={{ color: 'var(--kj-muted)' }}>
-            Alle Uhrenservices auch ohne Termin – einfach vorbeikommen.{' '}
-            <Link href="/service" style={{ color: 'var(--kj-gold)' }}>Alle Serviceleistungen →</Link>
+            Auch ohne Termin – einfach vorbeikommen.{' '}
+            <Link href="/service" style={{ color: 'var(--kj-gold)' }}>Alle Uhrenservices ansehen →</Link>
           </p>
         </div>
       </section>
 
-      {/* ── Appointment ─────────────────────────────────── */}
+      {/* ── APPOINTMENT ──────────────────────────────────── */}
       <section className="py-28" style={{ backgroundColor: 'var(--kj-surface)' }} id="termin">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -246,8 +170,7 @@ export default function UhrenPage() {
             <h2 className="section-title mb-4">Uhren-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Kommen Sie in unser Atelier in der Bahnhofstraße 28 – wir beraten Sie ausführlich zu
-              unserer gesamten Uhren-Kollektion und zum Uhrenservice.
+              Bahnhofstraße 28, 33602 Bielefeld · Persönliche Beratung zu unserer gesamten Uhren-Kollektion.
             </p>
           </div>
           <div className="p-8" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

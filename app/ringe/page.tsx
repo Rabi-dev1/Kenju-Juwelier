@@ -12,21 +12,25 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kenju-juwelier.de/ringe' },
 };
 
-/* ── Slider-Bilder (nur diese, keine Beschreibung) ── */
+/* ── Slider-Bilder – exakte Dateinamen aus public/images ── */
 const sliderBilder = [
-  { src: '/images/armband-rosegold.jpg',   alt: '585 Roségold Armband KenJu Juwelier' },
-  { src: '/images/vitrine-ketten.jpg',      alt: 'Schaufenster Goldketten KenJu Bielefeld' },
-  { src: '/images/armreif-twisted.jpg',     alt: '585 Gelbgold Armreifen gedreht' },
-  { src: '/images/armreif-wellen.jpg',      alt: '585 Gelbgold Armreif Wellenform' },
-  { src: '/images/laden-ringe.jpg',         alt: 'Ringeauswahl KenJu Juwelier Bielefeld' },
-  { src: '/images/kette-engel.jpg',         alt: '585 Gelbgold Kette Engelflügel' },
-  { src: '/images/kette-herz.jpg',          alt: '585 Gelbgold Kette Herz Anhänger' },
-  { src: '/images/kette-farbstein.jpg',     alt: 'Goldketten mit Farbstein-Anhänger' },
-  { src: '/images/kette-kugel.jpg',         alt: 'Goldketten mit Kugeldekor auf Büste' },
-  { src: '/images/kette-traumfaenger.jpg',  alt: '585 Gelbgold Kette Traumfänger Anhänger' },
-  { src: '/images/ohrstecker-kugel.jpg',    alt: '585 Gelbgold Kugelstecker Ohrringe' },
-  { src: '/images/ringe-baguette.jpg',      alt: '585 Gelbgold Ringe mit Farbsteinen' },
-  { src: '/images/ringe-memoire.jpg',       alt: 'Memoire Ringe Sortiment KenJu' },
+  { src: '/images/armband-rose.jpg',         alt: '585 Roségold Armband KenJu Juwelier' },
+  { src: '/images/armreif-gedreht.jpg',       alt: '585 Gelbgold Armreifen gedreht' },
+  { src: '/images/armreif-welle.jpg',         alt: '585 Gelbgold Armreif Wellenform' },
+  { src: '/images/halsketten.jpg',            alt: 'Schaufenster Goldketten KenJu Bielefeld' },
+  { src: '/images/kette-engelsfluegel.jpg',   alt: '585 Gelbgold Kette Engelflügel' },
+  { src: '/images/kette-herz.jpg',            alt: '585 Gelbgold Kette Herz Anhänger' },
+  { src: '/images/kette-kreis.jpg',           alt: 'Goldketten mit Farbstein-Anhänger' },
+  { src: '/images/kette-schlange.jpg',        alt: 'Goldketten Sortiment KenJu Bielefeld' },
+  { src: '/images/kette-traumfaenger.jpg',    alt: '585 Gelbgold Kette Traumfänger Anhänger' },
+  { src: '/images/ohrstecker-kugel.jpg',      alt: '585 Gelbgold Kugelstecker Ohrringe' },
+  { src: '/images/ring-baguette.jpg',         alt: '585 Gelbgold Ringe mit Farbsteinen' },
+  { src: '/images/creolen-farbsteine.jpg',    alt: '585 Gelbgold Creolen mit Farbsteinen' },
+  { src: '/images/creolen-gedreht.jpg',       alt: '585 Gelbgold Creolen gedreht' },
+  { src: '/images/creolen-filigran.jpg',      alt: '585 Gelbgold Creolen klassisch' },
+  { src: '/images/kreuz-filigran.jpg',        alt: '585 Gelbgold Goldkreuze klassisch' },
+  { src: '/images/kreuz-platte.jpg',          alt: '585 Gelbgold Kreuz Dog-Tag Anhänger' },
+  { src: '/images/brillantring-cluster-gelb.jpg', alt: 'Brillantring KenJu Juwelier Bielefeld' },
 ];
 
 export default function SchmuckPage() {
@@ -122,7 +126,7 @@ export default function SchmuckPage() {
             {/* Bild */}
             <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden group" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/brillantring-box.jpg"
+                src="/images/brillantring-halo-weiss.jpg"
                 alt="Solitär Brillantring Verlobungsring KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -20,17 +20,17 @@ const vorteile = [
 const materialien = [
   {
     name: '585 Gelbgold',
-    desc: 'Der Klassiker – warmer Goldton, zeitlos.',
+    desc: 'Klassisch & zeitlos.',
     gradient: 'linear-gradient(135deg, #c8a84b 0%, #f5d98a 40%, #b8932a 70%, #e8c56a 100%)',
   },
   {
     name: '585 Weißgold',
-    desc: 'Modern & rhodiniert für bleibenden Glanz.',
+    desc: 'Modern & elegant.',
     gradient: 'linear-gradient(135deg, #b0b8c1 0%, #e8edf2 40%, #8a9299 70%, #d4dde5 100%)',
   },
   {
     name: '585 Roségold',
-    desc: 'Romantisch – zarter Rosaton für besondere Momente.',
+    desc: 'Warm & romantisch.',
     gradient: 'linear-gradient(135deg, #c9826a 0%, #edb89a 40%, #b06a52 70%, #e0a080 100%)',
   },
 ];
@@ -95,7 +95,7 @@ export default function TrauringePage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.55)' }} />
+          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.42)' }} />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -114,6 +114,15 @@ export default function TrauringePage() {
           <Link href="#termin" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem' }}>
             Jetzt Beratung vereinbaren
           </Link>
+
+          {/* Trust-Chips unter CTA */}
+          <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 gap-y-2 mt-6">
+            {['Individuelle Maßanfertigung', 'Kostenlose Gravur', 'Persönliche Beratung', 'Atelier in Bielefeld'].map((item) => (
+              <span key={item} className="font-sans text-xs flex items-center gap-1.5" style={{ color: 'rgba(245,240,232,0.6)' }}>
+                <span style={{ color: 'var(--kj-gold)' }}>✓</span>{item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -256,6 +265,12 @@ export default function TrauringePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="section-subtitle mb-3">Kundenstimmen</p>
+            {/* Trust-Block */}
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span style={{ color: 'var(--kj-gold)', letterSpacing: '0.05em', fontSize: '0.9rem' }}>★★★★★</span>
+              <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>4,7 / 5</span>
+              <span className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>· Basierend auf unseren Google-Bewertungen</span>
+            </div>
             <h2 className="section-title">Was unsere Kunden sagen</h2>
             <div className="divider-gold mx-auto mt-4" />
           </div>
@@ -285,8 +300,11 @@ export default function TrauringePage() {
           <div className="text-center mb-10">
             <p className="section-subtitle mb-3">Kostenlos & Unverbindlich</p>
             <h2 className="section-title mb-4">Trauring-Beratung buchen</h2>
-            <div className="divider-gold mx-auto mb-4" />
-            <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
+            <div className="divider-gold mx-auto mb-5" />
+            <p className="font-sans text-sm leading-relaxed mx-auto" style={{ color: 'var(--kj-muted)', maxWidth: '650px' }}>
+              Kostenlose und unverbindliche Beratung. Wir nehmen uns Zeit für Ihre Wünsche und zeigen Ihnen passende Modelle vor Ort.
+            </p>
+            <p className="font-sans text-xs mt-2" style={{ color: 'var(--kj-muted)', opacity: 0.65 }}>
               Bahnhofstraße 28, 33602 Bielefeld · Loom 1. OG
             </p>
           </div>

@@ -35,6 +35,27 @@ const materialien = [
   },
 ];
 
+const kollektion = [
+  {
+    img: '/images/stonering.jpg',
+    alt: 'Klassischer Solitärring 585 Gelbgold KenJu Bielefeld',
+    title: 'Klassischer Solitärring',
+    desc: '585 Gelbgold mit zeitlosem Design.',
+  },
+  {
+    img: '/images/bigring.jpg',
+    alt: 'Bicolor Designring 585 Gelbgold KenJu Bielefeld',
+    title: 'Bicolor Designring',
+    desc: '585 Gelbgold & Bicolor mit besonderer Struktur.',
+  },
+  {
+    img: '/images/doppelring.jpg',
+    alt: 'Trauring-Set 585 Gelbgold KenJu Bielefeld',
+    title: 'Trauring-Set',
+    desc: '585 Gelbgold für Paare mit klassischem Geschmack.',
+  },
+];
+
 const bewertungen = [
   {
     name: 'Anna Moshage',
@@ -48,6 +69,13 @@ const bewertungen = [
     name: 'Alexander Schäuble',
     text: 'Seriös, sehr freundliches und kompetentes Personal vor Ort. Der Schmuck ist qualitativ perfekt, habe da nie Probleme gehabt. Auf jeden Fall weiterzuempfehlen 👍🏼',
   },
+];
+
+const trustItems = [
+  '✓ Individuelle Maßanfertigung',
+  '✓ Kostenlose Gravur',
+  '✓ Persönliche Beratung',
+  '✓ Atelier in Bielefeld',
 ];
 
 export default function TrauringePage() {
@@ -64,14 +92,10 @@ export default function TrauringePage() {
             alt="Trauringe Beratung – KenJu Juwelier Bielefeld"
             fill
             sizes="100vw"
-            className="object-cover img-zoom"
+            className="object-cover"
             priority
-            style={{ opacity: 0.55 }}
           />
-          <div
-            className="absolute inset-0"
-            style={{ background: 'linear-gradient(to top, rgba(15,13,10,0.97) 0%, rgba(15,13,10,0.55) 55%, rgba(15,13,10,0.25) 100%)' }}
-          />
+          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.55)' }} />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -96,6 +120,19 @@ export default function TrauringePage() {
       {/* ── WARUM PAARE KENJU WÄHLEN ─────────────────────── */}
       <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderBottom: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Trust-Leiste */}
+          <div
+            className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12 px-6 py-4"
+            style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
+          >
+            {trustItems.map((item) => (
+              <p key={item} className="font-sans text-xs text-center tracking-wide" style={{ color: 'var(--kj-gold)' }}>
+                {item}
+              </p>
+            ))}
+          </div>
+
           <div className="text-center mb-12">
             <p className="section-subtitle mb-4">Ihre Vorteile</p>
             <h2 className="section-title mb-4">Warum Paare KenJu wählen</h2>
@@ -134,11 +171,9 @@ export default function TrauringePage() {
       </section>
 
       {/* ── PERSÖNLICHE BERATUNG ─────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
+      <section className="py-28" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden" style={{ border: '1px solid var(--kj-border)' }}>
-
-            {/* Bild */}
             <div className="relative min-h-[360px] lg:min-h-0 overflow-hidden" style={{ background: 'var(--kj-bg)' }}>
               <Image
                 src="/images/ringberatung.jpg"
@@ -148,8 +183,6 @@ export default function TrauringePage() {
                 className="object-cover img-zoom"
               />
             </div>
-
-            {/* Text */}
             <div className="p-8 lg:p-12 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
               <p className="section-subtitle mb-4">Ihr Trauring-Partner</p>
               <h2 className="font-serif text-2xl md:text-3xl font-light mb-4" style={{ color: 'var(--kj-text)', lineHeight: 1.2 }}>
@@ -160,28 +193,66 @@ export default function TrauringePage() {
                 Bei KenJu Juwelier begleiten wir Sie von der ersten Idee bis zum fertigen Trauring. In unserem Atelier in Bielefeld nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
               </p>
               <ul className="space-y-3 mb-8">
-                {[
-                  'Individuelle Beratung',
-                  'Maßanfertigung',
-                  'Gravuren kostenlos',
-                  'Bahnhofstraße 28, Bielefeld, Loom 1. OG',
-                ].map((item) => (
+                {['Individuelle Beratung', 'Maßanfertigung', 'Gravuren kostenlos', 'Bahnhofstraße 28, Bielefeld, Loom 1. OG'].map((item) => (
                   <li key={item} className="flex items-center gap-3 font-sans text-sm" style={{ color: 'var(--kj-text)' }}>
                     <span style={{ color: 'var(--kj-gold)' }}>✓</span>
                     {item}
                   </li>
                 ))}
               </ul>
-              <Link href="#termin" className="btn-gold self-start">
-                Jetzt Termin buchen
-              </Link>
+              <Link href="#termin" className="btn-gold self-start">Jetzt Termin buchen</Link>
             </div>
           </div>
         </div>
       </section>
 
+      {/* ── TRAURING-KOLLEKTION ───────────────────────────── */}
+      <section className="py-28" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="section-subtitle mb-4">Ausgewählte Designs</p>
+            <h2 className="section-title mb-4">Unsere Trauring-Kollektion</h2>
+            <div className="divider-gold mx-auto mb-4" />
+            <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
+              Entdecken Sie ausgewählte Designs aus Gelbgold, Weißgold und Bicolor.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {kollektion.map((k) => (
+              <div
+                key={k.title}
+                className="overflow-hidden group"
+                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
+              >
+                <div className="relative overflow-hidden" style={{ height: '280px' }}>
+                  <Image
+                    src={k.img}
+                    alt={k.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    style={{ opacity: 0.9 }}
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-serif text-xl mb-1" style={{ color: 'var(--kj-text)' }}>{k.title}</h3>
+                  <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{k.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="#termin" className="btn-gold">
+              Jetzt persönliche Beratung vereinbaren
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── BEWERTUNGEN ──────────────────────────────────── */}
-      <section className="py-16" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
+      <section className="py-16" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="section-subtitle mb-3">Kundenstimmen</p>
@@ -209,7 +280,7 @@ export default function TrauringePage() {
       </section>
 
       {/* ── FORMULAR ─────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }} id="termin">
+      <section className="py-24" style={{ backgroundColor: 'var(--kj-bg)' }} id="termin">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="section-subtitle mb-3">Kostenlos & Unverbindlich</p>

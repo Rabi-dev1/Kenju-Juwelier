@@ -4,250 +4,259 @@ import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Service – Schmuck & Uhrenreparaturen Bielefeld | KenJu Juwelier',
-  description: 'Professionelle Schmuck- und Uhrenreparaturen bei KenJu Juwelier Bielefeld. Ringgrößenanpassung, Kettenverschlüsse, Batteriewechsel, Glaswechsel, Gravuren und mehr.',
-  keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Ringgrößenanpassung', 'Batteriewechsel Uhr', 'Gravur Bielefeld', 'Juwelier Service Bielefeld'],
+  title: 'Schmuck- & Uhrenreparatur Bielefeld | Meisterbetrieb | KenJu Juwelier',
+  description: 'Professioneller Schmuck- und Uhrenservice in Bielefeld. Ringgrößenanpassung, Gravuren, Batteriewechsel, Glaswechsel und mehr – zuverlässig beim Meisterbetrieb KenJu Juwelier.',
+  keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Ringgrößenanpassung Bielefeld', 'Batteriewechsel Uhr Bielefeld', 'Gravur Bielefeld', 'Juwelier Service Bielefeld', 'Uhrmacher Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/service' },
 };
 
+const trustBoxes = [
+  { val: '20+',  title: 'Jahre Erfahrung',               sub: 'Meisterbetrieb Bielefeld' },
+  { val: '◈',    title: 'Zertifizierte Handwerksqualität', sub: 'Geprüfte Fachkräfte' },
+  { val: 'Sofort', title: 'Batteriewechsel',              sub: 'Oft am selben Tag fertig' },
+  { val: '⬡',    title: 'Fachwerkstatt',                 sub: 'Für Schmuck & Uhren' },
+];
+
+const processSteps = [
+  { nr: '01', title: 'Schmuck oder Uhr vorbeibringen',  desc: 'Kommen Sie einfach in unser Atelier – Bahnhofstraße 28, Bielefeld.' },
+  { nr: '02', title: 'Kostenlose Einschätzung',          desc: 'Wir prüfen den Zustand und beraten Sie transparent und unverbindlich.' },
+  { nr: '03', title: 'Transparente Preisangabe',         desc: 'Sie erhalten ein klares Angebot – keine versteckten Kosten.' },
+  { nr: '04', title: 'Fachgerechte Reparatur',           desc: 'Unsere Experten arbeiten mit Präzision und Sorgfalt.' },
+  { nr: '05', title: 'Abholen und wieder tragen',        desc: 'Ihr Stück erstrahlt in neuem Glanz – fertig zur Abholung.' },
+];
+
 const schmuckServices = [
-  { name: 'Ringgrößenanpassung',   desc: 'Wir passen Ihren Ring fachgerecht auf Ihre Wunschgröße an – egal ob weiten oder enger. Schnell und präzise.' },
-  { name: 'Kettenverschlüsse',     desc: 'Reparatur und Ersatz von Karabinerverschlüssen, Federringen und Kastenverschlüssen aller Art.' },
-  { name: 'Lotarbeiten',           desc: 'Professionelles Verlöten gebrochener Ketten, Ringe oder anderer Schmuckstücke – unsichtbar und dauerhaft.' },
-  { name: 'Steinbearbeitung',      desc: 'Neubesetzen verlorener Steine, Nachschliff und Politur von Brillanten, Edelsteinen und Zirkonias.' },
-  { name: 'Rhodinierung',          desc: 'Auffrischen von Weißgoldschmuck durch Rhodinierung – für dauerhaft brillanten, silbrig-weißen Glanz.' },
-  { name: 'Politur & Reinigung',   desc: 'Professionelle Hochglanzpolitur und Ultraschallreinigung – Ihr Schmuck erstrahlt wieder wie neu.' },
-  { name: 'Gravuren',              desc: 'Individuelle Gravuren mit Datum, Namen oder Initialen – in Ringe, Armreifen und Anhänger.' },
-  { name: 'Umarbeitung',           desc: 'Wir arbeiten alten Schmuck zu neuen Stücken um – geben Erbstücken ein modernes zweites Leben.' },
+  { name: 'Ringgrößenanpassung',              desc: 'Fachgerecht weiten oder enger machen – schnell und präzise.' },
+  { name: 'Kettenreparaturen',                desc: 'Verschlüsse, Glieder, Lotarbeiten – sauber und dauerhaft.' },
+  { name: 'Steinersatz',                      desc: 'Verlorene Steine neu setzen – Brillanten, Edelsteine, Zirkonia.' },
+  { name: 'Gravuren',                         desc: 'Namen, Daten, Initialen – individuell in Ringe, Anhänger & Armreifen.' },
+  { name: 'Rhodinierung',                     desc: 'Weißgold auffrischen – brillanter, silbrig-weißer Glanz.' },
+  { name: 'Politur & Reinigung',              desc: 'Hochglanzpolitur und Ultraschallreinigung – wie neu.' },
+  { name: 'Umarbeitung alter Schmuckstücke',  desc: 'Erbstücken ein modernes zweites Leben geben.' },
 ];
 
 const uhrenServices = [
-  { name: 'Batteriewechsel',        desc: 'Schneller und sicherer Batteriewechsel – wasserdicht abgedichtet, sofort am gleichen Tag fertig.' },
-  { name: 'Glaswechsel',            desc: 'Ersatz von gekratzten oder zerbrochenen Uhrengläsern – Mineralglas und Saphirglas für alle Modelle.' },
-  { name: 'Armbandreparatur',       desc: 'Kürzen, Verlängern oder Austauschen von Metallbändern, Lederbändern und Kunststoffarmbändern.' },
-  { name: 'Gehäusereinigung',       desc: 'Professionelle Reinigung und Politur von Uhrengehäusen und -bändern für frischen Glanz.' },
-  { name: 'Drucküberprüfung',       desc: 'Wasserdichtigkeitstest und Neuabdichtung für wasserdichte Uhren – zuverlässiger Schutz.' },
-  { name: 'Gangüberprüfung',        desc: 'Überprüfung der Ganggenauigkeit bei Quarz- und mechanischen Uhren – Einstellung auf Anfrage.' },
+  { name: 'Batteriewechsel',              desc: 'Sicher, wasserdicht abgedichtet – oft noch am selben Tag.' },
+  { name: 'Glaswechsel',                  desc: 'Mineral- und Saphirglas für alle Modelle.' },
+  { name: 'Armbandservice',               desc: 'Kürzen, verlängern oder austauschen – Metall, Leder, Kunststoff.' },
+  { name: 'Druckprüfung & Abdichtung',    desc: 'Wasserdichtigkeitstest und Neuabdichtung.' },
+  { name: 'Gehäusereinigung',             desc: 'Professionelle Reinigung und Politur – frischer Glanz.' },
+  { name: 'Gangkontrolle',                desc: 'Ganggenauigkeit prüfen bei Quarz- und Automatik-Uhren.' },
+  { name: 'Wasserdichtigkeit prüfen',     desc: 'Zuverlässiger Schutz nach Norm.' },
+  { name: 'Kürzen von Metallarmbändern',  desc: 'Perfekter Sitz am Handgelenk.' },
 ];
 
 export default function ServicePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-end pb-24 pt-36 overflow-hidden" style={{ background: '#08080F' }}>
+      {/* ── HERO ─────────────────────────────────────────── */}
+      <section
+        className="relative flex items-end overflow-hidden"
+        style={{ background: '#08080F', minHeight: '65vh', paddingTop: '9rem', paddingBottom: '5rem' }}
+      >
         <div className="absolute inset-0">
           <Image
-            src="/images/creolen.jpg"
-            alt="Schmuck & Uhrenreparatur KenJu Juwelier Bielefeld"
-            fill
-            sizes="100vw"
+            src="/images/service-hero.jpg"
+            alt="Uhrenservice und Schmuckreparatur bei KenJu Juwelier Bielefeld – Meisterbetrieb"
+            fill sizes="100vw"
             className="object-cover"
+            style={{ objectPosition: 'center 35%', opacity: 0.5 }}
             priority
-            style={{ opacity: 0.25 }}
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,8,15,1) 0%, rgba(8,8,15,0.6) 50%, rgba(8,8,15,0.3) 100%)' }} />
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to top, rgba(8,8,15,0.97) 0%, rgba(8,8,15,0.55) 55%, rgba(8,8,15,0.3) 100%)' }}
+          />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 font-sans text-xs mb-8 tracking-widest uppercase" style={{ color: 'rgba(245,240,232,0.4)' }}>
+            <Link href="/" style={{ color: 'rgba(245,240,232,0.4)' }} className="hover:opacity-80 transition-opacity">Startseite</Link>
+            <span style={{ opacity: 0.4 }}>›</span>
+            <span style={{ color: 'var(--kj-gold)' }}>Service</span>
+          </nav>
+
           <p className="section-subtitle mb-5">Meisterbetrieb · Bielefeld</p>
-          <h1 className="font-serif text-5xl md:text-7xl font-light mb-6 text-white">
-            <span className="gold-text">Schmuck</span> &amp; Uhren<br className="hidden sm:block" />reparaturen
+
+          <h1 className="font-serif font-light text-white mb-6" style={{ fontSize: 'clamp(2rem, 5.5vw, 5rem)', lineHeight: 1.08 }}>
+            Schmuck- &amp; Uhrenservice<br className="hidden sm:block" /> vom Fachbetrieb
           </h1>
           <div className="divider-gold mb-6" />
-          <p className="font-sans text-white/55 max-w-xl leading-relaxed text-sm">
-            Zeigt ein Lieblingsstück Gebrauchsspuren? Wir bringen es zurück in Bestform –
-            fachgerecht, schnell und mit viel Erfahrung.
+          <p className="font-sans max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.58)', fontSize: '0.95rem' }}>
+            Reparaturen, Aufarbeitung, Gravuren und Uhrmacher-Service – präzise, zuverlässig und mit über 20 Jahren Erfahrung.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 mb-8">
+            <Link href="#termin-service" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '0.9rem 2rem' }}>
+              Termin vereinbaren
+            </Link>
+            <a href="tel:+4917663284312" className="btn-outline-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '0.9rem 2rem', borderColor: 'rgba(255,255,255,0.28)', color: 'rgba(255,255,255,0.78)' }}>
+              Jetzt anrufen
+            </a>
+          </div>
+
+          {/* Trust-Leiste */}
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            {['Meisterbetrieb', 'Über 20 Jahre Erfahrung', 'Faire Preise', 'Persönliche Beratung'].map((item) => (
+              <span key={item} className="font-sans text-xs flex items-center gap-1.5" style={{ color: 'rgba(245,240,232,0.5)' }}>
+                <span style={{ color: 'var(--kj-gold)' }}>✓</span>{item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="py-32" style={{ backgroundColor: 'var(--kj-bg)' }}>
+      {/* ── TRUST-KACHELN ────────────────────────────────── */}
+      <section className="py-12" style={{ backgroundColor: 'var(--kj-surface)', borderBottom: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <p className="section-subtitle mb-5">Ihr Servicebetrieb</p>
-              <h2 className="font-serif text-4xl md:text-5xl font-light leading-tight mb-6" style={{ color: 'var(--kj-text)' }}>
-                Reparatur &amp; Pflege –<br />mit Liebe zum Detail
-              </h2>
-              <div className="divider-gold mb-8" />
-              <p className="font-sans text-sm max-w-xl leading-relaxed mb-5" style={{ color: 'var(--kj-muted)' }}>
-                Zeigt ein Lieblingsstück kleine Gebrauchsspuren oder größere Schäden, ist es Zeit für eine
-                fachkundige Aufarbeitung. Bei <strong style={{ color: 'var(--kj-text)' }}>KenJu Juwelier</strong> in
-                Bielefeld kümmern wir uns zuverlässig um die{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Reparatur und Pflege</strong> von Schmuck und Uhren,
-                damit Sie Ihre Stücke wieder mit Freude tragen können.
-              </p>
-              <p className="font-sans text-sm max-w-xl leading-relaxed mb-10" style={{ color: 'var(--kj-muted)' }}>
-                Wir prüfen den Zustand sorgfältig, beraten Sie transparent und finden die passende Lösung –
-                schnell, fachgerecht und mit viel Erfahrung. Ob Batteriewechsel, Ringgrößenanpassung oder
-                aufwendige Gravur – alles aus einer Hand in Bielefeld.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="#termin-service" className="btn-dark">Jetzt kontaktieren</Link>
-                <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {trustBoxes.map((b) => (
+              <div key={b.title} className="p-6 text-center" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+                <p className="font-serif text-3xl gold-text mb-2">{b.val}</p>
+                <p className="font-sans text-xs font-semibold tracking-wide mb-1" style={{ color: 'var(--kj-text)' }}>{b.title}</p>
+                <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{b.sub}</p>
               </div>
-            </div>
-            {/* Stats column */}
-            <div className="grid grid-cols-2 gap-5">
-              {[
-                { val: '20+', label: 'Jahre Erfahrung', desc: 'Im Handwerk tätig' },
-                { val: 'Sofort', label: 'Batteriewechsel', desc: 'Noch am selben Tag' },
-                { val: 'Fair', label: 'Preisgestaltung', desc: 'Transparent & ehrlich' },
-                { val: '100%', label: 'Qualitätsarbeit', desc: 'Zertifizierter Betrieb' },
-              ].map((s) => (
-                <div
-                  key={s.label}
-                  className="p-6 text-center"
-                  style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-                >
-                  <p className="font-serif text-3xl gold-text mb-1">{s.val}</p>
-                  <p className="font-sans text-xs font-medium mb-1 tracking-wider" style={{ color: 'var(--kj-text)' }}>{s.label}</p>
-                  <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ABLAUF ───────────────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)' }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="section-subtitle mb-4">Schnell & Unkompliziert</p>
+            <h2 className="section-title mb-4">So einfach funktioniert unser Service</h2>
+            <div className="divider-gold mx-auto" />
+          </div>
+
+          <div className="relative">
+            {/* Vertikale Linie auf Desktop */}
+            <div className="hidden lg:block absolute left-[1.75rem] top-0 bottom-0 w-px" style={{ background: 'linear-gradient(to bottom, var(--kj-gold), transparent)', opacity: 0.2 }} />
+
+            <div className="space-y-0">
+              {processSteps.map((s, i) => (
+                <div key={s.nr} className="flex gap-6 pb-8" style={i < processSteps.length - 1 ? { borderLeft: '1px solid var(--kj-border)', paddingLeft: '2rem', marginLeft: '1.75rem' } : { paddingLeft: '2rem', marginLeft: '1.75rem' }}>
+                  <div
+                    className="shrink-0 w-14 h-14 flex items-center justify-center font-serif text-xl font-light -ml-[3.25rem]"
+                    style={{ border: '1px solid var(--kj-gold)', color: 'var(--kj-gold)', background: 'var(--kj-bg)', minWidth: '3.5rem' }}
+                  >
+                    {s.nr}
+                  </div>
+                  <div className="pt-3">
+                    <h3 className="font-serif text-lg mb-1" style={{ color: 'var(--kj-text)' }}>{s.title}</h3>
+                    <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+
+          <div className="text-center mt-10">
+            <Link href="#termin-service" className="btn-gold">Jetzt Termin buchen</Link>
+          </div>
         </div>
       </section>
 
-      {/* Schmuck Reparaturen */}
-      <section className="py-12 pb-28" style={{ backgroundColor: 'var(--kj-surface)' }}>
+      {/* ── SCHMUCK-SERVICES ─────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden" style={{ border: '1px solid var(--kj-border)' }}>
-            {/* Image */}
-            <div className="relative min-h-[320px] lg:min-h-[520px]" style={{ background: 'var(--kj-surface)' }}>
+            {/* Bild */}
+            <div className="relative min-h-[280px] lg:min-h-0 overflow-hidden" style={{ background: 'var(--kj-bg)' }}>
               <Image
                 src="/images/ringe.jpg"
-                alt="Schmuckreparatur bei KenJu Juwelier Bielefeld"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-                style={{ opacity: 0.78 }}
+                alt="Schmuckreparatur Bielefeld – Ringgrößenanpassung und Gravur bei KenJu Juwelier"
+                fill sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover img-zoom"
+                style={{ opacity: 0.82 }}
               />
               <div className="img-caption">
                 <p className="font-serif text-lg text-white">Präzise Handarbeit</p>
-                <p className="font-sans text-xs text-white/55 mt-1">Zertifizierter Meisterbetrieb · Bielefeld</p>
+                <p className="font-sans text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Meisterbetrieb · Bielefeld</p>
               </div>
             </div>
-            {/* Text */}
-            <div className="p-8 lg:p-14 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
-              <p className="section-subtitle mb-4">Schmuckreparaturen</p>
-              <h2 className="font-serif text-3xl mb-5" style={{ color: 'var(--kj-text)' }}>
-                Zuverlässiger Service<br />für Ihre Lieblingsstücke
+
+            {/* Services */}
+            <div className="p-8 lg:p-12 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
+              <p className="section-subtitle mb-3">Schmuckreparaturen</p>
+              <h2 className="font-serif text-2xl md:text-3xl font-light mb-4" style={{ color: 'var(--kj-text)' }}>
+                Beliebte Schmuckreparaturen
               </h2>
-              <div className="divider-gold mb-7" />
-              <p className="font-sans text-sm leading-relaxed mb-7" style={{ color: 'var(--kj-muted)' }}>
-                Unsere Werkstatt übernimmt Reparaturen aller Art –{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Ringgrößenanpassungen</strong>,
-                das Ersetzen von Kettenverschlüssen, Neufassen von Steinen, individuelle Gravuren
-                und die Umarbeitung alter Schmuckstücke zu etwas Neuem. So sind Ihre Stücke bei uns
-                in den besten Händen.
-              </p>
-              <div className="grid grid-cols-1 gap-0 mb-8">
+              <div className="divider-gold mb-6" />
+              <div className="space-y-0">
                 {schmuckServices.map((s) => (
-                  <div key={s.name} className="flex gap-4 py-3.5" style={{ borderBottom: '1px solid var(--kj-border)' }}>
-                    <span className="font-serif text-base mt-0.5 shrink-0" style={{ color: 'var(--kj-gold)' }}>✓</span>
+                  <div key={s.name} className="flex gap-4 py-3" style={{ borderBottom: '1px solid var(--kj-border)' }}>
+                    <span className="shrink-0 mt-0.5" style={{ color: 'var(--kj-gold)', fontSize: '0.7rem' }}>✦</span>
                     <div>
                       <p className="font-sans text-sm font-medium" style={{ color: 'var(--kj-text)' }}>{s.name}</p>
-                      <p className="font-sans text-xs mt-0.5 leading-snug" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
+                      <p className="font-sans text-xs mt-0.5" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="#termin-service" className="btn-dark">Jetzt kontaktieren</Link>
-                <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
-              </div>
+              <Link href="#termin-service" className="btn-dark mt-7 self-start">Termin vereinbaren</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Uhren Reparaturen */}
-      <section className="py-12 pb-28" style={{ backgroundColor: 'var(--kj-bg)' }}>
+      {/* ── UHREN-SERVICES ───────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden" style={{ border: '1px solid var(--kj-border)' }}>
-            {/* Text */}
-            <div className="p-8 lg:p-14 flex flex-col justify-center lg:order-1" style={{ background: 'var(--kj-card)' }}>
-              <p className="section-subtitle mb-4">Uhrenservice</p>
-              <h2 className="font-serif text-3xl mb-5" style={{ color: 'var(--kj-text)' }}>
-                Ihr Uhrmacher<br />in Bielefeld
+            {/* Services */}
+            <div className="p-8 lg:p-12 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
+              <p className="section-subtitle mb-3">Uhrmacher-Service</p>
+              <h2 className="font-serif text-2xl md:text-3xl font-light mb-4" style={{ color: 'var(--kj-text)' }}>
+                Ihr Uhrmacher in Bielefeld
               </h2>
-              <div className="divider-gold mb-7" />
-              <p className="font-sans text-sm leading-relaxed mb-7" style={{ color: 'var(--kj-muted)' }}>
-                Ob{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Batteriewechsel</strong>,{' '}
-                <strong style={{ color: 'var(--kj-text)' }}>Glaswechsel</strong> oder Armbandreparatur –
-                unser Uhrmachermeister kümmert sich mit Präzision und Sorgfalt um Ihre Uhr.
-                Auch Markenuhren wie Tommy Hilfiger, Hugo Boss, Police und Festina profitieren
-                von unserer Expertise und präzisen Handarbeit.
-              </p>
-              <div className="grid grid-cols-1 gap-0 mb-8">
+              <div className="divider-gold mb-6" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
                 {uhrenServices.map((s) => (
-                  <div key={s.name} className="flex gap-4 py-3.5" style={{ borderBottom: '1px solid var(--kj-border)' }}>
-                    <span className="font-serif text-base mt-0.5 shrink-0" style={{ color: 'var(--kj-gold)' }}>✓</span>
+                  <div key={s.name} className="flex gap-3 py-3 pr-4" style={{ borderBottom: '1px solid var(--kj-border)' }}>
+                    <span className="shrink-0 mt-0.5" style={{ color: 'var(--kj-gold)', fontSize: '0.7rem' }}>✦</span>
                     <div>
                       <p className="font-sans text-sm font-medium" style={{ color: 'var(--kj-text)' }}>{s.name}</p>
-                      <p className="font-sans text-xs mt-0.5 leading-snug" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
+                      <p className="font-sans text-xs mt-0.5" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="#termin-service" className="btn-dark">Jetzt kontaktieren</Link>
-                <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
-              </div>
+              <Link href="#termin-service" className="btn-dark mt-7 self-start">Termin vereinbaren</Link>
             </div>
-            {/* Image */}
-            <div className="relative min-h-[320px] lg:min-h-[520px] lg:order-2" style={{ background: 'var(--kj-surface)' }}>
+
+            {/* Bild */}
+            <div className="relative min-h-[280px] lg:min-h-0 overflow-hidden" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/creolen.jpg"
-                alt="Uhrenreparatur bei KenJu Juwelier Bielefeld"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-                style={{ opacity: 0.68 }}
+                src="/images/uhrzeig.jpg"
+                alt="Uhrmacher Bielefeld – Batteriewechsel und Uhrenreparatur bei KenJu Juwelier"
+                fill sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover img-zoom"
+                style={{ opacity: 0.82 }}
               />
               <div className="img-caption">
                 <p className="font-serif text-lg text-white">Uhrmacherkunst mit Präzision</p>
-                <p className="font-sans text-xs text-white/55 mt-1">Schnell · Zuverlässig · Transparent</p>
+                <p className="font-sans text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Schnell · Zuverlässig · Transparent</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="py-28" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)', borderBottom: '1px solid var(--kj-border)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-subtitle mb-5">Kommen Sie vorbei</p>
-          <h2 className="font-serif text-4xl md:text-5xl font-light mb-5" style={{ color: 'var(--kj-text)' }}>
-            Ihr Lieblingsstück<br />verdient das Beste.
-          </h2>
-          <div className="divider-gold mx-auto mb-8" />
-          <p className="font-sans text-sm max-w-lg mx-auto mb-10 leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-            In der Bahnhofstraße 28 in Bielefeld erwartet Sie persönliche Beratung, fachkundige
-            Reparatur und ein stilvolles Angebot an Schmuck, Uhren und Services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#termin-service" className="btn-dark">Termin vereinbaren</Link>
-            <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Appointment */}
-      <section className="py-28" style={{ backgroundColor: 'var(--kj-bg)' }} id="termin-service">
+      {/* ── FORMULAR ─────────────────────────────────────── */}
+      <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }} id="termin-service">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <p className="section-subtitle mb-3">Reparatur anfragen</p>
-            <h2 className="section-title mb-5">Service-Termin buchen</h2>
-            <div className="divider-gold mx-auto mb-5" />
+            <h2 className="section-title mb-4">Service-Termin buchen</h2>
+            <div className="divider-gold mx-auto mb-4" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Senden Sie uns eine Anfrage – wir melden uns innerhalb von 24 Stunden bei Ihnen.
+              Bahnhofstraße 28, 33602 Bielefeld · Wir antworten innerhalb von 24 Stunden.
             </p>
           </div>
-          <div className="p-8" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+          <div className="p-8 md:p-10" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
             <AppointmentForm />
           </div>
         </div>

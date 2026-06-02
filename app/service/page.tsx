@@ -4,9 +4,9 @@ import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Schmuck- & Uhrenreparatur Bielefeld | Meisterbetrieb | KenJu Juwelier',
-  description: 'Professionelle Schmuckreparatur und Uhrenreparatur in Bielefeld. Ringgrößenänderung, Gravuren, Batteriewechsel, Glaswechsel – Ihr Goldschmied und Uhrmacher in Bielefeld.',
-  keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Uhrmacher Bielefeld', 'Ringgrößenänderung Bielefeld', 'Goldschmied Bielefeld', 'Batteriewechsel Uhr Bielefeld', 'Gravur Bielefeld'],
+  title: 'Schmuck- & Uhrenreparatur Bielefeld | Meisterbetrieb KenJu Juwelier',
+  description: 'Schmuckreparatur & Uhrenreparatur in Bielefeld – Ringgrößenänderung, Gravuren, Batteriewechsel, Glaswechsel. Ihr Goldschmied & Uhrmacher. Bahnhofstraße 28, Loom 1. OG, 33602 Bielefeld.',
+  keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Uhrmacher Bielefeld', 'Ringgrößenänderung Bielefeld', 'Goldschmied Bielefeld', 'Batteriewechsel Uhr Bielefeld', 'Gravur Bielefeld', 'Schmuck reparieren Bielefeld', 'Glaswechsel Uhr Bielefeld', 'Kettenreparatur Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/service' },
 };
 
@@ -14,12 +14,13 @@ const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Schmuck- & Uhrenservice Bielefeld',
-  description: 'Schmuckreparatur, Uhrenreparatur, Ringgrößenänderung, Gravuren und mehr – Meisterbetrieb KenJu Juwelier, Bahnhofstraße 28, Bielefeld.',
+  description: 'Schmuckreparatur, Uhrenreparatur, Ringgrößenänderung, Gravuren und mehr – Meisterbetrieb KenJu Juwelier, Bahnhofstraße 28, Loom 1. OG, 33602 Bielefeld.',
   provider: {
     '@type': 'JewelryStore',
     name: 'KenJu Juwelier',
-    address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE' },
+    address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE', 'schema:description': 'Loom 1. OG' },
     telephone: '+4917663284312',
+    url: 'https://kenju-juwelier.de',
   },
   areaServed: { '@type': 'City', name: 'Bielefeld' },
 };
@@ -32,7 +33,7 @@ const trustBoxes = [
 ];
 
 const processSteps = [
-  { nr: '01', title: 'Schmuck oder Uhr vorbeibringen',  desc: 'Einfach in unser Atelier – Bahnhofstraße 28, Bielefeld.' },
+  { nr: '01', title: 'Schmuck oder Uhr vorbeibringen',  desc: 'Einfach in unser Atelier – Bahnhofstraße 28, Loom 1. OG, Bielefeld.' },
   { nr: '02', title: 'Kostenlose Einschätzung',          desc: 'Wir prüfen den Zustand transparent und unverbindlich.' },
   { nr: '03', title: 'Transparente Preisangabe',         desc: 'Klares Angebot – keine versteckten Kosten.' },
   { nr: '04', title: 'Fachgerechte Reparatur',           desc: 'Präzise Ausführung durch unsere Experten in Bielefeld.' },
@@ -116,15 +117,15 @@ export default function ServicePage() {
           </h1>
           <div className="divider-gold mb-6" />
           <p className="font-sans max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.58)', fontSize: '0.95rem' }}>
-            Schmuckreparatur und Uhrenreparatur in Bielefeld – präzise, zuverlässig und mit über 20 Jahren Erfahrung als Goldschmied und Uhrmacher.
+            Schmuckreparatur und Uhrenreparatur in Bielefeld – präzise, zuverlässig und mit über 20 Jahren Erfahrung als Goldschmied und Uhrmacher. Bahnhofstraße 28, Loom 1. OG.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-8">
+          <div className="flex flex-row gap-3 mb-8">
             <Link href="#termin-service" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '0.9rem 2rem' }}>
               Reparatur anfragen
             </Link>
             <a href="tel:+4917663284312" className="btn-outline-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '0.9rem 2rem', borderColor: 'rgba(255,255,255,0.28)', color: 'rgba(255,255,255,0.78)' }}>
-              Jetzt anrufen
+              Anrufen
             </a>
           </div>
 
@@ -187,11 +188,11 @@ export default function ServicePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden" style={{ border: '1px solid var(--kj-border)' }}>
             <div className="relative min-h-[280px] lg:min-h-0 overflow-hidden" style={{ background: 'var(--kj-bg)' }}>
               <Image
-                src="/images/brillant-set-luxus.jpg"
+                src="/images/service1.jpg"
                 alt="Goldschmied Bielefeld – Schmuckreparatur und Ringgrößenänderung bei KenJu Juwelier"
                 fill sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover img-zoom"
-                style={{ opacity: 0.85 }}
+                style={{ opacity: 0.88 }}
               />
               <div className="img-caption">
                 <p className="font-serif text-lg text-white">Goldschmied · Bielefeld</p>
@@ -250,11 +251,11 @@ export default function ServicePage() {
             </div>
             <div className="relative min-h-[280px] lg:min-h-0 overflow-hidden" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/service-hero.jpg"
+                src="/images/service2.jpg"
                 alt="Uhrmacher Bielefeld – Uhrenreparatur und Batteriewechsel bei KenJu Juwelier"
                 fill sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-                style={{ objectPosition: 'center 30%', opacity: 0.85 }}
+                className="object-cover img-zoom"
+                style={{ opacity: 0.88 }}
               />
               <div className="img-caption">
                 <p className="font-serif text-lg text-white">Uhrmacherkunst · Präzision</p>
@@ -346,7 +347,7 @@ export default function ServicePage() {
           </h2>
           <div className="divider-gold mx-auto mb-6" />
           <p className="font-sans text-sm max-w-lg mx-auto leading-relaxed mb-8" style={{ color: 'var(--kj-muted)' }}>
-            Persönliche Beratung, transparente Preise und fachgerechte Ausführung – direkt in unserem Meisterbetrieb für Schmuckreparatur und Uhrenreparatur in der <strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28 in Bielefeld</strong>.
+            Persönliche Beratung, transparente Preise und fachgerechte Ausführung – direkt in unserem Meisterbetrieb für Schmuckreparatur und Uhrenreparatur in der <strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28, Loom 1. OG, Bielefeld</strong>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-service" className="btn-gold">Reparatur anfragen</Link>
@@ -363,7 +364,7 @@ export default function ServicePage() {
             <h2 className="section-title mb-4">Service-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-4" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Bahnhofstraße 28, 33602 Bielefeld · Wir antworten innerhalb von 24 Stunden.
+              Bahnhofstraße 28, Loom 1. OG · 33602 Bielefeld · Wir antworten innerhalb von 24 Stunden.
             </p>
           </div>
           <div className="p-8 md:p-10" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

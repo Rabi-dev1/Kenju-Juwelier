@@ -18,7 +18,7 @@ const serviceJsonLd = {
   provider: {
     '@type': 'JewelryStore',
     name: 'KenJu Juwelier',
-    address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE', 'schema:description': 'Loom 1. OG' },
+    address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE' },
     telephone: '+4917663284312',
     url: 'https://kenju-juwelier.de',
   },
@@ -59,27 +59,6 @@ const uhrenServices = [
   { name: 'Gangkontrolle',              desc: 'Ganggenauigkeit bei Quarz- und Automatikuhren prüfen.' },
   { name: 'Wasserdichtigkeit prüfen',   desc: 'Zuverlässiger Schutz nach Norm.' },
   { name: 'Metallarmbänder kürzen',     desc: 'Perfekter Sitz am Handgelenk.' },
-];
-
-const vorherNachher = [
-  {
-    label: 'Ring',
-    img: '/images/ring-solitaer.jpg',
-    alt: 'Schmuckreparatur Bielefeld – Ring Vorher/Nachher bei KenJu Juwelier',
-    desc: 'Ringgrößenänderung & Politur',
-  },
-  {
-    label: 'Kette',
-    img: '/images/kette-schlange.jpg',
-    alt: 'Kettenaparatur Bielefeld – Goldkette Vorher/Nachher bei KenJu',
-    desc: 'Kettenreparatur & Reinigung',
-  },
-  {
-    label: 'Uhr',
-    img: '/images/uhrzeig.jpg',
-    alt: 'Uhrenreparatur Bielefeld – Uhr Vorher/Nachher bei KenJu Juwelier',
-    desc: 'Batteriewechsel & Glaswechsel',
-  },
 ];
 
 export default function ServicePage() {
@@ -298,48 +277,8 @@ export default function ServicePage() {
         </div>
       </section>
 
-      {/* ── VORHER / NACHHER ─────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="section-subtitle mb-4">Unsere Arbeit</p>
-            <h2 className="section-title mb-4">Präzise Handarbeit. Sichtbare Ergebnisse.</h2>
-            <div className="divider-gold mx-auto mb-4" />
-            <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Jedes Stück verlässt unsere Werkstatt in bestem Zustand – so wie es sein sollte.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {vorherNachher.map((item) => (
-              <div key={item.label} className="overflow-hidden" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
-                <div className="relative overflow-hidden" style={{ height: '260px' }}>
-                  <Image
-                    src={item.img}
-                    alt={item.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-700 hover:scale-[1.03]"
-                    style={{ opacity: 0.88 }}
-                  />
-                  {/* Vorher/Nachher Badge */}
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="font-sans text-xs px-2.5 py-1 tracking-widest uppercase" style={{ background: 'rgba(15,13,10,0.82)', color: 'var(--kj-muted)', border: '1px solid var(--kj-border)' }}>Vorher</span>
-                    <span className="font-sans text-xs px-2.5 py-1 tracking-widest uppercase" style={{ background: 'rgba(15,13,10,0.82)', color: 'var(--kj-gold)', border: '1px solid rgba(201,168,76,0.4)' }}>Nachher</span>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <p className="font-serif text-lg mb-1" style={{ color: 'var(--kj-text)' }}>{item.label}</p>
-                  <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── ABSCHLUSS-CTA ────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}>
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-subtitle mb-4">Kommen Sie vorbei</p>
           <h2 className="font-serif text-3xl md:text-4xl font-light mb-5" style={{ color: 'var(--kj-text)' }}>
@@ -347,7 +286,7 @@ export default function ServicePage() {
           </h2>
           <div className="divider-gold mx-auto mb-6" />
           <p className="font-sans text-sm max-w-lg mx-auto leading-relaxed mb-8" style={{ color: 'var(--kj-muted)' }}>
-            Persönliche Beratung, transparente Preise und fachgerechte Ausführung – direkt in unserem Meisterbetrieb für Schmuckreparatur und Uhrenreparatur in der <strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28, Loom 1. OG, Bielefeld</strong>.
+            Persönliche Beratung, transparente Preise und fachgerechte Ausführung – direkt in unserem Meisterbetrieb: <strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28, Loom 1. OG, 33602 Bielefeld</strong>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-service" className="btn-gold">Reparatur anfragen</Link>
@@ -357,7 +296,7 @@ export default function ServicePage() {
       </section>
 
       {/* ── FORMULAR ─────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-bg)' }} id="termin-service">
+      <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }} id="termin-service">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="section-subtitle mb-3">Reparatur anfragen</p>

@@ -25,11 +25,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://kenju-juwelier.de'),
   title: {
-    default: 'KenJu Juwelier Bielefeld – Brillantringe, Goldankauf & Exklusiver Schmuck',
+    default: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
     template: '%s | KenJu Juwelier Bielefeld',
   },
   description:
-    'KenJu Juwelier Bielefeld – Ihr Spezialist für Brillantringe, Goldankauf, Labor Diamanten, Trauringe, Ringe, Ohrringe und Halsketten. Meisterbetrieb in der Bahnhofstraße 28, 33602 Bielefeld.',
+    'KenJu Juwelier Bielefeld – Meisterbetrieb für Trauringe, Brillantringe, Labor Diamanten und fairen Goldankauf. Persönliche Beratung in der Bahnhofstraße 28, 33602 Bielefeld.',
   keywords: [
     'Juwelier Bielefeld', 'Goldankauf Bielefeld', 'Brillantringe Bielefeld', 'Verlobungsringe Bielefeld',
     'Goldschmuck', 'Labor Diamanten Bielefeld', 'Trauringe Bielefeld', 'Ohrringe Gold',
@@ -45,21 +45,22 @@ export const metadata: Metadata = {
     locale: 'de_DE',
     url: 'https://kenju-juwelier.de',
     siteName: 'KenJu Juwelier',
-    title: 'KenJu Juwelier Bielefeld – Brillantringe & Goldankauf',
-    description: 'Exklusiver Schmuck, Brillantringe und fairer Goldankauf in Bielefeld. Meisterbetrieb in der Bahnhofstraße 28.',
+    title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
+    description: 'Meisterbetrieb für Trauringe, Brillantringe und fairen Goldankauf in Bielefeld. Persönliche Beratung, handgefertigte Qualität seit über 20 Jahren.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/hero-ladenfront.jpg',
         width: 1200,
         height: 630,
-        alt: 'KenJu Juwelier Bielefeld – Brillantringe, Goldankauf & Exklusiver Schmuck',
+        alt: 'KenJu Juwelier Bielefeld – Meisterbetrieb für Schmuck, Trauringe & Goldankauf',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KenJu Juwelier Bielefeld – Brillantringe & Goldankauf',
-    description: 'Exklusiver Schmuck, Brillantringe und fairer Goldankauf in Bielefeld. Meisterbetrieb mit Tradition.',
+    title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
+    description: 'Meisterbetrieb für Trauringe, Brillantringe und fairen Goldankauf in Bielefeld. 20+ Jahre Erfahrung · 5,0 ★ Google · Bahnhofstraße 28.',
+    images: ['/images/hero-ladenfront.jpg'],
   },
   robots: {
     index: true,

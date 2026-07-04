@@ -268,7 +268,7 @@ export default function TrauringePage() {
             {/* Trust-Block */}
             <div className="flex items-center justify-center gap-2 mb-4">
               <span style={{ color: 'var(--kj-gold)', letterSpacing: '0.05em', fontSize: '0.9rem' }}>★★★★★</span>
-              <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>4,7 / 5</span>
+              <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>5,0 / 5</span>
               <span className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>· Basierend auf unseren Google-Bewertungen</span>
             </div>
             <h2 className="section-title">Was unsere Kunden sagen</h2>

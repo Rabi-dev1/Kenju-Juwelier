@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 
 const brands = [
   { name: 'Tommy Hilfiger', desc: 'Moderne Designuhren für Alltag und Business.', tags: ['Elegant', 'Alltag', 'Modern'] },
-  { name: 'Hugo Boss',       desc: 'Reduziertes, elegantes Design mit Präzisionsuhrwerk.', tags: ['Premium', 'Business', 'Elegant'] },
+  { name: 'Hugo Boss',       desc: 'Reduziertes, elegantes Design für höchste Ansprüche.', tags: ['Premium', 'Business', 'Elegant'] },
   { name: 'Police',          desc: 'Urbane Uhren mit starkem Charakter und italienischem Stil.', tags: ['Urban', 'Statement', 'Trendy'] },
   { name: 'Regent',          desc: 'Klassische Eleganz für Damen und Herren zum fairen Preis.', tags: ['Klassisch', 'Damen & Herren', 'Alltag'] },
   { name: 'Swiss Military',  desc: 'Schweizer Präzision – robust, wasserdicht, zuverlässig.', tags: ['Robust', 'Swiss Made', 'Wasserdicht'] },
 ];
 
 const services = [
-  { icon: '⟳', title: 'Batteriewechsel', desc: 'Noch am selben Tag, wasserdicht abgedichtet.' },
+  { icon: '⟳', title: 'Batteriewechsel', desc: 'Fertig am selben Tag – wasserdicht abgedichtet.' },
   { icon: '◇', title: 'Glaswechsel',     desc: 'Mineral- und Saphirglas für alle Modelle.' },
   { icon: '↔', title: 'Armbandservice',  desc: 'Kürzen, verlängern oder austauschen.' },
 ];
@@ -155,7 +155,7 @@ export default function UhrenPage() {
             <h2 className="section-title mb-4">Uhren-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Bahnhofstraße 28, 33602 Bielefeld · Persönliche Beratung zu unserer gesamten Uhren-Kollektion.
+              Bielefeld: Bahnhofstraße 28 · Lippstadt: Lange Straße 29, 59555 · Persönliche Beratung.
             </p>
           </div>
           <div className="p-8" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

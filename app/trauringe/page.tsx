@@ -202,7 +202,7 @@ export default function TrauringePage() {
                 Bei KenJu Juwelier begleiten wir Sie von der ersten Idee bis zum fertigen Trauring. In unserem Atelier in Bielefeld nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
               </p>
               <ul className="space-y-3 mb-8">
-                {['Individuelle Beratung', 'Maßanfertigung', 'Gravuren kostenlos', 'Bahnhofstraße 28, Bielefeld, Loom 1. OG'].map((item) => (
+                {['Individuelle Beratung', 'Maßanfertigung', 'Gravuren kostenlos', 'Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29'].map((item) => (
                   <li key={item} className="flex items-center gap-3 font-sans text-sm" style={{ color: 'var(--kj-text)' }}>
                     <span style={{ color: 'var(--kj-gold)' }}>✓</span>
                     {item}
@@ -305,7 +305,7 @@ export default function TrauringePage() {
               Kostenlose und unverbindliche Beratung. Wir nehmen uns Zeit für Ihre Wünsche und zeigen Ihnen passende Modelle vor Ort.
             </p>
             <p className="font-sans text-xs mt-2" style={{ color: 'var(--kj-muted)', opacity: 0.65 }}>
-              Bahnhofstraße 28, 33602 Bielefeld · Loom 1. OG
+              Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29, 59555
             </p>
           </div>
           <div className="p-8 md:p-12" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

@@ -37,7 +37,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="font-sans text-sm leading-relaxed mt-3" style={{ color: 'var(--kj-muted)' }}>
-              Meisterbetrieb für exklusiven Schmuck, Brillantringe, Labor Diamanten und fairen Goldankauf in Bielefeld.
+              Exklusiver Schmuck, Brillantringe, Labor Diamanten und fairer Goldankauf – in Bielefeld und Lippstadt.
             </p>
             {/* Social links */}
             <div className="flex gap-3 mt-5">
@@ -94,22 +94,37 @@ export default function Footer() {
               Kontakt
             </h3>
             <ul className="space-y-4 font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              <li className="font-medium" style={{ color: 'var(--kj-text)' }}>
-                Bahnhofstraße 28<br />33602 Bielefeld
+              <li>
+                <span className="font-medium" style={{ color: 'var(--kj-text)' }}>
+                  Loom Bielefeld · 1. OG<br />Bahnhofstraße 28, 33602 Bielefeld
+                </span>
+                <br />
+                <span style={{ opacity: 0.75, fontSize: '0.8rem' }}>Mo–Sa: 09:30–20:00 Uhr</span>
+                <br />
+                <a href="tel:+4952177075050" className="transition-opacity hover:opacity-80" style={{ fontSize: '0.8rem' }}>
+                  0521 77075050
+                </a>
+              </li>
+              <li>
+                <span className="font-medium" style={{ color: 'var(--kj-text)' }}>
+                  Lange Straße 29<br />59555 Lippstadt
+                </span>
+                <br />
+                <span style={{ opacity: 0.75, fontSize: '0.8rem' }}>Mo–Fr: 10:00–18:00 · Sa: 10:00–16:00 Uhr</span>
+                <br />
+                <a href="tel:+4929419889114" className="transition-opacity hover:opacity-80" style={{ fontSize: '0.8rem' }}>
+                  02941 9889114
+                </a>
               </li>
               <li>
                 <a href="tel:+4917663284312" className="transition-opacity hover:opacity-80 font-medium" style={{ color: 'var(--kj-text)' }}>
-                  +49 176 63284312
+                  Mobil: 0176 63284312
                 </a>
               </li>
               <li>
                 <a href="mailto:info@kenju-juwelier.de" className="transition-opacity hover:opacity-80">
                   info@kenju-juwelier.de
                 </a>
-              </li>
-              <li style={{ opacity: 0.75 }}>
-                Mo–Fr: 10:00–18:30<br />
-                Sa: 10:00–16:00
               </li>
             </ul>
           </div>
@@ -144,7 +159,7 @@ export default function Footer() {
             © {new Date().getFullYear()} KenJu Juwelier. Alle Rechte vorbehalten.
           </p>
           <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>
-            Meisterbetrieb · Zertifizierter Goldankauf · Bielefeld
+Zertifizierter Goldankauf · Bielefeld & Lippstadt
           </p>
         </div>
         {/* Agency signature */}

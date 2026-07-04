@@ -4,8 +4,8 @@ import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Schmuck- & Uhrenreparatur Bielefeld | Meisterbetrieb KenJu Juwelier',
-  description: 'Schmuckreparatur & Uhrenreparatur in Bielefeld – Ringgrößenänderung, Gravuren, Batteriewechsel, Glaswechsel. Ihr Goldschmied & Uhrmacher. Bahnhofstraße 28, Loom 1. OG, 33602 Bielefeld.',
+  title: 'Schmuck- & Uhrenreparatur Bielefeld | KenJu Juwelier',
+  description: 'Schmuckreparatur & Uhrenreparatur in Bielefeld – Ringgrößenänderung, Gravuren, Batteriewechsel, Glaswechsel. Ihr Goldschmied & Uhrmacher im Loom Bielefeld, 1. OG.',
   keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Uhrmacher Bielefeld', 'Ringgrößenänderung Bielefeld', 'Goldschmied Bielefeld', 'Batteriewechsel Uhr Bielefeld', 'Gravur Bielefeld', 'Schmuck reparieren Bielefeld', 'Glaswechsel Uhr Bielefeld', 'Kettenreparatur Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/service' },
 };
@@ -26,14 +26,14 @@ const serviceJsonLd = {
 };
 
 const trustBoxes = [
-  { val: '20+',    title: 'Jahre Erfahrung',                sub: 'Meisterbetrieb Bielefeld' },
+  { val: '10+',    title: 'Jahre Erfahrung',                sub: 'Bielefeld & Lippstadt' },
   { val: '◈',     title: 'Zertifizierte Handwerksqualität', sub: 'Geprüfte Fachkräfte' },
   { val: 'Sofort', title: 'Batteriewechsel',                sub: 'Oft am selben Tag fertig' },
   { val: '⬡',     title: 'Fachwerkstatt',                  sub: 'Für Schmuck & Uhren' },
 ];
 
 const processSteps = [
-  { nr: '01', title: 'Schmuck oder Uhr vorbeibringen',  desc: 'Einfach in unser Atelier – Bahnhofstraße 28, Loom 1. OG, Bielefeld.' },
+  { nr: '01', title: 'Schmuck oder Uhr vorbeibringen',  desc: 'Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29.' },
   { nr: '02', title: 'Kostenlose Einschätzung',          desc: 'Wir prüfen den Zustand transparent und unverbindlich.' },
   { nr: '03', title: 'Transparente Preisangabe',         desc: 'Klares Angebot – keine versteckten Kosten.' },
   { nr: '04', title: 'Fachgerechte Reparatur',           desc: 'Präzise Ausführung durch unsere Experten in Bielefeld.' },
@@ -90,13 +90,13 @@ export default function ServicePage() {
             <span style={{ color: 'var(--kj-gold)' }}>Service</span>
           </nav>
 
-          <p className="section-subtitle mb-5">Meisterbetrieb · Bielefeld</p>
+          <p className="section-subtitle mb-5">Bielefeld · Lippstadt</p>
           <h1 className="font-serif font-light text-white mb-6" style={{ fontSize: 'clamp(2rem, 5.5vw, 5rem)', lineHeight: 1.08 }}>
             Schmuck- &amp; Uhrenservice<br className="hidden sm:block" /> vom Fachbetrieb
           </h1>
           <div className="divider-gold mb-6" />
           <p className="font-sans max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.58)', fontSize: '0.95rem' }}>
-            Schmuckreparatur und Uhrenreparatur in Bielefeld – präzise, zuverlässig und mit über 20 Jahren Erfahrung als Goldschmied und Uhrmacher. Bahnhofstraße 28, Loom 1. OG.
+            Schmuckreparatur und Uhrenreparatur in Bielefeld – präzise, zuverlässig und mit über 10 Jahren Erfahrung als Goldschmied und Uhrmacher. Loom Bielefeld, 1. OG.
           </p>
 
           <div className="flex flex-row gap-3 mb-8">
@@ -109,7 +109,7 @@ export default function ServicePage() {
           </div>
 
           <div className="flex flex-wrap gap-x-5 gap-y-2">
-            {['Meisterbetrieb', 'Über 20 Jahre Erfahrung', 'Faire Preise', 'Persönliche Beratung'].map((item) => (
+            {['Über 10 Jahre Erfahrung', 'Faire Preise', 'Persönliche Beratung', '2 Standorte'].map((item) => (
               <span key={item} className="font-sans text-xs flex items-center gap-1.5" style={{ color: 'rgba(245,240,232,0.48)' }}>
                 <span style={{ color: 'var(--kj-gold)' }}>✓</span>{item}
               </span>
@@ -175,7 +175,7 @@ export default function ServicePage() {
               />
               <div className="img-caption">
                 <p className="font-serif text-lg text-white">Goldschmied · Bielefeld</p>
-                <p className="font-sans text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Meisterbetrieb · Präzise Handarbeit</p>
+                <p className="font-sans text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Präzise Handarbeit · Bielefeld & Lippstadt</p>
               </div>
             </div>
             <div className="p-8 lg:p-12 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
@@ -286,7 +286,7 @@ export default function ServicePage() {
           </h2>
           <div className="divider-gold mx-auto mb-6" />
           <p className="font-sans text-sm max-w-lg mx-auto leading-relaxed mb-8" style={{ color: 'var(--kj-muted)' }}>
-            Persönliche Beratung, transparente Preise und fachgerechte Ausführung – direkt in unserem Meisterbetrieb: <strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28, Loom 1. OG, 33602 Bielefeld</strong>.
+            Persönliche Beratung, transparente Preise und fachgerechte Ausführung – in unseren Ateliers:<br /><strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28, Loom 1. OG, Bielefeld</strong> · <strong style={{ color: 'var(--kj-text)' }}>Lange Straße 29, 59555 Lippstadt</strong>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-service" className="btn-gold">Reparatur anfragen</Link>
@@ -303,7 +303,7 @@ export default function ServicePage() {
             <h2 className="section-title mb-4">Service-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-4" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Bahnhofstraße 28, Loom 1. OG · 33602 Bielefeld · Wir antworten innerhalb von 24 Stunden.
+              Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29 · Wir antworten innerhalb von 24 Stunden.
             </p>
           </div>
           <div className="p-8 md:p-10" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

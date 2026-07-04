@@ -18,9 +18,12 @@ export default function ImpressumPage() {
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">Angaben gemäß § 5 TMG</h2>
             <p>
               KenJu Juwelier<br />
-              Bahnhofstraße 28<br />
+              Bahnhofstraße 28, Loom 1. OG<br />
               33602 Bielefeld<br />
-              Deutschland
+              Deutschland<br /><br />
+              Zweigstelle:<br />
+              Lange Straße 29<br />
+              59555 Lippstadt
             </p>
           </section>
 
@@ -54,8 +57,7 @@ export default function ImpressumPage() {
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">Berufsrechtliche Regelungen</h2>
             <p>
               Goldschmiede-Innung Ostwestfalen-Lippe<br />
-              Berufsordnung der Goldschmiede<br />
-              Meisterbetrieb nach §1 HwO
+              Berufsordnung der Goldschmiede
             </p>
           </section>
 

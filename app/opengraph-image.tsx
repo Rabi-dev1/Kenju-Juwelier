@@ -25,7 +25,7 @@ export default async function Image() {
 
         {/* Top label */}
         <div style={{ fontFamily: 'sans-serif', fontSize: 14, letterSpacing: '0.5em', color: '#C9A84C', marginBottom: 24, textTransform: 'uppercase' }}>
-          Meisterbetrieb · Bielefeld
+          Juwelier · Bielefeld & Lippstadt
         </div>
 
         {/* Logo */}

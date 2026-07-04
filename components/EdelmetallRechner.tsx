@@ -571,7 +571,7 @@ export default function EdelmetallRechner() {
               <div className="p-4 font-sans text-xs leading-relaxed"
                 style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)', color: 'var(--kj-muted)' }}>
                 * Orientierungspreis auf Basis des Spot-Kurses. Tatsächlicher Ankaufspreis wird
-                kostenlos und individuell bei KenJu Juwelier ermittelt, Bahnhofstraße 28, Bielefeld.
+                kostenlos und individuell bei KenJu Juwelier ermittelt – Loom Bielefeld (1. OG) oder Lange Straße 29, Lippstadt.
               </div>
             </div>
           ) : (

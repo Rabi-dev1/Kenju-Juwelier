@@ -7,11 +7,11 @@ import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
   title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
-  description: 'KenJu Juwelier Bielefeld – Meisterbetrieb für Trauringe, Brillantringe & Goldankauf. Persönliche Beratung, handgefertigte Qualität, faire Preise. Bahnhofstraße 28.',
+  description: 'KenJu Juwelier – Trauringe, Brillantringe & Goldankauf in Bielefeld und Lippstadt. Persönliche Beratung, handgefertigte Qualität, faire Preise. Loom Bielefeld, 1. OG.',
   alternates: { canonical: 'https://kenju-juwelier.de' },
   openGraph: {
     title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
-    description: 'Meisterbetrieb für Trauringe, Brillantringe und fairen Goldankauf in Bielefeld. ★★★★★ 5,0 Google · Bahnhofstraße 28.',
+    description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. ★★★★★ 5,0 Google · Loom Bielefeld, 1. OG.',
     url: 'https://kenju-juwelier.de',
     type: 'website',
   },
@@ -31,11 +31,11 @@ const pageJsonLd = {
 const categories = [
   {
     title: 'Schmuck',
-    desc: 'Ringe, Halsketten, Ohrringe & Brillantschmuck',
+    desc: 'Ringe, Ketten, Anhänger, Armbänder & Brillantschmuck',
     href: '/ringe',
     img: '/images/brillant-set-luxus.jpg',
     imgAlt: 'Goldschmuck und Brillantringe bei KenJu Juwelier Bielefeld',
-    sub: ['Ringe & Brillantringe', 'Halsketten', 'Ohrringe', 'Labor Diamanten'],
+    sub: ['Ringe & Brillantringe', 'Anhänger & Ketten', 'Armbänder & Fußketten', 'Labor Diamanten'],
   },
   {
     title: 'Trauringe',
@@ -64,7 +64,7 @@ const categories = [
 ];
 
 const usps = [
-  { nr: '01', title: 'Meisterbetrieb', desc: 'Zertifizierte Goldschmiede-Qualität – über 20 Jahre Erfahrung in Bielefeld.' },
+  { nr: '01', title: 'Erfahrung & Qualität', desc: 'Zertifizierte Goldschmiede-Qualität – seit über 10 Jahren.' },
   { nr: '02', title: 'Faire Preise',   desc: 'Transparente Bewertung und tagesaktuelle Kurse ohne versteckte Aufschläge.' },
   { nr: '03', title: 'Persönlich',     desc: 'Von der Beratung bis zur individuellen Anfertigung nehmen wir uns Zeit.' },
 ];
@@ -79,7 +79,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-ladenfront.jpg"
-            alt="KenJu Juwelier Bielefeld – Meisterbetrieb für Schmuck und Goldankauf"
+            alt="KenJu Juwelier – Schmuck, Trauringe und Goldankauf in Bielefeld und Lippstadt"
             fill sizes="100vw" className="object-cover img-zoom" priority
             style={{ opacity: 0.5 }}
           />
@@ -101,13 +101,13 @@ export default function HomePage() {
           <div className="divider-gold mx-auto mb-8" />
 
           <h1 className="font-serif font-light text-white" style={{ fontSize: 'clamp(1.6rem, 4.5vw, 4.2rem)', lineHeight: 1.12, marginBottom: '1.25rem' }}>
-            Meisterbetrieb für Schmuck,<br className="hidden sm:block" />
+            Exklusiver Schmuck,<br className="hidden sm:block" />
             <span className="gold-text"> Trauringe &amp; Goldankauf</span>
             <br className="hidden sm:block" /> in Bielefeld
           </h1>
 
           <p className="font-sans text-base md:text-lg max-w-xl mx-auto leading-relaxed mb-5" style={{ color: 'rgba(245,240,232,0.62)' }}>
-            Seit über 20 Jahren persönliche Beratung, handgefertigte Qualität und faire Preise.
+            Seit über 10 Jahren persönliche Beratung, handgefertigte Qualität und faire Preise.
           </p>
 
           {/* Google Stars */}
@@ -138,7 +138,7 @@ export default function HomePage() {
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { value: '20+',    label: 'Jahre Erfahrung',       sub: 'Meisterbetrieb' },
+              { value: '10+',    label: 'Jahre Erfahrung',       sub: 'Bielefeld & Lippstadt' },
               { value: '5.000+', label: 'Zufriedene Kunden',     sub: '5-Sterne Google' },
               { value: 'Sofort', label: 'Bargeld-Auszahlung',    sub: 'Goldankauf' },
               { value: '100%',   label: 'Kostenlose Bewertung',  sub: 'Unverbindlich' },
@@ -180,7 +180,7 @@ export default function HomePage() {
               </h2>
               <div className="divider-gold mb-8" />
               <p className="font-sans text-sm leading-relaxed mb-10" style={{ color: 'var(--kj-muted)', maxWidth: '48ch' }}>
-                Seit über <strong style={{ color: 'var(--kj-text)' }}>20 Jahren</strong> steht KenJu Juwelier in Bielefeld für handgefertigten Schmuck höchster Güte – von Goldringe über Brillantringe bis hin zu individuellen Trauringen und fairem Goldankauf.
+                Seit über <strong style={{ color: 'var(--kj-text)' }}>10 Jahren</strong> steht KenJu Juwelier für handgefertigten Schmuck höchster Güte – von Goldringen und Brillantringen über Anhänger, Armbänder und Fußketten bis hin zu individuellen Trauringen und fairem Goldankauf.
               </p>
 
               <div className="space-y-6">
@@ -286,7 +286,7 @@ export default function HomePage() {
             <h2 className="section-title mb-4">Termin vereinbaren</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm max-w-lg mx-auto leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-              Kostenloses Beratungsgespräch in unserem Atelier –<br />Bahnhofstraße 28, 33602 Bielefeld.
+              Kostenloses Beratungsgespräch in unseren Ateliers –<br />Bahnhofstraße 28, Bielefeld · Lange Straße 29, Lippstadt
             </p>
           </div>
           <div className="max-w-3xl mx-auto p-8 md:p-12" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

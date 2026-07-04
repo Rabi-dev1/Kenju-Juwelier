@@ -6,14 +6,18 @@ import AppointmentForm from '@/components/AppointmentForm';
 import JewelrySlider from '@/components/JewelrySlider';
 
 export const metadata: Metadata = {
-  title: 'Schmuck – Ringe, Ketten, Ohrringe & mehr | KenJu Juwelier Bielefeld',
-  description: 'Goldschmuck bei KenJu Juwelier Bielefeld: Ringe, Brillantringe, Ketten, Creolen, Armreifen und mehr in 585 Gelbgold, Weißgold und Roségold.',
-  keywords: ['Schmuck Bielefeld', 'Goldringe', 'Brillantringe', 'Goldketten', 'Creolen', 'Armreifen Gold', '585 Gold', 'Juwelier Bielefeld'],
+  title: 'Schmuck – Ringe, Ketten, Anhänger & mehr | KenJu Juwelier Bielefeld',
+  description: 'Goldschmuck bei KenJu Juwelier Bielefeld: Ringe, Brillantringe, Ketten, Anhänger, Armbänder, Fußketten, Creolen und mehr in 585 Gelbgold, Weißgold und Roségold.',
+  keywords: ['Schmuck Bielefeld', 'Goldringe', 'Brillantringe', 'Goldketten', 'Anhänger Gold', 'Armbänder Gold', 'Fußketten Gold', 'Creolen', '585 Gold', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/ringe' },
 };
 
 /* ── Slider-Bilder – exakte Dateinamen aus public/images ── */
 const sliderBilder = [
+  { src: '/images/anhaenger-fluegel.jpg',     alt: '585 Gelbgold Kette mit Flügel-Anhänger und Zirkonia – KenJu Juwelier Bielefeld' },
+  { src: '/images/schlangenkette-gold.jpg',   alt: '585 Gelbgold Schlangenkette flach – KenJu Juwelier Bielefeld' },
+  { src: '/images/anhaenger-kleeblatt.jpg',   alt: '585 Gelbgold Kette mit Kleeblatt-Anhänger – KenJu Juwelier Bielefeld' },
+  { src: '/images/anhaenger-herz.jpg',        alt: '585 Gelbgold Kette mit Herz-Anhänger und Zirkonia – KenJu Juwelier Bielefeld' },
   { src: '/images/armband-rose.jpg',         alt: '585 Roségold Armband KenJu Juwelier' },
   { src: '/images/armreif-gedreht.jpg',       alt: '585 Gelbgold Armreifen gedreht' },
   { src: '/images/armreif-welle.jpg',         alt: '585 Gelbgold Armreif Wellenform' },
@@ -39,7 +43,7 @@ export default function SchmuckPage() {
       <CategoryHero
         title="Schmuck bei KenJu Juwelier Bielefeld"
         subtitle="Gold · Brillanten · Leidenschaft"
-        description="Memory-Ringe, Solitär-Ringe, Anhänger, Ketten, Ohrstecker & Brillantschmuck – in 585 Gelbgold, Weißgold und Roségold."
+        description="Memory-Ringe, Solitär-Ringe, Anhänger, Ketten, Armbänder, Fußketten, Ohrstecker & Brillantschmuck – in 585 Gelbgold, Weißgold und Roségold."
         imageSrc="/images/ringe.jpg"
         imageAlt="Schmuck KenJu Juwelier Bielefeld"
         breadcrumb="Schmuck"

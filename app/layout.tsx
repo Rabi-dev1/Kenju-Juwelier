@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: '%s | KenJu Juwelier Bielefeld',
   },
   description:
-    'KenJu Juwelier Bielefeld – Meisterbetrieb für Trauringe, Brillantringe, Labor Diamanten und fairen Goldankauf. Persönliche Beratung in der Bahnhofstraße 28, 33602 Bielefeld.',
+    'KenJu Juwelier – Trauringe, Brillantringe, Labor Diamanten und fairer Goldankauf in Bielefeld und Lippstadt. Persönliche Beratung im Loom Bielefeld, 1. OG.',
   keywords: [
     'Juwelier Bielefeld', 'Goldankauf Bielefeld', 'Brillantringe Bielefeld', 'Verlobungsringe Bielefeld',
     'Goldschmuck', 'Labor Diamanten Bielefeld', 'Trauringe Bielefeld', 'Ohrringe Gold',
@@ -46,20 +46,20 @@ export const metadata: Metadata = {
     url: 'https://kenju-juwelier.de',
     siteName: 'KenJu Juwelier',
     title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
-    description: 'Meisterbetrieb für Trauringe, Brillantringe und fairen Goldankauf in Bielefeld. Persönliche Beratung, handgefertigte Qualität seit über 20 Jahren.',
+    description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. Persönliche Beratung, handgefertigte Qualität seit über 10 Jahren.',
     images: [
       {
         url: '/images/hero-ladenfront.jpg',
         width: 1200,
         height: 630,
-        alt: 'KenJu Juwelier Bielefeld – Meisterbetrieb für Schmuck, Trauringe & Goldankauf',
+        alt: 'KenJu Juwelier – Schmuck, Trauringe & Goldankauf in Bielefeld und Lippstadt',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
-    description: 'Meisterbetrieb für Trauringe, Brillantringe und fairen Goldankauf in Bielefeld. 20+ Jahre Erfahrung · 5,0 ★ Google · Bahnhofstraße 28.',
+    description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. 10+ Jahre Erfahrung · 5,0 ★ Google · Loom Bielefeld, 1. OG.',
     images: ['/images/hero-ladenfront.jpg'],
   },
   robots: {
@@ -108,11 +108,11 @@ const jsonLd = {
   '@id': 'https://kenju-juwelier.de/#jewelry-store',
   name: 'KenJu Juwelier',
   legalName: 'KenJu Juwelier',
-  description: 'Exklusiver Juwelier in Bielefeld – Brillantringe, Labor Diamanten, Goldankauf, Ringe, Ohrringe, Trauringe und mehr. Meisterbetrieb in der Bielefelder Innenstadt.',
+  description: 'Exklusiver Juwelier in Bielefeld und Lippstadt – Brillantringe, Labor Diamanten, Goldankauf, Anhänger, Armbänder, Trauringe und mehr. Im Loom Bielefeld, 1. OG.',
   url: 'https://kenju-juwelier.de',
   logo: 'https://kenju-juwelier.de/favicon.svg',
   image: 'https://kenju-juwelier.de/images/og-image.jpg',
-  telephone: '+4917663284312',
+  telephone: '+4952177075050',
   email: 'info@kenju-juwelier.de',
   foundingDate: '2010',
   address: {
@@ -130,8 +130,25 @@ const jsonLd = {
   },
   hasMap: 'https://maps.google.com/?q=KenJu+Juwelier+Bahnhofstra%C3%9Fe+28+Bielefeld',
   openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '10:00', closes: '18:30' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday'], opens: '10:00', closes: '16:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:30', closes: '20:00' },
+  ],
+  department: [
+    {
+      '@type': 'JewelryStore',
+      name: 'KenJu Juwelier Lippstadt',
+      telephone: '+4929419889114',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Lange Straße 29',
+        addressLocality: 'Lippstadt',
+        postalCode: '59555',
+        addressCountry: 'DE',
+      },
+      openingHoursSpecification: [
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '10:00', closes: '18:00' },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '10:00', closes: '16:00' },
+      ],
+    },
   ],
   priceRange: '€€€',
   currenciesAccepted: 'EUR',

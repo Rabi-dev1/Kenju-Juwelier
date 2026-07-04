@@ -7,7 +7,7 @@ import EdelmetallRechner from '@/components/EdelmetallRechner';
 export const metadata: Metadata = {
   title: 'Goldankauf Bielefeld | Faire Preise & Sofortige Auszahlung | KenJu Juwelier',
   description: 'Goldankauf in Bielefeld zum tagesaktuellen Marktpreis. Kostenlose Bewertung, faire Ankaufspreise und sofortige Barauszahlung. Jetzt Termin vereinbaren.',
-  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Bahnhofstraße', 'Juwelier Bielefeld Goldankauf'],
+  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Lippstadt', 'Goldmünzen kaufen Bielefeld', 'Goldbarren kaufen Bielefeld', 'Investmentgold Bielefeld', 'Gold als Anlage'],
   alternates: { canonical: 'https://kenju-juwelier.de/goldankauf' },
   openGraph: {
     title: 'Goldankauf Bielefeld – Fairer Preis, sofortige Auszahlung | KenJu Juwelier',
@@ -52,7 +52,7 @@ const faqJsonLd = {
     {
       '@type': 'Question',
       name: 'Wie läuft ein Goldankauf in Bielefeld ab?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sie bringen Ihr Gold, Silber oder Ihren Schmuck in unser Atelier in der Bahnhofstraße 28, Bielefeld. Wir bewerten Ihre Stücke kostenlos und unverbindlich, erstellen ein faires Angebot und zahlen bei Einigung sofort in bar aus.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sie bringen Ihr Gold, Silber oder Ihren Schmuck in eines unserer Ateliers – Loom Bielefeld (1. OG) oder Lange Straße 29 in Lippstadt. Wir bewerten Ihre Stücke kostenlos und unverbindlich, erstellen ein faires Angebot und zahlen bei Einigung sofort in bar oder per Echtzeitüberweisung aus.' },
     },
     {
       '@type': 'Question',
@@ -77,7 +77,7 @@ const faqJsonLd = {
     {
       '@type': 'Question',
       name: 'Wie schnell bekomme ich mein Geld?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Bei Einigung zahlen wir sofort in bar aus – noch am selben Tag. Es gibt keine Wartezeiten oder Überweisungen.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Bei einer Einigung zahlen wir den Betrag entweder sofort in bar aus oder per Echtzeitüberweisung – ganz nach Ihrem Wunsch, noch am selben Tag.' },
     },
     {
       '@type': 'Question',
@@ -93,7 +93,7 @@ const faqJsonLd = {
 };
 
 const steps = [
-  { step: '01', title: 'Termin vereinbaren',  desc: 'Online buchen oder einfach vorbeikommen – Bahnhofstraße 28, Bielefeld.' },
+  { step: '01', title: 'Termin vereinbaren',  desc: 'Online buchen oder vorbeikommen – Bielefeld: Bahnhofstraße 28 · Lippstadt: Lange Straße 29.' },
   { step: '02', title: 'Kostenlose Bewertung', desc: 'Unsere Experten bewerten Ihr Gold, Silber oder Ihren Schmuck kostenlos und unverbindlich.' },
   { step: '03', title: 'Faires Angebot',       desc: 'Transparenter Ankaufspreis auf Basis des tagesaktuellen Goldkurses.' },
   { step: '04', title: 'Sofortige Auszahlung', desc: 'Bei Einigung zahlen wir sofort in bar – noch am selben Tag.' },
@@ -132,7 +132,7 @@ export default function GoldankaufPage() {
           </h1>
           <div className="divider-gold mx-auto mb-6" />
           <p className="font-sans text-lg max-w-xl mx-auto leading-relaxed mb-10" style={{ color: 'rgba(245,240,232,0.65)' }}>
-            Goldankauf zum tagesaktuellen Marktpreis – kostenlose Bewertung, faire Ankaufspreise und sofortige Barauszahlung.
+            Goldankauf zum tagesaktuellen Marktpreis – kostenlose Bewertung, faire Ankaufspreise und sofortige Auszahlung in bar oder per Echtzeitüberweisung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-goldankauf" className="btn-gold">Jetzt Termin buchen</Link>
@@ -146,7 +146,7 @@ export default function GoldankaufPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { val: '20+',    label: 'Jahre Erfahrung' },
+              { val: '10+',    label: 'Jahre Erfahrung' },
               { val: '5.000+', label: 'Zufriedene Kunden' },
               { val: '100%',   label: 'Transparenz' },
               { val: 'Sofort', label: 'Bargeld-Auszahlung' },
@@ -187,8 +187,19 @@ export default function GoldankaufPage() {
           <div className="mt-6 p-4 text-center" style={{ border: '1px solid rgba(201,168,76,0.2)', background: 'var(--kj-card)' }}>
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
               <strong style={{ color: 'var(--kj-gold)' }}>Einfach vorbeikommen:</strong>{' '}
-              Kostenlose, unverbindliche Bewertung – Personalausweis mitbringen. Goldankauf Bahnhofstraße 28, Bielefeld.
+              Kostenlose, unverbindliche Bewertung – Personalausweis mitbringen. Loom Bielefeld (1. OG) · Lange Straße 29, Lippstadt.
             </p>
+          </div>
+
+          {/* Investmentgold */}
+          <div className="mt-4 p-5 flex items-start gap-4" style={{ border: '1px solid rgba(201,168,76,0.3)', background: 'var(--kj-card)' }}>
+            <span style={{ color: 'var(--kj-gold)', fontSize: '1.2rem', lineHeight: 1 }}>◈</span>
+            <div>
+              <p className="font-sans text-sm font-semibold mb-1" style={{ color: 'var(--kj-text)' }}>Gold als Anlage – Investmentgold bei KenJu</p>
+              <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+                Neben dem Ankauf bieten wir auch <strong style={{ color: 'var(--kj-text)' }}>Goldmünzen und Goldbarren als Wertanlage</strong> an. Lassen Sie sich persönlich zu Investmentgold beraten – transparent und zum tagesaktuellen Kurs.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -261,7 +272,7 @@ export default function GoldankaufPage() {
                 Statt der Barauszahlung können Sie einen <strong style={{ color: 'var(--kj-gold)' }}>Einkaufsgutschein</strong> mit Mehrwert wählen – ideal wenn Sie neuen Schmuck oder Trauringe bei KenJu erwerben möchten.
               </p>
               <ul className="space-y-2 mb-6">
-                {['Mehr Wert als Barauszahlung', 'Für das gesamte Sortiment einlösbar', 'Ideal für neuen Schmuck oder Trauringe', 'Keine Mindestbestellmenge'].map((item) => (
+                {['Mehr Wert als Barauszahlung', 'Für das gesamte Sortiment einlösbar', 'Ideal für neuen Schmuck oder Trauringe', 'Kein Mindestankaufswert'].map((item) => (
                   <li key={item} className="flex items-center gap-2.5">
                     <span style={{ color: 'var(--kj-gold)', fontSize: '0.75rem' }}>✓</span>
                     <span className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{item}</span>
@@ -302,7 +313,7 @@ export default function GoldankaufPage() {
               ))}
             </div>
             <p className="font-sans text-xs mt-3" style={{ color: 'var(--kj-muted)', opacity: 0.6 }}>
-              Bahnhofstraße 28, 33602 Bielefeld
+              Bielefeld: Bahnhofstraße 28 · Lippstadt: Lange Straße 29, 59555
             </p>
           </div>
           <div className="p-8 md:p-12" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

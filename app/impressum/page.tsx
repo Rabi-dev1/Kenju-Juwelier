@@ -52,29 +52,26 @@ export default function ImpressumPage() {
             </p>
           </section>
 
+          {/*
+            TODO – vom Kunden anfordern und hier einsetzen:
+            · Rechtsform (Einzelunternehmen / GbR / GmbH / UG) und vollständiger Firmenname laut Gewerbeanmeldung
+            · Inhaber bzw. Geschäftsführer (Vor- und Nachname) – Pflichtangabe
+            · Handelsregister + Registernummer (nur falls eingetragen)
+            · Umsatzsteuer-ID (DE…) oder Steuernummer
+            Erfundene Beispieldaten wurden bewusst entfernt: Falsche Registerangaben
+            im Impressum sind abmahnfähig – fehlende Angaben sind das kleinere Risiko.
+          */}
+
           <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Handelsregister</h2>
+            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Verantwortlich für den Inhalt</h2>
+            <p>Gemäß § 18 Abs. 2 MStV: KenJu Juwelier, Bahnhofstraße 28, 33602 Bielefeld</p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Verbraucherstreitbeilegung</h2>
             <p>
-              Registergericht: Amtsgericht Bielefeld<br />
-              Registernummer: HRB 123456 B
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Umsatzsteuer-ID</h2>
-            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br />DE 123 456 789</p>
-          </section>
-
-          <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Geschäftsführung</h2>
-            <p>[Name des Geschäftsführers]</p>
-          </section>
-
-          <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Berufsrechtliche Regelungen</h2>
-            <p>
-              Goldschmiede-Innung Ostwestfalen-Lippe<br />
-              Berufsordnung der Goldschmiede
+              Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
+              Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
             </p>
           </section>
 

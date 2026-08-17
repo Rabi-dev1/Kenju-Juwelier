@@ -115,7 +115,7 @@ export default function HomePage() {
             <span style={{ color: 'var(--kj-gold)', letterSpacing: '0.05em' }}>★★★★★</span>
             <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>5,0</span>
             <span className="font-sans text-xs" style={{ color: 'rgba(245,240,232,0.45)' }}>
-              · Top-Bewertungen zahlreicher zufriedener Kunden auf Google
+              · 133 Bewertungen zufriedener Kunden auf Google
             </span>
           </div>
 
@@ -141,7 +141,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
               { value: '10+',    label: 'Jahre Erfahrung',       sub: 'Bielefeld & Lippstadt' },
-              { value: '5,0 ★',  label: 'Top-Bewertungen',       sub: 'Zahlreiche zufriedene Kunden auf Google' },
+              { value: '5,0 ★',  label: 'Google-Bewertung',      sub: '133 zufriedene Kunden' },
               { value: 'Sofort', label: 'Auszahlung',            sub: 'Bar oder per Echtzeitüberweisung' },
               { value: '100%',   label: 'Kostenlose Bewertung',  sub: 'Unverbindlich' },
             ].map((s) => (

@@ -15,8 +15,8 @@ interface FormData {
 }
 
 const standortListe = [
-  { value: 'Bielefeld (Loom, 1. OG)', label: 'Bielefeld · Loom, 1. OG', maxTime: '19:00' },
-  { value: 'Lippstadt (Lange Straße 29)', label: 'Lippstadt · Lange Straße 29', maxTime: '17:30' },
+  { value: 'Bielefeld (Loom, 1. OG)', label: 'Bielefeld · Loom, 1. OG', minTime: '10:00', maxTime: '19:00', zeiten: 'Mo – Sa: 10:00 – 19:30 Uhr' },
+  { value: 'Lippstadt (Lange Straße 29)', label: 'Lippstadt · Lange Straße 29', minTime: '09:00', maxTime: '15:30', zeiten: 'Mo – Sa: 09:00 – 16:00 Uhr' },
 ];
 
 const categories = [
@@ -32,8 +32,9 @@ const categories = [
   'Sonstiges',
 ];
 
-/* Öffnungszeiten: Bielefeld Mo–Sa 10:00–19:30 · Lippstadt Mo–Fr 10:00–18:00, Sa 10:00–16:00 */
+/* Öffnungszeiten: Bielefeld Mo–Sa 10:00–19:30 · Lippstadt Mo–Sa 09:00–16:00 */
 const allTimes = [
+  '09:00', '09:30',
   '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30',
   '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
   '18:00', '18:30', '19:00',
@@ -72,8 +73,10 @@ export default function AppointmentForm() {
   const [lastMessage, setLastMessage] = useState('');
 
   const gewaehlterStandort = watch('standort');
-  const maxTime = standortListe.find((s) => s.value === gewaehlterStandort)?.maxTime ?? '19:00';
-  const times = allTimes.filter((t) => t <= maxTime);
+  const aktiverStandort = standortListe.find((s) => s.value === gewaehlterStandort);
+  const times = allTimes.filter(
+    (t) => t >= (aktiverStandort?.minTime ?? '09:00') && t <= (aktiverStandort?.maxTime ?? '19:00'),
+  );
 
   const onSubmit = (data: FormData) => {
     const text = buildMessage(data);
@@ -238,11 +241,9 @@ export default function AppointmentForm() {
           {errors.time && (
             <p className="font-sans text-xs mt-1.5" style={{ color: '#e05252' }}>{errors.time.message}</p>
           )}
-          {gewaehlterStandort && (
+          {aktiverStandort && (
             <p className="font-sans text-[0.68rem] mt-1.5" style={{ color: 'var(--kj-muted)', opacity: 0.75 }}>
-              {gewaehlterStandort.startsWith('Bielefeld')
-                ? 'Mo – Sa: 10:00 – 19:30 Uhr'
-                : 'Mo – Fr: 10:00 – 18:00 · Sa: 10:00 – 16:00 Uhr'}
+              {aktiverStandort.zeiten}
             </p>
           )}
         </div>

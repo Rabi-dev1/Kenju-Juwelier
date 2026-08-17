@@ -8,10 +8,15 @@ const nextConfig = {
   poweredByHeader: false,
   async redirects() {
     return [
-      { source: '/ohrstecker',   destination: '/ohrringe',   permanent: true },
-      { source: '/creolen',      destination: '/ohrringe',   permanent: true },
-      { source: '/brillantringe', destination: '/ringe',     permanent: true },
-      { source: '/kreuze',       destination: '/halsketten', permanent: true },
+      // Alte Einzelkategorien sind in der Sammelseite /ringe (Schmuck) aufgegangen
+      { source: '/ohrringe',      destination: '/ringe', permanent: true },
+      { source: '/halsketten',    destination: '/ringe', permanent: true },
+      { source: '/armreifen',     destination: '/ringe', permanent: true },
+      { source: '/ohrstecker',    destination: '/ringe', permanent: true },
+      { source: '/creolen',       destination: '/ringe', permanent: true },
+      { source: '/brillantringe', destination: '/ringe', permanent: true },
+      { source: '/kreuze',        destination: '/ringe', permanent: true },
+      { source: '/schmuck',       destination: '/ringe', permanent: true },
     ];
   },
   async headers() {

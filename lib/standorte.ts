@@ -31,10 +31,9 @@ export const standorte = [
     telefon: { label: '02941 9889114', href: 'tel:+4929419889114' },
     mobil: { label: '0151 57610382', href: 'tel:+4915157610382' },
     zeiten: [
-      { tage: 'Mo – Fr', zeit: '10:00 – 18:00 Uhr' },
-      { tage: 'Samstag', zeit: '10:00 – 16:00 Uhr' },
+      { tage: 'Mo – Sa', zeit: '09:00 – 16:00 Uhr' },
     ],
-    zeitenKurz: 'Mo – Fr: 10:00 – 18:00 · Sa: 10:00 – 16:00 Uhr',
+    zeitenKurz: 'Mo – Sa: 09:00 – 16:00 Uhr',
     maps: 'https://www.google.com/maps/search/?api=1&query=KenJu+Juwelier+Lange+Stra%C3%9Fe+29+59555+Lippstadt',
   },
 ] as const;

@@ -4,9 +4,9 @@ import Image from 'next/image';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Labor Diamanten Bielefeld – Ethisch. Strahlend. Erschwinglich. | KenJu Juwelier',
-  description: 'Labor Diamanten bei KenJu Juwelier Bielefeld. Ethisch erzeugte Diamanten mit identischer Brillanz zu einem fairen Preis. Ideal für Verlobungsringe und besonderen Schmuck.',
-  keywords: ['Labor Diamanten Bielefeld', 'Lab Grown Diamonds', 'synthetische Diamanten', 'Verlobungsring Labor Diamant', 'ethische Diamanten', 'KenJu Juwelier'],
+  title: 'Labor Diamanten Bielefeld & Lippstadt – Ethisch & Zertifiziert | KenJu',
+  description: 'Labor Diamanten bei KenJu Juwelier in Bielefeld und Lippstadt. Ethisch erzeugte Diamanten mit identischer Brillanz zu einem fairen Preis – ideal für Verlobungsringe.',
+  keywords: ['Labor Diamanten Bielefeld', 'Labor Diamanten Lippstadt', 'Lab Grown Diamonds', 'synthetische Diamanten', 'Verlobungsring Labor Diamant', 'ethische Diamanten'],
   alternates: { canonical: 'https://kenju-juwelier.de/labordiamanten' },
 };
 
@@ -30,7 +30,7 @@ const collections = [
   { title: 'Verlobungsringe',   desc: 'Solitär, Halo oder Pavé – individuell gefertigt.',       img: '/images/ringe.jpg' },
   { title: 'Ohrringe & Creolen', desc: '585 Gelbgold, Weißgold oder Roségold.',                  img: '/images/ohrstecker.jpg' },
   { title: 'Anhänger & Colliers', desc: 'Klassisch oder modern – zeitlos schön.',                img: '/images/halsketten.jpg' },
-  { title: 'Tennis-Armbänder',  desc: 'Funkelnde Steine, elegant am Handgelenk.',                img: '/images/armreifen.jpg' },
+  { title: 'Tennis-Armbänder',  desc: 'Funkelnde Steine, elegant am Handgelenk.',                img: '/images/armband-rose.jpg' },
 ];
 
 const faq = [
@@ -277,7 +277,7 @@ export default function LaborDiamantenPage() {
             <h2 className="section-title mb-3">Labor Diamant Beratung</h2>
             <div className="divider-gold mx-auto mb-4" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Lassen Sie sich in unserem Geschäft in Bielefeld persönlich zu Labor Diamanten beraten –
+              Lassen Sie sich in unseren Geschäften in Bielefeld und Lippstadt persönlich zu Labor Diamanten beraten –
               kostenlos und unverbindlich.
             </p>
           </div>

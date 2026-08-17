@@ -104,7 +104,7 @@ const ankaufKategorien = [
   { title: 'Silber',       img: '/images/silber.jpg',         alt: 'Silber verkaufen Bielefeld – Silberschmuck und Silberbarren',  tags: ['Silberschmuck', 'Silberbarren', 'Silbermünzen'] },
   { title: 'Münzen',       img: '/images/munzen.jpg',         alt: 'Goldmünzen verkaufen Bielefeld – Sammlermünzen Ankauf',        tags: ['Goldmünzen', 'Silbermünzen', 'Sammlermünzen'] },
   { title: 'Diamanten',    img: '/images/diamant.jpg',        alt: 'Diamanten bewerten lassen Bielefeld – Brillanten Ankauf',      tags: ['Lose Diamanten', 'Brillanten', 'Diamantschmuck'] },
-  { title: 'Zahngold',     img: '/images/brillantringe.jpg',  alt: 'Zahngold verkaufen Bielefeld – Zahnkronen Ankauf',             tags: ['Kronen', 'Brücken', 'Dentalgold'] },
+  { title: 'Zahngold',     img: '/images/brillantringe.jpg',  alt: 'Zahngold Ankauf – fachgerechte Bewertung bei KenJu Juwelier',  tags: ['Kronen', 'Brücken', 'Dentalgold'] },
   { title: 'Silberbesteck', img: '/images/silberbesteck.jpg', alt: 'Silberbesteck verkaufen Bielefeld – Tafelsilber Ankauf',       tags: ['Tafelsilber', 'Antikes Besteck', '800er / 925er'] },
   { title: 'Altschmuck',   img: '/images/altschmuck.jpg',     alt: 'Altschmuck verkaufen Bielefeld – Schmuck Ankauf KenJu',        tags: ['Ringe', 'Ketten', 'Anhänger'] },
 ];

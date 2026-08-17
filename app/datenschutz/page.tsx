@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung | KenJu Juwelier Bielefeld',
@@ -28,9 +28,10 @@ export default function DatenschutzPage() {
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">2. Verantwortlicher</h2>
             <p>
               KenJu Juwelier<br />
-              Bahnhofstraße 28, Loom 1. OG, 33602 Bielefeld<br />
-              Telefon: 0521 77075050 · Mobil: +49 176 63284312<br />
-              E-Mail: info@kenju-juwelier.de
+              Bahnhofstraße 28 (Loom, 1. OG), 33602 Bielefeld<br />
+              Zweigstelle: Lange Straße 29, 59555 Lippstadt<br />
+              Telefon: 0521 77075050 · Mobil: 0176 63284312<br />
+              E-Mail: info@kenju.de
             </p>
           </section>
 
@@ -46,11 +47,19 @@ export default function DatenschutzPage() {
               Hingegen bleiben andere Cookies auf Ihrem Endgerät bestehen, bis Sie diese selbst löschen.
             </p>
 
-            <h3 className="font-sans text-base text-kenju-platinum mb-2 mt-6">Kontaktformular</h3>
+            <h3 className="font-sans text-base text-kenju-platinum mb-2 mt-6">Terminanfrage-Formular</h3>
             <p>
-              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive
-              der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen
-              bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+              Wenn Sie unser Terminformular ausfüllen, werden die eingegebenen Daten nicht auf dieser Website gespeichert.
+              Beim Absenden wird lediglich eine vorbereitete Nachricht in WhatsApp bzw. in Ihrem E-Mail-Programm geöffnet.
+              Der Versand erfolgt erst durch Ihre ausdrückliche Bestätigung in der jeweiligen App.
+            </p>
+
+            <h3 className="font-sans text-base text-kenju-platinum mb-2 mt-6">WhatsApp</h3>
+            <p>
+              Für die Übermittlung von Terminanfragen bieten wir WhatsApp an (Anbieter: WhatsApp Ireland Limited,
+              4 Grand Canal Square, Dublin 2, Irland). Wenn Sie uns über WhatsApp kontaktieren, gelten zusätzlich die
+              Datenschutzbestimmungen von WhatsApp. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. f DSGVO.
+              Sie können uns alternativ jederzeit per E-Mail oder telefonisch erreichen.
             </p>
           </section>
 
@@ -73,10 +82,10 @@ export default function DatenschutzPage() {
           <section>
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">5. Google Maps</h2>
             <p>
-              Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street,
-              Dublin 4, Irland. Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern.
-              Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.
-              Der Anbieter dieser Seite hat keinen Einfluss auf diese Datenübertragung.
+              Auf dieser Website ist kein Kartendienst eingebettet. Unsere Adressen sind lediglich als Link zu Google Maps
+              hinterlegt. Erst wenn Sie einen dieser Links aktiv anklicken, werden Sie zu Google weitergeleitet und es können
+              Daten an die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland übertragen werden.
+              Ohne Klick auf den Link findet keine Datenübertragung an Google statt.
             </p>
           </section>
 
@@ -84,8 +93,8 @@ export default function DatenschutzPage() {
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">6. Kontakt</h2>
             <p>
               Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten wenden Sie sich an:<br />
-              <a href="mailto:datenschutz@kenju-juwelier.de" className="text-kenju-gold hover:underline">
-                datenschutz@kenju-juwelier.de
+              <a href="mailto:info@kenju.de" className="text-kenju-gold hover:underline">
+                info@kenju.de
               </a>
             </p>
           </section>

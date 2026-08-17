@@ -38,7 +38,7 @@ const reviewJsonLd = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',
-    reviewCount: '200',
+    reviewCount: '120',
     bestRating: '5',
     worstRating: '1',
   },
@@ -91,7 +91,7 @@ export default function Reviews() {
 
         {/* Header + prominent Google badge */}
         <div className="text-center mb-20">
-          <p className="section-subtitle mb-5">Kundenstimmen</p>
+          <p className="section-subtitle mb-5">Kundenrezensionen</p>
           <h2 className="section-title mb-6">Was unsere Kunden sagen</h2>
           <div className="divider-gold mx-auto mb-10" />
 
@@ -117,7 +117,7 @@ export default function Reviews() {
                 <span className="font-serif text-2xl font-light" style={{ color: 'var(--kj-gold)' }}>5,0</span>
               </div>
               <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>
-                Über 200 verifizierte Bewertungen auf Google
+                Top-Bewertungen zahlreicher zufriedener Kunden auf Google
               </p>
             </div>
 

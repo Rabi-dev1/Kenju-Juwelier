@@ -113,7 +113,7 @@ const jsonLd = {
   logo: 'https://kenju-juwelier.de/favicon.svg',
   image: 'https://kenju-juwelier.de/images/og-image.jpg',
   telephone: '+4952177075050',
-  email: 'info@kenju-juwelier.de',
+  email: 'info@kenju.de',
   foundingDate: '2010',
   address: {
     '@type': 'PostalAddress',
@@ -130,13 +130,14 @@ const jsonLd = {
   },
   hasMap: 'https://maps.google.com/?q=KenJu+Juwelier+Bahnhofstra%C3%9Fe+28+Bielefeld',
   openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:30', closes: '20:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '10:00', closes: '19:30' },
   ],
   department: [
     {
       '@type': 'JewelryStore',
       name: 'KenJu Juwelier Lippstadt',
       telephone: '+4929419889114',
+      email: 'info@kenju.de',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Lange Straße 29',
@@ -161,7 +162,7 @@ const jsonLd = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',
-    reviewCount: '200',
+    reviewCount: '120',
     bestRating: '5',
     worstRating: '1',
   },

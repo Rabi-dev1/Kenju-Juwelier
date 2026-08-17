@@ -111,10 +111,12 @@ export default function HomePage() {
           </p>
 
           {/* Google Stars */}
-          <div className="flex items-center justify-center gap-2 mb-10">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mb-10">
             <span style={{ color: 'var(--kj-gold)', letterSpacing: '0.05em' }}>★★★★★</span>
             <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>5,0</span>
-            <span className="font-sans text-xs" style={{ color: 'rgba(245,240,232,0.45)' }}>· 200+ Google-Bewertungen</span>
+            <span className="font-sans text-xs" style={{ color: 'rgba(245,240,232,0.45)' }}>
+              · Top-Bewertungen zahlreicher zufriedener Kunden auf Google
+            </span>
           </div>
 
           {/* CTAs — kein "Termin buchen" hier (Sticky Footer übernimmt das) */}
@@ -139,8 +141,8 @@ export default function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
               { value: '10+',    label: 'Jahre Erfahrung',       sub: 'Bielefeld & Lippstadt' },
-              { value: '5.000+', label: 'Zufriedene Kunden',     sub: '5-Sterne Google' },
-              { value: 'Sofort', label: 'Bargeld-Auszahlung',    sub: 'Goldankauf' },
+              { value: '5,0 ★',  label: 'Top-Bewertungen',       sub: 'Zahlreiche zufriedene Kunden auf Google' },
+              { value: 'Sofort', label: 'Auszahlung',            sub: 'Bar oder per Echtzeitüberweisung' },
               { value: '100%',   label: 'Kostenlose Bewertung',  sub: 'Unverbindlich' },
             ].map((s) => (
               <div key={s.label}>
@@ -169,7 +171,7 @@ export default function HomePage() {
               />
               <div className="img-caption">
                 <p className="font-serif text-lg text-white">Persönlich. Erfahren. Zuverlässig.</p>
-                <p className="font-sans text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Bahnhofstraße 28, Bielefeld</p>
+                <p className="font-sans text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Bielefeld · Lippstadt</p>
               </div>
             </div>
 
@@ -286,7 +288,9 @@ export default function HomePage() {
             <h2 className="section-title mb-4">Termin vereinbaren</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm max-w-lg mx-auto leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-              Kostenloses Beratungsgespräch in unseren Ateliers –<br />Bahnhofstraße 28, Bielefeld · Lange Straße 29, Lippstadt
+              Kostenloses Beratungsgespräch in unseren Ateliers:<br />
+              Bahnhofstraße 28 (Loom, 1. OG), 33602 Bielefeld<br />
+              Lange Straße 29, 59555 Lippstadt
             </p>
           </div>
           <div className="max-w-3xl mx-auto p-8 md:p-12" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

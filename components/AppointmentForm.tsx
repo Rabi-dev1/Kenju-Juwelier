@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -14,21 +14,29 @@ interface FormData {
   message: string;
 }
 
-const standorte = ['Bielefeld (Loom, 1. OG)', 'Lippstadt (Lange Straße 29)'];
+const standortListe = [
+  { value: 'Bielefeld (Loom, 1. OG)', label: 'Bielefeld · Loom, 1. OG', maxTime: '19:00' },
+  { value: 'Lippstadt (Lange Straße 29)', label: 'Lippstadt · Lange Straße 29', maxTime: '17:30' },
+];
 
 const categories = [
-  'Schmuck & Brillantringe',
+  'Ringe & Brillantringe',
+  'Ketten & Anhänger',
+  'Armbänder & Fußketten',
+  'Ohrschmuck',
   'Trauringe',
-  'Uhren',
-  'Goldankauf',
-  'Reparatur & Service',
+  'Uhren & Uhrenservice',
+  'Goldankauf / Silberankauf',
+  'Reparatur & Gravur',
   'Labor Diamanten',
   'Sonstiges',
 ];
 
-const times = [
-  '10:00', '10:30', '11:00', '11:30', '12:00',
+/* Öffnungszeiten: Bielefeld Mo–Sa 10:00–19:30 · Lippstadt Mo–Fr 10:00–18:00, Sa 10:00–16:00 */
+const allTimes = [
+  '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30',
   '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
+  '18:00', '18:30', '19:00',
 ];
 
 const WHATSAPP_NUMBER = '4917663284312';
@@ -59,9 +67,13 @@ function buildMessage(data: FormData): string {
 }
 
 export default function AppointmentForm() {
-  const { register, handleSubmit, reset, getValues, formState: { errors } } = useForm<FormData>();
+  const { register, handleSubmit, reset, getValues, watch, formState: { errors } } = useForm<FormData>();
   const [sent, setSent] = useState(false);
   const [lastMessage, setLastMessage] = useState('');
+
+  const gewaehlterStandort = watch('standort');
+  const maxTime = standortListe.find((s) => s.value === gewaehlterStandort)?.maxTime ?? '19:00';
+  const times = allTimes.filter((t) => t <= maxTime);
 
   const onSubmit = (data: FormData) => {
     const text = buildMessage(data);
@@ -73,7 +85,7 @@ export default function AppointmentForm() {
   };
 
   if (sent) {
-    const mailtoHref = `mailto:info@kenju-juwelier.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}&body=${encodeURIComponent(lastMessage)}`;
+    const mailtoHref = `mailto:info@kenju.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}&body=${encodeURIComponent(lastMessage)}`;
     return (
       <div className="text-center py-16">
         <div
@@ -96,7 +108,11 @@ export default function AppointmentForm() {
           <a href={mailtoHref} style={{ color: 'var(--kj-gold)' }} className="underline underline-offset-2">
             Anfrage per E-Mail senden
           </a>
-          {' '}oder rufen Sie uns an: <a href="tel:+4917663284312" style={{ color: 'var(--kj-gold)' }}>0176 63284312</a>
+          <br />
+          Oder rufen Sie an – Bielefeld:{' '}
+          <a href="tel:+4952177075050" style={{ color: 'var(--kj-gold)' }}>0521 77075050</a>
+          {' '}· Lippstadt:{' '}
+          <a href="tel:+4929419889114" style={{ color: 'var(--kj-gold)' }}>02941 9889114</a>
         </p>
         <button onClick={() => setSent(false)} className="btn-outline-gold">
           Weitere Anfrage
@@ -163,8 +179,8 @@ export default function AppointmentForm() {
             defaultValue=""
           >
             <option value="" disabled>Bitte wählen …</option>
-            {standorte.map((s) => (
-              <option key={s} value={s}>{s}</option>
+            {standortListe.map((s) => (
+              <option key={s.value} value={s.value}>{s.label}</option>
             ))}
           </select>
           {errors.standort && (
@@ -222,6 +238,13 @@ export default function AppointmentForm() {
           {errors.time && (
             <p className="font-sans text-xs mt-1.5" style={{ color: '#e05252' }}>{errors.time.message}</p>
           )}
+          {gewaehlterStandort && (
+            <p className="font-sans text-[0.68rem] mt-1.5" style={{ color: 'var(--kj-muted)', opacity: 0.75 }}>
+              {gewaehlterStandort.startsWith('Bielefeld')
+                ? 'Mo – Sa: 10:00 – 19:30 Uhr'
+                : 'Mo – Fr: 10:00 – 18:00 · Sa: 10:00 – 16:00 Uhr'}
+            </p>
+          )}
         </div>
 
         {/* Message */}
@@ -244,13 +267,13 @@ export default function AppointmentForm() {
           * Pflichtfelder — Ihre Anfrage wird per WhatsApp übermittelt.<br />
           Alternativ:{' '}
           <a
-            href={`mailto:info@kenju-juwelier.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}`}
+            href={`mailto:info@kenju.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}`}
             style={{ color: 'var(--kj-gold)' }}
             onClick={(e) => {
               const v = getValues();
               if (v.name || v.message) {
                 e.preventDefault();
-                window.location.href = `mailto:info@kenju-juwelier.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}&body=${encodeURIComponent(buildMessage(v))}`;
+                window.location.href = `mailto:info@kenju.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}&body=${encodeURIComponent(buildMessage(v))}`;
               }
             }}
           >

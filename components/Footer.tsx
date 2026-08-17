@@ -1,13 +1,13 @@
 import Link from 'next/link';
+import { standorte, EMAIL } from '@/lib/standorte';
 
 const categories = [
-  { label: 'Ringe & Brillantringe', href: '/ringe' },
-  { label: 'Trauringe',             href: '/trauringe' },
-  { label: 'Ohrringe',              href: '/ohrringe' },
-  { label: 'Halsketten & Kreuze',   href: '/halsketten' },
-  { label: 'Armreifen',             href: '/armreifen' },
-  { label: 'Uhren',                 href: '/uhren' },
-  { label: 'Goldankauf',            href: '/goldankauf' },
+  { label: 'Schmuck',       href: '/ringe' },
+  { label: 'Trauringe',     href: '/trauringe' },
+  { label: 'Uhren',         href: '/uhren' },
+  { label: 'Goldankauf',    href: '/goldankauf' },
+  { label: 'Service',       href: '/service' },
+  { label: 'Labor Diamanten', href: '/labordiamanten' },
 ];
 
 const legal = [
@@ -31,7 +31,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="inline-flex flex-col leading-none mb-5">
-              <span className="font-serif text-5xl font-light gold-text tracking-widest">KenJu</span>
+              {/* paddingRight verhindert, dass das "J" durch letter-spacing + background-clip abgeschnitten wird */}
+              <span
+                className="font-serif text-5xl font-light gold-text tracking-widest inline-block"
+                style={{ paddingRight: '0.18em' }}
+              >
+                KenJu
+              </span>
               <span className="font-sans text-[10px] tracking-[0.4em] uppercase mt-1.5" style={{ color: 'var(--kj-muted)' }}>
                 Juwelier · Bielefeld
               </span>
@@ -93,37 +99,37 @@ export default function Footer() {
             <h3 className="font-sans text-xs tracking-widest uppercase mb-5" style={{ color: 'var(--kj-gold)' }}>
               Kontakt
             </h3>
-            <ul className="space-y-4 font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
+            <ul className="space-y-5 font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
+              {standorte.map((s) => (
+                <li key={s.id}>
+                  <p className="font-sans text-xs tracking-widest uppercase mb-1.5" style={{ color: 'var(--kj-gold)', opacity: 0.85 }}>
+                    {s.stadt}
+                  </p>
+                  <a
+                    href={s.maps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium transition-opacity hover:opacity-75"
+                    style={{ color: 'var(--kj-text)' }}
+                  >
+                    {s.zusatz && <>{s.zusatz}<br /></>}
+                    {s.strasse}, {s.plz} {s.stadt}
+                  </a>
+                  <br />
+                  <span style={{ opacity: 0.75, fontSize: '0.78rem' }}>{s.zeitenKurz}</span>
+                  <br />
+                  <a href={s.telefon.href} className="transition-opacity hover:opacity-80" style={{ fontSize: '0.78rem' }}>
+                    Tel. {s.telefon.label}
+                  </a>
+                  {' · '}
+                  <a href={s.mobil.href} className="transition-opacity hover:opacity-80" style={{ fontSize: '0.78rem' }}>
+                    Mobil {s.mobil.label}
+                  </a>
+                </li>
+              ))}
               <li>
-                <span className="font-medium" style={{ color: 'var(--kj-text)' }}>
-                  Loom Bielefeld · 1. OG<br />Bahnhofstraße 28, 33602 Bielefeld
-                </span>
-                <br />
-                <span style={{ opacity: 0.75, fontSize: '0.8rem' }}>Mo–Sa: 09:30–20:00 Uhr</span>
-                <br />
-                <a href="tel:+4952177075050" className="transition-opacity hover:opacity-80" style={{ fontSize: '0.8rem' }}>
-                  0521 77075050
-                </a>
-              </li>
-              <li>
-                <span className="font-medium" style={{ color: 'var(--kj-text)' }}>
-                  Lange Straße 29<br />59555 Lippstadt
-                </span>
-                <br />
-                <span style={{ opacity: 0.75, fontSize: '0.8rem' }}>Mo–Fr: 10:00–18:00 · Sa: 10:00–16:00 Uhr</span>
-                <br />
-                <a href="tel:+4929419889114" className="transition-opacity hover:opacity-80" style={{ fontSize: '0.8rem' }}>
-                  02941 9889114
-                </a>
-              </li>
-              <li>
-                <a href="tel:+4917663284312" className="transition-opacity hover:opacity-80 font-medium" style={{ color: 'var(--kj-text)' }}>
-                  Mobil: 0176 63284312
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@kenju-juwelier.de" className="transition-opacity hover:opacity-80">
-                  info@kenju-juwelier.de
+                <a href={`mailto:${EMAIL}`} className="transition-opacity hover:opacity-80 font-medium" style={{ color: 'var(--kj-text)' }}>
+                  {EMAIL}
                 </a>
               </li>
             </ul>

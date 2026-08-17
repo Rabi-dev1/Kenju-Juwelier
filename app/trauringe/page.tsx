@@ -4,16 +4,16 @@ import Image from 'next/image';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Trauringe in Bielefeld – Individuelle Anfertigung | KenJu Juwelier',
-  description: 'Trauringe in Bielefeld bei KenJu Juwelier. Persönliche Beratung, individuelle Anfertigung in Gelbgold, Weißgold und Roségold. Kostenloser Beratungstermin.',
-  keywords: ['Trauringe Bielefeld', 'Eheringe Bielefeld', 'Trauringe individuell', 'Trauring Gelbgold'],
+  title: 'Trauringe in Bielefeld & Lippstadt – Individuelle Anfertigung | KenJu',
+  description: 'Trauringe in Bielefeld und Lippstadt bei KenJu Juwelier. Persönliche Beratung, individuelle Anfertigung in Gelbgold, Weißgold und Roségold. Kostenloser Beratungstermin.',
+  keywords: ['Trauringe Bielefeld', 'Trauringe Lippstadt', 'Eheringe Bielefeld', 'Eheringe Lippstadt', 'Trauringe individuell', 'Trauring Gelbgold'],
   alternates: { canonical: 'https://kenju-juwelier.de/trauringe' },
 };
 
 const vorteile = [
   { nr: '01', title: 'Individuelle Gestaltung',     desc: 'Breite, Legierung und Edelsteine nach Ihren Wünschen.' },
   { nr: '02', title: 'Handgefertigt in Deutschland', desc: 'Höchste Qualität und Tradition aus Meisterhand.' },
-  { nr: '03', title: 'Kostenlose Beratung',          desc: 'Wir nehmen uns ausgiebig Zeit für Sie in Bielefeld.' },
+  { nr: '03', title: 'Kostenlose Beratung',          desc: 'Wir nehmen uns Zeit für Sie – in Bielefeld und Lippstadt.' },
   { nr: '04', title: 'Gravur nach Wunsch',           desc: 'Ihre persönliche Botschaft – kostenlos im Ring.' },
 ];
 
@@ -75,7 +75,7 @@ const trustItems = [
   '✓ Individuelle Maßanfertigung',
   '✓ Kostenlose Gravur',
   '✓ Persönliche Beratung',
-  '✓ Atelier in Bielefeld',
+  '✓ Bielefeld & Lippstadt',
 ];
 
 export default function TrauringePage() {
@@ -104,12 +104,12 @@ export default function TrauringePage() {
             <span style={{ opacity: 0.4 }}>›</span>
             <span style={{ color: 'var(--kj-gold)' }}>Trauringe</span>
           </nav>
-          <h1 className="font-serif text-6xl md:text-8xl font-light mb-6 text-white" style={{ lineHeight: 1.05 }}>
-            Trauringe in Bielefeld
+          <h1 className="font-serif font-light mb-6 text-white" style={{ fontSize: 'clamp(2.2rem, 6vw, 5.5rem)', lineHeight: 1.05 }}>
+            Trauringe in Bielefeld<br className="hidden sm:block" /> &amp; Lippstadt
           </h1>
           <div className="divider-gold mb-6" />
           <p className="font-sans text-lg max-w-2xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.65)' }}>
-            Ihr Trauring ist mehr als ein Ring – er ist ein Versprechen für die Ewigkeit. Bei KenJu Juwelier in Bielefeld beraten wir Sie persönlich zu exklusiven Trauringen aus Gelbgold, Weißgold und Roségold und fertigen Ihre Ringe individuell nach Maß.
+            Ihr Trauring ist mehr als ein Ring – er ist ein Versprechen für die Ewigkeit. Bei KenJu Juwelier in Bielefeld und Lippstadt beraten wir Sie persönlich zu exklusiven Trauringen aus Gelbgold, Weißgold und Roségold und fertigen Ihre Ringe individuell nach Maß.
           </p>
           <Link href="#termin" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem' }}>
             Jetzt Beratung vereinbaren
@@ -117,7 +117,7 @@ export default function TrauringePage() {
 
           {/* Trust-Chips unter CTA */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 gap-y-2 mt-6">
-            {['Individuelle Maßanfertigung', 'Kostenlose Gravur', 'Persönliche Beratung', 'Atelier in Bielefeld'].map((item) => (
+            {['Individuelle Maßanfertigung', 'Kostenlose Gravur', 'Persönliche Beratung', 'Bielefeld & Lippstadt'].map((item) => (
               <span key={item} className="font-sans text-xs flex items-center gap-1.5" style={{ color: 'rgba(245,240,232,0.6)' }}>
                 <span style={{ color: 'var(--kj-gold)' }}>✓</span>{item}
               </span>
@@ -199,7 +199,7 @@ export default function TrauringePage() {
               </h2>
               <div className="divider-gold mb-6" />
               <p className="font-sans text-sm leading-relaxed mb-7" style={{ color: 'var(--kj-muted)' }}>
-                Bei KenJu Juwelier begleiten wir Sie von der ersten Idee bis zum fertigen Trauring. In unserem Atelier in Bielefeld nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
+                Bei KenJu Juwelier begleiten wir Sie von der ersten Idee bis zum fertigen Trauring. In unseren Ateliers in Bielefeld und Lippstadt nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
               </p>
               <ul className="space-y-3 mb-8">
                 {['Individuelle Beratung', 'Maßanfertigung', 'Gravuren kostenlos', 'Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29'].map((item) => (

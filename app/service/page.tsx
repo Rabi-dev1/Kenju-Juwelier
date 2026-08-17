@@ -1,28 +1,32 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Schmuck- & Uhrenreparatur Bielefeld | KenJu Juwelier',
-  description: 'Schmuckreparatur & Uhrenreparatur in Bielefeld – Ringgrößenänderung, Gravuren, Batteriewechsel, Glaswechsel. Ihr Goldschmied & Uhrmacher im Loom Bielefeld, 1. OG.',
-  keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Uhrmacher Bielefeld', 'Ringgrößenänderung Bielefeld', 'Goldschmied Bielefeld', 'Batteriewechsel Uhr Bielefeld', 'Gravur Bielefeld', 'Schmuck reparieren Bielefeld', 'Glaswechsel Uhr Bielefeld', 'Kettenreparatur Bielefeld'],
+  title: 'Schmuck- & Uhrenreparatur Bielefeld & Lippstadt | KenJu Juwelier',
+  description: 'Schmuckreparatur & Uhrenreparatur in Bielefeld und Lippstadt – Ringgrößenänderung, Gravuren, Batteriewechsel, Glaswechsel. Ihr Goldschmied & Uhrmacher.',
+  keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Uhrmacher Bielefeld', 'Schmuckreparatur Lippstadt', 'Uhrenreparatur Lippstadt', 'Ringgrößenänderung Bielefeld', 'Goldschmied Bielefeld', 'Batteriewechsel Uhr Bielefeld', 'Gravur Bielefeld', 'Kettenreparatur Bielefeld'],
   alternates: { canonical: 'https://kenju-juwelier.de/service' },
 };
 
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Schmuck- & Uhrenservice Bielefeld',
-  description: 'Schmuckreparatur, Uhrenreparatur, Ringgrößenänderung, Gravuren und mehr – Meisterbetrieb KenJu Juwelier, Bahnhofstraße 28, Loom 1. OG, 33602 Bielefeld.',
+  name: 'Schmuck- & Uhrenservice Bielefeld und Lippstadt',
+  description: 'Schmuckreparatur, Uhrenreparatur, Ringgrößenänderung, Gravuren und mehr bei KenJu Juwelier – Bahnhofstraße 28 (Loom, 1. OG), 33602 Bielefeld und Lange Straße 29, 59555 Lippstadt.',
   provider: {
     '@type': 'JewelryStore',
     name: 'KenJu Juwelier',
     address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE' },
-    telephone: '+4917663284312',
+    telephone: '+4952177075050',
+    email: 'info@kenju.de',
     url: 'https://kenju-juwelier.de',
   },
-  areaServed: { '@type': 'City', name: 'Bielefeld' },
+  areaServed: [
+    { '@type': 'City', name: 'Bielefeld' },
+    { '@type': 'City', name: 'Lippstadt' },
+  ],
 };
 
 const trustBoxes = [
@@ -33,15 +37,15 @@ const trustBoxes = [
 ];
 
 const processSteps = [
-  { nr: '01', title: 'Schmuck oder Uhr vorbeibringen',  desc: 'Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29.' },
+  { nr: '01', title: 'Schmuck oder Uhr vorbeibringen',  desc: 'Bielefeld: Bahnhofstraße 28 (Loom, 1. OG) · Lippstadt: Lange Straße 29.' },
   { nr: '02', title: 'Kostenlose Einschätzung',          desc: 'Wir prüfen den Zustand transparent und unverbindlich.' },
   { nr: '03', title: 'Transparente Preisangabe',         desc: 'Klares Angebot – keine versteckten Kosten.' },
-  { nr: '04', title: 'Fachgerechte Reparatur',           desc: 'Präzise Ausführung durch unsere Experten in Bielefeld.' },
+  { nr: '04', title: 'Fachgerechte Reparatur',           desc: 'Präzise Ausführung durch unsere erfahrenen Experten.' },
   { nr: '05', title: 'Abholen und wieder tragen',        desc: 'Ihr Stück erstrahlt in neuem Glanz.' },
 ];
 
 const schmuckServices = [
-  { name: 'Ringgrößenänderung Bielefeld', desc: 'Fachgerecht weiten oder enger machen – schnell und präzise.' },
+  { name: 'Ringgrößenänderung',           desc: 'Fachgerecht weiten oder enger machen – schnell und präzise.' },
   { name: 'Kettenreparaturen',            desc: 'Verschlüsse, Glieder, Lotarbeiten – sauber und dauerhaft.' },
   { name: 'Steinersatz',                  desc: 'Verlorene Steine neu setzen – Brillanten, Edelsteine, Zirkonia.' },
   { name: 'Gravuren',                     desc: 'Namen, Daten, Initialen – individuell in Ringe, Anhänger & Armreifen.' },
@@ -96,7 +100,7 @@ export default function ServicePage() {
           </h1>
           <div className="divider-gold mb-6" />
           <p className="font-sans max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.58)', fontSize: '0.95rem' }}>
-            Schmuckreparatur und Uhrenreparatur in Bielefeld – präzise, zuverlässig und mit über 10 Jahren Erfahrung als Goldschmied und Uhrmacher. Loom Bielefeld, 1. OG.
+            Schmuckreparatur und Uhrenreparatur in Bielefeld und Lippstadt – präzise, zuverlässig und mit über 10 Jahren Erfahrung als Goldschmied und Uhrmacher.
           </p>
 
           <div className="flex flex-row gap-3 mb-8">
@@ -286,7 +290,7 @@ export default function ServicePage() {
           </h2>
           <div className="divider-gold mx-auto mb-6" />
           <p className="font-sans text-sm max-w-lg mx-auto leading-relaxed mb-8" style={{ color: 'var(--kj-muted)' }}>
-            Persönliche Beratung, transparente Preise und fachgerechte Ausführung – in unseren Ateliers:<br /><strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28, Loom 1. OG, Bielefeld</strong> · <strong style={{ color: 'var(--kj-text)' }}>Lange Straße 29, 59555 Lippstadt</strong>
+            Persönliche Beratung, transparente Preise und fachgerechte Ausführung – in unseren Ateliers:<br /><strong style={{ color: 'var(--kj-text)' }}>Bahnhofstraße 28 (Loom, 1. OG), 33602 Bielefeld</strong> · <strong style={{ color: 'var(--kj-text)' }}>Lange Straße 29, 59555 Lippstadt</strong>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-service" className="btn-gold">Reparatur anfragen</Link>
@@ -303,7 +307,7 @@ export default function ServicePage() {
             <h2 className="section-title mb-4">Service-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-4" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29 · Wir antworten innerhalb von 24 Stunden.
+              Bielefeld: Bahnhofstraße 28 (Loom, 1. OG), 33602 · Lippstadt: Lange Straße 29, 59555 · Wir antworten innerhalb von 24 Stunden.
             </p>
           </div>
           <div className="p-8 md:p-10" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

@@ -1,17 +1,17 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 import EdelmetallRechner from '@/components/EdelmetallRechner';
 
 export const metadata: Metadata = {
-  title: 'Goldankauf Bielefeld | Faire Preise & Sofortige Auszahlung | KenJu Juwelier',
-  description: 'Goldankauf in Bielefeld zum tagesaktuellen Marktpreis. Kostenlose Bewertung, faire Ankaufspreise und sofortige Barauszahlung. Jetzt Termin vereinbaren.',
+  title: 'Goldankauf Bielefeld & Lippstadt | Faire Preise & Auszahlung | KenJu',
+  description: 'Goldankauf in Bielefeld und Lippstadt zum tagesaktuellen Marktpreis. Kostenlose Bewertung, faire Ankaufspreise, Auszahlung in bar oder per Echtzeitüberweisung.',
   keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Lippstadt', 'Goldmünzen kaufen Bielefeld', 'Goldbarren kaufen Bielefeld', 'Investmentgold Bielefeld', 'Gold als Anlage'],
   alternates: { canonical: 'https://kenju-juwelier.de/goldankauf' },
   openGraph: {
-    title: 'Goldankauf Bielefeld – Fairer Preis, sofortige Auszahlung | KenJu Juwelier',
-    description: 'Kostenlose Bewertung, tagesaktueller Goldpreis, Bargeldauszahlung noch am selben Tag. KenJu Juwelier – Bahnhofstraße 28, Bielefeld.',
+    title: 'Goldankauf Bielefeld & Lippstadt – Fairer Preis, sofortige Auszahlung',
+    description: 'Kostenlose Bewertung, tagesaktueller Goldpreis, Auszahlung noch am selben Tag. KenJu Juwelier – Bielefeld und Lippstadt.',
     url: 'https://kenju-juwelier.de/goldankauf',
     type: 'website',
   },
@@ -22,7 +22,8 @@ const localBusinessJsonLd = {
   '@type': 'JewelryStore',
   name: 'KenJu Juwelier',
   url: 'https://kenju-juwelier.de',
-  telephone: '+4917663284312',
+  telephone: '+4952177075050',
+  email: 'info@kenju.de',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Bahnhofstraße 28',
@@ -31,16 +32,15 @@ const localBusinessJsonLd = {
     addressCountry: 'DE',
   },
   openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '10:00', closes: '18:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '10:00', closes: '16:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], opens: '10:00', closes: '19:30' },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Goldankauf Bielefeld',
+    name: 'Goldankauf Bielefeld und Lippstadt',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Goldankauf', description: 'Fairer Goldankauf zum tagesaktuellen Marktpreis in Bielefeld.' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Silberankauf', description: 'Silber verkaufen in Bielefeld – kostenlose Bewertung.' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Diamanten Ankauf', description: 'Brillanten und lose Diamanten ankaufen in Bielefeld.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Goldankauf', description: 'Fairer Goldankauf zum tagesaktuellen Marktpreis in Bielefeld und Lippstadt.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Silberankauf', description: 'Silber verkaufen in Bielefeld und Lippstadt – kostenlose Bewertung.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Diamanten Ankauf', description: 'Brillanten und lose Diamanten ankaufen in Bielefeld und Lippstadt.' } },
     ],
   },
 };
@@ -51,7 +51,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Wie läuft ein Goldankauf in Bielefeld ab?',
+      name: 'Wie läuft ein Goldankauf bei KenJu ab?',
       acceptedAnswer: { '@type': 'Answer', text: 'Sie bringen Ihr Gold, Silber oder Ihren Schmuck in eines unserer Ateliers – Loom Bielefeld (1. OG) oder Lange Straße 29 in Lippstadt. Wir bewerten Ihre Stücke kostenlos und unverbindlich, erstellen ein faires Angebot und zahlen bei Einigung sofort in bar oder per Echtzeitüberweisung aus.' },
     },
     {
@@ -67,7 +67,7 @@ const faqJsonLd = {
     {
       '@type': 'Question',
       name: 'Kaufen Sie auch Silber an?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wir kaufen Silberschmuck, Silberbarren, Silbermünzen und Silberbesteck an – zum tagesaktuellen Silberpreis. Kostenlose Bewertung direkt in unserem Geschäft in Bielefeld.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wir kaufen Silberschmuck, Silberbarren, Silbermünzen und Silberbesteck an – zum tagesaktuellen Silberpreis. Kostenlose Bewertung direkt in unseren Geschäften in Bielefeld und Lippstadt.' },
     },
     {
       '@type': 'Question',
@@ -93,10 +93,10 @@ const faqJsonLd = {
 };
 
 const steps = [
-  { step: '01', title: 'Termin vereinbaren',  desc: 'Online buchen oder vorbeikommen – Bielefeld: Bahnhofstraße 28 · Lippstadt: Lange Straße 29.' },
+  { step: '01', title: 'Termin vereinbaren',  desc: 'Online buchen oder vorbeikommen – Bielefeld (Loom, 1. OG) oder Lippstadt.' },
   { step: '02', title: 'Kostenlose Bewertung', desc: 'Unsere Experten bewerten Ihr Gold, Silber oder Ihren Schmuck kostenlos und unverbindlich.' },
   { step: '03', title: 'Faires Angebot',       desc: 'Transparenter Ankaufspreis auf Basis des tagesaktuellen Goldkurses.' },
-  { step: '04', title: 'Sofortige Auszahlung', desc: 'Bei Einigung zahlen wir sofort in bar – noch am selben Tag.' },
+  { step: '04', title: 'Sofortige Auszahlung', desc: 'Bar oder per Echtzeitüberweisung – noch am selben Tag.' },
 ];
 
 const ankaufKategorien = [
@@ -128,7 +128,7 @@ export default function GoldankaufPage() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="section-subtitle mb-5">Diskret &amp; Professionell</p>
           <h1 className="font-serif font-light mb-6 text-white" style={{ fontSize: 'clamp(2.2rem, 7vw, 5.5rem)', lineHeight: 1.05 }}>
-            Gold verkaufen in <span className="gold-text">Bielefeld</span>
+            Gold verkaufen in <span className="gold-text">Bielefeld</span><br className="hidden sm:block" /> &amp; Lippstadt
           </h1>
           <div className="divider-gold mx-auto mb-6" />
           <p className="font-sans text-lg max-w-xl mx-auto leading-relaxed mb-10" style={{ color: 'rgba(245,240,232,0.65)' }}>
@@ -212,7 +212,7 @@ export default function GoldankaufPage() {
             <h2 className="section-title mb-3">Edelmetall-Preisrechner</h2>
             <div className="divider-gold mx-auto mb-4" />
             <p className="font-sans text-sm max-w-xl mx-auto" style={{ color: 'var(--kj-muted)' }}>
-              Erhalten Sie einen ersten Orientierungswert für Ihren Goldpreis in Bielefeld – auf Basis des aktuellen Spot-Kurses.
+              Erhalten Sie einen ersten Orientierungswert für Ihren Goldpreis – auf Basis des aktuellen Spot-Kurses.
             </p>
           </div>
           <EdelmetallRechner />
@@ -221,7 +221,7 @@ export default function GoldankaufPage() {
           <div className="mt-8 p-7 text-center" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
             <p className="font-serif text-xl mb-2" style={{ color: 'var(--kj-text)' }}>Sie möchten eine genaue Bewertung?</p>
             <p className="font-sans text-sm mb-5" style={{ color: 'var(--kj-muted)' }}>
-              Der Preisrechner liefert einen ersten Orientierungswert. Für eine exakte Bewertung prüfen wir Ihr Gold kostenlos direkt vor Ort in Bielefeld.
+              Der Preisrechner liefert einen ersten Orientierungswert. Für eine exakte Bewertung prüfen wir Ihr Gold kostenlos direkt vor Ort in Bielefeld oder Lippstadt.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               {['Kostenlose Bewertung', 'Unverbindlich', 'Sofortige Auszahlung'].map((item) => (
@@ -240,7 +240,7 @@ export default function GoldankaufPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="section-subtitle mb-3">Einfach &amp; Transparent</p>
-            <h2 className="section-title">So funktioniert der Goldankauf in Bielefeld</h2>
+            <h2 className="section-title">So funktioniert der Goldankauf</h2>
             <div className="divider-gold mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -303,7 +303,7 @@ export default function GoldankaufPage() {
             <h2 className="section-title mb-4">Goldankauf-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm max-w-lg mx-auto mb-5" style={{ color: 'var(--kj-muted)' }}>
-              Vereinbaren Sie jetzt Ihren kostenlosen und unverbindlichen Bewertungstermin für Ihren Goldankauf in Bielefeld.
+              Vereinbaren Sie jetzt Ihren kostenlosen und unverbindlichen Bewertungstermin für Ihren Goldankauf in Bielefeld oder Lippstadt.
             </p>
             <div className="flex flex-wrap justify-center gap-5 mb-2">
               {['Kostenlose Bewertung', 'Unverbindliches Angebot', 'Sofortige Barauszahlung', 'Diskrete Beratung'].map((item) => (
@@ -313,7 +313,7 @@ export default function GoldankaufPage() {
               ))}
             </div>
             <p className="font-sans text-xs mt-3" style={{ color: 'var(--kj-muted)', opacity: 0.6 }}>
-              Bielefeld: Bahnhofstraße 28 · Lippstadt: Lange Straße 29, 59555
+              Bielefeld: Bahnhofstraße 28 (Loom, 1. OG), 33602 · Lippstadt: Lange Straße 29, 59555
             </p>
           </div>
           <div className="p-8 md:p-12" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
@@ -327,7 +327,7 @@ export default function GoldankaufPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="section-subtitle mb-3">Häufige Fragen</p>
-            <h2 className="section-title">FAQ – Goldankauf in Bielefeld</h2>
+            <h2 className="section-title">FAQ – Goldankauf</h2>
             <div className="divider-gold mx-auto mt-4" />
           </div>
           <div className="space-y-2.5">

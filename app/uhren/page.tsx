@@ -155,7 +155,7 @@ export default function UhrenPage() {
             <h2 className="section-title mb-4">Uhren-Termin buchen</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Bielefeld: Bahnhofstraße 28 · Lippstadt: Lange Straße 29, 59555 · Persönliche Beratung.
+              Bielefeld: Bahnhofstraße 28 (Loom, 1. OG), 33602 · Lippstadt: Lange Straße 29, 59555
             </p>
           </div>
           <div className="p-8" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

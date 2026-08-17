@@ -30,8 +30,25 @@ export default function ImpressumPage() {
           <section>
             <h2 className="font-serif text-2xl text-kenju-cream mb-3">Kontakt</h2>
             <p>
-              Telefon: <a href="tel:+4917663284312" className="text-kenju-gold hover:underline">+49 176 63284312</a><br />
-              E-Mail: <a href="mailto:info@kenju-juwelier.de" className="text-kenju-gold hover:underline">info@kenju-juwelier.de</a>
+              <strong className="text-kenju-cream">Bielefeld</strong><br />
+              Telefon: <a href="tel:+4952177075050" className="text-kenju-gold hover:underline">0521 77075050</a><br />
+              Mobil: <a href="tel:+4917663284312" className="text-kenju-gold hover:underline">0176 63284312</a>
+            </p>
+            <p className="mt-4">
+              <strong className="text-kenju-cream">Lippstadt</strong><br />
+              Telefon: <a href="tel:+4929419889114" className="text-kenju-gold hover:underline">02941 9889114</a><br />
+              Mobil: <a href="tel:+4915157610382" className="text-kenju-gold hover:underline">0151 57610382</a>
+            </p>
+            <p className="mt-4">
+              E-Mail: <a href="mailto:info@kenju.de" className="text-kenju-gold hover:underline">info@kenju.de</a>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Öffnungszeiten</h2>
+            <p>
+              <strong className="text-kenju-cream">Bielefeld:</strong> Mo – Sa 10:00 – 19:30 Uhr<br />
+              <strong className="text-kenju-cream">Lippstadt:</strong> Mo – Fr 10:00 – 18:00 Uhr, Sa 10:00 – 16:00 Uhr
             </p>
           </section>
 

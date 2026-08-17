@@ -37,6 +37,18 @@ const sliderBilder = [
   { src: '/images/brillantring-cluster-gelb.jpg', alt: 'Brillantring KenJu Juwelier Bielefeld' },
 ];
 
+/* ── Sortiments-Übersicht ── */
+const sortiment = [
+  { icon: '◈', title: 'Ringe',      desc: 'Memory-Ringe, Solitär-Ringe, Brillantringe und Verlobungsringe.' },
+  { icon: '◉', title: 'Ketten',     desc: 'Panzer-, Anker- und Schlangenketten in allen Längen.' },
+  { icon: '✦', title: 'Anhänger',   desc: 'Kreuze, Herzen, Flügel, Kleeblätter und Namensanhänger.' },
+  { icon: '◯', title: 'Armbänder',  desc: 'Feine Armbänder und Armreifen in Gelb-, Weiß- und Roségold.' },
+  { icon: '⬡', title: 'Fußketten',  desc: 'Zarte Fußkettchen in 585 Gold – auch mit Anhänger.' },
+  { icon: '⋆', title: 'Ohrschmuck', desc: 'Ohrstecker, Creolen und Ohrhänger mit und ohne Steine.' },
+  { icon: '◇', title: 'Trauringe',  desc: 'Individuelle Anfertigung nach Maß – in Bielefeld und Lippstadt.' },
+  { icon: '❖', title: 'Brillanten', desc: 'Brillantschmuck und zertifizierte Labor Diamanten.' },
+];
+
 export default function SchmuckPage() {
   return (
     <>
@@ -65,6 +77,39 @@ export default function SchmuckPage() {
         <p className="font-sans text-xs text-center mt-6 px-4" style={{ color: 'var(--kj-muted)' }}>
           Alle Stücke in Ihrer Wunschgröße erhältlich · Gravuren auf Anfrage
         </p>
+      </section>
+
+      {/* ── Sortiment ───────────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}>
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="text-center mb-12">
+            <p className="section-subtitle mb-3">Unser Sortiment</p>
+            <h2 className="section-title mb-4">Das finden Sie bei KenJu</h2>
+            <div className="divider-gold mx-auto" />
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {sortiment.map((s) => (
+              <div
+                key={s.title}
+                className="p-6 flex flex-col gap-2"
+                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
+              >
+                <span className="font-serif text-xl" style={{ color: 'var(--kj-gold)' }}>{s.icon}</span>
+                <h3 className="font-serif text-lg" style={{ color: 'var(--kj-text)' }}>{s.title}</h3>
+                <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="font-sans text-sm text-center mt-8" style={{ color: 'var(--kj-muted)' }}>
+            Goldmünzen, Goldbarren und Investmentgold sowie unseren Silberankauf finden Sie im Bereich{' '}
+            <Link href="/goldankauf" style={{ color: 'var(--kj-gold)' }} className="underline underline-offset-2">
+              Goldankauf
+            </Link>
+            .
+          </p>
+        </div>
       </section>
 
       {/* ── Brillantring Editorial (brillantring-box.jpg) ── */}
@@ -120,7 +165,7 @@ export default function SchmuckPage() {
             <h2 className="section-title mb-4">Schmuck-Beratung buchen</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Kostenlose und unverbindliche Beratung in unserem Atelier in Bielefeld, Bahnhofstraße 28.
+              Kostenlose und unverbindliche Beratung – Bahnhofstraße 28 (Loom, 1. OG), 33602 Bielefeld · Lange Straße 29, 59555 Lippstadt.
             </p>
           </div>
           <div className="p-8" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>

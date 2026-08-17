@@ -38,11 +38,11 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-none group shrink-0">
-            <span className="font-serif text-3xl font-light tracking-widest transition-colors" style={{ color: 'var(--kj-gold)' }}>
+            <span className="font-serif text-3xl font-light tracking-widest transition-colors" style={{ color: 'var(--kj-gold)', paddingRight: '0.12em' }}>
               KenJu
             </span>
             <span className="font-sans text-[8px] tracking-[0.45em] uppercase mt-0.5 transition-colors" style={{ color: 'var(--kj-muted)' }}>
-              Juwelier · Bielefeld
+              Bielefeld · Lippstadt
             </span>
           </Link>
 

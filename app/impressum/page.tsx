@@ -1,74 +1,100 @@
 import type { Metadata } from 'next';
+import { standorte, EMAIL } from '@/lib/standorte';
 
 export const metadata: Metadata = {
-  title: 'Impressum | KenJu Juwelier Bielefeld',
+  title: 'Impressum | KenJu Juwelier Bielefeld & Lippstadt',
   robots: { index: false },
 };
 
 export default function ImpressumPage() {
   return (
-    <div className="min-h-screen pt-32 pb-24 bg-kenju-black">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-32 pb-24" style={{ backgroundColor: 'var(--kj-bg)' }}>
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-8">
         <p className="section-subtitle mb-3">Rechtliches</p>
-        <h1 className="font-serif text-5xl text-kenju-cream mb-4">Impressum</h1>
-        <div className="divider-gold mb-10" />
+        <h1
+          className="font-serif font-light mb-4"
+          style={{ color: 'var(--kj-text)', fontSize: 'clamp(2rem, 6vw, 3rem)', lineHeight: 1.15 }}
+        >
+          Impressum
+        </h1>
+        <div className="divider-gold mb-10" style={{ marginLeft: 0 }} />
 
-        <div className="space-y-8 font-sans text-sm text-kenju-muted leading-relaxed">
+        <div className="space-y-8 font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+
           <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Angaben gemäß § 5 TMG</h2>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
+              Angaben gemäß § 5 TMG
+            </h2>
             <p>
-              KenJu Juwelier<br />
-              Bahnhofstraße 28, Loom 1. OG<br />
+              <strong style={{ color: 'var(--kj-text)' }}>Juwelier KenJu</strong><br />
+              Inhaber: Kenan Gülünay<br />
+              Juwelier &amp; Schmuckhandel<br />
+              Bahnhofstraße 28 (Loom, 1. OG)<br />
               33602 Bielefeld<br />
-              Deutschland<br /><br />
-              Zweigstelle:<br />
+              Deutschland
+            </p>
+            <p className="mt-4">
+              <strong style={{ color: 'var(--kj-text)' }}>Zweigstelle Lippstadt</strong><br />
               Lange Straße 29<br />
               59555 Lippstadt
             </p>
           </section>
 
           <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Kontakt</h2>
-            <p>
-              <strong className="text-kenju-cream">Bielefeld</strong><br />
-              Telefon: <a href="tel:+4952177075050" className="text-kenju-gold hover:underline">0521 77075050</a><br />
-              Mobil: <a href="tel:+4917663284312" className="text-kenju-gold hover:underline">0176 63284312</a>
-            </p>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>Kontakt</h2>
+            {standorte.map((s) => (
+              <p key={s.id} className={s.id === 'lippstadt' ? 'mt-4' : undefined}>
+                <strong style={{ color: 'var(--kj-text)' }}>{s.stadt}</strong><br />
+                Telefon:{' '}
+                <a href={s.telefon.href} style={{ color: 'var(--kj-gold)' }} className="hover:underline">
+                  {s.telefon.label}
+                </a>
+                <br />
+                Mobil:{' '}
+                <a href={s.mobil.href} style={{ color: 'var(--kj-gold)' }} className="hover:underline">
+                  {s.mobil.label}
+                </a>
+              </p>
+            ))}
             <p className="mt-4">
-              <strong className="text-kenju-cream">Lippstadt</strong><br />
-              Telefon: <a href="tel:+4929419889114" className="text-kenju-gold hover:underline">02941 9889114</a><br />
-              Mobil: <a href="tel:+4915157610382" className="text-kenju-gold hover:underline">0151 57610382</a>
-            </p>
-            <p className="mt-4">
-              E-Mail: <a href="mailto:info@kenju.de" className="text-kenju-gold hover:underline">info@kenju.de</a>
+              E-Mail:{' '}
+              <a href={`mailto:${EMAIL}`} style={{ color: 'var(--kj-gold)' }} className="hover:underline">
+                {EMAIL}
+              </a>
             </p>
           </section>
 
           <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Öffnungszeiten</h2>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>Öffnungszeiten</h2>
+            {standorte.map((s) => (
+              <p key={s.id}>
+                <strong style={{ color: 'var(--kj-text)' }}>{s.stadt}:</strong> {s.zeitenKurz}
+              </p>
+            ))}
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>Umsatzsteuer-ID</h2>
             <p>
-              <strong className="text-kenju-cream">Bielefeld:</strong> Mo – Sa 10:00 – 19:30 Uhr<br />
-              <strong className="text-kenju-cream">Lippstadt:</strong> Mo – Fr 10:00 – 18:00 Uhr, Sa 10:00 – 16:00 Uhr
+              Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br />
+              <strong style={{ color: 'var(--kj-text)' }}>DE297979670</strong>
             </p>
           </section>
 
-          {/*
-            TODO – vom Kunden anfordern und hier einsetzen:
-            · Rechtsform (Einzelunternehmen / GbR / GmbH / UG) und vollständiger Firmenname laut Gewerbeanmeldung
-            · Inhaber bzw. Geschäftsführer (Vor- und Nachname) – Pflichtangabe
-            · Handelsregister + Registernummer (nur falls eingetragen)
-            · Umsatzsteuer-ID (DE…) oder Steuernummer
-            Erfundene Beispieldaten wurden bewusst entfernt: Falsche Registerangaben
-            im Impressum sind abmahnfähig – fehlende Angaben sind das kleinere Risiko.
-          */}
-
           <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Verantwortlich für den Inhalt</h2>
-            <p>Gemäß § 18 Abs. 2 MStV: KenJu Juwelier, Bahnhofstraße 28, 33602 Bielefeld</p>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
+              Verantwortlich für den Inhalt
+            </h2>
+            <p>
+              Gemäß § 18 Abs. 2 MStV:<br />
+              Kenan Gülünay, Bahnhofstraße 28, 33602 Bielefeld
+            </p>
           </section>
 
           <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Verbraucherstreitbeilegung</h2>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
+              Verbraucherstreitbeilegung / Universalschlichtungsstelle
+            </h2>
             <p>
               Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
               Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
@@ -76,11 +102,17 @@ export default function ImpressumPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">EU-Streitschlichtung</h2>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>EU-Streitschlichtung</h2>
             <p>
               Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-              <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-kenju-gold hover:underline">
-                https://ec.europa.eu/consumers/odr
+              <a
+                href="https://ec.europa.eu/consumers/odr"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--kj-gold)' }}
+                className="hover:underline"
+              >
+                ec.europa.eu/consumers/odr
               </a>
               .<br />
               Unsere E-Mail-Adresse finden Sie oben im Impressum.
@@ -88,12 +120,30 @@ export default function ImpressumPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-2xl text-kenju-cream mb-3">Haftung für Inhalte</h2>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>Haftung für Inhalte</h2>
             <p>
-              Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
-              Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet,
-              übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen,
-              die auf eine rechtswidrige Tätigkeit hinweisen.
+              Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den
+              allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+              verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
+              zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>Haftung für Links</h2>
+            <p>
+              Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+              Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
+              verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>Urheberrecht</h2>
+            <p>
+              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+              Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+              Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
             </p>
           </section>
         </div>

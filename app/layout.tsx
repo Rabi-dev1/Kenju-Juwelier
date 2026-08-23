@@ -23,7 +23,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kenju-juwelier.de'),
+  metadataBase: new URL('https://kenju.de'),
   title: {
     default: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
     template: '%s | KenJu Juwelier Bielefeld',
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     'Halsketten Gold', 'Armreifen Gold', 'KenJu Juwelier', 'Schmuck Bielefeld',
     'Edelmetallankauf', 'Silberankauf', 'Goldpreis', 'Juwelier Bahnhofstrasse Bielefeld',
   ],
-  authors: [{ name: 'KenJu Juwelier', url: 'https://kenju-juwelier.de' }],
+  authors: [{ name: 'KenJu Juwelier', url: 'https://kenju.de' }],
   creator: 'KenJu Juwelier Bielefeld',
   publisher: 'KenJu Juwelier',
   category: 'Juweliere & Goldschmiede',
   openGraph: {
     type: 'website',
     locale: 'de_DE',
-    url: 'https://kenju-juwelier.de',
+    url: 'https://kenju.de',
     siteName: 'KenJu Juwelier',
     title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
     description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. Persönliche Beratung, handgefertigte Qualität seit über 10 Jahren.',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  alternates: { canonical: 'https://kenju-juwelier.de' },
+  alternates: { canonical: 'https://kenju.de' },
   verification: {
     google: 'kenju-google-site-verification',
   },
@@ -93,11 +93,11 @@ const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'KenJu Juwelier',
-  url: 'https://kenju-juwelier.de',
+  url: 'https://kenju.de',
   inLanguage: 'de-DE',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://kenju-juwelier.de/?s={search_term_string}',
+    target: 'https://kenju.de/?s={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };
@@ -105,15 +105,15 @@ const websiteJsonLd = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'JewelryStore',
-  '@id': 'https://kenju-juwelier.de/#jewelry-store',
+  '@id': 'https://kenju.de/#jewelry-store',
   name: 'KenJu Juwelier',
   legalName: 'Juwelier KenJu – Inhaber Kenan Gülünay',
   founder: { '@type': 'Person', name: 'Kenan Gülünay' },
   vatID: 'DE297979670',
   description: 'Exklusiver Juwelier in Bielefeld und Lippstadt – Brillantringe, Labor Diamanten, Goldankauf, Anhänger, Armbänder, Trauringe und mehr. Im Loom Bielefeld, 1. OG.',
-  url: 'https://kenju-juwelier.de',
-  logo: 'https://kenju-juwelier.de/favicon.svg',
-  image: 'https://kenju-juwelier.de/images/og-image.jpg',
+  url: 'https://kenju.de',
+  logo: 'https://kenju.de/favicon.svg',
+  image: 'https://kenju.de/images/hero-ladenfront.jpg',
   telephone: '+4952177075050',
   email: 'info@kenju.de',
   foundingDate: '2010',

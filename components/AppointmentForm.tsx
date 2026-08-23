@@ -54,7 +54,7 @@ const labelStyle: React.CSSProperties = {
 
 function buildMessage(data: FormData): string {
   const lines = [
-    'Terminanfrage über kenju-juwelier.de',
+    'Terminanfrage über kenju.de',
     '',
     `Name: ${data.name}`,
     `E-Mail: ${data.email}`,

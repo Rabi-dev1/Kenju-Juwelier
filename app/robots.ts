@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/'],
       },
     ],
-    sitemap: 'https://kenju-juwelier.de/sitemap.xml',
-    host: 'https://kenju-juwelier.de',
+    sitemap: 'https://kenju.de/sitemap.xml',
+    host: 'https://kenju.de',
   };
 }

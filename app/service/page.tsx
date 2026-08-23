@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Schmuck- & Uhrenreparatur Bielefeld & Lippstadt | KenJu Juwelier',
   description: 'Schmuckreparatur & Uhrenreparatur in Bielefeld und Lippstadt – Ringgrößenänderung, Gravuren, Batteriewechsel, Glaswechsel. Ihr Goldschmied & Uhrmacher.',
   keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Uhrmacher Bielefeld', 'Schmuckreparatur Lippstadt', 'Uhrenreparatur Lippstadt', 'Ringgrößenänderung Bielefeld', 'Goldschmied Bielefeld', 'Batteriewechsel Uhr Bielefeld', 'Gravur Bielefeld', 'Kettenreparatur Bielefeld'],
-  alternates: { canonical: 'https://kenju-juwelier.de/service' },
+  alternates: { canonical: 'https://kenju.de/service' },
 };
 
 const serviceJsonLd = {
@@ -21,7 +21,7 @@ const serviceJsonLd = {
     address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE' },
     telephone: '+4952177075050',
     email: 'info@kenju.de',
-    url: 'https://kenju-juwelier.de',
+    url: 'https://kenju.de',
   },
   areaServed: [
     { '@type': 'City', name: 'Bielefeld' },

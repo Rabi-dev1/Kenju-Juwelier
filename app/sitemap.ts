@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE = 'https://kenju-juwelier.de';
+const BASE = 'https://kenju.de';
 const LAST_UPDATE = new Date('2026-07-04');
 
 export default function sitemap(): MetadataRoute.Sitemap {

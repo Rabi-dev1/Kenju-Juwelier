@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Labor Diamanten Bielefeld & Lippstadt – Ethisch & Zertifiziert | KenJu',
   description: 'Labor Diamanten bei KenJu Juwelier in Bielefeld und Lippstadt. Ethisch erzeugte Diamanten mit identischer Brillanz zu einem fairen Preis – ideal für Verlobungsringe.',
   keywords: ['Labor Diamanten Bielefeld', 'Labor Diamanten Lippstadt', 'Lab Grown Diamonds', 'synthetische Diamanten', 'Verlobungsring Labor Diamant', 'ethische Diamanten'],
-  alternates: { canonical: 'https://kenju-juwelier.de/labordiamanten' },
+  alternates: { canonical: 'https://kenju.de/labordiamanten' },
 };
 
 const productJsonLd = {

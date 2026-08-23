@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: 'Goldankauf Bielefeld & Lippstadt | Faire Preise & Auszahlung | KenJu',
   description: 'Goldankauf in Bielefeld und Lippstadt zum tagesaktuellen Marktpreis. Kostenlose Bewertung, faire Ankaufspreise, Auszahlung in bar oder per Echtzeitüberweisung.',
   keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Lippstadt', 'Goldmünzen kaufen Bielefeld', 'Goldbarren kaufen Bielefeld', 'Investmentgold Bielefeld', 'Gold als Anlage'],
-  alternates: { canonical: 'https://kenju-juwelier.de/goldankauf' },
+  alternates: { canonical: 'https://kenju.de/goldankauf' },
   openGraph: {
     title: 'Goldankauf Bielefeld & Lippstadt – Fairer Preis, sofortige Auszahlung',
     description: 'Kostenlose Bewertung, tagesaktueller Goldpreis, Auszahlung noch am selben Tag. KenJu Juwelier – Bielefeld und Lippstadt.',
-    url: 'https://kenju-juwelier.de/goldankauf',
+    url: 'https://kenju.de/goldankauf',
     type: 'website',
   },
 };
@@ -21,7 +21,7 @@ const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'JewelryStore',
   name: 'KenJu Juwelier',
-  url: 'https://kenju-juwelier.de',
+  url: 'https://kenju.de',
   telephone: '+4952177075050',
   email: 'info@kenju.de',
   address: {

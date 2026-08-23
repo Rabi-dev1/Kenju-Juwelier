@@ -16,8 +16,8 @@ export default function CategoryHero({ title, subtitle, description, imageSrc, i
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://kenju-juwelier.de' },
-      { '@type': 'ListItem', position: 2, name: breadcrumb, item: pageUrl ?? `https://kenju-juwelier.de/${breadcrumb.toLowerCase()}` },
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://kenju.de' },
+      { '@type': 'ListItem', position: 2, name: breadcrumb, item: pageUrl ?? `https://kenju.de/${breadcrumb.toLowerCase()}` },
     ],
   };
 

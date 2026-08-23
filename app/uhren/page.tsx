@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Uhren in Bielefeld – Tommy Hilfiger, Hugo Boss & mehr | KenJu Juwelier',
   description: 'Markenuhren bei KenJu Juwelier Bielefeld: Tommy Hilfiger, Hugo Boss, Police, Regent und Swiss Military. Persönliche Beratung vor Ort.',
   keywords: ['Uhren Bielefeld', 'Tommy Hilfiger Uhren', 'Hugo Boss Uhren', 'Police Uhren', 'Juwelier Bielefeld'],
-  alternates: { canonical: 'https://kenju-juwelier.de/uhren' },
+  alternates: { canonical: 'https://kenju.de/uhren' },
 };
 
 const brands = [

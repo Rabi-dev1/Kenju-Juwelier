@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Schmuck – Ringe, Ketten, Anhänger & mehr | KenJu Juwelier Bielefeld',
   description: 'Goldschmuck bei KenJu Juwelier Bielefeld: Ringe, Brillantringe, Ketten, Anhänger, Armbänder, Fußketten, Creolen und mehr in 585 Gelbgold, Weißgold und Roségold.',
   keywords: ['Schmuck Bielefeld', 'Goldringe', 'Brillantringe', 'Goldketten', 'Anhänger Gold', 'Armbänder Gold', 'Fußketten Gold', 'Creolen', '585 Gold', 'Juwelier Bielefeld'],
-  alternates: { canonical: 'https://kenju-juwelier.de/ringe' },
+  alternates: { canonical: 'https://kenju.de/ringe' },
 };
 
 /* ── Slider-Bilder – exakte Dateinamen aus public/images ── */
@@ -59,7 +59,7 @@ export default function SchmuckPage() {
         imageSrc="/images/ringe.jpg"
         imageAlt="Schmuck KenJu Juwelier Bielefeld"
         breadcrumb="Schmuck"
-        pageUrl="https://kenju-juwelier.de/ringe"
+        pageUrl="https://kenju.de/ringe"
       />
 
       {/* ── Slider ──────────────────────────────────────── */}

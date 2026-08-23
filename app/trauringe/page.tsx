@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Trauringe in Bielefeld & Lippstadt – Individuelle Anfertigung | KenJu',
   description: 'Trauringe in Bielefeld und Lippstadt bei KenJu Juwelier. Persönliche Beratung, individuelle Anfertigung in Gelbgold, Weißgold und Roségold. Kostenloser Beratungstermin.',
   keywords: ['Trauringe Bielefeld', 'Trauringe Lippstadt', 'Eheringe Bielefeld', 'Eheringe Lippstadt', 'Trauringe individuell', 'Trauring Gelbgold'],
-  alternates: { canonical: 'https://kenju-juwelier.de/trauringe' },
+  alternates: { canonical: 'https://kenju.de/trauringe' },
 };
 
 const vorteile = [

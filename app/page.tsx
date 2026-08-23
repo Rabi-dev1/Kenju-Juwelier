@@ -8,11 +8,11 @@ import AppointmentForm from '@/components/AppointmentForm';
 export const metadata: Metadata = {
   title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
   description: 'KenJu Juwelier – Trauringe, Brillantringe & Goldankauf in Bielefeld und Lippstadt. Persönliche Beratung, handgefertigte Qualität, faire Preise. Loom Bielefeld, 1. OG.',
-  alternates: { canonical: 'https://kenju-juwelier.de' },
+  alternates: { canonical: 'https://kenju.de' },
   openGraph: {
     title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
     description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. ★★★★★ 5,0 Google · Loom Bielefeld, 1. OG.',
-    url: 'https://kenju-juwelier.de',
+    url: 'https://kenju.de',
     type: 'website',
   },
 };
@@ -21,10 +21,10 @@ const pageJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'KenJu Juwelier Bielefeld – Startseite',
-  url: 'https://kenju-juwelier.de',
+  url: 'https://kenju.de',
   breadcrumb: {
     '@type': 'BreadcrumbList',
-    itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://kenju-juwelier.de' }],
+    itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://kenju.de' }],
   },
 };
 

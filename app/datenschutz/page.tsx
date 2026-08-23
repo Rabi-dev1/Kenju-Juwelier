@@ -75,13 +75,33 @@ export default function DatenschutzPage() {
               Optimierung der Website.
             </p>
 
-            <h3 className="font-sans text-base mb-2 mt-6" style={{ color: 'var(--kj-text)' }}>Cookies</h3>
+            <h3 className="font-sans text-base mb-2 mt-6" style={{ color: 'var(--kj-text)' }}>
+              Cookies und lokale Speicherung
+            </h3>
             <p>
-              Unsere Website verwendet technisch notwendige Cookies. Das sind kleine Textdateien, die Ihr Browser
-              auf Ihrem Endgerät speichert – etwa um Ihre Auswahl zwischen heller und dunkler Darstellung zu merken.
-              Diese Cookies richten auf Ihrem Endgerät keinen Schaden an und enthalten keine Viren. Sie können Ihren
-              Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im
-              Einzelfall erlauben oder generell ausschließen.
+              Diese Website setzt <strong style={{ color: 'var(--kj-text)' }}>keine Cookies</strong> und verwendet
+              keinerlei Tracking-, Analyse- oder Werbedienste. Es findet keine Auswertung Ihres Nutzungsverhaltens statt.
+            </p>
+            <p className="mt-3">
+              Lediglich zwei technisch notwendige Einträge werden im lokalen Speicher Ihres Browsers
+              („localStorage&quot;) abgelegt: Ihre Auswahl zwischen heller und dunkler Darstellung sowie die
+              Information, dass Sie den Hinweis zur Datenverarbeitung bereits gesehen haben. Diese Angaben verbleiben
+              ausschließlich auf Ihrem Endgerät, werden nicht an uns übertragen und können jederzeit über die
+              Einstellungen Ihres Browsers gelöscht werden. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TTDSG.
+            </p>
+
+            <h3 className="font-sans text-base mb-2 mt-6" style={{ color: 'var(--kj-text)' }}>Schriftarten</h3>
+            <p>
+              Zur einheitlichen Darstellung verwenden wir Schriftarten, die direkt von unserem Server geladen werden.
+              Eine Verbindung zu Servern von Google oder anderen Anbietern findet dabei nicht statt.
+            </p>
+
+            <h3 className="font-sans text-base mb-2 mt-6" style={{ color: 'var(--kj-text)' }}>Edelmetall-Preisrechner</h3>
+            <p>
+              Für den Preisrechner rufen wir tagesaktuelle Edelmetallkurse ab. Die Abfrage erfolgt ausschließlich über
+              unseren eigenen Server – Ihr Browser baut dabei keine Verbindung zu Drittanbietern auf und es werden
+              keine personenbezogenen Daten übermittelt. Die von Ihnen eingegebenen Gewichtsangaben werden nicht
+              gespeichert.
             </p>
 
             <h3 className="font-sans text-base mb-2 mt-6" style={{ color: 'var(--kj-text)' }}>
@@ -130,11 +150,18 @@ export default function DatenschutzPage() {
           <section>
             <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>5. Hosting</h2>
             <p>
-              Diese Website wird bei einem externen Dienstleister gehostet. Die auf dieser Website erfassten
-              personenbezogenen Daten werden auf den Servern des Hosters gespeichert. Der Hoster verarbeitet diese
-              Daten ausschließlich zur Erfüllung seiner Leistungspflichten und nach unseren Weisungen. Die Verwendung
-              erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO im Interesse einer sicheren und effizienten
-              Bereitstellung unseres Onlineangebots.
+              Diese Website wird gehostet von der <strong style={{ color: 'var(--kj-text)' }}>Vercel Inc.</strong>,
+              340 S Lemon Ave #4133, Walnut, CA 91789, USA. Beim Aufruf unserer Website werden technische Daten wie
+              Ihre IP-Adresse auf den Servern des Anbieters verarbeitet. Der Anbieter verarbeitet diese Daten
+              ausschließlich zur Erfüllung seiner Leistungspflichten und nach unseren Weisungen. Rechtsgrundlage ist
+              Art. 6 Abs. 1 lit. f DSGVO im Interesse einer sicheren und effizienten Bereitstellung unseres
+              Onlineangebots.
+            </p>
+            <p className="mt-3">
+              Die Datenverarbeitung kann dabei auch in den USA erfolgen. Grundlage der Übermittlung sind
+              Standardvertragsklauseln der EU-Kommission gemäß Art. 46 Abs. 2 lit. c DSGVO sowie die Zertifizierung
+              des Anbieters unter dem EU-US Data Privacy Framework. Wir haben mit dem Anbieter einen Vertrag zur
+              Auftragsverarbeitung nach Art. 28 DSGVO geschlossen.
             </p>
           </section>
 
@@ -149,7 +176,45 @@ export default function DatenschutzPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>7. Ihre Rechte</h2>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
+              7. Social-Media-Profile
+            </h2>
+            <p>
+              Im Fußbereich unserer Website verlinken wir auf unsere Profile bei Instagram und Facebook. Es handelt
+              sich um einfache Textlinks – es werden keine Inhalte dieser Netzwerke eingebunden und beim bloßen
+              Aufruf unserer Website keine Daten an die Betreiber übertragen. Erst wenn Sie einen dieser Links aktiv
+              anklicken, gelangen Sie auf die Seiten der jeweiligen Anbieter, für die deren eigene
+              Datenschutzbestimmungen gelten.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>8. Speicherdauer</h2>
+            <p>
+              Soweit in dieser Erklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre
+              personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein
+              berechtigtes Löschersuchen geltend machen oder eine Einwilligung widerrufen, werden Ihre Daten
+              gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung haben – etwa
+              handels- oder steuerrechtliche Aufbewahrungsfristen von 6 bzw. 10 Jahren oder Aufzeichnungspflichten
+              nach dem Geldwäschegesetz.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
+              9. Widerspruchsrecht nach Art. 21 DSGVO
+            </h2>
+            <p>
+              Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO erfolgt, haben Sie jederzeit
+              das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer
+              personenbezogenen Daten Widerspruch einzulegen. Wir verarbeiten die betreffenden Daten dann nicht mehr,
+              es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre
+              Interessen, Rechte und Freiheiten überwiegen.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>10. Ihre Rechte</h2>
             <p>Sie haben jederzeit das Recht:</p>
             <ul className="list-disc list-inside space-y-1 mt-2">
               <li>unentgeltlich Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten zu erhalten</li>
@@ -167,7 +232,7 @@ export default function DatenschutzPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>8. SSL-Verschlüsselung</h2>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>11. SSL-Verschlüsselung</h2>
             <p>
               Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte
               Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt
@@ -176,7 +241,7 @@ export default function DatenschutzPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>9. Kontakt</h2>
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>12. Kontakt</h2>
             <p>
               Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten wenden Sie sich bitte an:{' '}
               <a href={`mailto:${EMAIL}`} style={{ color: 'var(--kj-gold)' }} className="hover:underline">

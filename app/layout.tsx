@@ -154,7 +154,7 @@ const jsonLd = {
   ],
   priceRange: '€€€',
   currenciesAccepted: 'EUR',
-  paymentAccepted: 'Cash, Credit Card, Debit Card',
+  paymentAccepted: 'Cash, Debit Card, Bank Transfer',
   areaServed: [
     { '@type': 'City', name: 'Bielefeld' },
     { '@type': 'AdministrativeArea', name: 'Nordrhein-Westfalen' },

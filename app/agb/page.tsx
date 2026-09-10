@@ -46,8 +46,14 @@ export default function AGBPage() {
             <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>§ 3 Preise und Zahlung</h2>
             <p>
               Alle Preise verstehen sich in Euro inklusive der gesetzlichen Mehrwertsteuer. Zahlungen sind sofort und
-              ohne Abzug fällig. Bei Anfertigungen nach Maß und Sonderbestellungen ist eine Anzahlung von 50 % des
-              vereinbarten Kaufpreises bei Auftragserteilung zu leisten. Der Restbetrag wird bei Übergabe fällig.
+              ohne Abzug fällig. Die Zahlung kann wahlweise per Überweisung, EC-Karte oder in bar (nur bei Abholung
+              im Geschäft) erfolgen. Bei Versand ist die Zahlung vor Versand der Ware zu leisten, sofern nichts
+              anderes vereinbart wurde. Bei Anfertigungen nach Maß und Sonderbestellungen ist eine Anzahlung von
+              50 % des vereinbarten Kaufpreises bei Auftragserteilung zu leisten. Der Restbetrag wird bei Übergabe
+              fällig.
+            </p>
+            <p className="mt-3">
+              Die gelieferte Ware bleibt bis zur vollständigen Bezahlung des Kaufpreises Eigentum von KenJu.
             </p>
           </section>
 
@@ -69,6 +75,13 @@ export default function AGBPage() {
             </p>
 
             <h3 className="font-sans text-base mb-2 mt-5" style={{ color: 'var(--kj-text)' }}>Widerrufsbelehrung</h3>
+            <p className="mb-3">
+              Ein{' '}
+              <a href="#widerrufsformular" style={{ color: 'var(--kj-gold)' }} className="underline underline-offset-2">
+                Muster-Widerrufsformular
+              </a>{' '}
+              finden Sie am Ende dieser AGB.
+            </p>
             <p>
               Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.
               Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter,
@@ -145,7 +158,9 @@ export default function AGBPage() {
             </h2>
             <p>
               Vor Beginn einer Reparatur erhalten Sie eine unverbindliche Einschätzung und eine transparente
-              Preisangabe. Die Ausführung erfolgt erst nach Ihrer Freigabe. Nach Fertigstellung benachrichtigen wir
+              Preisangabe. Reparaturen werden teilweise an einen externen Goldschmied weitergegeben. Für die
+              ordnungsgemäße Ausführung gelten unsere Sorgfaltspflichten entsprechend. Die Ausführung erfolgt erst
+              nach Ihrer Freigabe. Nach Fertigstellung benachrichtigen wir
               Sie telefonisch – bei Nichterreichen wiederholt. Fertige Reparaturen bewahren wir{' '}
               <strong style={{ color: 'var(--kj-text)' }}>6 Monate</strong> ab der ersten Benachrichtigung für Sie
               auf. Nach Ablauf dieser Frist und nach mehrfacher erfolgloser Kontaktaufnahme behalten wir uns vor,
@@ -186,6 +201,53 @@ export default function AGBPage() {
           <p className="text-xs pt-4" style={{ borderTop: '1px solid var(--kj-border)', opacity: 0.7 }}>
             Stand: August 2026 | Juwelier KenJu, Inhaber Kenan Gülünay, Bahnhofstraße 28, 33602 Bielefeld | {EMAIL}
           </p>
+
+          {/* Gesetzlich vorgeschriebenes Muster nach Anlage 2 zu Art. 246a § 1 Abs. 2 EGBGB – Wortlaut nicht ändern */}
+          <section
+            id="widerrufsformular"
+            className="mt-12 p-7 md:p-9 scroll-mt-28"
+            style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
+          >
+            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
+              Muster-Widerrufsformular
+            </h2>
+            <div className="divider-gold mb-6" style={{ marginLeft: 0 }} />
+
+            <p className="italic mb-6">
+              (Wenn Sie den Vertrag widerrufen wollen, füllen Sie bitte dieses Formular aus und senden Sie es zurück.)
+            </p>
+
+            <p className="mb-6">
+              An:<br />
+              Juwelier KenJu<br />
+              Inhaber: Kenan Gülünay<br />
+              Bahnhofstraße 28<br />
+              33602 Bielefeld<br />
+              E-Mail: {EMAIL}
+            </p>
+
+            <p className="mb-6">
+              Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der
+              folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)
+            </p>
+
+            <div className="space-y-6 mb-6">
+              {[
+                'Bestellt am (*)/erhalten am (*):',
+                'Name des/der Verbraucher(s):',
+                'Anschrift des/der Verbraucher(s):',
+                'Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier):',
+                'Datum:',
+              ].map((feld) => (
+                <div key={feld}>
+                  <p>{feld}</p>
+                  <div className="mt-3" style={{ borderBottom: '1px solid var(--kj-border)' }} />
+                </div>
+              ))}
+            </div>
+
+            <p className="text-xs" style={{ opacity: 0.8 }}>(*) Unzutreffendes streichen.</p>
+          </section>
         </div>
       </div>
     </div>

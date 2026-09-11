@@ -32,7 +32,7 @@ const localBusinessJsonLd = {
     addressCountry: 'DE',
   },
   openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], opens: '10:00', closes: '19:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], opens: '09:30', closes: '20:00' },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

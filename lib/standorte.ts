@@ -13,7 +13,7 @@ export const standorte = [
     strasse: 'Bahnhofstraße 28',
     zusatz: 'Loom Bielefeld · 1. OG',
     plz: '33602',
-    telefon: { label: '0521 77075050', href: 'tel:+4952177075050' },
+    telefon: { label: '0176 51933306', href: 'tel:+4917651933306' },
     mobil: { label: '0176 63284312', href: 'tel:+4917663284312' },
     zeiten: [
       { tage: 'Mo – Sa', zeit: '09:30 – 20:00 Uhr' },

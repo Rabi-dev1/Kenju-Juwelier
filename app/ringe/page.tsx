@@ -7,8 +7,8 @@ import JewelrySlider from '@/components/JewelrySlider';
 
 export const metadata: Metadata = {
   title: 'Schmuck – Ringe, Ketten, Anhänger & mehr | KenJu Juwelier Bielefeld',
-  description: 'Goldschmuck bei KenJu Juwelier Bielefeld: Ringe, Brillantringe, Ketten, Anhänger, Armbänder, Fußketten, Creolen und mehr in 585 Gelbgold, Weißgold und Roségold.',
-  keywords: ['Schmuck Bielefeld', 'Goldringe', 'Brillantringe', 'Goldketten', 'Anhänger Gold', 'Armbänder Gold', 'Fußketten Gold', 'Creolen', '585 Gold', 'Juwelier Bielefeld'],
+  description: 'Goldschmuck bei KenJu Juwelier Bielefeld: Ringe, Brillantringe, Ketten, Anhänger, Armbänder (auch Silber & Edelstahl), Fußketten, Creolen und mehr.',
+  keywords: ['Schmuck Bielefeld', 'Goldringe', 'Brillantringe', 'Goldketten', 'Anhänger Gold', 'Armbänder Gold', 'Armband Silber', 'Armband Edelstahl', 'Fußketten Gold', 'Creolen', '585 Gold', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju.de/ringe' },
 };
 
@@ -37,25 +37,13 @@ const sliderBilder = [
   { src: '/images/brillantring-cluster-gelb.jpg', alt: 'Brillantring KenJu Juwelier Bielefeld' },
 ];
 
-/* ── Sortiments-Übersicht ── */
-const sortiment = [
-  { icon: '◈', title: 'Ringe',      desc: 'Memory-Ringe, Solitär-Ringe, Brillantringe und Verlobungsringe.' },
-  { icon: '◉', title: 'Ketten',     desc: 'Panzer-, Anker- und Schlangenketten in allen Längen.' },
-  { icon: '✦', title: 'Anhänger',   desc: 'Kreuze, Herzen, Flügel, Kleeblätter und Namensanhänger.' },
-  { icon: '◯', title: 'Armbänder',  desc: 'Feine Armbänder und Armreifen in Gelb-, Weiß- und Roségold.' },
-  { icon: '⬡', title: 'Fußketten',  desc: 'Zarte Fußkettchen in 585 Gold – auch mit Anhänger.' },
-  { icon: '⋆', title: 'Ohrschmuck', desc: 'Ohrstecker, Creolen und Ohrhänger mit und ohne Steine.' },
-  { icon: '◇', title: 'Trauringe',  desc: 'Individuelle Anfertigung nach Maß – in Bielefeld und Lippstadt.' },
-  { icon: '❖', title: 'Brillanten', desc: 'Brillantschmuck und zertifizierte Labor Diamanten.' },
-];
-
 export default function SchmuckPage() {
   return (
     <>
       <CategoryHero
         title="Schmuck bei KenJu Juwelier Bielefeld"
         subtitle="Gold · Brillanten · Leidenschaft"
-        description="Memory-Ringe, Solitär-Ringe, Anhänger, Ketten, Armbänder, Fußketten, Ohrstecker & Brillantschmuck – in 585 Gelbgold, Weißgold und Roségold."
+        description="Memory-Ringe, Solitär-Ringe, Anhänger, Ketten, Armbänder, Fußketten, Ohrstecker & Brillantschmuck – in Gold, Silber und Edelstahl."
         imageSrc="/images/ringe.jpg"
         imageAlt="Schmuck KenJu Juwelier Bielefeld"
         breadcrumb="Schmuck"
@@ -75,7 +63,7 @@ export default function SchmuckPage() {
         <JewelrySlider images={sliderBilder} speedSeconds={50} />
 
         <p className="font-sans text-xs text-center mt-6 px-4" style={{ color: 'var(--kj-muted)' }}>
-          Alle Stücke in Ihrer Wunschgröße erhältlich · Gravuren auf Anfrage
+          Alle Stücke in Ihrer Wunschgröße erhältlich · Gravuren auf Anfrage (kostenpflichtig)
         </p>
       </section>
 
@@ -88,27 +76,42 @@ export default function SchmuckPage() {
             <div className="divider-gold mx-auto" />
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {sortiment.map((s) => (
-              <div
-                key={s.title}
-                className="p-6 flex flex-col gap-2"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <span className="font-serif text-xl" style={{ color: 'var(--kj-gold)' }}>{s.icon}</span>
-                <h3 className="font-serif text-lg" style={{ color: 'var(--kj-text)' }}>{s.title}</h3>
-                <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
+          <div className="max-w-3xl mx-auto space-y-6 font-sans text-base leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+            <p>
+              Entdecken Sie bei <strong style={{ color: 'var(--kj-text)' }}>Juwelier KenJu</strong> eine besonders
+              große Auswahl an hochwertigem Gold- und Silberschmuck, veredelt mit funkelnden Brillanten und
+              hochwertigen Edelsteinen. Ob elegante Armbänder – auch in Silber und Edelstahl –, stilvolle Halsketten
+              oder besondere Ohrringe: Unsere Schmuckstücke verbinden zeitlose Eleganz mit modernem Design. Dabei
+              führen wir Stücke sowohl mit natürlichen Diamanten als auch mit Labor Diamanten.
+            </p>
 
-          <p className="font-sans text-sm text-center mt-8" style={{ color: 'var(--kj-muted)' }}>
-            Goldmünzen, Goldbarren und Investmentgold sowie unseren Silberankauf finden Sie im Bereich{' '}
-            <Link href="/goldankauf" style={{ color: 'var(--kj-gold)' }} className="underline underline-offset-2">
-              Goldankauf
-            </Link>
-            .
-          </p>
+            <div>
+              <h3 className="font-serif text-2xl font-light mb-3" style={{ color: 'var(--kj-text)' }}>
+                Schmuck, der Ihre Persönlichkeit unterstreicht
+              </h3>
+              <p>
+                Sie suchen ein einzigartiges Stück, das ganz Ihren Vorstellungen entspricht? Gemeinsam entwickeln wir
+                ein Unikat aus Gold oder Silber, das nach Ihren Wünschen gefertigt und auf Wunsch mit ausgewählten
+                Edelsteinen veredelt wird. Ob als besonderes Geschenk, zur Feier eines wichtigen Moments oder als
+                Ausdruck des eigenen Stils – individueller Schmuck erzählt eine ganz persönliche Geschichte.
+              </p>
+            </div>
+
+            <p>
+              Sie finden uns im <strong style={{ color: 'var(--kj-text)' }}>LooM Einkaufszentrum in Bielefeld</strong>{' '}
+              sowie in der <strong style={{ color: 'var(--kj-text)' }}>Langen Straße 29 in Lippstadt</strong>. Lassen
+              Sie sich von unserer Auswahl inspirieren und entdecken Sie Ihr neues Lieblingsstück – wir freuen uns
+              auf Ihren Besuch.
+            </p>
+
+            <p className="text-sm pt-2">
+              Goldmünzen, Goldbarren und Investmentgold sowie unseren Silberankauf finden Sie im Bereich{' '}
+              <Link href="/goldankauf" style={{ color: 'var(--kj-gold)' }} className="underline underline-offset-2">
+                Goldankauf
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </section>
 
@@ -122,8 +125,8 @@ export default function SchmuckPage() {
             {/* Bild */}
             <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden group" style={{ background: 'var(--kj-surface)' }}>
               <Image
-                src="/images/brillant-set-luxus.jpg"
-                alt="Brillantschmuck KenJu Juwelier Bielefeld"
+                src="/images/labordiamanten-collier.jpg"
+                alt="Collier mit Labor Diamanten – Brillantschmuck bei KenJu Juwelier Bielefeld"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover img-zoom"
@@ -134,7 +137,7 @@ export default function SchmuckPage() {
                 style={{ background: 'rgba(15,13,10,0.78)', border: '1px solid rgba(201,168,76,0.35)' }}
               >
                 <p className="font-sans text-xs tracking-widest uppercase" style={{ color: 'var(--kj-gold)' }}>Brillantschmuck</p>
-                <p className="font-serif text-sm text-white mt-0.5">Handgefertigt · 585 Gold</p>
+                <p className="font-serif text-sm text-white mt-0.5">Natürliche &amp; Labor Diamanten</p>
               </div>
             </div>
 

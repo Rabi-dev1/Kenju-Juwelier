@@ -22,8 +22,8 @@ const productJsonLd = {
 const benefits = [
   { icon: '◈', title: 'Identische Brillanz',   desc: 'Chemisch und optisch identisch mit Naturdiamanten.' },
   { icon: '◉', title: 'Ethisch & Nachhaltig',   desc: 'Kein Bergbau – verantwortungsvoll im Labor hergestellt.' },
-  { icon: '⬡', title: 'Fairer Preis',            desc: 'Bis zu 70 % günstiger als vergleichbare Naturdiamanten.' },
-  { icon: '◯', title: 'Zertifiziert',            desc: 'Alle Steine mit IGI / GIA Zertifikat.' },
+  { icon: '⬡', title: 'Fairer Preis',            desc: 'Bis zu 90 % günstiger als vergleichbare Naturdiamanten.' },
+  { icon: '◯', title: 'Zertifiziert',            desc: 'Alle Steine mit IGI-Zertifikat.' },
 ];
 
 const collections = [
@@ -44,11 +44,11 @@ const faq = [
   },
   {
     q: 'Sind Labor Diamanten wirklich günstiger?',
-    a: 'Ja – Labor Diamanten kosten typischerweise 40–70 % weniger als vergleichbare Naturdiamanten. Das bedeutet: Sie bekommen deutlich mehr Karat und Qualität für Ihr Budget.',
+    a: 'Ja – Labor Diamanten kosten bis zu 90 % weniger als vergleichbare Naturdiamanten. Das bedeutet: Sie bekommen deutlich mehr Karat und Qualität für Ihr Budget.',
   },
   {
     q: 'Werden Labor Diamanten zertifiziert?',
-    a: 'Ja. Alle unsere Labor Diamanten kommen mit einem Zertifikat von unabhängigen Gemmologie-Instituten (z.B. IGI oder GIA), das Schliff, Farbe, Reinheit und Karatgewicht bescheinigt.',
+    a: 'Ja. Alle unsere Labor Diamanten kommen mit einem IGI-Zertifikat des unabhängigen International Gemological Institute, das Schliff, Farbe, Reinheit und Karatgewicht bescheinigt.',
   },
   {
     q: 'Kann ich meinen Labor Diamant Ring individuell anfertigen lassen?',
@@ -86,7 +86,7 @@ export default function LaborDiamantenPage() {
           </p>
           <p className="font-sans text-white/50 text-base max-w-xl mx-auto leading-relaxed mb-10">
             Labor Diamanten sind echte Diamanten – hergestellt ohne Bergbau, mit voller Zertifizierung
-            und bis zu 70 % günstiger als Naturdiamanten.
+            und bis zu 90 % günstiger als Naturdiamanten.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-labor" className="btn-gold">Jetzt beraten lassen</Link>
@@ -165,9 +165,9 @@ export default function LaborDiamantenPage() {
                   ['Chemische Zusammensetzung', '100 % Kohlenstoff', '100 % Kohlenstoff'],
                   ['Härte (Mohs-Skala)', '10 – Höchste Härte', '10 – Höchste Härte'],
                   ['Brillanz & Feuer', 'Identisch', 'Identisch'],
-                  ['Unabhängige Zertifizierung', 'IGI / GIA zertifiziert', 'IGI / GIA zertifiziert'],
+                  ['Unabhängige Zertifizierung', 'IGI-zertifiziert', 'IGI / GIA zertifiziert'],
                   ['Ethik & Umwelt', '✓ Kein Bergbau erforderlich', '— Bergbau notwendig'],
-                  ['Preisvorteil', 'Bis zu 70 % günstiger', 'Referenzpreis'],
+                  ['Preisvorteil', 'Bis zu 90 % günstiger', 'Referenzpreis'],
                   ['Verfügbarkeit & Auswahl', 'Große, flexible Auswahl', 'Begrenzt & aufwendig'],
                 ].map(([prop, lab, nat], i) => (
                   <tr
@@ -191,7 +191,7 @@ export default function LaborDiamantenPage() {
             </table>
           </div>
           <p className="font-sans text-xs text-center mt-5" style={{ color: 'var(--kj-muted)', opacity: 0.7 }}>
-            Alle Angaben nach aktuellem gemmologischen Stand (IGI/GIA). Labor Diamanten haben dasselbe Zertifizierungssystem wie Naturdiamanten.
+            Alle Angaben nach aktuellem gemmologischen Stand. Unsere Labor Diamanten sind IGI-zertifiziert. Labor Diamanten haben dasselbe Zertifizierungssystem wie Naturdiamanten.
           </p>
         </div>
       </section>

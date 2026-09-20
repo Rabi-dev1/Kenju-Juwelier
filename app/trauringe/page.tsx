@@ -14,7 +14,7 @@ const vorteile = [
   { nr: '01', title: 'Individuelle Gestaltung',     desc: 'Breite, Legierung und Edelsteine nach Ihren Wünschen.' },
   { nr: '02', title: 'Handgefertigt in Deutschland', desc: 'Höchste Qualität und Tradition aus Meisterhand.' },
   { nr: '03', title: 'Kostenlose Beratung',          desc: 'Wir nehmen uns Zeit für Sie – in Bielefeld und Lippstadt.' },
-  { nr: '04', title: 'Gravur nach Wunsch',           desc: 'Ihre persönliche Botschaft – kostenlos im Ring.' },
+  { nr: '04', title: 'Gravur nach Wunsch',           desc: 'Ihre persönliche Botschaft dauerhaft im Ring.' },
 ];
 
 const materialien = [
@@ -73,7 +73,7 @@ const bewertungen = [
 
 const trustItems = [
   '✓ Individuelle Maßanfertigung',
-  '✓ Kostenlose Gravur',
+  '✓ Gravur auf Wunsch',
   '✓ Persönliche Beratung',
   '✓ Bielefeld & Lippstadt',
 ];
@@ -117,7 +117,7 @@ export default function TrauringePage() {
 
           {/* Trust-Chips unter CTA */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 gap-y-2 mt-6">
-            {['Individuelle Maßanfertigung', 'Kostenlose Gravur', 'Persönliche Beratung', 'Bielefeld & Lippstadt'].map((item) => (
+            {['Individuelle Maßanfertigung', 'Gravur auf Wunsch', 'Persönliche Beratung', 'Bielefeld & Lippstadt'].map((item) => (
               <span key={item} className="font-sans text-xs flex items-center gap-1.5" style={{ color: 'rgba(245,240,232,0.6)' }}>
                 <span style={{ color: 'var(--kj-gold)' }}>✓</span>{item}
               </span>
@@ -202,7 +202,7 @@ export default function TrauringePage() {
                 Bei KenJu Juwelier begleiten wir Sie von der ersten Idee bis zum fertigen Trauring. In unseren Ateliers in Bielefeld und Lippstadt nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
               </p>
               <ul className="space-y-3 mb-8">
-                {['Individuelle Beratung', 'Maßanfertigung', 'Gravuren kostenlos', 'Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29'].map((item) => (
+                {['Individuelle Beratung', 'Maßanfertigung', 'Gravur auf Wunsch', 'Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29'].map((item) => (
                   <li key={item} className="flex items-center gap-3 font-sans text-sm" style={{ color: 'var(--kj-text)' }}>
                     <span style={{ color: 'var(--kj-gold)' }}>✓</span>
                     {item}
@@ -268,7 +268,7 @@ export default function TrauringePage() {
             {/* Trust-Block */}
             <div className="flex items-center justify-center gap-2 mb-4">
               <span style={{ color: 'var(--kj-gold)', letterSpacing: '0.05em', fontSize: '0.9rem' }}>★★★★★</span>
-              <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>5,0 / 5</span>
+              <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>4,7 / 5</span>
               <span className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>· Basierend auf unseren Google-Bewertungen</span>
             </div>
             <h2 className="section-title">Was unsere Kunden sagen</h2>

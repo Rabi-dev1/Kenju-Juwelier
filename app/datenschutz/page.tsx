@@ -45,8 +45,8 @@ export default function DatenschutzPage() {
               Bahnhofstraße 28 (Loom, 1. OG), 33602 Bielefeld<br />
               Zweigstelle: Lange Straße 29, 59555 Lippstadt<br />
               Telefon:{' '}
-              <a href="tel:+4952177075050" style={{ color: 'var(--kj-gold)' }} className="hover:underline">
-                0521 77075050
+              <a href="tel:+4917651933306" style={{ color: 'var(--kj-gold)' }} className="hover:underline">
+                0176 51933306
               </a>
               <br />
               E-Mail:{' '}

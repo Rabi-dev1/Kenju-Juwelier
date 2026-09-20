@@ -19,7 +19,7 @@ const serviceJsonLd = {
     '@type': 'JewelryStore',
     name: 'KenJu Juwelier',
     address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE' },
-    telephone: '+4952177075050',
+    telephone: '+4917651933306',
     email: 'info@kenju.de',
     url: 'https://kenju.de',
   },
@@ -32,7 +32,7 @@ const serviceJsonLd = {
 const trustBoxes = [
   { val: '10+',    title: 'Jahre Erfahrung',                sub: 'Bielefeld & Lippstadt' },
   { val: '◈',     title: 'Zertifizierte Handwerksqualität', sub: 'Geprüfte Fachkräfte' },
-  { val: 'Sofort', title: 'Batteriewechsel',                sub: 'Oft am selben Tag fertig' },
+  { val: 'Sofort', title: 'Batteriewechsel',                sub: 'Oft in den nächsten 20 Minuten fertig' },
   { val: '⬡',     title: 'Fachwerkstatt',                  sub: 'Für Schmuck & Uhren' },
 ];
 
@@ -48,20 +48,19 @@ const schmuckServices = [
   { name: 'Ringgrößenänderung',           desc: 'Fachgerecht weiten oder enger machen – schnell und präzise.' },
   { name: 'Kettenreparaturen',            desc: 'Verschlüsse, Glieder, Lotarbeiten – sauber und dauerhaft.' },
   { name: 'Steinersatz',                  desc: 'Verlorene Steine neu setzen – Brillanten, Edelsteine, Zirkonia.' },
-  { name: 'Gravuren',                     desc: 'Namen, Daten, Initialen – individuell in Ringe, Anhänger & Armreifen.' },
+  { name: 'Gravuren',                     desc: 'Namen, Daten, Initialen – individuell in Ringe, Anhänger & Armbänder.' },
   { name: 'Rhodinierung',                 desc: 'Weißgold auffrischen – brillanter, silbrig-weißer Glanz.' },
   { name: 'Politur & Reinigung',          desc: 'Hochglanzpolitur und Ultraschallreinigung – wie neu.' },
   { name: 'Umarbeitung alter Schmuckstücke', desc: 'Erbstücken ein modernes zweites Leben geben.' },
 ];
 
 const uhrenServices = [
-  { name: 'Batteriewechsel',            desc: 'Sicher, wasserdicht abgedichtet – oft noch am selben Tag.' },
+  { name: 'Batteriewechsel',            desc: 'Reinigung des Gehäusedeckels inkl. Dichtungsring, Einsetzen der Batterie und fachgerechtes Verschließen – oft in 20 Minuten fertig.' },
   { name: 'Glaswechsel',                desc: 'Mineral- und Saphirglas für alle Modelle.' },
   { name: 'Armbandservice',             desc: 'Kürzen, verlängern oder austauschen.' },
-  { name: 'Druckprüfung & Abdichtung',  desc: 'Wasserdichtigkeitstest und Neuabdichtung.' },
+  { name: 'Wasserdichtigkeitsversiegelung', desc: 'Separate Leistung auf Kundenwunsch – gerne erstellen wir Ihnen einen Kostenvoranschlag.' },
   { name: 'Gehäusereinigung',           desc: 'Professionelle Reinigung und Politur.' },
   { name: 'Gangkontrolle',              desc: 'Ganggenauigkeit bei Quarz- und Automatikuhren prüfen.' },
-  { name: 'Wasserdichtigkeit prüfen',   desc: 'Zuverlässiger Schutz nach Norm.' },
   { name: 'Metallarmbänder kürzen',     desc: 'Perfekter Sitz am Handgelenk.' },
 ];
 

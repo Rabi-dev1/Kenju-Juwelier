@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kenju.de' },
   openGraph: {
     title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
-    description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. ★★★★★ 5,0 Google · Loom Bielefeld, 1. OG.',
+    description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. ★★★★★ 4,7 Google · Loom Bielefeld, 1. OG.',
     url: 'https://kenju.de',
     type: 'website',
   },
@@ -113,7 +113,7 @@ export default function HomePage() {
           {/* Google Stars */}
           <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mb-10">
             <span style={{ color: 'var(--kj-gold)', letterSpacing: '0.05em' }}>★★★★★</span>
-            <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>5,0</span>
+            <span className="font-sans text-sm font-medium" style={{ color: 'var(--kj-gold)' }}>4,7</span>
             <span className="font-sans text-xs" style={{ color: 'rgba(245,240,232,0.45)' }}>
               · 133 Bewertungen zufriedener Kunden auf Google
             </span>
@@ -141,7 +141,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
               { value: '10+',    label: 'Jahre Erfahrung',       sub: 'Bielefeld & Lippstadt' },
-              { value: '5,0 ★',  label: 'Google-Bewertung',      sub: '133 zufriedene Kunden' },
+              { value: '4,7 ★',  label: 'Google-Bewertung',      sub: '133 zufriedene Kunden' },
               { value: 'Sofort', label: 'Auszahlung',            sub: 'Bar oder per Echtzeitüberweisung' },
               { value: '100%',   label: 'Kostenlose Bewertung',  sub: 'Unverbindlich' },
             ].map((s) => (

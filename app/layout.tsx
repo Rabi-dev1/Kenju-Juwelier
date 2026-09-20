@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
-    description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. 10+ Jahre Erfahrung · 5,0 ★ Google · Loom Bielefeld, 1. OG.',
+    description: 'Trauringe, Brillantringe und fairer Goldankauf in Bielefeld und Lippstadt. 10+ Jahre Erfahrung · 4,7 ★ Google · Loom Bielefeld, 1. OG.',
     images: ['/images/hero-ladenfront.jpg'],
   },
   robots: {
@@ -114,7 +114,7 @@ const jsonLd = {
   url: 'https://kenju.de',
   logo: 'https://kenju.de/favicon.svg',
   image: 'https://kenju.de/images/hero-ladenfront.jpg',
-  telephone: '+4952177075050',
+  telephone: '+4917651933306',
   email: 'info@kenju.de',
   foundingDate: '2010',
   address: {
@@ -163,7 +163,7 @@ const jsonLd = {
   knowsLanguage: ['de', 'en', 'ar', 'tr'],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5.0',
+    ratingValue: '4.7',
     reviewCount: '133',
     bestRating: '5',
     worstRating: '1',

@@ -37,7 +37,7 @@ const reviewJsonLd = {
   name: 'KenJu Juwelier',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5.0',
+    ratingValue: '4.7',
     reviewCount: '133',
     bestRating: '5',
     worstRating: '1',
@@ -114,7 +114,7 @@ export default function Reviews() {
             <div className="text-left">
               <div className="flex items-center gap-2.5 mb-1">
                 <Stars count={5} />
-                <span className="font-serif text-2xl font-light" style={{ color: 'var(--kj-gold)' }}>5,0</span>
+                <span className="font-serif text-2xl font-light" style={{ color: 'var(--kj-gold)' }}>4,7</span>
               </div>
               <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>
                 133 Bewertungen zufriedener Kunden auf Google

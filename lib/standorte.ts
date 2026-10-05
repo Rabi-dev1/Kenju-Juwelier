@@ -28,7 +28,7 @@ export const standorte = [
     zusatz: null,
     plz: '59555',
     telefon: { label: '02941 9889114', href: 'tel:+4929419889114' },
-    mobil: { label: '0151 57610382', href: 'tel:+4915157610382' },
+    mobil: { label: '0176 63284312', href: 'tel:+4917663284312' },
     zeiten: [
       { tage: 'Mo – Fr', zeit: '10:00 – 18:00 Uhr' },
       { tage: 'Samstag', zeit: '10:00 – 16:00 Uhr' },

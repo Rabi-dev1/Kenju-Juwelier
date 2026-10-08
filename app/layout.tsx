@@ -25,8 +25,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://kenju.de'),
   title: {
-    default: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
-    template: '%s | KenJu Juwelier Bielefeld',
+    default: 'Juwelier in Bielefeld & Lippstadt | KenJu Juwelier',
+    /* Unterseiten-Titel OHNE Markennamen angeben – der wird hier angehängt */
+    template: '%s | KenJu Juwelier',
   },
   description:
     'KenJu Juwelier – Trauringe, Brillantringe, Labor Diamanten und fairer Goldankauf in Bielefeld und Lippstadt. Persönliche Beratung im Loom Bielefeld, 1. OG.',

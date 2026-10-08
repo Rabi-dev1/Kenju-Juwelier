@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { EMAIL } from '@/lib/standorte';
 
 export const metadata: Metadata = {
-  title: 'AGB – Allgemeine Geschäftsbedingungen | KenJu Juwelier',
+  title: 'AGB – Allgemeine Geschäftsbedingungen',
   robots: { index: false },
 };
 

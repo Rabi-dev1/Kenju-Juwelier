@@ -4,7 +4,7 @@ import Image from 'next/image';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Uhren in Bielefeld – Tommy Hilfiger, Hugo Boss & mehr | KenJu Juwelier',
+  title: 'Markenuhren in Bielefeld & Lippstadt',
   description: 'Markenuhren bei KenJu Juwelier Bielefeld: Tommy Hilfiger, Hugo Boss, Police, Regent und Swiss Military. Persönliche Beratung vor Ort.',
   keywords: ['Uhren Bielefeld', 'Tommy Hilfiger Uhren', 'Hugo Boss Uhren', 'Police Uhren', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju.de/uhren' },
@@ -29,7 +29,7 @@ export default function UhrenPage() {
     <>
       {/* ── HERO ─────────────────────────────────────────── */}
       <section
-        className="relative flex items-end pb-16 pt-36 overflow-hidden"
+        className="on-dark relative flex items-end pb-16 pt-36 overflow-hidden"
         style={{ background: '#0F0D0A', minHeight: '65vh' }}
       >
         <div className="absolute inset-0">
@@ -52,7 +52,7 @@ export default function UhrenPage() {
             <span style={{ color: 'var(--kj-gold)' }}>Uhren</span>
           </nav>
           <h1 className="font-serif text-6xl md:text-8xl font-light mb-5 text-white" style={{ lineHeight: 1.05 }}>
-            Uhren in Bielefeld
+            Uhren in Bielefeld &amp; Lippstadt
           </h1>
           <div className="divider-gold mb-5" />
           <p className="font-sans text-lg max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.65)' }}>

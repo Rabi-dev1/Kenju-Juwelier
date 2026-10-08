@@ -1,10 +1,26 @@
 import { NextResponse } from 'next/server';
 
-// Fallback-Kurse falls APIs nicht erreichbar
+// Fallback-Kurse falls APIs nicht erreichbar (Stand: Oktober 2026)
 const FALLBACK = {
-  metals: { gold: 3300, silver: 33, platinum: 980, palladium: 1050 },
+  metals: { gold: 4130, silver: 59, platinum: 1662, palladium: 1159 },
   fx:     { eurUsd: 1.12, chfEur: 0.938 },
 };
+
+/** Spot-Preis eines Edelmetalls in USD/Unze – api.gold-api.com, kein Key nötig */
+async function spotPreis(symbol: 'XAU' | 'XAG' | 'XPT' | 'XPD'): Promise<number | null> {
+  try {
+    const res = await fetch(`https://api.gold-api.com/price/${symbol}`, {
+      next: { revalidate: 1800 }, // 30 min Server-Cache
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const preis = Number(data?.price);
+    return Number.isFinite(preis) && preis > 0 ? Math.round(preis * 100) / 100 : null;
+  } catch {
+    return null;
+  }
+}
 
 export async function GET() {
   let gold      = FALLBACK.metals.gold;
@@ -17,28 +33,20 @@ export async function GET() {
   let liveFx     = false;
 
   // ── Spot-Preise (USD / Troy Oz) ──────────────────────────────────
-  try {
-    const res = await fetch('https://api.metals.live/v1/spot', {
-      next: { revalidate: 1800 }, // 30 min server cache
-      headers: { Accept: 'application/json' },
-    });
-    if (res.ok) {
-      // Response: Array von Einzel-Objekten  →  [{gold:X},{silver:X},...]
-      // oder manchmal ein Objekt              →  {gold:X, silver:X, ...}
-      const raw = await res.json();
-      const data: Record<string, number> = Array.isArray(raw)
-        ? Object.assign({}, ...raw)
-        : raw;
+  const [au, ag, pt, pd] = await Promise.all([
+    spotPreis('XAU'),
+    spotPreis('XAG'),
+    spotPreis('XPT'),
+    spotPreis('XPD'),
+  ]);
 
-      if (data.gold)      { gold      = Math.round(data.gold      * 100) / 100; }
-      if (data.silver)    { silver    = Math.round(data.silver    * 100) / 100; }
-      if (data.platinum)  { platinum  = Math.round(data.platinum  * 100) / 100; }
-      if (data.palladium) { palladium = Math.round(data.palladium * 100) / 100; }
-      liveMetals = true;
-    }
-  } catch {
-    // Fallback bleibt aktiv
-  }
+  if (au !== null) gold      = au;
+  if (ag !== null) silver    = ag;
+  if (pt !== null) platinum  = pt;
+  if (pd !== null) palladium = pd;
+
+  // "live" nur, wenn mindestens Gold und Silber abgerufen werden konnten
+  liveMetals = au !== null && ag !== null;
 
   // ── Währungskurse ────────────────────────────────────────────────
   // open.er-api: Basis USD → rates.EUR = Anzahl EUR pro 1 USD

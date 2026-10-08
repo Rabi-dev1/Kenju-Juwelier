@@ -4,8 +4,8 @@ import Image from 'next/image';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Labor Diamanten Bielefeld & Lippstadt – Ethisch & Zertifiziert | KenJu',
-  description: 'Labor Diamanten bei KenJu Juwelier in Bielefeld und Lippstadt. Ethisch erzeugte Diamanten mit identischer Brillanz zu einem fairen Preis – ideal für Verlobungsringe.',
+  title: 'Labor Diamanten Bielefeld & Lippstadt',
+  description: 'Labor Diamanten in Bielefeld und Lippstadt: IGI-zertifiziert, identische Brillanz wie Naturdiamanten und bis zu 90 % günstiger. Ideal für Verlobungsringe.',
   keywords: ['Labor Diamanten Bielefeld', 'Labor Diamanten Lippstadt', 'Lab Grown Diamonds', 'synthetische Diamanten', 'Verlobungsring Labor Diamant', 'ethische Diamanten'],
   alternates: { canonical: 'https://kenju.de/labordiamanten' },
 };
@@ -62,7 +62,7 @@ export default function LaborDiamantenPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-24 overflow-hidden" style={{ background: '#0F0D0A' }}>
+      <section className="on-dark relative pt-36 pb-24 overflow-hidden" style={{ background: '#0F0D0A' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/brillant-set-luxus.jpg"

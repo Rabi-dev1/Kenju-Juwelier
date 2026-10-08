@@ -4,7 +4,7 @@ import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Schmuck- & Uhrenreparatur Bielefeld & Lippstadt | KenJu Juwelier',
+  title: 'Schmuck- & Uhrenreparatur Bielefeld',
   description: 'Schmuckreparatur & Uhrenreparatur in Bielefeld und Lippstadt – Ringgrößenänderung, Gravuren, Batteriewechsel, Glaswechsel. Ihr Goldschmied & Uhrmacher.',
   keywords: ['Schmuckreparatur Bielefeld', 'Uhrenreparatur Bielefeld', 'Uhrmacher Bielefeld', 'Schmuckreparatur Lippstadt', 'Uhrenreparatur Lippstadt', 'Ringgrößenänderung Bielefeld', 'Goldschmied Bielefeld', 'Batteriewechsel Uhr Bielefeld', 'Gravur Bielefeld', 'Kettenreparatur Bielefeld'],
   alternates: { canonical: 'https://kenju.de/service' },
@@ -71,7 +71,7 @@ export default function ServicePage() {
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section
-        className="relative flex items-end overflow-hidden"
+        className="on-dark relative flex items-end overflow-hidden"
         style={{ background: '#08080F', minHeight: '65vh', paddingTop: '9rem', paddingBottom: '5rem' }}
       >
         <div className="absolute inset-0">

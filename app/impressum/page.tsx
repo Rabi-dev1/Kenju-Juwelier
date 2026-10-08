@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { standorte, EMAIL } from '@/lib/standorte';
 
 export const metadata: Metadata = {
-  title: 'Impressum | KenJu Juwelier Bielefeld & Lippstadt',
+  title: 'Impressum',
   robots: { index: false },
 };
 

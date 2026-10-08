@@ -121,7 +121,7 @@ export default function Footer() {
                   {s.nummern.map((n, i) => (
                     <span key={n.href}>
                       {i > 0 && ' · '}
-                      <a href={n.href} className="transition-opacity hover:opacity-80" style={{ fontSize: '0.78rem' }}>
+                      <a href={n.href} className="touch-link transition-opacity hover:opacity-80" style={{ fontSize: '0.78rem' }}>
                         {n.label}
                       </a>
                     </span>
@@ -129,7 +129,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <a href={`mailto:${EMAIL}`} className="transition-opacity hover:opacity-80 font-medium" style={{ color: 'var(--kj-text)' }}>
+                <a href={`mailto:${EMAIL}`} className="touch-link transition-opacity hover:opacity-80 font-medium" style={{ color: 'var(--kj-text)' }}>
                   {EMAIL}
                 </a>
               </li>

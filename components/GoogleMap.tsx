@@ -107,7 +107,7 @@ export default function GoogleMap() {
                         <tr key={n.href}>
                           <td className="pr-3 py-0.5 align-top whitespace-nowrap" style={{ color: 'var(--kj-muted)' }}>{n.typ}</td>
                           <td className="py-0.5">
-                            <a href={n.href} className="transition-opacity hover:opacity-75">{n.label}</a>
+                            <a href={n.href} className="touch-link transition-opacity hover:opacity-75">{n.label}</a>
                           </td>
                         </tr>
                       ))}
@@ -121,7 +121,7 @@ export default function GoogleMap() {
 
         <p className="text-center font-sans text-sm mt-10" style={{ color: 'var(--kj-muted)' }}>
           Oder schreiben Sie uns:{' '}
-          <a href={`mailto:${EMAIL}`} style={{ color: 'var(--kj-gold)' }} className="transition-opacity hover:opacity-75">
+          <a href={`mailto:${EMAIL}`} style={{ color: 'var(--kj-gold)' }} className="touch-link transition-opacity hover:opacity-75">
             {EMAIL}
           </a>
         </p>

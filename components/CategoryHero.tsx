@@ -23,7 +23,7 @@ export default function CategoryHero({ title, subtitle, description, imageSrc, i
 
   return (
     <section
-      className="relative min-h-[70vh] flex items-end pb-20 pt-36 overflow-hidden"
+      className="on-dark relative min-h-[70vh] flex items-end pb-20 pt-36 overflow-hidden"
       style={{ background: '#0F0D0A' }}
     >
       <script

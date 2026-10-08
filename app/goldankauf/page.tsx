@@ -5,7 +5,7 @@ import AppointmentForm from '@/components/AppointmentForm';
 import EdelmetallRechner from '@/components/EdelmetallRechner';
 
 export const metadata: Metadata = {
-  title: 'Goldankauf Bielefeld & Lippstadt | Faire Preise & Auszahlung | KenJu',
+  title: 'Goldankauf Bielefeld & Lippstadt',
   description: 'Goldankauf in Bielefeld und Lippstadt zum tagesaktuellen Marktpreis. Kostenlose Bewertung, faire Ankaufspreise, Auszahlung in bar oder per Echtzeitüberweisung.',
   keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Lippstadt', 'Goldmünzen kaufen Bielefeld', 'Goldbarren kaufen Bielefeld', 'Investmentgold Bielefeld', 'Gold als Anlage'],
   alternates: { canonical: 'https://kenju.de/goldankauf' },
@@ -116,7 +116,7 @@ export default function GoldankaufPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 overflow-hidden" style={{ background: '#0F0D0A' }}>
+      <section className="on-dark relative pt-36 pb-24 overflow-hidden" style={{ background: '#0F0D0A' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/goldankauf.jpg"

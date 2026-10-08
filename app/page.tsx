@@ -6,8 +6,8 @@ import GoogleMap from '@/components/GoogleMap';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
-  description: 'KenJu Juwelier – Trauringe, Brillantringe & Goldankauf in Bielefeld und Lippstadt. Persönliche Beratung, handgefertigte Qualität, faire Preise. Loom Bielefeld, 1. OG.',
+  title: 'Juwelier in Bielefeld & Lippstadt | KenJu Juwelier',
+  description: 'Trauringe, Brillantringe & Goldankauf in Bielefeld und Lippstadt. Persönliche Beratung, handgefertigte Qualität, faire Preise – im Loom Bielefeld, 1. OG.',
   alternates: { canonical: 'https://kenju.de' },
   openGraph: {
     title: 'Juwelier in Bielefeld | Trauringe, Schmuck & Goldankauf | KenJu',
@@ -75,7 +75,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
 
       {/* ── 1. HERO ──────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="on-dark relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-ladenfront.jpg"
@@ -103,7 +103,7 @@ export default function HomePage() {
           <h1 className="font-serif font-light text-white" style={{ fontSize: 'clamp(1.6rem, 4.5vw, 4.2rem)', lineHeight: 1.12, marginBottom: '1.25rem' }}>
             Exklusiver Schmuck,<br className="hidden sm:block" />
             <span className="gold-text"> Trauringe &amp; Goldankauf</span>
-            <br className="hidden sm:block" /> in Bielefeld
+            <br className="hidden sm:block" /> in Bielefeld &amp; Lippstadt
           </h1>
 
           <p className="font-sans text-base md:text-lg max-w-xl mx-auto leading-relaxed mb-5" style={{ color: 'rgba(245,240,232,0.62)' }}>
@@ -251,7 +251,7 @@ export default function HomePage() {
       <Reviews />
 
       {/* ── 6. GOLDANKAUF BANNER ─────────────────────────── */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="on-dark relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/goldankauf.jpg"
@@ -264,7 +264,7 @@ export default function HomePage() {
         <div className="relative max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <p className="section-subtitle mb-4">Jetzt verkaufen</p>
           <h2 className="font-serif font-light text-white mb-5" style={{ fontSize: 'clamp(1.7rem, 3.8vw, 3.2rem)', lineHeight: 1.15 }}>
-            Fairer <span className="gold-text">Goldankauf</span> in Bielefeld –<br className="hidden sm:block" /> kostenlose Bewertung, sofortige Auszahlung.
+            Fairer <span className="gold-text">Goldankauf</span> in Bielefeld &amp; Lippstadt –<br className="hidden sm:block" /> kostenlose Bewertung, sofortige Auszahlung.
           </h2>
           <div className="divider-gold mx-auto mb-8" />
           <div className="flex flex-wrap justify-center gap-3 mb-10">

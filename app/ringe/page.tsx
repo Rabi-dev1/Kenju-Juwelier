@@ -6,7 +6,7 @@ import AppointmentForm from '@/components/AppointmentForm';
 import JewelrySlider from '@/components/JewelrySlider';
 
 export const metadata: Metadata = {
-  title: 'Schmuck – Ringe, Ketten, Anhänger & mehr | KenJu Juwelier Bielefeld',
+  title: 'Schmuck, Ringe & Ketten in Bielefeld',
   description: 'Goldschmuck bei KenJu Juwelier Bielefeld: Ringe, Brillantringe, Ketten, Anhänger, Armbänder (auch Silber & Edelstahl), Fußketten, Creolen und mehr.',
   keywords: ['Schmuck Bielefeld', 'Goldringe', 'Brillantringe', 'Goldketten', 'Anhänger Gold', 'Armbänder Gold', 'Armband Silber', 'Armband Edelstahl', 'Fußketten Gold', 'Creolen', '585 Gold', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju.de/ringe' },
@@ -41,7 +41,7 @@ export default function SchmuckPage() {
   return (
     <>
       <CategoryHero
-        title="Schmuck bei KenJu Juwelier Bielefeld"
+        title="Schmuck in Bielefeld & Lippstadt"
         subtitle="Gold · Brillanten · Leidenschaft"
         description="Memory-Ringe, Solitär-Ringe, Anhänger, Ketten, Armbänder, Fußketten, Ohrstecker & Brillantschmuck – in Gold, Silber und Edelstahl."
         imageSrc="/images/ringe.jpg"

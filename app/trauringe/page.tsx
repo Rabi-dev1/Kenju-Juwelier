@@ -4,8 +4,8 @@ import Image from 'next/image';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Trauringe & Verlobungsringe Bielefeld & Lippstadt | KenJu Juwelier',
-  description: 'Trauringe, Verlobungsringe und Partnerringe in Bielefeld und Lippstadt. Gold, Platin, Titan und mehr – persönliche Beratung und individuelle Anfertigung bei Juwelier KenJu.',
+  title: 'Trauringe & Verlobungsringe Bielefeld',
+  description: 'Trauringe, Verlobungsringe und Partnerringe in Bielefeld und Lippstadt. Gold, Platin, Titan und mehr – persönliche Beratung und Anfertigung nach Maß.',
   keywords: ['Trauringe Bielefeld', 'Verlobungsringe Bielefeld', 'Trauringe Lippstadt', 'Verlobungsringe Lippstadt', 'Eheringe Bielefeld', 'Partnerringe', 'Trauringe Platin', 'Trauringe Titan', 'Trauring Gelbgold'],
   alternates: { canonical: 'https://kenju.de/trauringe' },
 };
@@ -97,7 +97,7 @@ export default function TrauringePage() {
     <>
       {/* ── HERO ─────────────────────────────────────────── */}
       <section
-        className="relative flex items-end pb-16 pt-36 overflow-hidden"
+        className="on-dark relative flex items-end pb-16 pt-36 overflow-hidden"
         style={{ background: '#0F0D0A', minHeight: '60vh' }}
       >
         <div className="absolute inset-0">

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { EMAIL } from '@/lib/standorte';
 
 export const metadata: Metadata = {
-  title: 'Datenschutzerklärung | KenJu Juwelier Bielefeld & Lippstadt',
+  title: 'Datenschutzerklärung',
   robots: { index: false },
 };
 

@@ -61,6 +61,23 @@ html.dark {
 
 @layer components {
 
+  /* ── Bereiche mit dauerhaft dunklem Grund (Hero über Bild) ──
+     Dort gilt immer die helle Goldpalette, sonst ist der Text
+     im hellen Modus zu dunkel für den abgedunkelten Hintergrund. */
+  .on-dark {
+    --kj-gold:        #C9A84C;
+    --kj-gold-light:  #E8C96A;
+    --kj-gold-dark:   #A6873A;
+  }
+
+  /* ── Größere Tippflächen für Kontaktlinks auf Touch-Geräten ──
+     Telefonnummern und E-Mail-Adressen sollen bequem antippbar sein. */
+  .touch-link {
+    display: inline-block;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
   /* ── Gold gradient text ── */
   .gold-text {
     background: linear-gradient(135deg, var(--kj-gold) 0%, var(--kj-gold-light) 50%, var(--kj-gold-dark) 100%);

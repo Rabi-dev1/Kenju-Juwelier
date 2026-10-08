@@ -18,7 +18,6 @@ export const standorte = [
     mobil: { label: '0176 63284312', href: 'tel:+4917663284312' },
     nummern: [
       { typ: 'Telefon', label: '0521 77075050', href: 'tel:+4952177075050' },
-      { typ: 'Mobil',   label: '0176 51933306', href: 'tel:+4917651933306' },
       { typ: 'Mobil',   label: '0176 63284312', href: 'tel:+4917663284312' },
     ],
     zeiten: [

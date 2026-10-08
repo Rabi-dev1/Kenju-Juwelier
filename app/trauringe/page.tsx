@@ -4,9 +4,9 @@ import Image from 'next/image';
 import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
-  title: 'Trauringe in Bielefeld & Lippstadt – Individuelle Anfertigung | KenJu',
-  description: 'Trauringe in Bielefeld und Lippstadt bei KenJu Juwelier. Persönliche Beratung, individuelle Anfertigung in Gelbgold, Weißgold und Roségold. Kostenloser Beratungstermin.',
-  keywords: ['Trauringe Bielefeld', 'Trauringe Lippstadt', 'Eheringe Bielefeld', 'Eheringe Lippstadt', 'Trauringe individuell', 'Trauring Gelbgold'],
+  title: 'Trauringe & Verlobungsringe Bielefeld & Lippstadt | KenJu Juwelier',
+  description: 'Trauringe, Verlobungsringe und Partnerringe in Bielefeld und Lippstadt. Gold, Platin, Titan und mehr – persönliche Beratung und individuelle Anfertigung bei Juwelier KenJu.',
+  keywords: ['Trauringe Bielefeld', 'Verlobungsringe Bielefeld', 'Trauringe Lippstadt', 'Verlobungsringe Lippstadt', 'Eheringe Bielefeld', 'Partnerringe', 'Trauringe Platin', 'Trauringe Titan', 'Trauring Gelbgold'],
   alternates: { canonical: 'https://kenju.de/trauringe' },
 };
 
@@ -19,20 +19,34 @@ const vorteile = [
 
 const materialien = [
   {
-    name: '585 Gelbgold',
+    name: 'Gelbgold',
     desc: 'Klassisch & zeitlos.',
     gradient: 'linear-gradient(135deg, #c8a84b 0%, #f5d98a 40%, #b8932a 70%, #e8c56a 100%)',
   },
   {
-    name: '585 Weißgold',
+    name: 'Weißgold',
     desc: 'Modern & elegant.',
     gradient: 'linear-gradient(135deg, #b0b8c1 0%, #e8edf2 40%, #8a9299 70%, #d4dde5 100%)',
   },
   {
-    name: '585 Roségold',
+    name: 'Roségold',
     desc: 'Warm & romantisch.',
     gradient: 'linear-gradient(135deg, #c9826a 0%, #edb89a 40%, #b06a52 70%, #e0a080 100%)',
   },
+];
+
+/* Goldlegierungen in Karat */
+const legierungen = ['333', '375', '585', '750'];
+
+/* Weitere Materialien für Trauringe */
+const weitereMaterialien = [
+  'Platin',
+  'Palladium',
+  'Titan',
+  'Tungsten',
+  'Keramik',
+  'Silber',
+  'Edelstahl',
 ];
 
 const kollektion = [
@@ -102,14 +116,14 @@ export default function TrauringePage() {
           <nav className="flex items-center gap-2 font-sans text-xs mb-8 tracking-widest uppercase" style={{ color: 'rgba(245,240,232,0.45)' }}>
             <Link href="/" style={{ color: 'rgba(245,240,232,0.45)' }} className="hover:opacity-80 transition-opacity">Startseite</Link>
             <span style={{ opacity: 0.4 }}>›</span>
-            <span style={{ color: 'var(--kj-gold)' }}>Trauringe</span>
+            <span style={{ color: 'var(--kj-gold)' }}>Trauringe &amp; Verlobungsringe</span>
           </nav>
-          <h1 className="font-serif font-light mb-6 text-white" style={{ fontSize: 'clamp(2.2rem, 6vw, 5.5rem)', lineHeight: 1.05 }}>
-            Trauringe in Bielefeld<br className="hidden sm:block" /> &amp; Lippstadt
+          <h1 className="font-serif font-light mb-6 text-white" style={{ fontSize: 'clamp(1.9rem, 5vw, 4.5rem)', lineHeight: 1.08 }}>
+            Trauringe &amp; Verlobungsringe<br className="hidden sm:block" /> in Bielefeld &amp; Lippstadt
           </h1>
           <div className="divider-gold mb-6" />
           <p className="font-sans text-lg max-w-2xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.65)' }}>
-            Ihr Trauring ist mehr als ein Ring – er ist ein Versprechen für die Ewigkeit. Bei KenJu Juwelier in Bielefeld und Lippstadt beraten wir Sie persönlich zu exklusiven Trauringen aus Gelbgold, Weißgold und Roségold und fertigen Ihre Ringe individuell nach Maß.
+            Ihr Ring ist mehr als Schmuck – er ist ein Versprechen für die Ewigkeit. Bei Juwelier KenJu in Bielefeld und Lippstadt beraten wir Sie persönlich zu Trauringen, Verlobungsringen und Partnerringen und fertigen Ihre Ringe individuell nach Maß.
           </p>
           <Link href="#termin" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem' }}>
             Jetzt Beratung vereinbaren
@@ -122,6 +136,41 @@ export default function TrauringePage() {
                 <span style={{ color: 'var(--kj-gold)' }}>✓</span>{item}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── EINFÜHRUNGSTEXT ──────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--kj-bg)' }}>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-4">Juwelier KenJu</p>
+            <h2 className="section-title mb-4">Trau- &amp; Verlobungsringe für besondere Momente</h2>
+            <div className="divider-gold mx-auto" />
+          </div>
+
+          <div className="space-y-5 font-sans text-base leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+            <p>
+              Ein Ring erzählt eine Geschichte – von einem besonderen Versprechen, einem gemeinsamen Weg und einem
+              Moment, der für immer bleibt. Bei Juwelier KenJu finden Sie eine sorgfältig ausgewählte Kollektion an
+              Trauringen, Verlobungsringen und Partnerringen, die hochwertige Materialien, erstklassige Verarbeitung
+              und zeitlose Eleganz vereinen.
+            </p>
+            <p>
+              Ob klassisch und schlicht, modern und stilvoll oder mit funkelnden Diamanten und besonderen Details –
+              gemeinsam mit Ihnen finden wir den Ring, der Ihre Persönlichkeit widerspiegelt und Ihre ganz persönliche
+              Geschichte erzählt.
+            </p>
+            <p>
+              Bei Juwelier KenJu legen wir großen Wert darauf, dass nicht nur das Design überzeugt. Auch die Passform,
+              das Material und die Verarbeitung spielen eine entscheidende Rolle für einen Ring, der Sie im Alltag und
+              ein Leben lang begleitet.
+            </p>
+            <p>
+              In einer persönlichen und individuellen Beratung nehmen wir uns Zeit für Ihre Wünsche und zeigen Ihnen
+              verschiedene Stilrichtungen, Materialien und Gestaltungsmöglichkeiten. So finden wir gemeinsam den Ring,
+              der zu Ihnen passt und Ihren besonderen Moment unvergesslich macht.
+            </p>
           </div>
         </div>
       </section>
@@ -175,6 +224,45 @@ export default function TrauringePage() {
                 <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>{m.desc}</p>
               </div>
             ))}
+          </div>
+
+          {/* Goldlegierungen */}
+          <div className="mt-5 p-6" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+            <p className="font-sans text-xs tracking-widest uppercase mb-4" style={{ color: 'var(--kj-gold)' }}>
+              Goldlegierungen
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {legierungen.map((l) => (
+                <span
+                  key={l}
+                  className="font-serif text-lg px-5 py-2"
+                  style={{ background: 'var(--kj-surface)', border: '1px solid var(--kj-border)', color: 'var(--kj-text)' }}
+                >
+                  {l}
+                </span>
+              ))}
+            </div>
+            <p className="font-sans text-xs mt-4" style={{ color: 'var(--kj-muted)' }}>
+              Erhältlich in Gelbgold, Weißgold und Roségold – auch als Bicolor-Kombination.
+            </p>
+          </div>
+
+          {/* Weitere Materialien */}
+          <div className="mt-4 p-6" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+            <p className="font-sans text-xs tracking-widest uppercase mb-4" style={{ color: 'var(--kj-gold)' }}>
+              Weitere Materialien für Trauringe
+            </p>
+            <div className="flex flex-wrap gap-2.5">
+              {weitereMaterialien.map((m) => (
+                <span
+                  key={m}
+                  className="font-sans text-sm px-4 py-1.5"
+                  style={{ background: 'var(--kj-surface)', border: '1px solid var(--kj-border)', color: 'var(--kj-muted)' }}
+                >
+                  {m}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

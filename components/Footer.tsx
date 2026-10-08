@@ -3,7 +3,7 @@ import { standorte, EMAIL } from '@/lib/standorte';
 
 const categories = [
   { label: 'Schmuck',       href: '/ringe' },
-  { label: 'Trauringe',     href: '/trauringe' },
+  { label: 'Trauringe & Verlobungsringe', href: '/trauringe' },
   { label: 'Uhren',         href: '/uhren' },
   { label: 'Goldankauf',    href: '/goldankauf' },
   { label: 'Service',       href: '/service' },

@@ -39,10 +39,10 @@ const categories = [
   },
   {
     title: 'Trauringe',
-    desc: 'Individuelle Anfertigung in Bielefeld',
+    desc: 'Trau-, Verlobungs- & Partnerringe',
     href: '/trauringe',
     img: '/images/trauringehero.jpg',
-    imgAlt: 'Trauringe vom Juwelier in Bielefeld – individuelle Anfertigung bei KenJu',
+    imgAlt: 'Trauringe und Verlobungsringe vom Juwelier in Bielefeld – individuelle Anfertigung bei KenJu',
     sub: [],
   },
   {

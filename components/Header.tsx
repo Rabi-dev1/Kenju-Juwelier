@@ -6,7 +6,7 @@ import ThemeToggle from './ThemeToggle';
 
 const nav = [
   { label: 'Schmuck',         href: '/ringe' },
-  { label: 'Trauringe',       href: '/trauringe' },
+  { label: 'Trauringe & Verlobungsringe', href: '/trauringe' },
   { label: 'Uhren',           href: '/uhren' },
   { label: 'Goldankauf',      href: '/goldankauf' },
   { label: 'Service',         href: '/service' },
@@ -47,7 +47,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden xl:flex items-center gap-5">
             {nav.map((item) => (
               <Link
                 key={item.href}
@@ -70,7 +70,7 @@ export default function Header() {
           </nav>
 
           {/* Mobile: theme toggle + burger */}
-          <div className="lg:hidden flex items-center gap-3">
+          <div className="xl:hidden flex items-center gap-3">
             <ThemeToggle />
             <button
               onClick={() => setOpen(!open)}
@@ -96,7 +96,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className="lg:hidden overflow-hidden transition-all duration-300"
+        className="xl:hidden overflow-hidden transition-all duration-300"
         style={{
           maxHeight: open ? '600px' : '0',
           borderTop: open ? '1px solid var(--kj-border)' : 'none',

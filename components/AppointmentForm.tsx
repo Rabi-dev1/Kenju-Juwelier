@@ -24,7 +24,7 @@ const categories = [
   'Ketten & Anhänger',
   'Armbänder & Fußketten',
   'Ohrschmuck',
-  'Trauringe',
+  'Trauringe & Verlobungsringe',
   'Uhren & Uhrenservice',
   'Goldankauf / Silberankauf',
   'Reparatur & Gravur',

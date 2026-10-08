@@ -51,22 +51,22 @@ const weitereMaterialien = [
 
 const kollektion = [
   {
-    img: '/images/stonering.jpg',
-    alt: 'Klassischer Solitärring 585 Gelbgold KenJu Bielefeld',
-    title: 'Klassischer Solitärring',
-    desc: '585 Gelbgold mit zeitlosem Design.',
+    img: '/images/trauringe2.jpg',
+    alt: 'Trauringe in Gelbgold – Kollektion bei KenJu Juwelier Bielefeld & Lippstadt',
+    title: 'Gelbgold',
+    desc: 'Warme Goldtöne, klassisch bis modern – mit und ohne Brillanten.',
   },
   {
-    img: '/images/bigring.jpg',
-    alt: 'Bicolor Designring 585 Gelbgold KenJu Bielefeld',
-    title: 'Bicolor Designring',
-    desc: '585 Gelbgold & Bicolor mit besonderer Struktur.',
+    img: '/images/trauringe3.jpg',
+    alt: 'Trauringe in Weißgold mit Brillanten – KenJu Juwelier Bielefeld & Lippstadt',
+    title: 'Weißgold & Bicolor',
+    desc: 'Elegante Modelle, teils mit Brillantbesatz und Bicolor-Details.',
   },
   {
-    img: '/images/doppelring.jpg',
-    alt: 'Trauring-Set 585 Gelbgold KenJu Bielefeld',
-    title: 'Trauring-Set',
-    desc: '585 Gelbgold für Paare mit klassischem Geschmack.',
+    img: '/images/trauringe1.jpg',
+    alt: 'Trauringe in Edelstahl, Titan und Silber – KenJu Juwelier Bielefeld & Lippstadt',
+    title: 'Weitere Materialien',
+    desc: 'Edelstahl, Titan, Tungsten und Silber – robust und pflegeleicht.',
   },
 ];
 

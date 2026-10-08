@@ -45,15 +45,15 @@ export default function ImpressumPage() {
             {standorte.map((s) => (
               <p key={s.id} className={s.id === 'lippstadt' ? 'mt-4' : undefined}>
                 <strong style={{ color: 'var(--kj-text)' }}>{s.stadt}</strong><br />
-                Telefon:{' '}
-                <a href={s.telefon.href} style={{ color: 'var(--kj-gold)' }} className="hover:underline">
-                  {s.telefon.label}
-                </a>
-                <br />
-                Mobil:{' '}
-                <a href={s.mobil.href} style={{ color: 'var(--kj-gold)' }} className="hover:underline">
-                  {s.mobil.label}
-                </a>
+                {s.nummern.map((n) => (
+                  <span key={n.href}>
+                    {n.typ}:{' '}
+                    <a href={n.href} style={{ color: 'var(--kj-gold)' }} className="hover:underline">
+                      {n.label}
+                    </a>
+                    <br />
+                  </span>
+                ))}
               </p>
             ))}
             <p className="mt-4">

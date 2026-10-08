@@ -13,8 +13,14 @@ export const standorte = [
     strasse: 'Bahnhofstraße 28',
     zusatz: 'Loom Bielefeld · 1. OG',
     plz: '33602',
-    telefon: { label: '0176 51933306', href: 'tel:+4917651933306' },
+    /* Erste Nummer = Hauptnummer für Anruf-Buttons */
+    telefon: { label: '0521 77075050', href: 'tel:+4952177075050' },
     mobil: { label: '0176 63284312', href: 'tel:+4917663284312' },
+    nummern: [
+      { typ: 'Telefon', label: '0521 77075050', href: 'tel:+4952177075050' },
+      { typ: 'Mobil',   label: '0176 51933306', href: 'tel:+4917651933306' },
+      { typ: 'Mobil',   label: '0176 63284312', href: 'tel:+4917663284312' },
+    ],
     zeiten: [
       { tage: 'Mo – Sa', zeit: '09:30 – 20:00 Uhr' },
     ],
@@ -29,6 +35,10 @@ export const standorte = [
     plz: '59555',
     telefon: { label: '02941 9889114', href: 'tel:+4929419889114' },
     mobil: { label: '0176 63284312', href: 'tel:+4917663284312' },
+    nummern: [
+      { typ: 'Telefon', label: '02941 9889114', href: 'tel:+4929419889114' },
+      { typ: 'Mobil',   label: '0176 63284312', href: 'tel:+4917663284312' },
+    ],
     zeiten: [
       { tage: 'Mo – Fr', zeit: '10:00 – 18:00 Uhr' },
       { tage: 'Samstag', zeit: '10:00 – 16:00 Uhr' },

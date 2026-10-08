@@ -113,7 +113,7 @@ export default function AppointmentForm() {
           </a>
           <br />
           Oder rufen Sie an – Bielefeld:{' '}
-          <a href="tel:+4917651933306" style={{ color: 'var(--kj-gold)' }}>0176 51933306</a>
+          <a href="tel:+4952177075050" style={{ color: 'var(--kj-gold)' }}>0521 77075050</a>
           {' '}· Lippstadt:{' '}
           <a href="tel:+4929419889114" style={{ color: 'var(--kj-gold)' }}>02941 9889114</a>
         </p>

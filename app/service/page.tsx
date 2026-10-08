@@ -19,7 +19,7 @@ const serviceJsonLd = {
     '@type': 'JewelryStore',
     name: 'KenJu Juwelier',
     address: { '@type': 'PostalAddress', streetAddress: 'Bahnhofstraße 28', addressLocality: 'Bielefeld', postalCode: '33602', addressCountry: 'DE' },
-    telephone: '+4917651933306',
+    telephone: '+4952177075050',
     email: 'info@kenju.de',
     url: 'https://kenju.de',
   },

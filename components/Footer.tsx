@@ -118,13 +118,14 @@ export default function Footer() {
                   <br />
                   <span style={{ opacity: 0.75, fontSize: '0.78rem' }}>{s.zeitenKurz}</span>
                   <br />
-                  <a href={s.telefon.href} className="transition-opacity hover:opacity-80" style={{ fontSize: '0.78rem' }}>
-                    Tel. {s.telefon.label}
-                  </a>
-                  {' · '}
-                  <a href={s.mobil.href} className="transition-opacity hover:opacity-80" style={{ fontSize: '0.78rem' }}>
-                    Mobil {s.mobil.label}
-                  </a>
+                  {s.nummern.map((n, i) => (
+                    <span key={n.href}>
+                      {i > 0 && ' · '}
+                      <a href={n.href} className="transition-opacity hover:opacity-80" style={{ fontSize: '0.78rem' }}>
+                        {n.label}
+                      </a>
+                    </span>
+                  ))}
                 </li>
               ))}
               <li>

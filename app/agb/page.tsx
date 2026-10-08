@@ -89,7 +89,7 @@ export default function AGBPage() {
             </p>
             <p className="mt-3">
               Um Ihr Widerrufsrecht auszuüben, müssen Sie uns – Juwelier KenJu, Inhaber Kenan Gülünay,
-              Bahnhofstraße 28, 33602 Bielefeld, Telefon 0176 51933306, E-Mail {EMAIL} – mittels einer eindeutigen
+              Bahnhofstraße 28, 33602 Bielefeld, Telefon 0521 77075050, E-Mail {EMAIL} – mittels einer eindeutigen
               Erklärung (z. B. per Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu
               widerrufen, informieren. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die
               Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.

@@ -22,7 +22,7 @@ const localBusinessJsonLd = {
   '@type': 'JewelryStore',
   name: 'KenJu Juwelier',
   url: 'https://kenju.de',
-  telephone: '+4917651933306',
+  telephone: '+4952177075050',
   email: 'info@kenju.de',
   address: {
     '@type': 'PostalAddress',

@@ -114,7 +114,7 @@ const jsonLd = {
   url: 'https://kenju.de',
   logo: 'https://kenju.de/favicon.svg',
   image: 'https://kenju.de/images/hero-ladenfront.jpg',
-  telephone: '+4917651933306',
+  telephone: '+4952177075050',
   email: 'info@kenju.de',
   foundingDate: '2010',
   address: {

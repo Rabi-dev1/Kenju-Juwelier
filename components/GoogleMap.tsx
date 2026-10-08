@@ -101,11 +101,18 @@ export default function GoogleMap() {
                   <p className="font-sans text-xs tracking-widest uppercase mb-1.5" style={{ color: 'var(--kj-gold)', opacity: 0.8 }}>
                     Telefon
                   </p>
-                  <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-text)' }}>
-                    <a href={s.telefon.href} className="transition-opacity hover:opacity-75">{s.telefon.label}</a><br />
-                    <span style={{ color: 'var(--kj-muted)' }}>Mobil: </span>
-                    <a href={s.mobil.href} className="transition-opacity hover:opacity-75">{s.mobil.label}</a>
-                  </p>
+                  <table className="font-sans text-sm" style={{ color: 'var(--kj-text)' }}>
+                    <tbody>
+                      {s.nummern.map((n) => (
+                        <tr key={n.href}>
+                          <td className="pr-3 py-0.5 align-top whitespace-nowrap" style={{ color: 'var(--kj-muted)' }}>{n.typ}</td>
+                          <td className="py-0.5">
+                            <a href={n.href} className="transition-opacity hover:opacity-75">{n.label}</a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

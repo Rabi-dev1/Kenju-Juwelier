@@ -6,6 +6,7 @@ import ThemeToggle from './ThemeToggle';
 
 const nav = [
   { label: 'Schmuck',         href: '/ringe' },
+  { label: 'Labor-Diamanten', href: '/labordiamanten' },
   { label: 'Trauringe & Verlobungsringe', href: '/trauringe' },
   { label: 'Uhren',           href: '/uhren' },
   { label: 'Goldankauf',      href: '/goldankauf' },
@@ -47,12 +48,12 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden xl:flex items-center gap-5">
+          <nav className="hidden xl:flex items-center gap-4 2xl:gap-5">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="font-sans text-xs tracking-widest uppercase transition-colors duration-200 relative group/link"
+                className="font-sans text-xs tracking-wider 2xl:tracking-widest uppercase whitespace-nowrap transition-colors duration-200 relative group/link"
                 style={{ color: 'var(--kj-muted)' }}
                 onMouseEnter={e => (e.currentTarget.style.color = 'var(--kj-gold)')}
                 onMouseLeave={e => (e.currentTarget.style.color = 'var(--kj-muted)')}

@@ -153,7 +153,7 @@ export default function SchmuckPage() {
                 Entdecken Sie hochwertige Solitärringe, Memory-Ringe und Brillantringe mit funkelnden Brillanten. Gefertigt in 585 Gelbgold, Weißgold oder Roségold und individuell nach Ihren Wünschen ausgewählt.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="#termin" className="btn-dark">Jetzt kontaktieren</Link>
+                <Link href="/labordiamanten" className="btn-dark">Labor-Diamanten entdecken</Link>
                 <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
               </div>
             </div>

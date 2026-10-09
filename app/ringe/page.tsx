@@ -105,6 +105,13 @@ export default function SchmuckPage() {
               auf Ihren Besuch.
             </p>
 
+            <div>
+              <h3 className="font-serif text-2xl font-light mb-3" style={{ color: 'var(--kj-text)' }}>
+                Ohrschmuck
+              </h3>
+              <p>Ohrstecker, Creolen, Ohrhänger</p>
+            </div>
+
             <p className="text-sm pt-2">
               Goldmünzen, Goldbarren und Investmentgold sowie unseren Silberankauf finden Sie im Bereich{' '}
               <Link href="/goldankauf" style={{ color: 'var(--kj-gold)' }} className="underline underline-offset-2">
@@ -146,11 +153,11 @@ export default function SchmuckPage() {
             <div className="p-8 lg:p-14 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
               <p className="section-subtitle mb-4">Der besondere Moment</p>
               <h2 className="font-serif text-3xl md:text-4xl font-light mb-5" style={{ color: 'var(--kj-text)', lineHeight: 1.2 }}>
-                Brillantschmuck bei KenJu Juwelier Bielefeld
+                Diamantschmuck bei Juwelier KenJu
               </h2>
               <div className="divider-gold mb-7" />
               <p className="font-sans text-sm leading-relaxed mb-9" style={{ color: 'var(--kj-muted)' }}>
-                Entdecken Sie hochwertige Solitärringe, Memory-Ringe und Brillantringe mit funkelnden Brillanten. Gefertigt in 585 Gelbgold, Weißgold oder Roségold und individuell nach Ihren Wünschen ausgewählt.
+                Entdecken Sie eine besonders große Auswahl an hochwertigen Schmuckstücken sowohl mit natürlichen Diamanten, als auch mit Labor Diamanten besetzt.<br />Gerne fertigen wir auch Schmuckstücke nach Ihren Wünschen an.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/labordiamanten" className="btn-dark">Labor-Diamanten entdecken</Link>

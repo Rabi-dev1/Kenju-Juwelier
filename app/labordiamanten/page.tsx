@@ -51,6 +51,13 @@ const kollektion = [
     alt: 'Tennis-Armbänder mit Labor-Diamanten in Gelb- und Weißgold – KenJu Juwelier Bielefeld & Lippstadt',
     position: '50% 55%',
   },
+  {
+    titel: 'Verlobungsringe',
+    text: 'Verlobungsringe mit funkelndem Labor-Diamanten – klassisch gefasst, für den Moment, der bleibt.',
+    bild: '/images/Labordiamantverlobungsring.jpeg',
+    alt: 'Verlobungsring mit Labor-Diamant wird bei KenJu Juwelier Bielefeld & Lippstadt angesteckt',
+    position: '50% 42%',
+  },
 ];
 
 const vorteile = [
@@ -132,11 +139,11 @@ export default function LaborDiamantenPage() {
             </h2>
             <div className="divider-gold mx-auto my-6" />
             <p className="font-sans text-base leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-              Drei Beispiele aus unserer Auswahl – im Geschäft zeigen wir Ihnen gerne weitere Modelle.
+              Beispiele aus unserer Auswahl – im Geschäft zeigen wir Ihnen gerne weitere Modelle.
             </p>
           </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-x-6 sm:gap-y-14 lg:gap-6 xl:gap-8">
             {kollektion.map((k) => (
               <article key={k.titel} className="group">
                 <div
@@ -147,13 +154,13 @@ export default function LaborDiamantenPage() {
                     src={k.bild}
                     alt={k.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-[1400ms] ease-out md:group-hover:scale-[1.035] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-[1400ms] ease-out sm:group-hover:scale-[1.035] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                     style={{ objectPosition: k.position }}
                   />
                 </div>
-                <div className="pt-6 text-center md:text-left">
-                  <h3 className="font-serif font-light text-2xl md:text-[1.7rem] mb-2" style={{ color: 'var(--kj-text)' }}>
+                <div className="pt-6 text-center sm:text-left">
+                  <h3 className="font-serif font-light text-2xl lg:text-[1.5rem] mb-2" style={{ color: 'var(--kj-text)' }}>
                     {k.titel}
                   </h3>
                   <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>

@@ -1,292 +1,246 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
-import AppointmentForm from '@/components/AppointmentForm';
+import Link from 'next/link';
+import { standorte } from '@/lib/standorte';
 
 export const metadata: Metadata = {
   title: 'Labor Diamanten Bielefeld & Lippstadt',
-  description: 'Labor Diamanten in Bielefeld und Lippstadt: IGI-zertifiziert, identische Brillanz wie Naturdiamanten und bis zu 90 % günstiger. Ideal für Verlobungsringe.',
-  keywords: ['Labor Diamanten Bielefeld', 'Labor Diamanten Lippstadt', 'Lab Grown Diamonds', 'synthetische Diamanten', 'Verlobungsring Labor Diamant', 'ethische Diamanten'],
+  description:
+    'Labor-Diamant-Schmuck in Bielefeld und Lippstadt: elegante Colliers, Ohrringe und Tennis-Armbänder. Persönliche Beratung bei KenJu Juwelier.',
+  keywords: [
+    'Labor Diamanten Bielefeld',
+    'Labor Diamanten Lippstadt',
+    'Labordiamant Schmuck',
+    'Diamant Collier',
+    'Diamant Ohrringe',
+    'Tennisarmband Diamanten',
+    'Lab Grown Diamonds',
+  ],
   alternates: { canonical: 'https://kenju.de/labordiamanten' },
 };
 
-const productJsonLd = {
+const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'Labor Diamant Schmuck',
-  description: 'Ethisch erzeugte Labor Diamanten mit identischer chemischer, physikalischer und optischer Struktur wie Naturdiamanten.',
-  brand: { '@type': 'Brand', name: 'KenJu Juwelier' },
-  category: 'Jewelry',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://kenju.de' },
+    { '@type': 'ListItem', position: 2, name: 'Labor Diamanten', item: 'https://kenju.de/labordiamanten' },
+  ],
 };
 
-const benefits = [
-  { icon: '◈', title: 'Identische Brillanz',   desc: 'Chemisch und optisch identisch mit Naturdiamanten.' },
-  { icon: '◉', title: 'Ethisch & Nachhaltig',   desc: 'Kein Bergbau – verantwortungsvoll im Labor hergestellt.' },
-  { icon: '⬡', title: 'Fairer Preis',            desc: 'Bis zu 90 % günstiger als vergleichbare Naturdiamanten.' },
-  { icon: '◯', title: 'Zertifiziert',            desc: 'Alle Steine mit IGI-Zertifikat.' },
+/* Originalbilder des Kunden – exakte Dateinamen (Groß-/Kleinschreibung zählt auf dem Server) */
+const kollektion = [
+  {
+    titel: 'Anhänger & Colliers',
+    text: 'Elegante Diamantketten und Anhänger mit zeitloser Ausstrahlung – für besondere Momente und jeden Tag.',
+    bild: '/images/labordiamantkette.jpeg',
+    alt: 'Collier mit Labor-Diamanten auf schwarzer Büste – KenJu Juwelier Bielefeld & Lippstadt',
+    position: '50% 12%',
+  },
+  {
+    titel: 'Labor-Diamant-Ohrringe',
+    text: 'Funkelnde Ohrringe mit moderner Eleganz – stilvolle Begleiter für jeden Anlass.',
+    bild: '/images/labordiamantoringe.jpeg',
+    alt: 'Ohrringe mit Labor-Diamanten – KenJu Juwelier Bielefeld & Lippstadt',
+    position: '50% 55%',
+  },
+  {
+    titel: 'Tennis-Armbänder',
+    text: 'Klassische Tennis-Armbänder mit funkelnder Brillanz – zeitlos und ausdrucksstark.',
+    bild: '/images/Labordiamanttennisband.jpeg',
+    alt: 'Tennis-Armbänder mit Labor-Diamanten in Gelb- und Weißgold – KenJu Juwelier Bielefeld & Lippstadt',
+    position: '50% 55%',
+  },
 ];
 
-const collections = [
-  { title: 'Verlobungsringe',   desc: 'Solitär, Halo oder Pavé – individuell gefertigt.',       img: '/images/ringe.jpg' },
-  { title: 'Ohrringe & Creolen', desc: '585 Gelbgold, Weißgold oder Roségold.',                  img: '/images/ohrstecker.jpg' },
-  { title: 'Anhänger & Colliers', desc: 'Klassisch oder modern – zeitlos schön.',                img: '/images/halsketten.jpg' },
-  { title: 'Tennis-Armbänder',  desc: 'Funkelnde Steine, elegant am Handgelenk.',                img: '/images/armband-rose.jpg' },
+const vorteile = [
+  {
+    titel: 'Echte Diamanten',
+    text: 'Labor-Diamanten besitzen dieselbe grundlegende chemische Zusammensetzung und Kristallstruktur wie natürlich entstandene Diamanten.',
+  },
+  {
+    titel: 'Moderne Herstellung',
+    text: 'Sie entstehen in kontrollierten technischen Verfahren statt über geologische Zeiträume in der Natur.',
+  },
+  {
+    titel: 'Persönliche Auswahl',
+    text: 'Wir unterstützen Sie dabei, einen Diamanten und ein Schmuckstück passend zu Ihren Vorstellungen und Ihrem Budget auszuwählen.',
+  },
 ];
 
-const faq = [
-  {
-    q: 'Was ist ein Labor Diamant?',
-    a: 'Ein Labor Diamant ist ein echter Diamant – chemisch, physikalisch und optisch identisch mit einem Naturdiamanten. Er entsteht im Labor unter denselben Bedingungen wie in der Natur, nur kontrolliert und ohne Bergbau.',
-  },
-  {
-    q: 'Kann man Labor Diamanten von Naturdiamanten unterscheiden?',
-    a: 'Mit bloßem Auge ist kein Unterschied erkennbar. Nur mit speziellen Gemmologen-Geräten kann der Ursprung festgestellt werden. Beide haben dieselbe Härte (10 Mohs), denselben Brechungsindex und dieselbe Brillanz.',
-  },
-  {
-    q: 'Sind Labor Diamanten wirklich günstiger?',
-    a: 'Ja – Labor Diamanten kosten bis zu 90 % weniger als vergleichbare Naturdiamanten. Das bedeutet: Sie bekommen deutlich mehr Karat und Qualität für Ihr Budget.',
-  },
-  {
-    q: 'Werden Labor Diamanten zertifiziert?',
-    a: 'Ja. Alle unsere Labor Diamanten kommen mit einem IGI-Zertifikat des unabhängigen International Gemological Institute, das Schliff, Farbe, Reinheit und Karatgewicht bescheinigt.',
-  },
-  {
-    q: 'Kann ich meinen Labor Diamant Ring individuell anfertigen lassen?',
-    a: 'Ja, selbstverständlich. Bei KenJu Juwelier beraten wir Sie persönlich und fertigen Ihren Ring nach Ihren genauen Wünschen an – in Ihrer gewünschten Gold-Legierung, Fassung und Ringgröße.',
-  },
-];
+const ueberschrift = { fontSize: 'clamp(1.9rem, 5.2vw, 3.4rem)', lineHeight: 1.12, color: 'var(--kj-text)' } as const;
 
 export default function LaborDiamantenPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      {/* Hero */}
-      <section className="on-dark relative pt-36 pb-24 overflow-hidden" style={{ background: '#0F0D0A' }}>
+      {/* ── A · HERO ─────────────────────────────────────── */}
+      <section
+        className="on-dark relative flex items-end overflow-hidden"
+        style={{ background: '#0F0D0A', minHeight: 'min(86svh, 780px)' }}
+      >
         <div className="absolute inset-0">
           <Image
-            src="/images/brillant-set-luxus.jpg"
-            alt="Labor Diamant Schmuck KenJu Juwelier Bielefeld"
+            src="/images/labordiamantkette.jpeg"
+            alt="Collier mit Labor-Diamanten – KenJu Juwelier Bielefeld & Lippstadt"
             fill
+            priority
             sizes="100vw"
             className="object-cover"
-            priority
-            style={{ opacity: 0.3 }}
+            style={{ objectPosition: '50% 30%', opacity: 0.8 }}
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,13,10,0.7) 0%, rgba(15,13,10,0.5) 50%, rgba(15,13,10,1) 100%)' }} />
-        </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="section-subtitle mb-4">Zukunft des Schmucks</p>
-          <h1 className="font-serif text-6xl md:text-7xl font-light mb-6 text-white">
-            <span className="gold-text">Labor</span> Diamanten
-          </h1>
-          <div className="divider-gold mx-auto mb-6" />
-          <p className="font-sans text-white/60 text-lg max-w-2xl mx-auto leading-relaxed mb-4">
-            Ethisch erzeugt. Identische Brillanz. Fairer Preis.
-          </p>
-          <p className="font-sans text-white/50 text-base max-w-xl mx-auto leading-relaxed mb-10">
-            Labor Diamanten sind echte Diamanten – hergestellt ohne Bergbau, mit voller Zertifizierung
-            und bis zu 90 % günstiger als Naturdiamanten.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#termin-labor" className="btn-gold">Jetzt beraten lassen</Link>
-            <a href="tel:+4917663284312" className="btn-outline-gold" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
-              +49 176 63284312
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-bg)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="section-subtitle mb-4">Ihre Vorteile</p>
-            <h2 className="section-title mb-4">Warum Labor Diamanten?</h2>
-            <div className="divider-gold mx-auto mb-6" />
-            <p className="font-sans text-sm max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-              Labor Diamanten sind keine Imitate – sie sind echte Diamanten, die im Labor unter denselben
-              geologischen Bedingungen wie in der Natur entstehen.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((b) => (
-              <div
-                key={b.title}
-                className="p-6 text-center transition-all duration-300 hover:shadow-lg"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <span className="text-4xl gold-text block mb-4">{b.icon}</span>
-                <h3 className="font-serif text-xl mb-3" style={{ color: 'var(--kj-text)' }}>{b.title}</h3>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{b.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="section-subtitle mb-4">Transparenz</p>
-            <h2 className="section-title mb-4">Labor vs. Natur – Der direkte Vergleich</h2>
-            <div className="divider-gold mx-auto mb-6" />
-          </div>
           <div
-            className="overflow-x-auto"
-            style={{ border: '1px solid var(--kj-border)', background: 'var(--kj-card)' }}
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(to top, rgba(15,13,10,0.96) 0%, rgba(15,13,10,0.78) 38%, rgba(15,13,10,0.35) 100%)',
+            }}
+          />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-16 md:pb-24">
+          <p className="section-subtitle mb-5">Labor-Diamanten</p>
+          <h1
+            className="font-serif font-light text-white mb-4 max-w-3xl"
+            style={{ fontSize: 'clamp(2.1rem, 6.4vw, 4.6rem)', lineHeight: 1.06 }}
           >
-            <table className="w-full font-sans text-sm">
-              <thead>
-                <tr style={{ borderBottom: '2px solid var(--kj-border)' }}>
-                  <th
-                    className="text-left py-5 px-8 font-medium tracking-widest uppercase"
-                    style={{ color: 'var(--kj-muted)', fontSize: '0.7rem' }}
-                  >
-                    Eigenschaft
-                  </th>
-                  <th
-                    className="text-center py-5 px-8 font-medium tracking-widest uppercase"
-                    style={{ color: 'var(--kj-gold)', fontSize: '0.7rem', background: 'rgba(201,168,76,0.06)' }}
-                  >
-                    ✦ Labor Diamant
-                  </th>
-                  <th
-                    className="text-center py-5 px-8 font-medium tracking-widest uppercase"
-                    style={{ color: 'var(--kj-muted)', fontSize: '0.7rem' }}
-                  >
-                    Naturdiamant
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Chemische Zusammensetzung', '100 % Kohlenstoff', '100 % Kohlenstoff'],
-                  ['Härte (Mohs-Skala)', '10 – Höchste Härte', '10 – Höchste Härte'],
-                  ['Brillanz & Feuer', 'Identisch', 'Identisch'],
-                  ['Unabhängige Zertifizierung', 'IGI-zertifiziert', 'IGI / GIA zertifiziert'],
-                  ['Ethik & Umwelt', '✓ Kein Bergbau erforderlich', '— Bergbau notwendig'],
-                  ['Preisvorteil', 'Bis zu 90 % günstiger', 'Referenzpreis'],
-                  ['Verfügbarkeit & Auswahl', 'Große, flexible Auswahl', 'Begrenzt & aufwendig'],
-                ].map(([prop, lab, nat], i) => (
-                  <tr
-                    key={prop}
-                    style={{
-                      borderBottom: '1px solid var(--kj-border)',
-                      background: i % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.03)',
-                    }}
-                  >
-                    <td className="py-5 px-8 font-medium text-sm" style={{ color: 'var(--kj-text)' }}>{prop}</td>
-                    <td
-                      className="py-5 px-8 text-center text-sm font-medium"
-                      style={{ color: 'var(--kj-gold)', background: 'rgba(201,168,76,0.04)' }}
-                    >
-                      {lab}
-                    </td>
-                    <td className="py-5 px-8 text-center text-sm" style={{ color: 'var(--kj-muted)' }}>{nat}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="font-sans text-xs text-center mt-5" style={{ color: 'var(--kj-muted)', opacity: 0.7 }}>
-            Alle Angaben nach aktuellem gemmologischen Stand. Unsere Labor Diamanten sind IGI-zertifiziert. Labor Diamanten haben dasselbe Zertifizierungssystem wie Naturdiamanten.
+            Labor-Diamanten in Bielefeld &amp; Lippstadt
+          </h1>
+          <p className="font-serif italic mb-6" style={{ fontSize: 'clamp(1.2rem, 3vw, 1.7rem)', color: 'var(--kj-gold)' }}>
+            Echte Diamanten. Zeitlose Brillanz.
           </p>
+          <div className="divider-gold mb-6" style={{ marginLeft: 0 }} />
+          <p className="font-sans leading-relaxed max-w-xl mb-9" style={{ color: 'rgba(245,240,232,0.78)', fontSize: '1rem' }}>
+            Entdecken Sie ausgewählten Schmuck mit im Labor gewachsenen Diamanten. Ob elegante Colliers,
+            ausdrucksstarke Ohrringe oder klassische Tennis-Armbänder – wir beraten Sie persönlich bei der
+            Auswahl Ihres Schmuckstücks.
+          </p>
+          <Link href="/#termin" className="btn-gold">
+            Persönliche Beratung anfragen
+          </Link>
         </div>
       </section>
 
-      {/* Collections */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-bg)' }}>
+      {/* ── B · KOLLEKTION ───────────────────────────────── */}
+      <section className="py-24 md:py-32" style={{ backgroundColor: 'var(--kj-bg)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="section-subtitle mb-4">Unsere Kollektion</p>
-            <h2 className="section-title mb-4">Labor Diamant Schmuck</h2>
-            <div className="divider-gold mx-auto" />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {collections.map((col) => (
-              <div
-                key={col.title}
-                className="overflow-hidden transition-all duration-300 hover:shadow-lg"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                <div className="relative h-52 category-img-placeholder overflow-hidden">
+          <header className="text-center max-w-2xl mx-auto mb-14 md:mb-20">
+            <p className="section-subtitle mb-4">Die Kollektion</p>
+            <h2 className="font-serif font-light" style={ueberschrift}>
+              Besondere Stücke. Für besondere Momente.
+            </h2>
+            <div className="divider-gold mx-auto my-6" />
+            <p className="font-sans text-base leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+              Drei Beispiele aus unserer Auswahl – im Geschäft zeigen wir Ihnen gerne weitere Modelle.
+            </p>
+          </header>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 lg:gap-10">
+            {kollektion.map((k) => (
+              <article key={k.titel} className="group">
+                <div
+                  className="relative overflow-hidden"
+                  style={{ aspectRatio: '4 / 5', background: 'var(--kj-surface)', border: '1px solid var(--kj-border)' }}
+                >
                   <Image
-                    src={col.img}
-                    alt={`Labor Diamant ${col.title} – KenJu Juwelier Bielefeld`}
+                    src={k.bild}
+                    alt={k.alt}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                    style={{ opacity: 0.8 }}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-[1400ms] ease-out md:group-hover:scale-[1.035] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                    style={{ objectPosition: k.position }}
                   />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,8,15,0.6), transparent)' }} />
                 </div>
-                <div className="p-5">
-                  <h3 className="font-serif text-xl mb-2" style={{ color: 'var(--kj-text)' }}>{col.title}</h3>
-                  <p className="font-sans text-sm leading-relaxed mb-4" style={{ color: 'var(--kj-muted)' }}>{col.desc}</p>
-                  <span className="font-sans text-xs tracking-widest uppercase flex items-center gap-2" style={{ color: 'var(--kj-gold)' }}>
-                    Anfragen <span>→</span>
-                  </span>
+                <div className="pt-6 text-center md:text-left">
+                  <h3 className="font-serif font-light text-2xl md:text-[1.7rem] mb-2" style={{ color: 'var(--kj-text)' }}>
+                    {k.titel}
+                  </h3>
+                  <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+                    {k.text}
+                  </p>
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── C · WARUM LABOR-DIAMANTEN ────────────────────── */}
+      <section
+        className="py-24 md:py-28"
+        style={{ backgroundColor: 'var(--kj-surface)', borderTop: '1px solid var(--kj-border)' }}
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <header className="text-center max-w-2xl mx-auto mb-14 md:mb-16">
+            <p className="section-subtitle mb-4">Warum Labor-Diamanten?</p>
+            <h2 className="font-serif font-light" style={ueberschrift}>
+              Brillanz, die überzeugt.
+            </h2>
+            <div className="divider-gold mx-auto mt-6" />
+          </header>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+            {vorteile.map((v) => (
+              <div key={v.titel} className="pt-6" style={{ borderTop: '1px solid var(--kj-gold)' }}>
+                <h3 className="font-serif font-light text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
+                  {v.titel}
+                </h3>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
+                  {v.text}
+                </p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Link href="#termin-labor" className="btn-gold">Individuelle Anfertigung anfragen</Link>
-          </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-surface)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-3">Häufige Fragen</p>
-            <h2 className="section-title">FAQ – Labor Diamanten</h2>
-            <div className="divider-gold mx-auto mt-4" />
-          </div>
-          <div className="space-y-4">
-            {faq.map((item) => (
-              <details
-                key={item.q}
-                className="p-5 transition-all"
+      {/* ── D · PERSÖNLICHE BERATUNG ─────────────────────── */}
+      <section
+        className="py-24 md:py-32"
+        style={{ backgroundColor: 'var(--kj-bg)', borderTop: '1px solid var(--kj-border)' }}
+      >
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="section-subtitle mb-4">Persönliche Beratung</p>
+          <h2 className="font-serif font-light" style={ueberschrift}>
+            Finden Sie Ihren Lieblingsdiamanten.
+          </h2>
+          <div className="divider-gold mx-auto my-6" />
+          <p className="font-sans text-base leading-relaxed mb-10" style={{ color: 'var(--kj-muted)' }}>
+            Sie möchten Labor-Diamant-Schmuck persönlich entdecken oder sich zu einem bestimmten Schmuckstück
+            beraten lassen? Wir freuen uns auf Ihren Besuch bei KenJu in Bielefeld oder Lippstadt.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-start">
+            <Link href="/#termin" className="btn-gold">
+              Termin vereinbaren
+            </Link>
+
+            {/* Jetzt anrufen: zwei Standorte, daher kurze Auswahl – funktioniert ohne JavaScript */}
+            <details className="relative w-full sm:w-auto text-left">
+              <summary className="btn-outline-gold cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+                Jetzt anrufen
+              </summary>
+              <div
+                className="mt-2 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:min-w-[17rem] z-10"
                 style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
               >
-                <summary
-                  className="font-serif text-lg cursor-pointer list-none flex items-center justify-between gap-4"
-                  style={{ color: 'var(--kj-text)' }}
-                >
-                  {item.q}
-                  <span className="shrink-0 text-xl" style={{ color: 'var(--kj-gold)' }}>+</span>
-                </summary>
-                <p className="font-sans text-sm mt-4 leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-                  {item.a}
-                </p>
-              </details>
-            ))}
+                {standorte.map((s, i) => (
+                  <a
+                    key={s.id}
+                    href={s.telefon.href}
+                    className="flex items-center justify-between gap-6 px-5 py-4"
+                    style={i > 0 ? { borderTop: '1px solid var(--kj-border)' } : undefined}
+                  >
+                    <span className="font-serif text-lg" style={{ color: 'var(--kj-text)' }}>{s.stadt}</span>
+                    <span className="font-sans text-sm" style={{ color: 'var(--kj-gold)' }}>{s.telefon.label}</span>
+                  </a>
+                ))}
+              </div>
+            </details>
           </div>
         </div>
       </section>
-
-      {/* Appointment */}
-      <section className="py-24" style={{ backgroundColor: 'var(--kj-bg)' }} id="termin-labor">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-3">Kostenlose Beratung</p>
-            <h2 className="section-title mb-3">Labor Diamant Beratung</h2>
-            <div className="divider-gold mx-auto mb-4" />
-            <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
-              Lassen Sie sich in unseren Geschäften in Bielefeld und Lippstadt persönlich zu Labor Diamanten beraten –
-              kostenlos und unverbindlich.
-            </p>
-          </div>
-          <div className="p-8" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
-            <AppointmentForm />
-          </div>
-        </div>
-      </section>
-
     </>
   );
 }

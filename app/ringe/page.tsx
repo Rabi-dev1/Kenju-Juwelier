@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 /* ── Slider-Bilder – exakte Dateinamen aus public/images ── */
 const sliderBilder = [
+  { src: '/images/labordiamanten.jpeg',        alt: 'Ohrringe mit Labor Diamanten – Brillantschmuck bei KenJu Juwelier Bielefeld & Lippstadt' },
   { src: '/images/anhaenger-fluegel.jpg',     alt: '585 Gelbgold Kette mit Flügel-Anhänger und Zirkonia – KenJu Juwelier Bielefeld' },
   { src: '/images/schlangenkette-gold.jpg',   alt: '585 Gelbgold Schlangenkette flach – KenJu Juwelier Bielefeld' },
   { src: '/images/anhaenger-kleeblatt.jpg',   alt: '585 Gelbgold Kette mit Kleeblatt-Anhänger – KenJu Juwelier Bielefeld' },

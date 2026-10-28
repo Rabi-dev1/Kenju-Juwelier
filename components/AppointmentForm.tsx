@@ -40,7 +40,11 @@ const allTimes = [
   '18:00', '18:30', '19:00', '19:30',
 ];
 
-const WHATSAPP_NUMBER = '4917663284312';
+const TERMIN_EMAIL = 'info@kenju.de';
+const MAIL_SUBJECT = 'Terminanfrage – KenJu Juwelier';
+
+const mailtoFor = (text: string) =>
+  `mailto:${TERMIN_EMAIL}?subject=${encodeURIComponent(MAIL_SUBJECT)}&body=${encodeURIComponent(text)}`;
 
 const labelStyle: React.CSSProperties = {
   display: 'block',
@@ -81,14 +85,14 @@ export default function AppointmentForm() {
   const onSubmit = (data: FormData) => {
     const text = buildMessage(data);
     setLastMessage(text);
-    // Anfrage per WhatsApp übermitteln – öffnet Chat mit vorbefüllter Nachricht
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    // Anfrage per E-Mail an info@kenju.de – öffnet das E-Mail-Programm mit vorbefüllter Nachricht
+    window.location.href = mailtoFor(text);
     setSent(true);
     reset();
   };
 
   if (sent) {
-    const mailtoHref = `mailto:info@kenju.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}&body=${encodeURIComponent(lastMessage)}`;
+    const mailtoHref = mailtoFor(lastMessage);
     return (
       <div className="text-center py-16">
         <div
@@ -103,14 +107,16 @@ export default function AppointmentForm() {
           Fast geschafft!
         </h3>
         <p className="font-sans text-sm mb-2 max-w-md mx-auto leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-          Ihre Anfrage wurde in WhatsApp geöffnet – bitte senden Sie die Nachricht dort ab.
+          Ihre Anfrage wurde in Ihrem E-Mail-Programm vorbereitet – bitte senden Sie die E-Mail dort ab.
           Wir melden uns innerhalb von 24 Stunden persönlich bei Ihnen.
         </p>
         <p className="font-sans text-xs mb-8" style={{ color: 'var(--kj-muted)', opacity: 0.7 }}>
-          Kein WhatsApp?{' '}
+          Es hat sich nichts geöffnet?{' '}
           <a href={mailtoHref} style={{ color: 'var(--kj-gold)' }} className="underline underline-offset-2">
-            Anfrage per E-Mail senden
+            E-Mail erneut öffnen
           </a>
+          {' '}oder schreiben Sie an{' '}
+          <a href={`mailto:${TERMIN_EMAIL}`} style={{ color: 'var(--kj-gold)' }}>{TERMIN_EMAIL}</a>.
           <br />
           Oder rufen Sie an – Bielefeld:{' '}
           <a href="tel:+4952177075050" style={{ color: 'var(--kj-gold)' }}>0521 77075050</a>
@@ -265,21 +271,7 @@ export default function AppointmentForm() {
           Termin anfragen
         </button>
         <p className="font-sans text-xs" style={{ color: 'var(--kj-muted)' }}>
-          * Pflichtfelder — Ihre Anfrage wird per WhatsApp übermittelt.<br />
-          Alternativ:{' '}
-          <a
-            href={`mailto:info@kenju.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}`}
-            style={{ color: 'var(--kj-gold)' }}
-            onClick={(e) => {
-              const v = getValues();
-              if (v.name || v.message) {
-                e.preventDefault();
-                window.location.href = `mailto:info@kenju.de?subject=${encodeURIComponent('Terminanfrage – KenJu Juwelier')}&body=${encodeURIComponent(buildMessage(v))}`;
-              }
-            }}
-          >
-            per E-Mail anfragen
-          </a>
+          * Pflichtfelder — Ihre Anfrage wird per E-Mail an {TERMIN_EMAIL} übermittelt.
         </p>
       </div>
     </form>

@@ -86,7 +86,7 @@ const formatTime = (iso: string) => {
 };
 
 /* ── Component ──────────────────────────────────────────────────── */
-export default function EdelmetallRechner() {
+export default function EdelmetallRechner({ compact = false }: { compact?: boolean }) {
   const [metalIdx,   setMetalIdx]   = useState(0);
   const [weight,     setWeight]     = useState('1');
   const [unit,       setUnit]       = useState('g');
@@ -228,9 +228,9 @@ export default function EdelmetallRechner() {
     <div style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
 
       {/* ── Header ──────────────────────────────────────────────── */}
-      <div className="px-6 py-6 sm:px-8 sm:py-7" style={{ borderBottom: '1px solid var(--kj-border)' }}>
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
+      <div className={compact ? 'px-6 py-4 sm:px-8' : 'px-6 py-6 sm:px-8 sm:py-7'} style={{ borderBottom: '1px solid var(--kj-border)' }}>
+        <div className={`flex flex-wrap items-start gap-3 ${compact ? "justify-end" : "justify-between"}`}>
+          <div className={compact ? 'hidden' : undefined}>
             <p className="section-subtitle mb-1.5">Orientierungstool</p>
             <h3 className="font-serif font-light" style={{ fontSize: 'clamp(1.4rem, 4vw, 1.875rem)', color: 'var(--kj-text)' }}>
               Edelmetall Preisrechner
@@ -285,7 +285,7 @@ export default function EdelmetallRechner() {
 
         {/* ── LEFT: Inputs ──────────────────────────────────────── */}
         <div
-          className="rechner-left p-6 sm:p-8 flex flex-col gap-6"
+          className={`rechner-left p-6 sm:p-8 flex flex-col ${compact ? 'gap-5' : 'gap-6'}`}
           style={{ borderBottom: '1px solid var(--kj-border)' }}
         >
 
@@ -378,6 +378,8 @@ export default function EdelmetallRechner() {
             </div>
           </div>
 
+          {!compact && (
+            <>
           {/* ── Spot-Kurs je Metall ──────────────────────────────── */}
           <div>
             <div className="flex items-center justify-between gap-2 mb-2" style={{ flexWrap: 'wrap' }}>
@@ -509,6 +511,9 @@ export default function EdelmetallRechner() {
               </div>
             </div>
           </div>
+
+            </>
+          )}
 
           {/* Calculate button */}
           <button

@@ -109,19 +109,10 @@ export default function DatenschutzPage() {
             </h3>
             <p>
               Wenn Sie unser Terminformular ausfüllen, werden die eingegebenen Daten nicht auf dieser Website
-              gespeichert und nicht an unseren Server übertragen. Beim Absenden wird lediglich eine vorbereitete
-              Nachricht in WhatsApp bzw. in Ihrem E-Mail-Programm geöffnet. Der Versand erfolgt erst durch Ihre
-              ausdrückliche Bestätigung in der jeweiligen App. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
+              gespeichert und nicht an unseren Server übertragen. Beim Absenden wird lediglich eine
+              E-Mail an info@kenju.de in Ihrem E-Mail-Programm vorbereitet. Der Versand erfolgt erst durch Ihre
+              ausdrückliche Bestätigung in Ihrem E-Mail-Programm. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
               (Durchführung vorvertraglicher Maßnahmen).
-            </p>
-
-            <h3 className="font-sans text-base mb-2 mt-6" style={{ color: 'var(--kj-text)' }}>WhatsApp</h3>
-            <p>
-              Für die Übermittlung von Terminanfragen bieten wir WhatsApp an. Anbieter ist die WhatsApp Ireland
-              Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland. Wenn Sie uns über WhatsApp
-              kontaktieren, gelten zusätzlich die Datenschutzbestimmungen von WhatsApp. Ihre Daten werden dabei
-              gegebenenfalls auch außerhalb der Europäischen Union verarbeitet. Sie können uns alternativ jederzeit
-              per E-Mail oder telefonisch erreichen.
             </p>
 
             <h3 className="font-sans text-base mb-2 mt-6" style={{ color: 'var(--kj-text)' }}>

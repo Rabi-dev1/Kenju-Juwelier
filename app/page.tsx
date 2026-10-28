@@ -137,14 +137,14 @@ export default function HomePage() {
       </section>
 
       {/* ── 1b. GOLDWERT-RECHNER ─────────────────────────── */}
-      <section className="py-16 md:py-20" style={{ backgroundColor: 'var(--kj-bg)' }} id="goldwert">
+      <section className="py-12 md:py-14" style={{ backgroundColor: 'var(--kj-bg)' }} id="goldwert">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-7">
             <p className="section-subtitle mb-3">Goldankauf</p>
             <h2 className="section-title mb-4">Hier Ihren Goldwert berechnen</h2>
             <div className="divider-gold mx-auto" />
           </div>
-          <EdelmetallRechner />
+          <EdelmetallRechner compact />
         </div>
       </section>
 

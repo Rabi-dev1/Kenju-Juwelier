@@ -108,7 +108,7 @@ const ankaufKategorien = [
   { title: 'Diamanten',     img: '/images/diamanten-lose.webp',  alt: 'Diamanten verkaufen Bielefeld – lose Diamanten und Brillanten zum Ankauf', tags: ['Lose Diamanten ab 0,50 ct', 'Diamantschmuck'] },
   { title: 'Zahngold',      img: '/images/zahngold.webp',        alt: 'Zahngold verkaufen Bielefeld – Zahnkronen und Dentallegierungen zum Ankauf', tags: ['Zahnkronen auch mit Zähnen', 'Dentallegierungen'] },
   { title: 'Luxusuhren',    img: '/images/luxusuhren.webp',      alt: 'Luxusuhren verkaufen Bielefeld – Rolex, Markenuhren, Gold- und Silberuhren zum Ankauf', tags: ['Luxusuhren', 'Markenuhren', 'Golduhren', 'Silberuhren'] },
-  { title: 'Platin',        img: '/images/platin.webp',          alt: 'Platin verkaufen Bielefeld – Platinschmuck, Platinmünzen und Platinbarren', tags: ['Platinschmuck', 'Platinmünzen', 'Platinbarren'] },
+  { title: 'Platin',        img: '/images/platin.webp',          alt: 'Platin verkaufen Bielefeld – Platinschmuck, Platinmünzen und Platinbarren', tags: ['Schmuck', 'Münzen', 'Barren'] },
   { title: 'Palladium',     img: '/images/palladium.webp',       alt: 'Palladium verkaufen Bielefeld – Palladiummünzen, Palladiumbarren und Palladiumschmuck', tags: ['Münzen', 'Barren', 'Schmuck'] },
 ];
 

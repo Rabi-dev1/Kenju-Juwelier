@@ -84,7 +84,7 @@ export default function HomePage() {
             fill sizes="100vw" className="object-cover img-zoom" priority
             style={{ opacity: 0.5 }}
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,13,10,0.65) 0%, rgba(15,13,10,0.4) 40%, rgba(15,13,10,0.92) 100%)' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(15,13,10,0.74) 0%, rgba(15,13,10,0.52) 40%, rgba(15,13,10,0.93) 100%)' }} />
         </div>
         <div className="absolute top-1/3 left-0 w-32 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,76,0.25))' }} />
         <div className="absolute bottom-1/3 right-0 w-32 h-px" style={{ background: 'linear-gradient(to left, transparent, rgba(201,168,76,0.25))' }} />

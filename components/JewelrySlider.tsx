@@ -26,7 +26,7 @@ export default function JewelrySlider({
   const track = [...images, ...images];
 
   return (
-    <div className="overflow-hidden relative w-full">
+    <div className="overflow-hidden motion-reduce:overflow-x-auto relative w-full">
       <style>{`
         @keyframes kj-marquee {
           0%   { transform: translateX(0); }

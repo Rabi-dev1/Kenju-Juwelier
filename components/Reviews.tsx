@@ -31,27 +31,6 @@ const reviews = [
   },
 ];
 
-const reviewJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'JewelryStore',
-  name: 'KenJu Juwelier',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.7',
-    reviewCount: '133',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: reviews.map((r) => ({
-    '@type': 'Review',
-    author: { '@type': 'Person', name: r.name },
-    reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
-    reviewBody: r.text,
-    datePublished: r.date,
-    name: r.item,
-  })),
-};
-
 function Stars({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5" aria-label={`${count} von 5 Sternen`}>
@@ -85,8 +64,6 @@ function GoogleG() {
 export default function Reviews() {
   return (
     <section className="py-32" style={{ backgroundColor: 'var(--kj-surface)' }} id="bewertungen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }} />
-
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
 
         {/* Header + prominent Google badge */}

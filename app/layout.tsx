@@ -75,9 +75,6 @@ export const metadata: Metadata = {
     },
   },
   alternates: { canonical: 'https://kenju.de' },
-  verification: {
-    google: 'kenju-google-site-verification',
-  },
   other: {
     'geo.region': 'DE-NW',
     'geo.placename': 'Bielefeld',
@@ -96,11 +93,6 @@ const websiteJsonLd = {
   name: 'KenJu Juwelier',
   url: 'https://kenju.de',
   inLanguage: 'de-DE',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://kenju.de/?s={search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
 };
 
 const jsonLd = {
@@ -162,13 +154,6 @@ const jsonLd = {
     { '@type': 'AdministrativeArea', name: 'Nordrhein-Westfalen' },
   ],
   knowsLanguage: ['de', 'en', 'ar', 'tr'],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.7',
-    reviewCount: '133',
-    bestRating: '5',
-    worstRating: '1',
-  },
   sameAs: [
     'https://www.instagram.com/juwelier_kenju/',
     'https://www.facebook.com/people/Juwelier-KenJu-Bielefeld/100029105127054/',
@@ -217,9 +202,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-title" content="KenJu Juwelier" />
       </head>
       <body>
+        <a href="#main" className="skip-link">Zum Inhalt springen</a>
         <Header />
         {/* pb-16 on mobile to avoid content hiding behind MobileCtaBar */}
-        <main className="pb-16 lg:pb-0">{children}</main>
+        <main id="main" tabIndex={-1} className="pb-16 lg:pb-0 outline-none">{children}</main>
         <Footer />
         <FloatingButtons />
         <MobileCtaBar />

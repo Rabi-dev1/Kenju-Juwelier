@@ -6,12 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/static/'],
-      },
-      {
-        /* Block low-value AI scrapers that ignore content quality */
-        userAgent: ['GPTBot', 'ChatGPT-User', 'CCBot', 'anthropic-ai', 'Claude-Web'],
-        disallow: ['/'],
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://kenju.de/sitemap.xml',

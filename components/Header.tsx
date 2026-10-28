@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import ThemeToggle from './ThemeToggle';
 
 const nav = [
@@ -14,7 +15,11 @@ const nav = [
   { label: 'Kontakt',         href: '/#termin' },
 ];
 
+/* Seiten mit dauerhaft dunklem Hero: dort ist die Navigation oben hell */
+const darkHeroRoutes = ['/', '/ringe', '/trauringe', '/uhren', '/goldankauf', '/service', '/labordiamanten'];
+
 export default function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled]   = useState(false);
   const [open, setOpen]           = useState(false);
 
@@ -24,6 +29,10 @@ export default function Header() {
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
   }, []);
+
+  const lightOnHero = !scrolled && darkHeroRoutes.includes(pathname);
+  const linkColor = lightOnHero ? 'rgba(245,240,232,0.88)' : 'var(--kj-muted)';
+  const isActive = (href: string) => href !== '/#termin' && pathname === href;
 
   return (
     <header
@@ -42,7 +51,7 @@ export default function Header() {
             <span className="font-serif text-3xl font-light tracking-widest transition-colors" style={{ color: 'var(--kj-gold)', paddingRight: '0.12em' }}>
               KenJu
             </span>
-            <span className="font-sans text-[8px] tracking-[0.45em] uppercase mt-0.5 transition-colors" style={{ color: 'var(--kj-muted)' }}>
+            <span className="font-sans text-[8px] tracking-[0.45em] uppercase mt-0.5 transition-colors" style={{ color: lightOnHero ? 'rgba(245,240,232,0.7)' : 'var(--kj-muted)' }}>
               Bielefeld · Lippstadt
             </span>
           </Link>
@@ -54,9 +63,10 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className="font-sans text-xs tracking-wider 2xl:tracking-widest uppercase whitespace-nowrap transition-colors duration-200 relative group/link"
-                style={{ color: 'var(--kj-muted)' }}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+                style={{ color: isActive(item.href) ? 'var(--kj-gold)' : linkColor }}
                 onMouseEnter={e => (e.currentTarget.style.color = 'var(--kj-gold)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'var(--kj-muted)')}
+                onMouseLeave={e => (e.currentTarget.style.color = isActive(item.href) ? 'var(--kj-gold)' : linkColor)}
               >
                 {item.label}
               </Link>
@@ -76,7 +86,8 @@ export default function Header() {
             <button
               onClick={() => setOpen(!open)}
               className="flex flex-col gap-1.5 p-2"
-              aria-label="Menü öffnen"
+              aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
+              aria-expanded={open}
             >
               <span
                 className="block w-6 h-0.5 transition-all duration-300"
@@ -111,7 +122,8 @@ export default function Header() {
               href={item.href}
               onClick={() => setOpen(false)}
               className="font-sans text-sm tracking-widest uppercase py-3 transition-colors"
-              style={{ color: 'var(--kj-muted)', borderBottom: '1px solid var(--kj-border)' }}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+              style={{ color: isActive(item.href) ? 'var(--kj-gold)' : 'var(--kj-muted)', borderBottom: '1px solid var(--kj-border)' }}
             >
               {item.label}
             </Link>

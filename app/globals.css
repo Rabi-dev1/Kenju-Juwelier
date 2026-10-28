@@ -100,6 +100,7 @@ html.dark {
     letter-spacing: 0.12em;
   }
   html.dark .btn-gold { color: #08080F; }
+  .on-dark .btn-gold { color: #14100A; }
   .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(154,120,24,0.3); }
 
   .btn-outline-gold {
@@ -298,3 +299,44 @@ html.dark {
 .agency-link:hover .agency-label       { opacity: 0.92; }
 .agency-link:hover .agency-by          { opacity: 0.7; }
 .agency-link:hover .agency-icon        { opacity: 0.65; }
+
+
+/* ── Anker nicht unter dem fixen Header verstecken ── */
+[id] { scroll-margin-top: 6rem; }
+
+/* ── Tastatur-Fokus sichtbar ── */
+:focus-visible {
+  outline: 2px solid var(--kj-gold);
+  outline-offset: 3px;
+}
+
+/* ── Skip-Link (nur bei Tastaturfokus sichtbar) ── */
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 0.75rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--kj-bg);
+  color: var(--kj-text);
+  border: 1px solid var(--kj-gold);
+  font-size: 0.8rem;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* ── Kein 300ms-Tap-Delay, dezenter Tap-Highlight ── */
+a, button, summary, input, select, textarea { touch-action: manipulation; }
+a, button, summary { -webkit-tap-highlight-color: rgba(201,168,76,0.18); }
+
+/* ── Reduzierte Bewegung respektieren ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .kj-marquee { animation: none !important; }
+}

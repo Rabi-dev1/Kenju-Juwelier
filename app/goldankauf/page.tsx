@@ -7,7 +7,7 @@ import CallButton from '@/components/CallButton';
 
 export const metadata: Metadata = {
   title: 'Goldankauf Bielefeld & Lippstadt',
-  description: 'Goldankauf in Bielefeld und Lippstadt zum tagesaktuellen Marktpreis. Kostenlose Bewertung, faire Ankaufspreise, Auszahlung in bar oder per Echtzeitüberweisung.',
+  description: 'Goldankauf in Bielefeld & Lippstadt: Gold, Silber, Platin, Palladium, Diamanten, Zahngold und Luxusuhren zum tagesaktuellen Preis. Kostenlose Bewertung, sofortige Auszahlung.',
   keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altgold verkaufen Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Lippstadt', 'Goldmünzen kaufen Bielefeld', 'Goldbarren kaufen Bielefeld', 'Investmentgold Bielefeld', 'Gold als Anlage', 'Platin verkaufen Bielefeld', 'Palladium verkaufen Bielefeld', 'Luxusuhren verkaufen Bielefeld', 'Diamanten verkaufen Bielefeld', 'Altsilber verkaufen'],
   alternates: { canonical: 'https://kenju.de/goldankauf' },
   openGraph: {
@@ -41,6 +41,8 @@ const localBusinessJsonLd = {
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Goldankauf', description: 'Fairer Goldankauf zum tagesaktuellen Marktpreis in Bielefeld und Lippstadt.' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Silberankauf', description: 'Silber verkaufen in Bielefeld und Lippstadt – kostenlose Bewertung.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Platin- und Palladiumankauf', description: 'Platin und Palladium als Schmuck, Münzen und Barren verkaufen in Bielefeld und Lippstadt.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Luxusuhren Ankauf', description: 'Luxusuhren, Markenuhren, Gold- und Silberuhren ankaufen in Bielefeld und Lippstadt.' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Diamanten Ankauf', description: 'Brillanten und lose Diamanten ankaufen in Bielefeld und Lippstadt.' } },
     ],
   },
@@ -69,6 +71,11 @@ const faqJsonLd = {
       '@type': 'Question',
       name: 'Kaufen Sie auch Silber an?',
       acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wir kaufen Silberschmuck, Silberbarren, Silbermünzen und Silberbesteck an – zum tagesaktuellen Silberpreis. Kostenlose Bewertung direkt in unseren Geschäften in Bielefeld und Lippstadt.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Welche Edelmetalle und Wertgegenstände kaufen Sie an?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Wir kaufen Gold (Münzen, Barren, Altgold und Goldschmuck), Silber (Münzen, Barren, Sammlermünzen, Altsilber), Platin, Palladium, lose Diamanten ab 0,50 ct und Diamantschmuck, Zahngold sowie Luxusuhren, Markenuhren, Gold- und Silberuhren an.' },
     },
     {
       '@type': 'Question',

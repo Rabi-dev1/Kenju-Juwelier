@@ -4,6 +4,7 @@ import Link from 'next/link';
 import CategoryHero from '@/components/CategoryHero';
 import AppointmentForm from '@/components/AppointmentForm';
 import JewelrySlider from '@/components/JewelrySlider';
+import CallButton from '@/components/CallButton';
 
 export const metadata: Metadata = {
   title: 'Schmuck, Ringe & Ketten in Bielefeld',
@@ -19,23 +20,11 @@ const sliderBilder = [
   { src: '/images/schlangenkette-gold.jpg',   alt: '585 Gelbgold Schlangenkette flach – KenJu Juwelier Bielefeld' },
   { src: '/images/anhaenger-kleeblatt.jpg',   alt: '585 Gelbgold Kette mit Kleeblatt-Anhänger – KenJu Juwelier Bielefeld' },
   { src: '/images/anhaenger-herz.jpg',        alt: '585 Gelbgold Kette mit Herz-Anhänger und Zirkonia – KenJu Juwelier Bielefeld' },
-  { src: '/images/armband-rose.jpg',         alt: '585 Roségold Armband KenJu Juwelier' },
-  { src: '/images/armreif-gedreht.jpg',       alt: '585 Gelbgold Armreifen gedreht' },
-  { src: '/images/armreif-welle.jpg',         alt: '585 Gelbgold Armreif Wellenform' },
   { src: '/images/halsketten.jpg',            alt: 'Schaufenster Goldketten KenJu Bielefeld' },
   { src: '/images/kette-engelsfluegel.jpg',   alt: '585 Gelbgold Kette Engelflügel' },
-  { src: '/images/kette-herz.jpg',            alt: '585 Gelbgold Kette Herz Anhänger' },
-  { src: '/images/kette-kreis.jpg',           alt: 'Goldketten mit Farbstein-Anhänger' },
-  { src: '/images/kette-schlange.jpg',        alt: 'Goldketten Sortiment KenJu Bielefeld' },
-  { src: '/images/kette-traumfaenger.jpg',    alt: '585 Gelbgold Kette Traumfänger Anhänger' },
   { src: '/images/ohrstecker-kugel.jpg',      alt: '585 Gelbgold Kugelstecker Ohrringe' },
-  { src: '/images/ring-baguette.jpg',         alt: '585 Gelbgold Ringe mit Farbsteinen' },
-  { src: '/images/creolen-farbsteine.jpg',    alt: '585 Gelbgold Creolen mit Farbsteinen' },
-  { src: '/images/creolen-gedreht.jpg',       alt: '585 Gelbgold Creolen gedreht' },
-  { src: '/images/creolen-filigran.jpg',      alt: '585 Gelbgold Creolen klassisch' },
   { src: '/images/kreuz-filigran.jpg',        alt: '585 Gelbgold Goldkreuze klassisch' },
   { src: '/images/kreuz-platte.jpg',          alt: '585 Gelbgold Kreuz Dog-Tag Anhänger' },
-  { src: '/images/brillantring-cluster-gelb.jpg', alt: 'Brillantring KenJu Juwelier Bielefeld' },
 ];
 
 export default function SchmuckPage() {
@@ -161,7 +150,7 @@ export default function SchmuckPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/labordiamanten" className="btn-dark">Labor-Diamanten entdecken</Link>
-                <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
+                <CallButton className="btn-outline-gold" />
               </div>
             </div>
           </div>
@@ -173,7 +162,7 @@ export default function SchmuckPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="section-subtitle mb-3">Kostenlos & Unverbindlich</p>
-            <h2 className="section-title mb-4">Schmuck-Beratung buchen</h2>
+            <h2 className="section-title mb-4">Trauring-Beratung buchen</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm" style={{ color: 'var(--kj-muted)' }}>
               Kostenlose und unverbindliche Beratung – Bahnhofstraße 28 (Loom, 1. OG), 33602 Bielefeld · Lange Straße 29, 59555 Lippstadt.

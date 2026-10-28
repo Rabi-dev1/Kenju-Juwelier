@@ -5,6 +5,9 @@
  */
 
 export const EMAIL = 'info@kenju.de';
+export const INSTAGRAM_URL = 'https://www.instagram.com/juwelier_kenju/';
+/** Öffnet die Google-Suche zu KenJu; dort steht der Button „Rezension schreiben“ (Place-ID-Direktlink: bei Bedarf ersetzen) */
+export const REVIEW_URL = 'https://www.google.com/search?q=KenJu+Juwelier+Bielefeld+Bewertungen';
 
 export const standorte = [
   {
@@ -15,10 +18,8 @@ export const standorte = [
     plz: '33602',
     /* Erste Nummer = Hauptnummer für Anruf-Buttons */
     telefon: { label: '0521 77075050', href: 'tel:+4952177075050' },
-    mobil: { label: '0176 63284312', href: 'tel:+4917663284312' },
     nummern: [
       { typ: 'Telefon', label: '0521 77075050', href: 'tel:+4952177075050' },
-      { typ: 'Mobil',   label: '0176 63284312', href: 'tel:+4917663284312' },
     ],
     zeiten: [
       { tage: 'Mo – Sa', zeit: '09:30 – 20:00 Uhr' },
@@ -33,10 +34,8 @@ export const standorte = [
     zusatz: null,
     plz: '59555',
     telefon: { label: '02941 9889114', href: 'tel:+4929419889114' },
-    mobil: { label: '0176 63284312', href: 'tel:+4917663284312' },
     nummern: [
       { typ: 'Telefon', label: '02941 9889114', href: 'tel:+4929419889114' },
-      { typ: 'Mobil',   label: '0176 63284312', href: 'tel:+4917663284312' },
     ],
     zeiten: [
       { tage: 'Mo – Fr', zeit: '10:00 – 18:00 Uhr' },

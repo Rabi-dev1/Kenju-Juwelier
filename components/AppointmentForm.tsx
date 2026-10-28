@@ -167,7 +167,7 @@ export default function AppointmentForm() {
             type="tel"
             {...register('phone')}
             className="input-dark"
-            placeholder="+49 176 …"
+            placeholder="+49 …"
             autoComplete="tel"
           />
         </div>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Reviews from '@/components/Reviews';
+import EdelmetallRechner from '@/components/EdelmetallRechner';
 import GoogleMap from '@/components/GoogleMap';
 import AppointmentForm from '@/components/AppointmentForm';
 
@@ -47,10 +48,10 @@ const categories = [
   },
   {
     title: 'Uhren',
-    desc: 'Tommy Hilfiger, Hugo Boss, Police & mehr',
+    desc: 'Tommy Hilfiger, Boss, Police & mehr',
     href: '/uhren',
     img: '/images/uhrhero.jpg',
-    imgAlt: 'Markenuhren bei KenJu Juwelier Bielefeld – Tommy Hilfiger, Hugo Boss, Police',
+    imgAlt: 'Markenuhren bei KenJu Juwelier Bielefeld – Tommy Hilfiger, Boss, Police',
     sub: [],
   },
   {
@@ -132,6 +133,18 @@ export default function HomePage() {
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
           <div className="w-px h-14" style={{ background: 'linear-gradient(to bottom, rgba(201,168,76,0.5), transparent)' }} />
+        </div>
+      </section>
+
+      {/* ── 1b. GOLDWERT-RECHNER ─────────────────────────── */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: 'var(--kj-bg)' }} id="goldwert">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="section-subtitle mb-3">Goldankauf</p>
+            <h2 className="section-title mb-4">Hier Ihren Goldwert berechnen</h2>
+            <div className="divider-gold mx-auto" />
+          </div>
+          <EdelmetallRechner />
         </div>
       </section>
 
@@ -277,6 +290,20 @@ export default function HomePage() {
           <Link href="/goldankauf" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem' }}>
             Mehr zum Goldankauf
           </Link>
+        </div>
+      </section>
+
+      {/* ── 6b. ANLAGEGOLD ───────────────────────────────── */}
+      <section className="py-20 md:py-24" style={{ backgroundColor: 'var(--kj-bg)' }} id="anlagegold">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="section-subtitle mb-4">Wertanlage</p>
+          <h2 className="section-title mb-4">Anlagegold</h2>
+          <div className="divider-gold mx-auto mb-6" />
+          <p className="font-sans text-base leading-relaxed mb-8" style={{ color: 'var(--kj-muted)' }}>
+            Investieren Sie in Gold &amp; Silber.<br />
+            Wir beraten Sie gerne.
+          </p>
+          <Link href="#termin" className="btn-gold">Beratung vereinbaren</Link>
         </div>
       </section>
 

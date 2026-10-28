@@ -2,25 +2,26 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AppointmentForm from '@/components/AppointmentForm';
+import CallButton from '@/components/CallButton';
 
 export const metadata: Metadata = {
   title: 'Markenuhren in Bielefeld & Lippstadt',
-  description: 'Markenuhren bei KenJu Juwelier Bielefeld: Tommy Hilfiger, Hugo Boss, Police, Regent und Swiss Military. Persönliche Beratung vor Ort.',
-  keywords: ['Uhren Bielefeld', 'Tommy Hilfiger Uhren', 'Hugo Boss Uhren', 'Police Uhren', 'Juwelier Bielefeld'],
+  description: 'Markenuhren bei KenJu Juwelier Bielefeld: Tommy Hilfiger, Boss, Police, Regent und Swiss Military. Persönliche Beratung vor Ort.',
+  keywords: ['Uhren Bielefeld', 'Tommy Hilfiger Uhren', 'Boss Uhren', 'Police Uhren', 'Juwelier Bielefeld'],
   alternates: { canonical: 'https://kenju.de/uhren' },
 };
 
 const brands = [
   { name: 'Tommy Hilfiger', desc: 'Moderne Designuhren für Alltag und Business.', tags: ['Elegant', 'Alltag', 'Modern'] },
-  { name: 'Hugo Boss',       desc: 'Reduziertes, elegantes Design für höchste Ansprüche.', tags: ['Premium', 'Business', 'Elegant'] },
+  { name: 'Boss',       desc: 'Elegantes Design für höchste Ansprüche.', tags: ['Premium', 'Business', 'Elegant'] },
   { name: 'Police',          desc: 'Urbane Uhren mit starkem Charakter und italienischem Stil.', tags: ['Urban', 'Statement', 'Trendy'] },
   { name: 'Regent',          desc: 'Klassische Eleganz für Damen und Herren zum fairen Preis.', tags: ['Klassisch', 'Damen & Herren', 'Alltag'] },
   { name: 'Swiss Military',  desc: 'Schweizer Präzision – robust, wasserdicht, zuverlässig.', tags: ['Robust', 'Swiss Made', 'Wasserdicht'] },
 ];
 
 const services = [
-  { icon: '⟳', title: 'Batteriewechsel', desc: 'Fertig am selben Tag – wasserdicht abgedichtet.' },
-  { icon: '◇', title: 'Glaswechsel',     desc: 'Mineral- und Saphirglas für alle Modelle.' },
+  { icon: '⟳', title: 'Batteriewechsel', desc: 'Fertig am selben Tag.' },
+  { icon: '◇', title: 'Glaswechsel',     desc: 'Mineral-, Saphir- und Kunststoffglas für alle Modelle.' },
   { icon: '↔', title: 'Armbandservice',  desc: 'Kürzen, verlängern oder austauschen.' },
 ];
 
@@ -56,15 +57,13 @@ export default function UhrenPage() {
           </h1>
           <div className="divider-gold mb-5" />
           <p className="font-sans text-lg max-w-xl leading-relaxed mb-8" style={{ color: 'rgba(245,240,232,0.65)' }}>
-            Markenuhren von Tommy Hilfiger, Hugo Boss, Police, Regent und Swiss Military.
+            Markenuhren von Tommy Hilfiger, Boss, Police, Regent und Swiss Military.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href="#termin" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem' }}>
               Beratung vereinbaren
             </Link>
-            <a href="tel:+4917663284312" className="btn-outline-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem', borderColor: 'rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.8)' }}>
-              Jetzt anrufen
-            </a>
+            <CallButton className="btn-outline-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '1rem 2.5rem', borderColor: 'rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.8)' }} />
           </div>
         </div>
       </section>

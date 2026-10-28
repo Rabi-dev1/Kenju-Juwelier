@@ -281,13 +281,12 @@ export default function TrauringePage() {
               />
             </div>
             <div className="p-8 lg:p-12 flex flex-col justify-center" style={{ background: 'var(--kj-card)' }}>
-              <p className="section-subtitle mb-4">Ihr Trauring-Partner</p>
               <h2 className="font-serif text-2xl md:text-3xl font-light mb-4" style={{ color: 'var(--kj-text)', lineHeight: 1.2 }}>
                 Persönliche Beratung in unserem Atelier
               </h2>
               <div className="divider-gold mb-6" />
               <p className="font-sans text-sm leading-relaxed mb-7" style={{ color: 'var(--kj-muted)' }}>
-                Bei KenJu Juwelier begleiten wir Sie von der ersten Idee bis zum fertigen Trauring. In unseren Ateliers in Bielefeld und Lippstadt nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
+                Bei KenJu Juwelier begleiten wir Sie von der ersten Idee bis zum fertigen Ring. In unseren Ateliers in Bielefeld und Lippstadt nehmen wir uns Zeit für Ihre Wünsche und beraten Sie persönlich und unverbindlich.
               </p>
               <ul className="space-y-3 mb-8">
                 {['Individuelle Beratung', 'Maßanfertigung', 'Gravur auf Wunsch', 'Bielefeld: Bahnhofstraße 28, Loom 1. OG · Lippstadt: Lange Straße 29'].map((item) => (

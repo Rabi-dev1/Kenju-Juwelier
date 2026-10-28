@@ -3,11 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
 import EdelmetallRechner from '@/components/EdelmetallRechner';
+import CallButton from '@/components/CallButton';
 
 export const metadata: Metadata = {
   title: 'Goldankauf Bielefeld & Lippstadt',
   description: 'Goldankauf in Bielefeld und Lippstadt zum tagesaktuellen Marktpreis. Kostenlose Bewertung, faire Ankaufspreise, Auszahlung in bar oder per Echtzeitüberweisung.',
-  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altgold verkaufen Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Lippstadt', 'Goldmünzen kaufen Bielefeld', 'Goldbarren kaufen Bielefeld', 'Investmentgold Bielefeld', 'Gold als Anlage'],
+  keywords: ['Goldankauf Bielefeld', 'Gold verkaufen Bielefeld', 'Zahngold verkaufen Bielefeld', 'Silber verkaufen Bielefeld', 'Schmuck verkaufen Bielefeld', 'Edelmetall Ankauf Bielefeld', 'Altgold verkaufen Bielefeld', 'Altschmuck verkaufen', 'Goldankauf Lippstadt', 'Goldmünzen kaufen Bielefeld', 'Goldbarren kaufen Bielefeld', 'Investmentgold Bielefeld', 'Gold als Anlage', 'Platin verkaufen Bielefeld', 'Palladium verkaufen Bielefeld', 'Luxusuhren verkaufen Bielefeld', 'Diamanten verkaufen Bielefeld', 'Altsilber verkaufen'],
   alternates: { canonical: 'https://kenju.de/goldankauf' },
   openGraph: {
     title: 'Goldankauf Bielefeld & Lippstadt – Fairer Preis, sofortige Auszahlung',
@@ -100,13 +101,15 @@ const steps = [
 ];
 
 const ankaufKategorien = [
-  { title: 'Gold',         img: '/images/gold.jpg',          alt: 'Gold verkaufen Bielefeld – Goldschmuck und Goldbarren',        tags: ['Goldschmuck', 'Goldbarren', 'Goldmünzen', 'Zahngold'] },
-  { title: 'Altgold',     img: '/images/altgold.jpeg',       alt: 'Altgold verkaufen Bielefeld & Lippstadt – Goldschmuck, Ketten und Ringe zum Ankauf bei KenJu Juwelier', tags: ['Ringe', 'Ketten', 'Anhänger'] },
-  { title: 'Silber',       img: '/images/silber.jpg',         alt: 'Silber verkaufen Bielefeld – Silberschmuck und Silberbarren',  tags: ['Silberschmuck', 'Silberbarren', 'Silbermünzen'] },
-  { title: 'Münzen',       img: '/images/munzen.jpg',         alt: 'Goldmünzen verkaufen Bielefeld – Sammlermünzen Ankauf',        tags: ['Goldmünzen', 'Silbermünzen', 'Sammlermünzen'] },
-  { title: 'Diamanten',    img: '/images/diamant.jpg',        alt: 'Diamanten bewerten lassen Bielefeld – Brillanten Ankauf',      tags: ['Lose Diamanten', 'Brillanten', 'Diamantschmuck'] },
-  { title: 'Zahngold',     img: '/images/brillantringe.jpg',  alt: 'Zahngold Ankauf – fachgerechte Bewertung bei KenJu Juwelier',  tags: ['Kronen', 'Brücken', 'Dentalgold'] },
-  { title: 'Silberbesteck', img: '/images/silberbesteck.jpg', alt: 'Silberbesteck verkaufen Bielefeld – Tafelsilber Ankauf',       tags: ['Tafelsilber', 'Antikes Besteck', '800er / 925er'] },
+  { title: 'Gold',          img: '/images/gold.jpg',             alt: 'Gold verkaufen Bielefeld – Goldmünzen und Goldbarren zum Ankauf bei KenJu Juwelier', tags: ['Münzen', 'Barren'] },
+  { title: 'Altgold',       img: '/images/altgold.jpeg',         alt: 'Altgold verkaufen Bielefeld & Lippstadt – Goldschmuck, Ketten und Ringe zum Ankauf bei KenJu Juwelier', tags: ['Goldschmuck wie z. B. Ringe, Ketten, Anhänger usw.'] },
+  { title: 'Silber',        img: '/images/munzen.jpg',           alt: 'Silber verkaufen Bielefeld – Silbermünzen, Silberbarren und Sammlermünzen', tags: ['Münzen', 'Barren', 'Sammlermünzen'] },
+  { title: 'Altsilber',     img: '/images/silber.jpg',           alt: 'Altsilber verkaufen Bielefeld – Silberschmuck und Bruchsilber', tags: ['Silberschmuck', 'Bruchsilber'] },
+  { title: 'Diamanten',     img: '/images/diamanten-lose.webp',  alt: 'Diamanten verkaufen Bielefeld – lose Diamanten und Brillanten zum Ankauf', tags: ['Lose Diamanten ab 0,50 ct', 'Diamantschmuck'] },
+  { title: 'Zahngold',      img: '/images/zahngold.webp',        alt: 'Zahngold verkaufen Bielefeld – Zahnkronen und Dentallegierungen zum Ankauf', tags: ['Zahnkronen auch mit Zähnen', 'Dentallegierungen'] },
+  { title: 'Luxusuhren',    img: '/images/luxusuhren.webp',      alt: 'Luxusuhren verkaufen Bielefeld – Rolex, Markenuhren, Gold- und Silberuhren zum Ankauf', tags: ['Luxusuhren', 'Markenuhren', 'Golduhren', 'Silberuhren'] },
+  { title: 'Platin',        img: '/images/platin.webp',          alt: 'Platin verkaufen Bielefeld – Platinschmuck, Platinmünzen und Platinbarren', tags: ['Platinschmuck', 'Platinmünzen', 'Platinbarren'] },
+  { title: 'Palladium',     img: '/images/palladium.webp',       alt: 'Palladium verkaufen Bielefeld – Palladiummünzen, Palladiumbarren und Palladiumschmuck', tags: ['Münzen', 'Barren', 'Schmuck'] },
 ];
 
 export default function GoldankaufPage() {
@@ -136,7 +139,7 @@ export default function GoldankaufPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-goldankauf" className="btn-gold">Jetzt Termin buchen</Link>
-            <a href="tel:+4917663284312" className="btn-outline-gold" style={{ borderColor: 'rgba(255,255,255,0.35)', color: 'rgba(255,255,255,0.85)' }}>+49 176 63284312</a>
+            <CallButton className="btn-outline-gold" style={{ borderColor: 'rgba(255,255,255,0.35)', color: 'rgba(255,255,255,0.85)' }} />
           </div>
         </div>
       </section>
@@ -169,16 +172,20 @@ export default function GoldankaufPage() {
             <div className="divider-gold mx-auto" />
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {ankaufKategorien.map((kat) => (
-              <div key={kat.title} className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
+              <div key={kat.title} className="last:col-span-2 lg:last:col-span-1 group overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
                 <div className="relative h-40 overflow-hidden">
-                  <Image src={kat.img} alt={kat.alt} fill sizes="(max-width: 640px) 50vw, 25vw" className="object-cover img-zoom" style={{ opacity: 0.85 }} />
+                  <Image src={kat.img} alt={kat.alt} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw" className="object-cover img-zoom" style={{ opacity: 0.9 }} />
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(15,13,10,0.5), transparent 70%)' }} />
                 </div>
                 <div className="p-4">
                   <h3 className="font-serif text-lg mb-1.5" style={{ color: 'var(--kj-text)' }}>{kat.title}</h3>
-                  <p className="font-sans text-xs leading-relaxed" style={{ color: 'var(--kj-muted)' }}>{kat.tags.join(' · ')}</p>
+                  <ul className="font-sans text-xs leading-relaxed space-y-0.5" style={{ color: 'var(--kj-muted)' }}>
+                    {kat.tags.map((t) => (
+                      <li key={t} className="flex gap-1.5"><span style={{ color: 'var(--kj-gold)' }}>–</span><span>{t}</span></li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}

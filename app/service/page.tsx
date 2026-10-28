@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import AppointmentForm from '@/components/AppointmentForm';
+import CallButton from '@/components/CallButton';
 
 export const metadata: Metadata = {
   title: 'Schmuck- & Uhrenreparatur Bielefeld',
@@ -56,7 +57,7 @@ const schmuckServices = [
 
 const uhrenServices = [
   { name: 'Batteriewechsel',            desc: 'Reinigung des Gehäusedeckels inkl. Dichtungsring, Einsetzen der Batterie und fachgerechtes Verschließen – oft in 20 Minuten fertig.' },
-  { name: 'Glaswechsel',                desc: 'Mineral- und Saphirglas für alle Modelle.' },
+  { name: 'Glaswechsel',                desc: 'Mineral-, Saphir- und Kunststoffglas für alle Modelle.' },
   { name: 'Armbandservice',             desc: 'Kürzen, verlängern oder austauschen.' },
   { name: 'Wasserdichtigkeitsversiegelung', desc: 'Separate Leistung auf Kundenwunsch – gerne erstellen wir Ihnen einen Kostenvoranschlag.' },
   { name: 'Gehäusereinigung',           desc: 'Professionelle Reinigung und Politur.' },
@@ -106,9 +107,7 @@ export default function ServicePage() {
             <Link href="#termin-service" className="btn-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '0.9rem 2rem' }}>
               Reparatur anfragen
             </Link>
-            <a href="tel:+4917663284312" className="btn-outline-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '0.9rem 2rem', borderColor: 'rgba(255,255,255,0.28)', color: 'rgba(255,255,255,0.78)' }}>
-              Anrufen
-            </a>
+            <CallButton className="btn-outline-gold" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', padding: '0.9rem 2rem', borderColor: 'rgba(255,255,255,0.28)', color: 'rgba(255,255,255,0.78)' }} />
           </div>
 
           <div className="flex flex-wrap gap-x-5 gap-y-2">
@@ -256,12 +255,12 @@ export default function ServicePage() {
             <h2 className="section-title mb-4">Verfügbare Uhrenmarken</h2>
             <div className="divider-gold mx-auto mb-5" />
             <p className="font-sans text-sm leading-relaxed max-w-xl mx-auto" style={{ color: 'var(--kj-muted)' }}>
-              Bei KenJu finden Sie ausgewählte Modelle von <strong style={{ color: 'var(--kj-text)' }}>Tommy Hilfiger, Hugo Boss, Police, Regent</strong> und <strong style={{ color: 'var(--kj-text)' }}>Swiss Military</strong>.
+              Bei KenJu finden Sie ausgewählte Modelle von <strong style={{ color: 'var(--kj-text)' }}>Tommy Hilfiger, Boss, Police, Regent</strong> und <strong style={{ color: 'var(--kj-text)' }}>Swiss Military</strong>.
             </p>
           </div>
 
           <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-8">
-            {['Tommy Hilfiger', 'Hugo Boss', 'Police', 'Regent', 'Swiss Military'].map((brand) => (
+            {['Tommy Hilfiger', 'Boss', 'Police', 'Regent', 'Swiss Military'].map((brand) => (
               <div key={brand} className="p-4 text-center" style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}>
                 <p className="font-serif text-sm" style={{ color: 'var(--kj-text)' }}>{brand}</p>
               </div>
@@ -293,7 +292,7 @@ export default function ServicePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#termin-service" className="btn-gold">Reparatur anfragen</Link>
-            <a href="tel:+4917663284312" className="btn-outline-gold">Jetzt anrufen</a>
+            <CallButton className="btn-outline-gold" />
           </div>
         </div>
       </section>

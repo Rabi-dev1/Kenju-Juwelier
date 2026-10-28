@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { standorte } from '@/lib/standorte';
+import CallButton from '@/components/CallButton';
 
 export const metadata: Metadata = {
   title: 'Labor Diamanten Bielefeld & Lippstadt',
@@ -24,7 +24,7 @@ const breadcrumbJsonLd = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://kenju.de' },
-    { '@type': 'ListItem', position: 2, name: 'Labor Diamanten', item: 'https://kenju.de/labordiamanten' },
+    { '@type': 'ListItem', position: 2, name: 'Diamantschmuck / Labor Diamanten', item: 'https://kenju.de/labordiamanten' },
   ],
 };
 
@@ -107,7 +107,7 @@ export default function LaborDiamantenPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-40 pb-16 md:pb-24">
-          <p className="section-subtitle mb-5">Labor-Diamanten</p>
+          <p className="section-subtitle mb-5">Diamantschmuck / Labor Diamanten</p>
           <h1
             className="font-serif font-light text-white mb-4 max-w-3xl"
             style={{ fontSize: 'clamp(2.1rem, 6.4vw, 4.6rem)', lineHeight: 1.06 }}
@@ -119,7 +119,7 @@ export default function LaborDiamantenPage() {
           </p>
           <div className="divider-gold mb-6" style={{ marginLeft: 0 }} />
           <p className="font-sans leading-relaxed max-w-xl mb-9" style={{ color: 'rgba(245,240,232,0.78)', fontSize: '1rem' }}>
-            Entdecken Sie ausgewählten Schmuck mit im Labor gewachsenen Diamanten. Ob elegante Colliers,
+            Entdecken Sie ausgewählten Schmuck mit im Labor entstandenen Diamanten. Ob elegante Colliers,
             ausdrucksstarke Ohrringe oder klassische Tennis-Armbänder – wir beraten Sie persönlich bei der
             Auswahl Ihres Schmuckstücks.
           </p>
@@ -139,7 +139,7 @@ export default function LaborDiamantenPage() {
             </h2>
             <div className="divider-gold mx-auto my-6" />
             <p className="font-sans text-base leading-relaxed" style={{ color: 'var(--kj-muted)' }}>
-              Beispiele aus unserer Auswahl – im Geschäft zeigen wir Ihnen gerne weitere Modelle.
+              Entdecken Sie eine besonders große Auswahl an hochwertigen Schmuckstücken sowohl mit natürlichen Diamanten, als auch mit Labor Diamanten besetzt.<br />Gerne fertigen wir auch Schmuckstücke nach Ihren Wünschen an.
             </p>
           </header>
 
@@ -223,28 +223,7 @@ export default function LaborDiamantenPage() {
               Termin vereinbaren
             </Link>
 
-            {/* Jetzt anrufen: zwei Standorte, daher kurze Auswahl – funktioniert ohne JavaScript */}
-            <details className="relative w-full sm:w-auto text-left">
-              <summary className="btn-outline-gold cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
-                Jetzt anrufen
-              </summary>
-              <div
-                className="mt-2 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:min-w-[17rem] z-10"
-                style={{ background: 'var(--kj-card)', border: '1px solid var(--kj-border)' }}
-              >
-                {standorte.map((s, i) => (
-                  <a
-                    key={s.id}
-                    href={s.telefon.href}
-                    className="flex items-center justify-between gap-6 px-5 py-4"
-                    style={i > 0 ? { borderTop: '1px solid var(--kj-border)' } : undefined}
-                  >
-                    <span className="font-serif text-lg" style={{ color: 'var(--kj-text)' }}>{s.stadt}</span>
-                    <span className="font-sans text-sm" style={{ color: 'var(--kj-gold)' }}>{s.telefon.label}</span>
-                  </a>
-                ))}
-              </div>
-            </details>
+            <CallButton />
           </div>
         </div>
       </section>

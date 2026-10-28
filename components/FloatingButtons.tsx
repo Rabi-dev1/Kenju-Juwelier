@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { standorte, EMAIL } from '@/lib/standorte';
+import { standorte, EMAIL, INSTAGRAM_URL, REVIEW_URL } from '@/lib/standorte';
 
 const PhoneIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -49,6 +49,32 @@ const buttons = [
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
         <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    ),
+  },
+  {
+    id: 'review',
+    href: REVIEW_URL,
+    label: 'Bewerten Sie uns',
+    external: true,
+    badge: null,
+    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    ),
+  },
+  {
+    id: 'instagram',
+    href: INSTAGRAM_URL,
+    label: 'Instagram',
+    external: true,
+    badge: null,
+    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
       </svg>
     ),
   },

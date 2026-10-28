@@ -6,7 +6,7 @@ import ThemeToggle from './ThemeToggle';
 
 const nav = [
   { label: 'Schmuck',         href: '/ringe' },
-  { label: 'Labor-Diamanten', href: '/labordiamanten' },
+  { label: 'Diamantschmuck / Labor Diamanten', href: '/labordiamanten' },
   { label: 'Trauringe & Verlobungsringe', href: '/trauringe' },
   { label: 'Uhren',           href: '/uhren' },
   { label: 'Goldankauf',      href: '/goldankauf' },
@@ -48,7 +48,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden xl:flex items-center gap-4 2xl:gap-5">
+          <nav className="hidden min-[1460px]:flex items-center gap-4 2xl:gap-5">
             {nav.map((item) => (
               <Link
                 key={item.href}
@@ -64,14 +64,14 @@ export default function Header() {
 
             <div className="flex items-center gap-3 ml-2 pl-6" style={{ borderLeft: '1px solid var(--kj-border)' }}>
               <ThemeToggle />
-              <Link href="/#termin" className="btn-gold text-xs px-5 py-2.5">
+              <Link href="/#termin" className="btn-gold text-xs px-5 py-2.5 whitespace-nowrap">
                 Termin buchen
               </Link>
             </div>
           </nav>
 
           {/* Mobile: theme toggle + burger */}
-          <div className="xl:hidden flex items-center gap-3">
+          <div className="min-[1460px]:hidden flex items-center gap-3">
             <ThemeToggle />
             <button
               onClick={() => setOpen(!open)}
@@ -97,7 +97,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className="xl:hidden overflow-hidden transition-all duration-300"
+        className="min-[1460px]:hidden overflow-hidden transition-all duration-300"
         style={{
           maxHeight: open ? '600px' : '0',
           borderTop: open ? '1px solid var(--kj-border)' : 'none',

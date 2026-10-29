@@ -87,7 +87,7 @@ export default function DatenschutzPage() {
               („localStorage&quot;) abgelegt: Ihre Auswahl zwischen heller und dunkler Darstellung sowie die
               Information, dass Sie den Hinweis zur Datenverarbeitung bereits gesehen haben. Diese Angaben verbleiben
               ausschließlich auf Ihrem Endgerät, werden nicht an uns übertragen und können jederzeit über die
-              Einstellungen Ihres Browsers gelöscht werden. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TTDSG.
+              Einstellungen Ihres Browsers gelöscht werden. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG.
             </p>
 
             <h3 className="font-sans text-base mb-2 mt-6" style={{ color: 'var(--kj-text)' }}>Schriftarten</h3>
@@ -130,11 +130,14 @@ export default function DatenschutzPage() {
               4. Datenverarbeitung beim Ankauf von Edelmetallen
             </h2>
             <p>
-              Beim An- und Verkauf von Edelmetallen sind wir gesetzlich verpflichtet, Ihre Identität anhand eines
-              gültigen Personalausweises oder Reisepasses zu überprüfen und die Daten aufzuzeichnen. Rechtsgrundlage
-              ist Art. 6 Abs. 1 lit. c DSGVO in Verbindung mit den Vorgaben des Geldwäschegesetzes (GwG). Diese Daten
-              werden entsprechend den gesetzlichen Aufbewahrungsfristen gespeichert und ausschließlich zu diesem
-              Zweck verwendet.
+              Beim An- und Verkauf von Edelmetallen können wir aufgrund gesetzlicher Vorschriften, insbesondere des
+              Geldwäschegesetzes (GwG), verpflichtet sein, Ihre Identität zu überprüfen und bestimmte
+              personenbezogene Daten zu dokumentieren.
+            </p>
+            <p className="mt-3">
+              Soweit eine gesetzliche Verpflichtung besteht, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1
+              lit. c DSGVO. Die Speicherung erfolgt entsprechend den jeweils geltenden gesetzlichen
+              Aufbewahrungsfristen.
             </p>
           </section>
 
@@ -186,7 +189,7 @@ export default function DatenschutzPage() {
               personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein
               berechtigtes Löschersuchen geltend machen oder eine Einwilligung widerrufen, werden Ihre Daten
               gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung haben – etwa
-              handels- oder steuerrechtliche Aufbewahrungsfristen von 6 bzw. 10 Jahren oder Aufzeichnungspflichten
+              handels- oder steuerrechtliche Aufbewahrungsfristen von je nach Art der Unterlagen 6, 8 oder 10 Jahren oder Aufzeichnungspflichten
               nach dem Geldwäschegesetz.
             </p>
           </section>

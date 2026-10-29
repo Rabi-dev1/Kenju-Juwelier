@@ -23,7 +23,7 @@ export default function ImpressumPage() {
 
           <section>
             <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>
-              Angaben gemäß § 5 TMG
+              Angaben gemäß § 5 DDG
             </h2>
             <p>
               <strong style={{ color: 'var(--kj-text)' }}>Juwelier KenJu</strong><br />
@@ -98,43 +98,6 @@ export default function ImpressumPage() {
             <p>
               Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
               Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>EU-Streitschlichtung</h2>
-            <p>
-              Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-              <a
-                href="https://ec.europa.eu/consumers/odr"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: 'var(--kj-gold)' }}
-                className="hover:underline"
-              >
-                ec.europa.eu/consumers/odr
-              </a>
-              .<br />
-              Unsere E-Mail-Adresse finden Sie oben im Impressum.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>Haftung für Inhalte</h2>
-            <p>
-              Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den
-              allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
-              verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
-              zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-serif text-2xl mb-3" style={{ color: 'var(--kj-text)' }}>Haftung für Links</h2>
-            <p>
-              Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-              Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-              verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
             </p>
           </section>
 

@@ -43,8 +43,8 @@ export default function Header() {
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-6 h-20">
 
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-none group shrink-0">

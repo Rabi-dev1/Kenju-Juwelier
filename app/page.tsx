@@ -34,8 +34,8 @@ const categories = [
     title: 'Schmuck',
     desc: 'Ringe, Ketten, Anhänger, Armbänder & Brillantschmuck',
     href: '/ringe',
-    img: '/images/brillant-set-luxus.jpg',
-    imgAlt: 'Goldschmuck und Brillantringe bei KenJu Juwelier Bielefeld',
+    img: '/images/schmuckneu.jpeg',
+    imgAlt: 'Goldarmbänder und Ringe in der Vitrine bei KenJu Juwelier',
     sub: ['Ringe & Brillantringe', 'Anhänger & Ketten', 'Armbänder & Fußketten', 'Labor Diamanten'],
   },
   {

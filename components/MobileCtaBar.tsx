@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { standorte } from '@/lib/standorte';
+import { standorte, INSTAGRAM_URL, REVIEW_URL } from '@/lib/standorte';
 
 export default function MobileCtaBar() {
   const [showPhones, setShowPhones] = useState(false);
@@ -100,6 +100,50 @@ export default function MobileCtaBar() {
             Termin buchen
           </span>
         </Link>
+
+        {/* Bewerten */}
+        <a
+          href={REVIEW_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 flex flex-col items-center justify-center gap-1 py-3.5 transition-all active:opacity-70"
+          style={{ borderLeft: '1px solid var(--kj-border)' }}
+          aria-label="Bewerten Sie uns"
+        >
+          <svg
+            width="19" height="19" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+            style={{ color: 'var(--kj-gold)' }}
+          >
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <span className="font-sans text-xs tracking-wide" style={{ color: 'var(--kj-gold)' }}>
+            Bewerten
+          </span>
+        </a>
+
+        {/* Instagram */}
+        <a
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 flex flex-col items-center justify-center gap-1 py-3.5 transition-all active:opacity-70"
+          style={{ borderLeft: '1px solid var(--kj-border)' }}
+          aria-label="KenJu auf Instagram"
+        >
+          <svg
+            width="19" height="19" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+            style={{ color: 'var(--kj-gold)' }}
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span className="font-sans text-xs tracking-wide" style={{ color: 'var(--kj-gold)' }}>
+            Instagram
+          </span>
+        </a>
       </div>
     </>
   );
